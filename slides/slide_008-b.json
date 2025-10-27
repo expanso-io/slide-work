@@ -1,0 +1,293 @@
+{
+  "slide_id": "slide_08b_roi_focused",
+  "frame_name": "Next Steps - ROI Calculator CTA",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "What Could You Save?",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 48,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1600
+      }
+    },
+    {
+      "type": "group",
+      "id": "roi_tiers",
+      "position": {
+        "x": 160,
+        "y": 180,
+        "width": 1600,
+        "height": 480
+      },
+      "layout": {
+        "type": "horizontal",
+        "columns": 3,
+        "gap": 60
+      },
+      "elements": [
+        {
+          "type": "roi_tier_card",
+          "id": "tier_small",
+          "title": "Small Teams",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 493,
+            "height": 480
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.1)",
+            "border": "2px solid #4299e1",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "data": {
+            "volume": "10-50 TB/month",
+            "current_cost": "$60K-$300K/year",
+            "typical_reduction": "60%",
+            "annual_savings": "$36K-$180K",
+            "payback_period": "3 months"
+          }
+        },
+        {
+          "type": "roi_tier_card",
+          "id": "tier_medium",
+          "title": "Mid-Market",
+          "position": {
+            "x": 553,
+            "y": 0,
+            "width": 493,
+            "height": 480
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.15)",
+            "border": "3px solid #48BB78",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "badge": "MOST COMMON",
+          "data": {
+            "volume": "50-200 TB/month",
+            "current_cost": "$300K-$1.2M/year",
+            "typical_reduction": "65%",
+            "annual_savings": "$195K-$780K",
+            "payback_period": "2-3 months"
+          }
+        },
+        {
+          "type": "roi_tier_card",
+          "id": "tier_enterprise",
+          "title": "Enterprise",
+          "position": {
+            "x": 1107,
+            "y": 0,
+            "width": 493,
+            "height": 480
+          },
+          "style": {
+            "background": "rgba(237, 137, 54, 0.1)",
+            "border": "2px solid #ed8936",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "data": {
+            "volume": "200+ TB/month",
+            "current_cost": "$1.2M-$5M+/year",
+            "typical_reduction": "70%",
+            "annual_savings": "$840K-$3.5M+",
+            "payback_period": "1-2 months"
+          }
+        }
+      ],
+      "card_template": {
+        "elements": [
+          {
+            "type": "text",
+            "id": "tier_title",
+            "style": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 28,
+              "text_align": "center",
+              "margin_bottom": 24
+            }
+          },
+          {
+            "type": "stat_row",
+            "label": "Data Volume",
+            "value_key": "volume"
+          },
+          {
+            "type": "stat_row",
+            "label": "Current Cost",
+            "value_key": "current_cost"
+          },
+          {
+            "type": "divider",
+            "style": "thin"
+          },
+          {
+            "type": "stat_row",
+            "label": "Typical Reduction",
+            "value_key": "typical_reduction",
+            "highlight": true
+          },
+          {
+            "type": "stat_row",
+            "label": "Annual Savings",
+            "value_key": "annual_savings",
+            "highlight": true,
+            "size": "large"
+          },
+          {
+            "type": "stat_row",
+            "label": "Payback Period",
+            "value_key": "payback_period"
+          }
+        ],
+        "stat_row_style": {
+          "label": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 14,
+            "color": "#A0AEC0",
+            "text_transform": "uppercase",
+            "letter_spacing": 1
+          },
+          "value": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 20,
+            "color": "#FFFFFF",
+            "margin_top": 8,
+            "margin_bottom": 20
+          },
+          "value_large": {
+            "font_size": 32,
+            "color": "#48BB78"
+          },
+          "value_highlight": {
+            "color": "#48BB78"
+          }
+        }
+      }
+    },
+    {
+      "type": "container",
+      "id": "cta_section",
+      "position": {
+        "x": 160,
+        "y": 720,
+        "width": 1600,
+        "height": 280
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.15)",
+        "border": "3px solid #48BB78",
+        "border_radius": 12,
+        "padding": 48
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "cta_headline",
+          "content": "Get Your Custom Savings Analysis",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 36,
+            "color": "#48BB78",
+            "text_align": "center",
+            "margin_bottom": 20
+          }
+        },
+        {
+          "type": "text",
+          "id": "cta_body",
+          "content": "30-minute call to calculate your specific ROI and build a business case",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 500,
+            "font_size": 24,
+            "color": "#FFFFFF",
+            "text_align": "center",
+            "line_height": 1.5,
+            "margin_bottom": 28
+          }
+        },
+        {
+          "type": "contact_bar",
+          "elements": [
+            {
+              "icon": "📧",
+              "text": "aronchick@expanso.io",
+              "link": "mailto:aronchick@expanso.io"
+            },
+            {
+              "icon": "📅",
+              "text": "calendly.com/expanso",
+              "link": "https://calendly.com/expanso"
+            },
+            {
+              "icon": "💬",
+              "text": "LinkedIn: /in/daronchick",
+              "link": "https://linkedin.com/in/daronchick"
+            }
+          ],
+          "style": {
+            "layout": "horizontal",
+            "gap": 60,
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 20,
+            "color": "#9ae6b4",
+            "text_align": "center"
+          }
+        }
+      ]
+    }
+  },
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "tier_small": "#4299e1",
+      "tier_medium": "#48BB78",
+      "tier_enterprise": "#ed8936",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#A0AEC0",
+      "savings_highlight": "#48BB78"
+    },
+    "visual_language": {
+      "tiered_approach": "Helps prospect self-identify their segment",
+      "concrete_numbers": "Makes savings tangible and believable",
+      "middle_emphasis": "Mid-market card highlighted as most common"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Let me show you what this could mean financially, depending on your scale.",
+    "tier_walkthrough": "[Point to cards] If you're a small team processing 10 to 50 terabytes per month, you're spending $60K to $300K a year. With a typical 60% reduction, that's $36K to $180K saved annually. Payback in 3 months. [Point to middle] If you're mid-market—50 to 200 terabytes per month—you're spending $300K to $1.2M a year. At 65% reduction, that's $195K to $780K saved. Payback in 2 to 3 months. This is our most common segment. [Point to right] If you're enterprise—200+ terabytes—you're spending $1.2M to $5M+ annually. At 70% reduction, that's $840K to $3.5M+ saved. Payback in 1 to 2 months.",
+    "cta": "Which segment are you in? [Let them answer] Great. Let's get your custom savings analysis. 30-minute call to calculate your specific ROI and build a business case you can take to your CFO.",
+    "contact_options": "[Point to contact bar] You can reach me by email, grab time on my calendar, or connect on LinkedIn—whatever works best for you.",
+    "transition": "What questions do you have about the numbers?",
+    "pacing": "Let them self-identify their tier. This creates ownership."
+  },
+  "use_case": "CFO/FinOps presentations where financial impact is the primary decision criterion"
+}

@@ -1,0 +1,286 @@
+{
+  "slide_id": "slide_09_backup_competitive",
+  "frame_name": "Backup - Competitive Landscape",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "How Expanso Compares",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Understanding the Upstream Data Control Category",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "comparison_table",
+      "id": "competitive_matrix",
+      "position": {
+        "x": 80,
+        "y": 220,
+        "width": 1760,
+        "height": 720
+      },
+      "structure": {
+        "columns": [
+          {
+            "id": "category",
+            "header": "Category",
+            "width": 280,
+            "align": "left"
+          },
+          {
+            "id": "expanso",
+            "header": "Expanso\n(Upstream Control)",
+            "width": 370,
+            "align": "center",
+            "highlight": true
+          },
+          {
+            "id": "cloud_platforms",
+            "header": "Cloud Platforms\n(Snowflake, Databricks)",
+            "width": 370,
+            "align": "center"
+          },
+          {
+            "id": "etl_tools",
+            "header": "ETL/ELT Tools\n(Fivetran, Airbyte)",
+            "width": 370,
+            "align": "center"
+          },
+          {
+            "id": "observability",
+            "header": "Observability\n(Datadog, Splunk)",
+            "width": 370,
+            "align": "center"
+          }
+        ],
+        "rows": [
+          {
+            "category": "Where It Runs",
+            "expanso": "At the source\n(edge, on-prem, VPC)",
+            "cloud_platforms": "Cloud only\n(after ingestion)",
+            "etl_tools": "Cloud or hybrid\n(post-extraction)",
+            "observability": "Cloud only\n(after ingestion)",
+            "row_height": 100
+          },
+          {
+            "category": "Primary Purpose",
+            "expanso": "Filter & optimize\nBEFORE cloud",
+            "cloud_platforms": "Store & analyze\ndata",
+            "etl_tools": "Move data between\nsystems",
+            "observability": "Monitor & alert\non data",
+            "row_height": 100
+          },
+          {
+            "category": "Data Reduction",
+            "expanso": "50-70% reduction\n✓",
+            "cloud_platforms": "None\n(wants MORE data)",
+            "etl_tools": "None\n(moves ALL data)",
+            "observability": "None\n(stores ALL logs)",
+            "row_height": 100
+          },
+          {
+            "category": "Cost Impact",
+            "expanso": "Reduces platform\ncosts by 50-70%",
+            "cloud_platforms": "Primary cost\ncenter",
+            "etl_tools": "Adds cost\n(connector fees)",
+            "observability": "Primary cost\ncenter",
+            "row_height": 100
+          },
+          {
+            "category": "PII Compliance",
+            "expanso": "Filter at source\nBEFORE cloud",
+            "cloud_platforms": "Masking after\ningestion",
+            "etl_tools": "Limited or none",
+            "observability": "Redaction after\ningestion",
+            "row_height": 100
+          },
+          {
+            "category": "Works With",
+            "expanso": "All platforms\n(non-exclusive)",
+            "cloud_platforms": "Themselves only",
+            "etl_tools": "Specific sources\n& destinations",
+            "observability": "Themselves only",
+            "row_height": 100
+          },
+          {
+            "category": "Business Model",
+            "expanso": "% of savings\n(aligned incentives)",
+            "cloud_platforms": "Volume-based\n(more data = more $)",
+            "etl_tools": "Per-connector\nor volume",
+            "observability": "Volume-based\n(more data = more $)",
+            "row_height": 100
+          }
+        ]
+      },
+      "style": {
+        "header": {
+          "background": "#2d3748",
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 16,
+          "color": "#FFFFFF",
+          "padding": 20,
+          "border_bottom": "2px solid #4A5568"
+        },
+        "header_highlight": {
+          "background": "rgba(72, 187, 120, 0.2)",
+          "border": "2px solid #48BB78",
+          "color": "#48BB78"
+        },
+        "cell": {
+          "font_family": "Inter",
+          "font_weight": 400,
+          "font_size": 14,
+          "color": "#FFFFFF",
+          "line_height": 1.5,
+          "padding": 16,
+          "border_bottom": "1px solid #4A5568"
+        },
+        "category_cell": {
+          "font_weight": 600,
+          "color": "#CBD5E0",
+          "background": "rgba(45, 55, 72, 0.5)"
+        },
+        "expanso_cell": {
+          "background": "rgba(72, 187, 120, 0.08)",
+          "font_weight": 500
+        },
+        "checkmark": {
+          "color": "#48BB78",
+          "font_size": 18
+        }
+      }
+    },
+    {
+      "type": "container",
+      "id": "key_takeaway",
+      "position": {
+        "x": 80,
+        "y": 980,
+        "width": 1760,
+        "height": 80
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.15)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 20
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "takeaway_text",
+          "content": "💡 Key Insight: Expanso doesn't compete with your platforms—we make them cheaper. You keep Snowflake, Databricks, Splunk, and Datadog. You just pay 50-70% less.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 20,
+            "color": "#FFFFFF",
+            "text_align": "center",
+            "line_height": 1.5
+          },
+          "emphasis": {
+            "phrases": ["doesn't compete", "make them cheaper", "pay 50-70% less"],
+            "color": "#48BB78",
+            "font_weight": 700
+          }
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "table_header": "#2d3748",
+      "table_border": "#4A5568",
+      "expanso_highlight_bg": "rgba(72, 187, 120, 0.08)",
+      "expanso_highlight_border": "#48BB78",
+      "expanso_text": "#48BB78",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0",
+      "category_bg": "rgba(45, 55, 72, 0.5)"
+    },
+    "visual_language": {
+      "column_highlight": "Expanso column visually emphasized with green tint",
+      "category_focus": "Category column darker to separate from data",
+      "grid_structure": "Clear delineation between competitive offerings"
+    }
+  },
+  "presentation_notes": {
+    "opening": "This is a backup slide in case you get the question: 'How do you compare to X?' Let me show you the competitive landscape.",
+    "context": "We're often asked how we compare to cloud platforms, ETL tools, or observability platforms. The truth is: we don't really compete with them. We're a different category entirely.",
+    "table_walkthrough": {
+      "where_runs": "[Point to row 1] First, where does it run? Expanso runs at the source—at the edge, on-prem, in your VPC. Cloud platforms only run in the cloud after ingestion. ETL tools run cloud or hybrid but post-extraction. Observability tools run in the cloud.",
+      "purpose": "[Point to row 2] Primary purpose: We filter and optimize BEFORE the cloud. Cloud platforms store and analyze data. ETL tools move data between systems. Observability tools monitor and alert.",
+      "data_reduction": "[Point to row 3] Data reduction: We reduce 50 to 70%. Cloud platforms want MORE data—that's their business model. ETL tools move ALL data. Observability tools store ALL logs.",
+      "cost_impact": "[Point to row 4] Cost impact: We REDUCE platform costs by 50 to 70%. Cloud platforms ARE the primary cost center. ETL tools ADD cost through connector fees. Observability tools ARE the primary cost center.",
+      "compliance": "[Point to row 5] PII compliance: We filter at the source BEFORE the cloud. Cloud platforms do masking after ingestion. ETL tools have limited or no compliance features. Observability tools do redaction after ingestion.",
+      "works_with": "[Point to row 6] Works with: We work with ALL platforms—we're non-exclusive. Cloud platforms only work with themselves. ETL tools work with specific sources and destinations. Observability tools only work with themselves.",
+      "business_model": "[Point to row 7] Business model: We charge a percentage of savings—our incentives are aligned with yours. Cloud platforms are volume-based—more data equals more money. ETL is per-connector or volume. Observability is volume-based."
+    },
+    "key_takeaway": "[Point to bottom] Here's the key insight: Expanso doesn't compete with your platforms—we make them cheaper. You keep Snowflake, Databricks, Splunk, and Datadog. You just pay 50 to 70% less.",
+    "transition": "Any questions about how we fit into your existing stack?",
+    "usage_note": "Only use this slide if explicitly asked about competition. Don't volunteer it—it can create confusion about category."
+  },
+  "persona_alignment": {
+    "procurement": {
+      "focus_elements": ["Business Model row", "Works With row"],
+      "talking_points": "Non-exclusive, aligned incentives, reduces existing vendor costs"
+    },
+    "architects": {
+      "focus_elements": ["Where It Runs row", "Works With row"],
+      "talking_points": "Architectural layer, platform-agnostic, upstream positioning"
+    },
+    "finance": {
+      "focus_elements": ["Cost Impact row", "Business Model row", "Data Reduction row"],
+      "talking_points": "Cost reduction not cost addition, performance-based pricing"
+    }
+  },
+  "usage_guidelines": {
+    "when_to_show": [
+      "Prospect asks 'How do you compare to [competitor]?'",
+      "Procurement wants to understand category positioning",
+      "Need to clarify that Expanso complements rather than replaces existing tools"
+    ],
+    "when_not_to_show": [
+      "Unprompted in standard pitch (creates unnecessary confusion)",
+      "Early in sales cycle (focus on value, not competition)",
+      "Technical deep-dives (engineers don't care about competition)"
+    ]
+  }
+}

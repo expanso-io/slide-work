@@ -1,0 +1,180 @@
+{
+  "slide_id": "slide_08a_simple_cta",
+  "frame_name": "Next Steps - Simple Call to Action",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Let's Start Saving You Money",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 56,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 200,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "text",
+      "id": "value_prop",
+      "content": "2-4 Week Pilot • 50-70% Cost Reduction • No Risk",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 600,
+        "font_size": 32,
+        "color": "#48BB78",
+        "text_align": "center",
+        "letter_spacing": 1
+      },
+      "position": {
+        "x": "center",
+        "y": 320,
+        "max_width": 1600
+      }
+    },
+    {
+      "type": "container",
+      "id": "cta_box",
+      "position": {
+        "x": 360,
+        "y": 440,
+        "width": 1200,
+        "height": 320
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.15)",
+        "border": "4px solid #48BB78",
+        "border_radius": 16,
+        "padding": 60
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "cta_headline",
+          "content": "Schedule Your Discovery Call",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 40,
+            "color": "#FFFFFF",
+            "text_align": "center",
+            "margin_bottom": 32
+          },
+          "position": {
+            "x": "center",
+            "y": 0
+          }
+        },
+        {
+          "type": "text",
+          "id": "cta_description",
+          "content": "30-minute call to analyze your data architecture\nand identify $500K-$2M+ in annual savings",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 500,
+            "font_size": 24,
+            "color": "#CBD5E0",
+            "text_align": "center",
+            "line_height": 1.6,
+            "margin_bottom": 40
+          },
+          "position": {
+            "x": "center",
+            "y": 80
+          }
+        },
+        {
+          "type": "text",
+          "id": "contact_primary",
+          "content": "📧 aronchick@expanso.io",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 32,
+            "color": "#48BB78",
+            "text_align": "center",
+            "margin_bottom": 16
+          },
+          "position": {
+            "x": "center",
+            "y": 180
+          }
+        },
+        {
+          "type": "text",
+          "id": "contact_calendar",
+          "content": "📅 calendly.com/expanso",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 28,
+            "color": "#9ae6b4",
+            "text_align": "center"
+          },
+          "position": {
+            "x": "center",
+            "y": 232
+          }
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "social_proof",
+      "content": "Join 50+ companies already saving millions on cloud data costs",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 20,
+        "color": "#A0AEC0",
+        "text_align": "center",
+        "font_style": "italic"
+      },
+      "position": {
+        "x": "center",
+        "y": 820
+      }
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0",
+      "text_muted": "#A0AEC0",
+      "cta_primary": "#48BB78",
+      "cta_secondary": "#9ae6b4",
+      "cta_bg": "rgba(72, 187, 120, 0.15)",
+      "cta_border": "#48BB78"
+    },
+    "visual_language": {
+      "minimalist": "Remove all friction and decision paralysis",
+      "single_cta": "One clear action, no competing choices",
+      "value_first": "Lead with outcome, not process"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Here's what I'd like to do next.",
+    "value_prop": "We'll run a 2 to 4 week pilot. You'll see 50 to 70 percent cost reduction. And there's no risk—if we don't save you money, you don't pay.",
+    "cta": "Let's schedule a 30-minute discovery call. We'll analyze your data architecture and identify $500K to $2M+ in annual savings. [Pause] You can email me directly—aronchick@expanso.io—or grab time on my calendar at calendly.com/expanso.",
+    "closing": "[Point to social proof] You'd be joining 50+ companies already saving millions on their cloud data costs.",
+    "silence": "After delivering CTA, stop talking. Let them respond. Silence is powerful.",
+    "pacing": "Slow and confident. This is the money moment."
+  },
+  "use_case": "Sales presentations where decision-maker is present and ready to act",
+  "advantage": "Zero cognitive load, maximum clarity, removes all friction"
+}

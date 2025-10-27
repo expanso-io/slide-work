@@ -1,0 +1,150 @@
+{
+  "slide_id": "slide_05b_code_example",
+  "frame_name": "How It Works - Configuration Example",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "How It Works: A Real Configuration Example",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "left"
+      },
+      "position": {
+        "x": 80,
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "container",
+      "id": "scenario_box",
+      "position": {
+        "x": 80,
+        "y": 160,
+        "width": 1760,
+        "height": 100
+      },
+      "style": {
+        "background": "rgba(66, 153, 225, 0.1)",
+        "border": "2px solid #4299e1",
+        "border_radius": 8,
+        "padding": 24
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "scenario_text",
+          "content": "Scenario: You want to send only ERROR logs to Splunk, mask credit card numbers, and drop all DEBUG logs entirely.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 500,
+            "font_size": 22,
+            "color": "#FFFFFF",
+            "text_align": "left"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code_block",
+      "id": "expanso_config",
+      "position": {
+        "x": 80,
+        "y": 300,
+        "width": 1760,
+        "height": 560
+      },
+      "content": {
+        "language": "yaml",
+        "code": "# expanso-pipeline.yaml\nname: production-logs\nsource:\n  type: application-logs\n  path: /var/log/app/*.log\n\nfilters:\n  # Drop all DEBUG logs (typically 60-70% of volume)\n  - type: drop\n    condition: log_level == \"DEBUG\"\n    \n  # Only keep ERROR and WARN for Splunk\n  - type: keep\n    condition: log_level in [\"ERROR\", \"WARN\"]\n\ntransformations:\n  # Mask credit card numbers\n  - type: mask\n    field: message\n    pattern: \\d{4}-\\d{4}-\\d{4}-\\d{4}\n    replacement: \"****-****-****-****\"\n    \n  # Add metadata\n  - type: enrich\n    fields:\n      environment: production\n      processed_by: expanso\n\nrouting:\n  # Send to Splunk\n  - destination: splunk\n    endpoint: https://splunk.company.com:8088\n    auth: ${SPLUNK_TOKEN}\n    \n  # Also send to S3 for archival (compressed)\n  - destination: s3\n    bucket: company-logs-archive\n    compression: gzip",
+        "highlighting": [
+          {"line_range": [9, 10], "color": "#fc8181", "label": "FILTER: Drops 60-70%"},
+          {"line_range": [17, 20], "color": "#4299e1", "label": "TRANSFORM: Mask PII"},
+          {"line_range": [29, 31], "color": "#48BB78", "label": "ROUTE: Multi-sink"}
+        ]
+      },
+      "style": {
+        "background": "#0d1117",
+        "border": "2px solid #30363d",
+        "border_radius": 8,
+        "padding": 32,
+        "font_family": "Fira Code, Monaco, Courier New",
+        "font_size": 16,
+        "line_height": 1.6,
+        "color": "#c9d1d9"
+      }
+    },
+    {
+      "type": "container",
+      "id": "result_box",
+      "position": {
+        "x": 80,
+        "y": 900,
+        "width": 1760,
+        "height": 120
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.15)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 24
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "result_headline",
+          "content": "Result:",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 22,
+            "color": "#9ae6b4",
+            "margin_bottom": 12
+          }
+        },
+        {
+          "type": "text",
+          "id": "result_text",
+          "content": "Debug logs (70% of volume) never reach Splunk. ERROR logs arrive masked and enriched. Splunk bill drops by $280K/year. Compliance team happy. Data team happy. CFO very happy.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 500,
+            "font_size": 20,
+            "line_height": 1.5,
+            "color": "#FFFFFF"
+          },
+          "emphasis": {
+            "phrases": ["$280K/year", "Compliance team happy"],
+            "color": "#48BB78",
+            "font_weight": 600
+          }
+        }
+      ]
+    }
+  ],
+  "design_notes": {
+    "use_case": "Technical audiences, data engineers, platform architects",
+    "advantage": "Shows actual implementation complexity (very low), builds confidence",
+    "risk": "May overwhelm non-technical audiences with code"
+  },
+  "presentation_notes": {
+    "opening": "Let me show you what this actually looks like in practice. Here's a real configuration.",
+    "scenario": "[Point to scenario box] Say you want to send only ERROR logs to Splunk, mask credit card numbers, and drop all DEBUG logs entirely. Here's the config.",
+    "code_walkthrough": "[Point to code] This is the entire configuration. It's YAML—Infrastructure as Code. [Point to filter section] Here we drop DEBUG logs—that's typically 60 to 70 percent of your volume right there. [Point to transform section] Here we mask credit card numbers for compliance. [Point to routing section] And here we route to both Splunk and S3 for archival.",
+    "result": "[Point to result box] The result? Debug logs never reach Splunk. ERROR logs arrive clean and compliant. Your Splunk bill drops by $280K a year. Compliance team is happy. Data team is happy. CFO is very happy.",
+    "transition": "That's one pipeline. Now imagine this across all your data sources. Let me show you what kind of impact that creates..."
+  }
+}

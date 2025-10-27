@@ -1,0 +1,346 @@
+{
+  "slide_id": "slide_15_backup_implementation_roadmap",
+  "frame_name": "Backup - Implementation Roadmap",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Implementation Roadmap",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "From Pilot to Production in 6-8 Weeks",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "timeline",
+      "position": {
+        "x": 80,
+        "y": 220,
+        "width": 1760,
+        "height": 700
+      },
+      "elements": [
+        {
+          "type": "timeline_phase",
+          "id": "phase_1_kickoff",
+          "phase_number": "1",
+          "phase_name": "Kickoff & Discovery",
+          "duration": "Week 1",
+          "position": {
+            "y": 0,
+            "height": 130
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.1)",
+            "border": "3px solid #4299e1",
+            "border_radius": 12,
+            "padding": 24
+          },
+          "deliverables": [
+            "Discovery call: Data sources, volumes, platforms",
+            "Architecture review: Where to deploy agents",
+            "Success criteria definition: Target % reduction",
+            "Pilot scope: 1-2 data sources selected"
+          ],
+          "participants": "Sales, Solutions Engineering, Customer Architects",
+          "output": "Pilot Plan Document"
+        },
+        {
+          "type": "timeline_phase",
+          "id": "phase_2_pilot",
+          "phase_number": "2",
+          "phase_name": "Pilot Deployment (Shadow Mode)",
+          "duration": "Weeks 2-3",
+          "position": {
+            "y": 150,
+            "height": 130
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.15)",
+            "border": "3px solid #48BB78",
+            "border_radius": 12,
+            "padding": 24
+          },
+          "deliverables": [
+            "Agent installation (K8s, Docker, or VM)",
+            "Shadow mode enabled: Observe, don't modify",
+            "Baseline metrics collection (2 weeks)",
+            "Policy development: Filter/transform/route rules"
+          ],
+          "participants": "Solutions Engineering, Customer DevOps/SRE",
+          "output": "Savings Analysis Report",
+          "milestone": "Validate 50-70% reduction potential"
+        },
+        {
+          "type": "timeline_phase",
+          "id": "phase_3_validation",
+          "phase_number": "3",
+          "phase_name": "Validation & Business Case",
+          "duration": "Week 4",
+          "position": {
+            "y": 300,
+            "height": 130
+          },
+          "style": {
+            "background": "rgba(237, 137, 54, 0.1)",
+            "border": "3px solid #ed8936",
+            "border_radius": 12,
+            "padding": 24
+          },
+          "deliverables": [
+            "Savings report: Actual % reduction measured",
+            "Query validation: Confirm no data loss",
+            "ROI calculation: 3-year financial model",
+            "Go/No-Go decision meeting"
+          ],
+          "participants": "Customer Exec Sponsor, Finance, Engineering",
+          "output": "Business Case Approval",
+          "decision_point": true
+        },
+        {
+          "type": "timeline_phase",
+          "id": "phase_4_production",
+          "phase_number": "4",
+          "phase_name": "Production Rollout",
+          "duration": "Weeks 5-6",
+          "position": {
+            "y": 450,
+            "height": 130
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.15)",
+            "border": "3px solid #48BB78",
+            "border_radius": 12,
+            "padding": 24
+          },
+          "deliverables": [
+            "Flip from shadow → active mode",
+            "Canary rollout: 10% → 50% → 100% traffic",
+            "Monitoring setup: Dashboards + alerts",
+            "Scale to additional data sources (2-10 sources)"
+          ],
+          "participants": "Solutions Engineering, Customer SRE, Operations",
+          "output": "Production Environment Live",
+          "milestone": "First savings realized"
+        },
+        {
+          "type": "timeline_phase",
+          "id": "phase_5_optimization",
+          "phase_number": "5",
+          "phase_name": "Optimization & Expansion",
+          "duration": "Weeks 7-8",
+          "position": {
+            "y": 600,
+            "height": 130
+          },
+          "style": {
+            "background": "rgba(159, 122, 234, 0.1)",
+            "border": "3px solid #9f7aea",
+            "border_radius": 12,
+            "padding": 24
+          },
+          "deliverables": [
+            "Policy tuning based on production data",
+            "Scale to remaining data sources (all sources)",
+            "Training: Operations team on day-2 management",
+            "First QBR: Review savings, identify improvements"
+          ],
+          "participants": "Customer Success, Customer Operations Team",
+          "output": "Full Production Deployment",
+          "milestone": "Target savings achieved"
+        }
+      ],
+      "phase_style": {
+        "layout": "horizontal",
+        "phase_number": {
+          "display": "circle",
+          "size": 48,
+          "background": "#48BB78",
+          "color": "#FFFFFF",
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 24,
+          "position": "left",
+          "margin_right": 20
+        },
+        "content_area": {
+          "layout": "vertical"
+        },
+        "header": {
+          "layout": "horizontal",
+          "justify": "space-between",
+          "margin_bottom": 16
+        },
+        "phase_name": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 22,
+          "color": "#FFFFFF"
+        },
+        "duration": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 18,
+          "color": "#9ae6b4",
+          "background": "rgba(72, 187, 120, 0.2)",
+          "padding": "6px 16px",
+          "border_radius": 20
+        },
+        "deliverables": {
+          "font_family": "Inter",
+          "font_weight": 400,
+          "font_size": 14,
+          "color": "#FFFFFF",
+          "line_height": 1.8,
+          "bullet": "•",
+          "margin_bottom": 12
+        },
+        "participants": {
+          "font_family": "Inter",
+          "font_weight": 500,
+          "font_size": 13,
+          "color": "#CBD5E0",
+          "margin_top": 8
+        },
+        "milestone_badge": {
+          "background": "#48BB78",
+          "color": "#FFFFFF",
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 12,
+          "padding": "4px 12px",
+          "border_radius": 12,
+          "margin_top": 8
+        }
+      }
+    },
+    {
+      "type": "container",
+      "id": "timeline_summary",
+      "position": {
+        "x": 80,
+        "y": 960,
+        "width": 1760,
+        "height": 80
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.2)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 20
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "summary_text",
+          "content": "⏱️ Total Time: 6-8 weeks from kickoff to full production • 💰 First Savings: Week 5 • 🎯 Target Achievement: Week 8",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 20,
+            "color": "#FFFFFF",
+            "text_align": "center"
+          }
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "phase_1": "#4299e1",
+      "phase_2": "#48BB78",
+      "phase_3": "#ed8936",
+      "phase_4": "#48BB78",
+      "phase_5": "#9f7aea",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0",
+      "milestone": "#48BB78"
+    },
+    "visual_language": {
+      "vertical_timeline": "Shows clear progression",
+      "color_coding": "Different colors for different phase types",
+      "milestone_emphasis": "Key achievements highlighted"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Let me walk you through what the implementation timeline looks like—from kickoff to full production.",
+    "phase_by_phase": {
+      "phase_1": "[Point to phase 1] Week one is kickoff and discovery. We do a discovery call to understand your data sources, volumes, and platforms. Architecture review to determine where to deploy agents. Define success criteria—your target percentage reduction. And scope the pilot—we'll pick 1 to 2 data sources to start with. Participants: Sales, solutions engineering, your architects. Output: A pilot plan document.",
+      "phase_2": "[Point to phase 2] Weeks two and three are the pilot deployment in shadow mode. We install agents—Kubernetes, Docker, or VM—your choice. Shadow mode is enabled—agents observe but don't modify anything. We collect baseline metrics for 2 weeks. And we develop policies—the filter, transform, and route rules. Participants: Solutions engineering and your DevOps or SRE team. Output: A savings analysis report. Milestone: We validate that 50 to 70% reduction is achievable.",
+      "phase_3": "[Point to phase 3] Week four is validation and business case. We deliver a savings report with the actual percentage reduction measured. Query validation to confirm no data was lost. ROI calculation—a 3-year financial model. And a go/no-go decision meeting. Participants: Your exec sponsor, finance, and engineering. Output: Business case approval. This is a decision point.",
+      "phase_4": "[Point to phase 4] Weeks five and six are production rollout. We flip from shadow to active mode. Canary rollout—10% traffic, then 50%, then 100%. Monitoring setup—dashboards and alerts. And we scale to additional data sources—2 to 10 sources depending on complexity. Participants: Solutions engineering, your SRE, and operations. Output: Production environment live. Milestone: First savings realized.",
+      "phase_5": "[Point to phase 5] Weeks seven and eight are optimization and expansion. Policy tuning based on production data. Scale to remaining data sources—all sources. Training for your operations team on day-2 management. And first quarterly business review—we review savings and identify improvements. Participants: Customer success and your operations team. Output: Full production deployment. Milestone: Target savings achieved."
+    },
+    "summary": "[Point to bottom] Total time: 6 to 8 weeks from kickoff to full production. First savings: Week 5. Target achievement: Week 8.",
+    "flexibility": "This timeline is typical, but we can compress or extend based on your needs. Fastest we've done: 4 weeks. Slowest: 12 weeks for highly complex environments.",
+    "when_to_use": "Use this slide when prospects ask: 'What's the implementation process?' 'How long until we see savings?' 'What's involved?'"
+  },
+  "persona_alignment": {
+    "executives": {
+      "focus_elements": ["total_timeline", "first_savings_week", "milestones"],
+      "talking_points": "Fast time-to-value, clear milestones, measurable outcomes"
+    },
+    "technical_teams": {
+      "focus_elements": ["phase_2_pilot", "phase_4_production", "deliverables"],
+      "talking_points": "Shadow mode safety, canary rollout, technical deliverables"
+    },
+    "operations": {
+      "focus_elements": ["phase_5_optimization", "training", "day2_operations"],
+      "talking_points": "Training provided, operational handoff, ongoing support"
+    }
+  },
+  "usage_guidelines": {
+    "when_to_show": [
+      "Prospect asks about implementation process",
+      "During technical evaluation discussions",
+      "When planning resources and timeline",
+      "In SOW or proposal conversations"
+    ],
+    "when_not_to_show": [
+      "First meeting (too detailed, too early)",
+      "Before value is established",
+      "With prospects not yet committed to evaluation"
+    ]
+  },
+  "customization_notes": {
+    "adjust_timeline": "If customer has constraints (e.g., 'must go live in 4 weeks'), show compressed timeline",
+    "add_dependencies": "If customer has specific requirements (e.g., security review, compliance audit), add those as phases",
+    "highlight_customer_responsibilities": "Make clear what customer team needs to provide (access, decisions, resources)"
+  }
+}

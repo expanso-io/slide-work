@@ -1,0 +1,372 @@
+{
+  "slide_id": "slide_15b_raci_matrix",
+  "frame_name": "Backup - Roles & Responsibilities (RACI)",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Roles & Responsibilities Matrix",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Who Does What During Implementation",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "container",
+      "id": "raci_legend",
+      "position": {
+        "x": 80,
+        "y": 190,
+        "width": 1760,
+        "height": 80
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.1)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 20
+      },
+      "elements": [
+        {
+          "type": "raci_legend_items",
+          "layout": "horizontal",
+          "items": [
+            {
+              "letter": "R",
+              "label": "Responsible (Does the work)",
+              "color": "#48BB78"
+            },
+            {
+              "letter": "A",
+              "label": "Accountable (Makes decisions)",
+              "color": "#4299e1"
+            },
+            {
+              "letter": "C",
+              "label": "Consulted (Provides input)",
+              "color": "#ed8936"
+            },
+            {
+              "letter": "I",
+              "label": "Informed (Kept updated)",
+              "color": "#9f7aea"
+            }
+          ],
+          "style": {
+            "item_spacing": 60,
+            "letter": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 24,
+              "width": 40,
+              "height": 40,
+              "border_radius": "50%",
+              "display": "inline-flex",
+              "align_items": "center",
+              "justify_content": "center",
+              "margin_right": 12
+            },
+            "label": {
+              "font_family": "Inter",
+              "font_weight": 500,
+              "font_size": 15,
+              "color": "#FFFFFF"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "raci_matrix",
+      "id": "responsibility_matrix",
+      "position": {
+        "x": 80,
+        "y": 300,
+        "width": 1760,
+        "height": 700
+      },
+      "structure": {
+        "columns": [
+          {
+            "id": "activity",
+            "header": "Activity / Task",
+            "width": 500
+          },
+          {
+            "id": "expanso_se",
+            "header": "Expanso\nSolutions Eng",
+            "width": 160
+          },
+          {
+            "id": "expanso_csm",
+            "header": "Expanso\nCustomer Success",
+            "width": 160
+          },
+          {
+            "id": "customer_devops",
+            "header": "Customer\nDevOps/SRE",
+            "width": 160
+          },
+          {
+            "id": "customer_architect",
+            "header": "Customer\nArchitect",
+            "width": 160
+          },
+          {
+            "id": "customer_security",
+            "header": "Customer\nSecurity",
+            "width": 160
+          },
+          {
+            "id": "customer_exec",
+            "header": "Customer\nExec Sponsor",
+            "width": 160
+          },
+          {
+            "id": "customer_finance",
+            "header": "Customer\nFinance",
+            "width": 160
+          }
+        ],
+        "rows": [
+          {
+            "section": "Discovery & Planning Phase"
+          },
+          {
+            "activity": "Discovery call & requirements gathering",
+            "expanso_se": "R",
+            "customer_devops": "C",
+            "customer_architect": "A",
+            "customer_exec": "I"
+          },
+          {
+            "activity": "Architecture review & design",
+            "expanso_se": "R",
+            "customer_devops": "C",
+            "customer_architect": "A",
+            "customer_security": "C"
+          },
+          {
+            "activity": "Data source prioritization",
+            "expanso_se": "C",
+            "customer_devops": "R",
+            "customer_architect": "A",
+            "customer_exec": "I"
+          },
+          {
+            "activity": "Security & compliance review",
+            "expanso_se": "I",
+            "customer_architect": "C",
+            "customer_security": "A",
+            "customer_exec": "I"
+          },
+          {
+            "section": "Pilot Deployment Phase"
+          },
+          {
+            "activity": "Agent installation & configuration",
+            "expanso_se": "R",
+            "customer_devops": "A",
+            "customer_architect": "C"
+          },
+          {
+            "activity": "Shadow mode enablement",
+            "expanso_se": "R",
+            "customer_devops": "A",
+            "customer_architect": "I"
+          },
+          {
+            "activity": "Policy development",
+            "expanso_se": "R",
+            "customer_devops": "C",
+            "customer_architect": "C"
+          },
+          {
+            "activity": "Query validation (no data loss)",
+            "expanso_se": "C",
+            "customer_devops": "R",
+            "customer_architect": "A"
+          },
+          {
+            "section": "Validation & Business Case"
+          },
+          {
+            "activity": "Savings analysis & reporting",
+            "expanso_se": "R",
+            "customer_devops": "C",
+            "customer_exec": "I",
+            "customer_finance": "I"
+          },
+          {
+            "activity": "ROI calculation & business case",
+            "expanso_se": "R",
+            "customer_exec": "A",
+            "customer_finance": "C"
+          },
+          {
+            "activity": "Go/No-Go decision",
+            "expanso_se": "I",
+            "customer_exec": "A",
+            "customer_architect": "C",
+            "customer_finance": "C"
+          },
+          {
+            "section": "Production Rollout"
+          },
+          {
+            "activity": "Production deployment (canary)",
+            "expanso_se": "R",
+            "customer_devops": "A",
+            "customer_architect": "C"
+          },
+          {
+            "activity": "Monitoring & alerting setup",
+            "expanso_se": "R",
+            "customer_devops": "A"
+          },
+          {
+            "activity": "Scale to additional data sources",
+            "expanso_se": "R",
+            "customer_devops": "A",
+            "customer_architect": "C"
+          },
+          {
+            "section": "Optimization & Handoff"
+          },
+          {
+            "activity": "Policy tuning & optimization",
+            "expanso_se": "R",
+            "customer_devops": "C"
+          },
+          {
+            "activity": "Operations team training",
+            "expanso_csm": "R",
+            "customer_devops": "A"
+          },
+          {
+            "activity": "Quarterly Business Review",
+            "expanso_csm": "R",
+            "customer_exec": "A",
+            "customer_devops": "C",
+            "customer_finance": "I"
+          },
+          {
+            "activity": "Day-2 operations & support",
+            "expanso_csm": "R",
+            "customer_devops": "A"
+          }
+        ]
+      },
+      "style": {
+        "section_header": {
+          "background": "rgba(72, 187, 120, 0.2)",
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 15,
+          "color": "#48BB78",
+          "padding": 10,
+          "text_transform": "uppercase",
+          "letter_spacing": 1
+        },
+        "header_row": {
+          "background": "#2d3748",
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 13,
+          "color": "#FFFFFF",
+          "padding": 12,
+          "border_bottom": "2px solid #48BB78",
+          "text_align": "center",
+          "line_height": 1.4
+        },
+        "activity_cell": {
+          "font_family": "Inter",
+          "font_weight": 400,
+          "font_size": 14,
+          "color": "#FFFFFF",
+          "padding": 12,
+          "text_align": "left"
+        },
+        "raci_cell": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 18,
+          "padding": 12,
+          "text_align": "center",
+          "R": {
+            "background": "rgba(72, 187, 120, 0.3)",
+            "color": "#48BB78"
+          },
+          "A": {
+            "background": "rgba(66, 153, 225, 0.3)",
+            "color": "#4299e1"
+          },
+          "C": {
+            "background": "rgba(237, 137, 54, 0.3)",
+            "color": "#ed8936"
+          },
+          "I": {
+            "background": "rgba(159, 122, 234, 0.3)",
+            "color": "#9f7aea"
+          }
+        }
+      }
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "responsible": "#48BB78",
+      "accountable": "#4299e1",
+      "consulted": "#ed8936",
+      "informed": "#9f7aea",
+      "text_primary": "#FFFFFF"
+    }
+  },
+  "presentation_notes": {
+    "opening": "This RACI matrix shows exactly who's responsible for what during implementation.",
+    "legend_first": "Start by explaining the legend: R means responsible—does the work. A means accountable—makes decisions. C means consulted—provides input. I means informed—kept updated.",
+    "key_insights": [
+      "Expanso SE drives most technical work (R's in their column)",
+      "Customer DevOps/SRE is accountable for production decisions",
+      "Customer exec sponsor stays informed but only accountable for Go/No-Go",
+      "Customer security consulted during planning, not involved in day-to-day"
+    ],
+    "when_to_use": "Use with project-oriented customers who want clear role definitions. Especially useful for large enterprises with complex approval chains."
+  },
+  "use_case": "Enterprise implementations, complex organizational structures, SOW development"
+}

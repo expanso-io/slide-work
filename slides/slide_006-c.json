@@ -1,0 +1,222 @@
+{
+  "slide_id": "slide_06c_roi_calculator",
+  "frame_name": "Customer Example - Interactive ROI",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Calculate Your Potential Savings",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "container",
+      "id": "calculator_interface",
+      "position": {
+        "x": 200,
+        "y": 180,
+        "width": 1520,
+        "height": 720
+      },
+      "style": {
+        "background": "rgba(66, 153, 225, 0.1)",
+        "border": "3px solid #4299e1",
+        "border_radius": 12,
+        "padding": 60
+      },
+      "elements": [
+        {
+          "type": "input_section",
+          "id": "current_state_inputs",
+          "title": "Your Current State:",
+          "position": {"y": 0},
+          "fields": [
+            {
+              "label": "Monthly Data Volume (TB)",
+              "id": "volume_input",
+              "default_value": 100,
+              "type": "number",
+              "suffix": "TB"
+            },
+            {
+              "label": "Average Cost per TB",
+              "id": "cost_input",
+              "default_value": 50,
+              "type": "currency",
+              "prefix": "$"
+            },
+            {
+              "label": "Expected Data Reduction",
+              "id": "reduction_input",
+              "default_value": 65,
+              "type": "percentage",
+              "range": {"min": 40, "max": 80},
+              "suffix": "%"
+            }
+          ],
+          "style": {
+            "layout": "vertical",
+            "field_spacing": 32,
+            "label": {
+              "font_family": "Inter",
+              "font_weight": 600,
+              "font_size": 18,
+              "color": "#90cdf4"
+            },
+            "input": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 32,
+              "color": "#FFFFFF",
+              "background": "rgba(66, 153, 225, 0.2)",
+              "border": "2px solid #4299e1",
+              "border_radius": 6,
+              "padding": 16,
+              "width": 300
+            }
+          }
+        },
+        {
+          "type": "calculation_display",
+          "id": "results_display",
+          "position": {"y": 360},
+          "calculations": [
+            {
+              "label": "Current Annual Cost",
+              "formula": "volume * cost * 12",
+              "format": "currency",
+              "style": "muted"
+            },
+            {
+              "label": "Data Reduced",
+              "formula": "volume * (reduction / 100)",
+              "format": "data_volume",
+              "suffix": "TB/month",
+              "style": "highlighted"
+            },
+            {
+              "label": "New Monthly Volume",
+              "formula": "volume * (1 - reduction / 100)",
+              "format": "data_volume",
+              "suffix": "TB/month",
+              "style": "standard"
+            },
+            {
+              "label": "Monthly Savings",
+              "formula": "(volume * (reduction / 100)) * cost",
+              "format": "currency",
+              "style": "savings"
+            },
+            {
+              "label": "Annual Savings",
+              "formula": "(volume * (reduction / 100)) * cost * 12",
+              "format": "currency",
+              "style": "major_savings",
+              "emphasize": true
+            },
+            {
+              "label": "3-Year Total Savings",
+              "formula": "(volume * (reduction / 100)) * cost * 36",
+              "format": "currency",
+              "style": "major_savings"
+            }
+          ],
+          "style": {
+            "layout": "grid",
+            "columns": 2,
+            "gap": 32,
+            "label": {
+              "font_family": "Inter",
+              "font_weight": 600,
+              "font_size": 16,
+              "color": "#90cdf4"
+            },
+            "value": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 28,
+              "color": "#FFFFFF"
+            },
+            "major_savings": {
+              "background": "rgba(72, 187, 120, 0.2)",
+              "border": "3px solid #48BB78",
+              "border_radius": 8,
+              "padding": 20,
+              "value_color": "#48BB78",
+              "value_size": 42
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "assumptions_note",
+      "position": {
+        "x": 200,
+        "y": 940,
+        "width": 1520,
+        "height": 80
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "disclaimer",
+          "content": "Conservative estimate based on customer averages. Actual savings vary by data type and use case. Request a detailed assessment for your specific environment.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 400,
+            "font_size": 14,
+            "color": "#A0AEC0",
+            "text_align": "center",
+            "line_height": 1.6
+          }
+        }
+      ]
+    }
+  },
+  "interactive_note": "This slide works best as an interactive tool during live demos or as a web-based calculator. For static presentations, show a filled example with compelling numbers.",
+  "default_example": {
+    "volume": 100,
+    "cost": 50,
+    "reduction": 65,
+    "results": {
+      "current_annual": "$60,000",
+      "data_reduced": "65 TB/month",
+      "new_volume": "35 TB/month",
+      "monthly_savings": "$3,250",
+      "annual_savings": "$39,000",
+      "three_year": "$117,000"
+    }
+  },
+  "design_notes": {
+    "use_case": "Interactive sales presentations, workshops, or web-based ROI tool",
+    "advantage": "Personalized to prospect's actual numbers, creates ownership",
+    "implementation": "Build as Figma prototype with variables, or as standalone web tool"
+  },
+  "presentation_notes": {
+    "opening": "Let's calculate what this could mean for you specifically.",
+    "interactive_mode": "[If using live calculator] Tell me: What's your monthly data volume in terabytes? [Pause for answer, input] What's your average cost per terabyte? [Input] Based on similar customers, you'd likely see a 60 to 70% reduction. Let's use 65%. [Calculate] Here's what that means for you...",
+    "static_mode": "[If showing filled example] Let's say you're ingesting 100 terabytes per month at $50 per terabyte. That's $60,000 a year in current costs. [Point to results] With a conservative 65% data reduction, you'd save $39,000 annually. Over three years, that's $117,000 in savings. And that's just from one data source. Multiply this across your entire data estate...",
+    "transition": "Now you've seen the pattern. The question isn't whether this works—the data proves it does. The question is: How do you get started?"
+  }
+}

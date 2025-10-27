@@ -1,0 +1,193 @@
+{
+  "slide_id": "slide_10b_security_compliance",
+  "frame_name": "Backup - Security & Compliance Model",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Security & Compliance Architecture",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "group",
+      "id": "security_layers",
+      "position": {
+        "x": 80,
+        "y": 160,
+        "width": 1760,
+        "height": 780
+      },
+      "layout": {
+        "type": "vertical_stack",
+        "gap": 32
+      },
+      "elements": [
+        {
+          "type": "security_layer_card",
+          "id": "data_residency",
+          "icon": "🏠",
+          "title": "Data Residency & Sovereignty",
+          "position": {"y": 0, "height": 140},
+          "points": [
+            "Data processed at source—never leaves your environment until YOU decide",
+            "PII filtered BEFORE crossing network boundaries",
+            "Supports region-specific deployments (EU, US, APAC isolation)",
+            "No data transmission to Expanso SaaS (agents run in your infrastructure)"
+          ]
+        },
+        {
+          "type": "security_layer_card",
+          "id": "access_control",
+          "icon": "🔐",
+          "title": "Access Control & Authentication",
+          "position": {"y": 172, "height": 140},
+          "points": [
+            "RBAC for policy management (who can deploy what)",
+            "SSO integration (SAML, OIDC) for user authentication",
+            "mTLS between agents and control plane",
+            "API key rotation and secret management (Vault, AWS Secrets Manager)"
+          ]
+        },
+        {
+          "type": "security_layer_card",
+          "id": "encryption",
+          "icon": "🔒",
+          "title": "Encryption & Data Protection",
+          "position": {"y": 344, "height": 140},
+          "points": [
+            "Data encrypted in transit (TLS 1.3)",
+            "No persistent data storage on agents (ephemeral processing)",
+            "Customer-managed encryption keys (CMEK) for archived data",
+            "Field-level encryption for sensitive attributes"
+          ]
+        },
+        {
+          "type": "security_layer_card",
+          "id": "compliance_frameworks",
+          "icon": "✅",
+          "title": "Compliance Framework Support",
+          "position": {"y": 516, "height": 140},
+          "points": [
+            "SOC 2 Type II certified (Expanso platform)",
+            "GDPR-compliant data processing (right to erasure, data minimization)",
+            "HIPAA-ready deployment patterns (BAA available)",
+            "PCI-DSS support (masking card numbers at source)"
+          ]
+        },
+        {
+          "type": "security_layer_card",
+          "id": "audit_logging",
+          "icon": "📋",
+          "title": "Audit & Logging",
+          "position": {"y": 688, "height": 140},
+          "points": [
+            "Immutable audit logs (who changed what policy, when)",
+            "Data lineage tracking (what was filtered, transformed, routed)",
+            "Compliance reporting (show auditors PII was filtered before cloud)",
+            "Integration with SIEM systems (Splunk, Datadog, Sentinel)"
+          ]
+        }
+      ],
+      "card_style": {
+        "background": "rgba(72, 187, 120, 0.1)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 28,
+        "layout": "horizontal",
+        "icon": {
+          "font_size": 48,
+          "position": "left",
+          "margin_right": 24
+        },
+        "title": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 22,
+          "color": "#48BB78",
+          "margin_bottom": 16
+        },
+        "points": {
+          "font_family": "Inter",
+          "font_weight": 400,
+          "font_size": 15,
+          "color": "#FFFFFF",
+          "line_height": 1.8,
+          "bullet": "•",
+          "spacing": 8
+        }
+      }
+    },
+    {
+      "type": "container",
+      "id": "security_highlight",
+      "position": {
+        "x": 360,
+        "y": 980,
+        "width": 1200,
+        "height": 80
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.2)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 20
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "highlight_text",
+          "content": "🛡️ Key Principle: Expanso IMPROVES your security posture by filtering PII before it reaches the cloud.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 22,
+            "color": "#48BB78",
+            "text_align": "center"
+          }
+        }
+      ]
+    }
+  },
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "card_bg": "rgba(72, 187, 120, 0.1)",
+      "card_border": "#48BB78",
+      "title_color": "#48BB78",
+      "text_primary": "#FFFFFF"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Let me address security and compliance—this is often a top concern for enterprises.",
+    "layer_by_layer": {
+      "data_residency": "[Point to card 1] Data residency and sovereignty: Data is processed at the source—it never leaves your environment until YOU decide. PII is filtered BEFORE crossing network boundaries. We support region-specific deployments for EU, US, APAC isolation. And critically: No data is transmitted to Expanso SaaS. The agents run entirely in your infrastructure.",
+      "access_control": "[Point to card 2] Access control: RBAC for policy management—who can deploy what. SSO integration with SAML and OIDC. Mutual TLS between agents and control plane. API key rotation and secret management integrated with Vault or AWS Secrets Manager.",
+      "encryption": "[Point to card 3] Encryption and data protection: Data encrypted in transit with TLS 1.3. No persistent data storage on agents—ephemeral processing only. Customer-managed encryption keys for archived data. Field-level encryption for sensitive attributes.",
+      "compliance": "[Point to card 4] Compliance frameworks: We're SOC 2 Type II certified. GDPR-compliant data processing with support for right to erasure and data minimization. HIPAA-ready deployment patterns with BAA available. PCI-DSS support for masking card numbers at source.",
+      "audit": "[Point to card 5] Audit and logging: Immutable audit logs show who changed what policy and when. Data lineage tracking shows what was filtered, transformed, and routed. Compliance reporting lets you show auditors that PII was filtered before reaching the cloud. Integration with SIEM systems like Splunk, Datadog, and Sentinel."
+    },
+    "security_principle": "[Point to bottom] Here's the key principle: Expanso IMPROVES your security posture by filtering PII before it reaches the cloud. You're reducing your attack surface, not expanding it.",
+    "when_to_use": "Use this slide when security or compliance teams are involved in the evaluation"
+  },
+  "use_case": "Security reviews, compliance discussions, CISO presentations, GRC teams"
+}

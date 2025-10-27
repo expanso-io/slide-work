@@ -1,0 +1,236 @@
+{
+  "slide_id": "slide_06a_retail",
+  "frame_name": "Customer Example - Retail Industry",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Retail Example: $1.8M Saved on Customer Analytics",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "left"
+      },
+      "position": {
+        "x": 80,
+        "y": 60,
+        "max_width": 1760
+      },
+      "emphasis": {
+        "words": ["$1.8M"],
+        "color": "#48BB78"
+      }
+    },
+    {
+      "type": "container",
+      "id": "company_profile",
+      "position": {
+        "x": 80,
+        "y": 160,
+        "width": 1760,
+        "height": 120
+      },
+      "style": {
+        "background": "rgba(74, 85, 104, 0.3)",
+        "border": "2px solid #4A5568",
+        "border_radius": 8,
+        "padding": 32
+      },
+      "layout": {
+        "type": "horizontal",
+        "gap": 80
+      },
+      "elements": [
+        {
+          "type": "stat_item",
+          "label": "Company",
+          "value": "Top-50 US retailer",
+          "icon": "🛒"
+        },
+        {
+          "type": "stat_item",
+          "label": "Data Sources",
+          "value": "2,000+ stores, mobile app, e-commerce",
+          "icon": "📱"
+        },
+        {
+          "type": "stat_item",
+          "label": "Use Cases",
+          "value": "Customer analytics, inventory, fraud",
+          "icon": "🎯"
+        },
+        {
+          "type": "stat_item",
+          "label": "Challenge",
+          "value": "PII compliance + exploding costs",
+          "icon": "⚠️"
+        }
+      ],
+      "stat_style": {
+        "label": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 14,
+          "color": "#A0AEC0",
+          "text_transform": "uppercase",
+          "letter_spacing": 1
+        },
+        "value": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 18,
+          "color": "#FFFFFF",
+          "margin_top": 8
+        },
+        "icon": {
+          "font_size": 32,
+          "margin_bottom": 12
+        }
+      }
+    },
+    {
+      "type": "group",
+      "id": "use_case_breakdown",
+      "position": {
+        "x": 80,
+        "y": 320,
+        "width": 1760,
+        "height": 580
+      },
+      "elements": [
+        {
+          "type": "use_case_card",
+          "id": "customer_analytics",
+          "title": "Customer Analytics Data",
+          "position": {"x": 0, "y": 0, "width": 1760, "height": 180},
+          "data": {
+            "before": {
+              "volume": "150 TB/month clickstream & transaction logs",
+              "cost": "$1.2M/year Snowflake costs",
+              "problem": "75% of data never queried (bot traffic, dev logs)"
+            },
+            "solution": "Filter bot traffic + dev logs at edge. Sample non-converting sessions at 20%.",
+            "after": {
+              "volume": "45 TB/month (70% reduction)",
+              "cost": "$360K/year",
+              "savings": "$840K/year saved"
+            }
+          }
+        },
+        {
+          "type": "use_case_card",
+          "id": "inventory_monitoring",
+          "title": "Inventory & Store Operations",
+          "position": {"x": 0, "y": 200, "width": 1760, "height": 180},
+          "data": {
+            "before": {
+              "volume": "80 TB/month IoT sensor data",
+              "cost": "$640K/year Datadog + storage",
+              "problem": "Redundant metrics every 10 seconds from 2,000 stores"
+            },
+            "solution": "Aggregate metrics to 5-minute intervals. Drop unchanged values.",
+            "after": {
+              "volume": "18 TB/month (77% reduction)",
+              "cost": "$144K/year",
+              "savings": "$496K/year saved"
+            }
+          }
+        },
+        {
+          "type": "use_case_card",
+          "id": "fraud_detection",
+          "title": "Fraud Detection & Security",
+          "position": {"x": 0, "y": 400, "width": 1760, "height": 180},
+          "data": {
+            "before": {
+              "volume": "60 TB/month security logs",
+              "cost": "$720K/year Splunk",
+              "problem": "Noisy logs, PII in plaintext, compliance risk"
+            },
+            "solution": "Filter INFO logs. Mask customer PII. Route only WARN/ERROR to Splunk.",
+            "after": {
+              "volume": "15 TB/month (75% reduction)",
+              "cost": "$180K/year",
+              "savings": "$540K/year saved"
+            }
+          }
+        }
+      ],
+      "card_style": {
+        "background": "rgba(72, 187, 120, 0.05)",
+        "border": "2px solid #4A5568",
+        "border_radius": 8,
+        "padding": 24,
+        "layout": "three_column",
+        "before_column": {
+          "width": "33%",
+          "color": "#fc8181"
+        },
+        "solution_column": {
+          "width": "34%",
+          "color": "#4299e1"
+        },
+        "after_column": {
+          "width": "33%",
+          "color": "#48BB78"
+        }
+      }
+    },
+    {
+      "type": "container",
+      "id": "total_impact",
+      "position": {
+        "x": 80,
+        "y": 940,
+        "width": 1760,
+        "height": 100
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.2)",
+        "border": "3px solid #48BB78",
+        "border_radius": 8,
+        "padding": 24
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "total_savings",
+          "content": "Total Annual Savings: $1.8M  |  Average Data Reduction: 74%  |  Deployment Time: 3 Weeks  |  PII Compliance: 100%",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 24,
+            "color": "#FFFFFF",
+            "text_align": "center"
+          },
+          "emphasis": {
+            "phrases": ["$1.8M", "74%", "100%"],
+            "color": "#48BB78"
+          }
+        }
+      ]
+    }
+  },
+  "design_notes": {
+    "use_case": "When presenting to retail companies or showing multiple use cases",
+    "advantage": "Shows versatility across different data types and use cases",
+    "customization": "Can swap retail for healthcare, fintech, manufacturing, etc."
+  },
+  "presentation_notes": {
+    "opening": "Here's another example from retail—a top-50 US retailer with 2,000 stores.",
+    "walkthrough": "[Point to each card] They had three major data challenges. First, customer analytics: 150 terabytes a month of clickstream and transaction logs flowing into Snowflake. $1.2 million a year. But 75% of that data was never queried—it was bot traffic and dev logs. [Pause] We filtered the bot traffic and dev logs at the edge. We sampled non-converting sessions at 20%. Result: 45 terabytes per month, $360K a year. $840K saved. [Continue for each use case...]",
+    "total_impact": "[Point to bottom bar] Total annual savings: $1.8 million. Average data reduction across all use cases: 74%. Deployment time: 3 weeks. And now they're 100% PII compliant.",
+    "transition": "These aren't outliers. This is the pattern we see across every customer..."
+  }
+}

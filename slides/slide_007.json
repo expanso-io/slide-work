@@ -1,0 +1,469 @@
+{
+  "slide_id": "slide_07_objection_handling",
+  "frame_name": "Objection Handling - Common Questions",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": ""But Will This Work for Us?"",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Let's address the most common concerns",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 400,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "objections_grid",
+      "position": {
+        "x": 80,
+        "y": 220,
+        "width": 1760,
+        "height": 780
+      },
+      "layout": {
+        "type": "grid",
+        "columns": 2,
+        "rows": 3,
+        "gap_horizontal": 60,
+        "gap_vertical": 40
+      },
+      "elements": [
+        {
+          "type": "objection_card",
+          "id": "objection_1",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 850,
+            "height": 233
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.08)",
+            "border": "2px solid #4A5568",
+            "border_radius": 8,
+            "padding": 32
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "objection_1_question",
+              "content": "❌ "Our data is too complex for automated filtering"",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 20,
+                "color": "#fc8181",
+                "text_align": "left",
+                "margin_bottom": 16
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              }
+            },
+            {
+              "type": "text",
+              "id": "objection_1_answer",
+              "content": "✓ Expanso uses declarative policies—you define the rules. Our customers run the world's most complex data pipelines (financial trading, healthcare diagnostics, autonomous vehicles). If they can do it, you can too.",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "line_height": 1.6,
+                "color": "#FFFFFF",
+                "text_align": "left"
+              },
+              "position": {
+                "x": 0,
+                "y": 48
+              },
+              "emphasis": {
+                "phrases": ["you define the rules", "If they can do it, you can too"],
+                "color": "#48BB78",
+                "font_weight": 600
+              }
+            }
+          ]
+        },
+        {
+          "type": "objection_card",
+          "id": "objection_2",
+          "position": {
+            "x": 910,
+            "y": 0,
+            "width": 850,
+            "height": 233
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.08)",
+            "border": "2px solid #4A5568",
+            "border_radius": 8,
+            "padding": 32
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "objection_2_question",
+              "content": "❌ "We already have data pipelines (Fivetran, dbt, Airflow)"",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 20,
+                "color": "#fc8181",
+                "text_align": "left",
+                "margin_bottom": 16
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              }
+            },
+            {
+              "type": "text",
+              "id": "objection_2_answer",
+              "content": "✓ Those tools work downstream—after data reaches the cloud. Expanso works upstream—at the source. We reduce what flows into your pipelines. You keep Fivetran, dbt, and Airflow. They just process 50-70% less data.",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "line_height": 1.6,
+                "color": "#FFFFFF",
+                "text_align": "left"
+              },
+              "position": {
+                "x": 0,
+                "y": 48
+              },
+              "emphasis": {
+                "phrases": ["upstream—at the source", "50-70% less data"],
+                "color": "#48BB78",
+                "font_weight": 600
+              }
+            }
+          ]
+        },
+        {
+          "type": "objection_card",
+          "id": "objection_3",
+          "position": {
+            "x": 0,
+            "y": 273,
+            "width": 850,
+            "height": 233
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.08)",
+            "border": "2px solid #4A5568",
+            "border_radius": 8,
+            "padding": 32
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "objection_3_question",
+              "content": "❌ "What if we filter out data we need later?"",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 20,
+                "color": "#fc8181",
+                "text_align": "left",
+                "margin_bottom": 16
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              }
+            },
+            {
+              "type": "text",
+              "id": "objection_3_answer",
+              "content": "✓ You start with conservative filters (debug logs, duplicates, bot traffic). We track what's filtered vs. what's queried. After 30 days, you see what's safe to drop. Plus, you can always route filtered data to cheap S3 storage for $0.02/GB instead of $0.50/GB in Snowflake.",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "line_height": 1.6,
+                "color": "#FFFFFF",
+                "text_align": "left"
+              },
+              "position": {
+                "x": 0,
+                "y": 48
+              },
+              "emphasis": {
+                "phrases": ["conservative filters", "$0.02/GB instead of $0.50/GB"],
+                "color": "#48BB78",
+                "font_weight": 600
+              }
+            }
+          ]
+        },
+        {
+          "type": "objection_card",
+          "id": "objection_4",
+          "position": {
+            "x": 910,
+            "y": 273,
+            "width": 850,
+            "height": 233
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.08)",
+            "border": "2px solid #4A5568",
+            "border_radius": 8,
+            "padding": 32
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "objection_4_question",
+              "content": "❌ "This sounds like a huge deployment effort"",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 20,
+                "color": "#fc8181",
+                "text_align": "left",
+                "margin_bottom": 16
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              }
+            },
+            {
+              "type": "text",
+              "id": "objection_4_answer",
+              "content": "✓ Average time to production: 2-4 weeks. It's a single agent deployment—no app changes, no database migrations, no SDK integration. Most customers start with one data source as a pilot, validate savings in 72 hours, then scale.",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "line_height": 1.6,
+                "color": "#FFFFFF",
+                "text_align": "left"
+              },
+              "position": {
+                "x": 0,
+                "y": 48
+              },
+              "emphasis": {
+                "phrases": ["2-4 weeks", "no app changes", "validate savings in 72 hours"],
+                "color": "#48BB78",
+                "font_weight": 600
+              }
+            }
+          ]
+        },
+        {
+          "type": "objection_card",
+          "id": "objection_5",
+          "position": {
+            "x": 0,
+            "y": 546,
+            "width": 850,
+            "height": 233
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.08)",
+            "border": "2px solid #4A5568",
+            "border_radius": 8,
+            "padding": 32
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "objection_5_question",
+              "content": "❌ "Our platforms (Snowflake/Databricks) won't like this"",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 20,
+                "color": "#fc8181",
+                "text_align": "left",
+                "margin_bottom": 16
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              }
+            },
+            {
+              "type": "text",
+              "id": "objection_5_answer",
+              "content": "✓ Your platforms see cleaner, higher-quality data. Queries run faster. Costs drop. Compliance improves. Snowflake doesn't care if you send 100TB or 30TB—they just want you happy. And you will be, because you're paying 70% less.",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "line_height": 1.6,
+                "color": "#FFFFFF",
+                "text_align": "left"
+              },
+              "position": {
+                "x": 0,
+                "y": 48
+              },
+              "emphasis": {
+                "phrases": ["cleaner, higher-quality data", "paying 70% less"],
+                "color": "#48BB78",
+                "font_weight": 600
+              }
+            }
+          ]
+        },
+        {
+          "type": "objection_card",
+          "id": "objection_6",
+          "position": {
+            "x": 910,
+            "y": 546,
+            "width": 850,
+            "height": 233
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.08)",
+            "border": "2px solid #4A5568",
+            "border_radius": 8,
+            "padding": 32
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "objection_6_question",
+              "content": "❌ "What's your pricing model?"",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 20,
+                "color": "#fc8181",
+                "text_align": "left",
+                "margin_bottom": 16
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              }
+            },
+            {
+              "type": "text",
+              "id": "objection_6_answer",
+              "content": "✓ We charge a percentage of your savings. If you save $2M, we take a fraction. If you save nothing, you pay nothing. Our incentives are perfectly aligned with yours. Typical payback period: 3-6 months.",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "line_height": 1.6,
+                "color": "#FFFFFF",
+                "text_align": "left"
+              },
+              "position": {
+                "x": 0,
+                "y": 48
+              },
+              "emphasis": {
+                "phrases": ["percentage of your savings", "If you save nothing, you pay nothing"],
+                "color": "#48BB78",
+                "font_weight": 600
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "card_bg": "rgba(66, 153, 225, 0.08)",
+      "card_border": "#4A5568",
+      "objection_color": "#fc8181",
+      "answer_color": "#48BB78",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0"
+    },
+    "visual_language": {
+      "red_x": "Objection/concern marker",
+      "green_check": "Resolution/answer marker",
+      "equal_cards": "All objections have equal weight and treatment",
+      "grid_layout": "Easy scanning, organized structure"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Now, I know what you're thinking. You've probably got some questions. Let me address the most common concerns we hear.",
+    "approach": "Don't wait for objections—address them proactively. This builds trust and shows you understand their concerns.",
+    "delivery_tips": [
+      "Read each objection out loud exactly as written (validates their concern)",
+      "Pause briefly before the answer (shows you take it seriously)",
+      "Deliver answer confidently but not dismissively",
+      "Watch for nods or reactions—these reveal which objections are most relevant"
+    ],
+    "card_by_card": {
+      "objection_1": "[Read objection] 'Our data is too complex for automated filtering.' [Pause] Here's the thing: Expanso uses declarative policies—YOU define the rules. Our customers run the world's most complex data pipelines—financial trading systems, healthcare diagnostics, autonomous vehicles. If they can do it, you can too.",
+      "objection_2": "[Read objection] 'We already have data pipelines—Fivetran, dbt, Airflow.' [Pause] Right—and those tools work downstream, after data reaches the cloud. Expanso works upstream, at the source. We reduce what flows INTO your pipelines. You keep Fivetran, dbt, and Airflow. They just process 50 to 70 percent less data.",
+      "objection_3": "[Read objection] 'What if we filter out data we need later?' [Pause] Smart question. You start with conservative filters—debug logs, duplicates, bot traffic. We track what's filtered versus what's queried. After 30 days, you see what's safe to drop. Plus, you can always route filtered data to cheap S3 storage for 2 cents per gigabyte instead of 50 cents per gigabyte in Snowflake.",
+      "objection_4": "[Read objection] 'This sounds like a huge deployment effort.' [Pause] Average time to production: 2 to 4 weeks. It's a single agent deployment. No app changes. No database migrations. No SDK integration. Most customers start with one data source as a pilot, validate savings in 72 hours, then scale.",
+      "objection_5": "[Read objection] 'Our platforms—Snowflake, Databricks—won't like this.' [Pause] Actually, your platforms see cleaner, higher-quality data. Queries run faster. Costs drop. Compliance improves. Snowflake doesn't care if you send 100 terabytes or 30 terabytes—they just want you happy. And you will be, because you're paying 70% less.",
+      "objection_6": "[Read objection] 'What's your pricing model?' [Pause] We charge a percentage of your savings. If you save $2 million, we take a fraction. If you save nothing, you pay nothing. Our incentives are perfectly aligned with yours. Typical payback period: 3 to 6 months."
+    },
+    "transition": "Those are the big six. Any other questions? [Pause for questions] Great. Let me show you what the next steps look like...",
+    "pacing": "Don't rush this slide. Each objection deserves its moment. Watch for audience reactions—they'll tell you which objections matter most."
+  },
+  "persona_alignment": {
+    "data_engineers": {
+      "focus_elements": ["objection_1 (complexity)", "objection_2 (existing tools)", "objection_4 (deployment)"],
+      "talking_points": "Technical feasibility, integration with existing stack, implementation effort"
+    },
+    "executives": {
+      "focus_elements": ["objection_6 (pricing)", "objection_4 (timeline)", "objection_5 (vendor relations)"],
+      "talking_points": "Business model alignment, fast time to value, risk management"
+    },
+    "data_architects": {
+      "focus_elements": ["objection_3 (data loss risk)", "objection_2 (architecture)", "objection_1 (complexity)"],
+      "talking_points": "Architectural soundness, risk mitigation, technical sophistication"
+    },
+    "procurement_legal": {
+      "focus_elements": ["objection_6 (pricing)", "objection_4 (deployment scope)"],
+      "talking_points": "Commercial terms, implementation scope, vendor lock-in avoidance"
+    }
+  },
+  "interactive_notes": {
+    "live_presentation": "After showing this slide, pause and ask: 'Which of these resonates most with your situation?' This creates dialogue and surfaces real objections.",
+    "follow_up": "If they raise an objection not on this slide, acknowledge it as a great question and address it immediately. Don't defer."
+  }
+}

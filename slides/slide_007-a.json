@@ -1,0 +1,305 @@
+{
+  "slide_id": "slide_07a_technical_objections",
+  "frame_name": "Technical Objections - For Engineering Audiences",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Technical Deep-Dive: Common Engineering Questions",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "group",
+      "id": "technical_objections_list",
+      "position": {
+        "x": 80,
+        "y": 160,
+        "width": 1760,
+        "height": 860
+      },
+      "layout": {
+        "type": "vertical_stack",
+        "gap": 32
+      },
+      "elements": [
+        {
+          "type": "technical_objection_row",
+          "id": "tech_obj_1",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 1760,
+            "height": 160
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.08)",
+            "border_left": "6px solid #fc8181",
+            "border_radius": 8,
+            "padding": 32
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "tech_q1",
+              "content": "Q: What's the performance overhead of inline filtering?",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 20,
+                "color": "#4299e1",
+                "margin_bottom": 12
+              }
+            },
+            {
+              "type": "text",
+              "id": "tech_a1",
+              "content": "A: <100ms latency for most transformations. We use Bacalhau's WebAssembly runtime for near-native performance. Filters run in parallel, not serial. For 99.9% of workloads, overhead is negligible (<5%). High-throughput customers (>1M events/sec) run dedicated compute nodes.",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "line_height": 1.6,
+                "color": "#FFFFFF"
+              },
+              "emphasis": {
+                "phrases": ["<100ms latency", "<5%", "near-native performance"],
+                "color": "#48BB78",
+                "font_weight": 600
+              }
+            }
+          ]
+        },
+        {
+          "type": "technical_objection_row",
+          "id": "tech_obj_2",
+          "position": {
+            "x": 0,
+            "y": 192,
+            "width": 1760,
+            "height": 160
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.08)",
+            "border_left": "6px solid #fc8181",
+            "border_radius": 8,
+            "padding": 32
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "tech_q2",
+              "content": "Q: How do you handle schema evolution and breaking changes?",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 20,
+                "color": "#4299e1",
+                "margin_bottom": 12
+              }
+            },
+            {
+              "type": "text",
+              "id": "tech_a2",
+              "content": "A: Policies are schema-aware but fault-tolerant. If a field doesn't exist, the filter passes data through unchanged (fail-open). You version policies in Git. We support gradual rollouts (canary deployments). Schema changes? Update your policy config—no code recompile needed.",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "line_height": 1.6,
+                "color": "#FFFFFF"
+              },
+              "emphasis": {
+                "phrases": ["fail-open", "version policies in Git", "no code recompile"],
+                "color": "#48BB78",
+                "font_weight": 600
+              }
+            }
+          ]
+        },
+        {
+          "type": "technical_objection_row",
+          "id": "tech_obj_3",
+          "position": {
+            "x": 0,
+            "y": 384,
+            "width": 1760,
+            "height": 160
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.08)",
+            "border_left": "6px solid #fc8181",
+            "border_radius": 8,
+            "padding": 32
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "tech_q3",
+              "content": "Q: What happens if the Expanso agent crashes or goes offline?",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 20,
+                "color": "#4299e1",
+                "margin_bottom": 12
+              }
+            },
+            {
+              "type": "text",
+              "id": "tech_a3",
+              "content": "A: Data flows through unchanged—we're fail-safe by design. No agent = no filtering, but no data loss. Agents auto-restart on failure (systemd/k8s). You get alerting on agent health. For critical workloads, deploy agents in HA pairs with automatic failover.",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "line_height": 1.6,
+                "color": "#FFFFFF"
+              },
+              "emphasis": {
+                "phrases": ["fail-safe by design", "no data loss", "HA pairs"],
+                "color": "#48BB78",
+                "font_weight": 600
+              }
+            }
+          ]
+        },
+        {
+          "type": "technical_objection_row",
+          "id": "tech_obj_4",
+          "position": {
+            "x": 0,
+            "y": 576,
+            "width": 1760,
+            "height": 160
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.08)",
+            "border_left": "6px solid #fc8181",
+            "border_radius": 8,
+            "padding": 32
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "tech_q4",
+              "content": "Q: Can we test this without disrupting production?",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 20,
+                "color": "#4299e1",
+                "margin_bottom": 12
+              }
+            },
+            {
+              "type": "text",
+              "id": "tech_a4",
+              "content": "A: Yes—shadow mode. Agents tap data streams, apply filters, and report metrics WITHOUT actually dropping data. You see what would be filtered, but nothing changes in production. After validation, flip to active mode. Most teams shadow for 1-2 weeks before going live.",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "line_height": 1.6,
+                "color": "#FFFFFF"
+              },
+              "emphasis": {
+                "phrases": ["shadow mode", "WITHOUT actually dropping data", "1-2 weeks"],
+                "color": "#48BB78",
+                "font_weight": 600
+              }
+            }
+          ]
+        },
+        {
+          "type": "technical_objection_row",
+          "id": "tech_obj_5",
+          "position": {
+            "x": 0,
+            "y": 768,
+            "width": 1760,
+            "height": 160
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.08)",
+            "border_left": "6px solid #fc8181",
+            "border_radius": 8,
+            "padding": 32
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "tech_q5",
+              "content": "Q: What's your observability story? How do we monitor this?",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 20,
+                "color": "#4299e1",
+                "margin_bottom": 12
+              }
+            },
+            {
+              "type": "text",
+              "id": "tech_a5",
+              "content": "A: Built-in Prometheus metrics (throughput, latency, drop rates). Grafana dashboards out-of-the-box. Structured logs to any sink (Splunk, Datadog, S3). OpenTelemetry traces for distributed debugging. Plus, we integrate with your existing observability stack—no new tools required.",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "line_height": 1.6,
+                "color": "#FFFFFF"
+              },
+              "emphasis": {
+                "phrases": ["Prometheus metrics", "Grafana dashboards out-of-the-box", "no new tools required"],
+                "color": "#48BB78",
+                "font_weight": 600
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "row_bg": "rgba(66, 153, 225, 0.08)",
+      "question_color": "#4299e1",
+      "answer_emphasis": "#48BB78",
+      "border_accent": "#fc8181",
+      "text_primary": "#FFFFFF"
+    },
+    "visual_language": {
+      "left_border": "Colored border provides visual rhythm",
+      "q_and_a_format": "Clear delineation between question and answer",
+      "vertical_stack": "Easy reading flow, conference-friendly"
+    }
+  },
+  "presentation_notes": {
+    "opening": "For the engineers in the room, let me address the technical questions you're probably thinking about.",
+    "delivery": "These are real questions from CTOs and principal engineers. If you're thinking it, they've asked it.",
+    "approach": "Read each question verbatim, pause, then deliver the answer confidently. The specificity builds credibility.",
+    "transition": "Those are the top five technical concerns. I'm happy to go deeper on any of these, or we can move to next steps."
+  },
+  "use_case": "Engineering deep-dives, architecture reviews, technical evaluation meetings"
+}

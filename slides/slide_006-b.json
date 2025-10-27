@@ -1,0 +1,202 @@
+{
+  "slide_id": "slide_06b_aggregate",
+  "frame_name": "Customer Results - Aggregate Data",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Customer Results: Consistent Impact Across Industries",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "group",
+      "id": "customer_grid",
+      "position": {
+        "x": 80,
+        "y": 180,
+        "width": 1760,
+        "height": 700
+      },
+      "layout": {
+        "type": "grid",
+        "columns": 3,
+        "rows": 2,
+        "gap": 40
+      },
+      "elements": [
+        {
+          "type": "customer_card",
+          "industry": "Logistics",
+          "icon": "📦",
+          "metrics": {
+            "data_reduction": "65%",
+            "annual_savings": "$2.1M",
+            "implementation": "4 weeks",
+            "key_benefit": "Supply chain IoT optimization"
+          }
+        },
+        {
+          "type": "customer_card",
+          "industry": "Retail",
+          "icon": "🛒",
+          "metrics": {
+            "data_reduction": "74%",
+            "annual_savings": "$1.8M",
+            "implementation": "3 weeks",
+            "key_benefit": "Customer analytics + compliance"
+          }
+        },
+        {
+          "type": "customer_card",
+          "industry": "Financial Services",
+          "icon": "🏦",
+          "metrics": {
+            "data_reduction": "58%",
+            "annual_savings": "$3.4M",
+            "implementation": "6 weeks",
+            "key_benefit": "Trading logs + fraud detection"
+          }
+        },
+        {
+          "type": "customer_card",
+          "industry": "Healthcare",
+          "icon": "🏥",
+          "metrics": {
+            "data_reduction": "71%",
+            "annual_savings": "$1.2M",
+            "implementation": "5 weeks",
+            "key_benefit": "Medical device data + HIPAA"
+          }
+        },
+        {
+          "type": "customer_card",
+          "industry": "Manufacturing",
+          "icon": "🏭",
+          "metrics": {
+            "data_reduction": "69%",
+            "annual_savings": "$980K",
+            "implementation": "4 weeks",
+            "key_benefit": "Industrial IoT sensors"
+          }
+        },
+        {
+          "type": "customer_card",
+          "industry": "Technology",
+          "icon": "💻",
+          "metrics": {
+            "data_reduction": "62%",
+            "annual_savings": "$2.7M",
+            "implementation": "3 weeks",
+            "key_benefit": "Application logs + observability"
+          }
+        }
+      ],
+      "card_style": {
+        "background": "rgba(72, 187, 120, 0.1)",
+        "border": "2px solid #48BB78",
+        "border_radius": 12,
+        "padding": 32,
+        "layout": "vertical_center"
+      }
+    },
+    {
+      "type": "container",
+      "id": "aggregate_stats",
+      "position": {
+        "x": 80,
+        "y": 920,
+        "width": 1760,
+        "height": 120
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.15)",
+        "border": "3px solid #48BB78",
+        "border_radius": 8,
+        "padding": 32
+      },
+      "layout": {
+        "type": "horizontal_grid",
+        "columns": 4,
+        "gap": 60
+      },
+      "elements": [
+        {
+          "type": "aggregate_metric",
+          "label": "Average Data Reduction",
+          "value": "67%",
+          "icon": "📉"
+        },
+        {
+          "type": "aggregate_metric",
+          "label": "Average Annual Savings",
+          "value": "$2.0M",
+          "icon": "💰"
+        },
+        {
+          "type": "aggregate_metric",
+          "label": "Average Time to Value",
+          "value": "4.2 weeks",
+          "icon": "⏱️"
+        },
+        {
+          "type": "aggregate_metric",
+          "label": "Customer Satisfaction",
+          "value": "9.4/10",
+          "icon": "⭐"
+        }
+      ],
+      "metric_style": {
+        "label": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 16,
+          "color": "#9ae6b4",
+          "text_align": "center"
+        },
+        "value": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 36,
+          "color": "#FFFFFF",
+          "text_align": "center",
+          "margin_top": 12
+        },
+        "icon": {
+          "font_size": 32,
+          "margin_bottom": 16
+        }
+      }
+    }
+  },
+  "design_notes": {
+    "use_case": "When you want to show breadth of customer success across industries",
+    "advantage": "Demonstrates pattern of success, not one-off results",
+    "risk": "Less detailed than single customer deep-dive"
+  },
+  "presentation_notes": {
+    "opening": "Let me show you results across multiple customers and industries.",
+    "grid_walkthrough": "[Point to grid] Logistics: 65% data reduction, $2.1M saved in 4 weeks. Retail: 74% reduction, $1.8M saved. Financial services: 58% reduction, $3.4M saved. Healthcare: 71% reduction, $1.2M saved—and full HIPAA compliance. Manufacturing: 69% reduction. Technology company: 62% reduction, $2.7M saved.",
+    "aggregate": "[Point to bottom] Here's what the pattern shows: Average data reduction of 67%. Average annual savings of $2 million. Average time to value of 4.2 weeks. And customer satisfaction of 9.4 out of 10.",
+    "transition": "This isn't magic. It's mathematics. When you control data upstream, the savings are inevitable. Now let me show you how you can achieve similar results..."
+  }
+}

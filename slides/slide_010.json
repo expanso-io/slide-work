@@ -1,0 +1,353 @@
+{
+  "slide_id": "slide_10_backup_technical_details",
+  "frame_name": "Backup - Technical Architecture Deep Dive",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Technical Architecture: Under the Hood",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "How Expanso Actually Works",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "architecture_stack",
+      "position": {
+        "x": 80,
+        "y": 200,
+        "width": 1760,
+        "height": 740
+      },
+      "layout": {
+        "type": "layered_stack",
+        "orientation": "vertical"
+      },
+      "elements": [
+        {
+          "type": "architecture_layer",
+          "id": "control_plane",
+          "label": "Control Plane",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 1760,
+            "height": 140
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.1)",
+            "border": "2px solid #4299e1",
+            "border_radius": 8,
+            "padding": 24
+          },
+          "components": [
+            {
+              "name": "Configuration Management",
+              "description": "Git-based policy storage, versioning, rollback",
+              "tech_stack": "GitOps, ArgoCD-style reconciliation"
+            },
+            {
+              "name": "Agent Orchestration",
+              "description": "Deploy, update, monitor edge agents",
+              "tech_stack": "Kubernetes operators, systemd"
+            },
+            {
+              "name": "Telemetry & Observability",
+              "description": "Metrics, logs, traces from all agents",
+              "tech_stack": "Prometheus, OpenTelemetry"
+            },
+            {
+              "name": "Policy Compiler",
+              "description": "Convert declarative rules → executable code",
+              "tech_stack": "YAML → WebAssembly"
+            }
+          ],
+          "layout": {
+            "type": "horizontal_grid",
+            "columns": 4,
+            "gap": 20
+          }
+        },
+        {
+          "type": "architecture_layer",
+          "id": "data_plane",
+          "label": "Data Plane (Where the Work Happens)",
+          "position": {
+            "x": 0,
+            "y": 180,
+            "width": 1760,
+            "height": 280
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.15)",
+            "border": "3px solid #48BB78",
+            "border_radius": 8,
+            "padding": 32
+          },
+          "emphasis_note": "This is the core innovation",
+          "components": [
+            {
+              "name": "Bacalhau Compute Engine",
+              "description": "Distributed compute framework running at the edge",
+              "details": [
+                "WebAssembly runtime for near-native performance",
+                "Runs on x86, ARM, any Linux (Docker/K8s/bare metal)",
+                "Sub-100ms latency for most operations",
+                "Handles 100K+ events/sec per node"
+              ],
+              "icon": "⚙️"
+            },
+            {
+              "name": "Stream Processing Pipeline",
+              "description": "Real-time data transformation engine",
+              "details": [
+                "Stateless filters (fast path)",
+                "Stateful aggregations (windowing, grouping)",
+                "Schema-aware transformations",
+                "Fail-open design (never blocks data)"
+              ],
+              "icon": "🌊"
+            },
+            {
+              "name": "Multi-Sink Router",
+              "description": "Intelligent routing to multiple destinations",
+              "details": [
+                "Route by content, metadata, or time",
+                "Support for 20+ destination types",
+                "Buffering & retry logic built-in",
+                "Dead-letter queue for failures"
+              ],
+              "icon": "🎯"
+            }
+          ],
+          "layout": {
+            "type": "horizontal",
+            "columns": 3,
+            "gap": 40
+          }
+        },
+        {
+          "type": "architecture_layer",
+          "id": "data_connectors",
+          "label": "Data Connectors",
+          "position": {
+            "x": 0,
+            "y": 500,
+            "width": 1760,
+            "height": 120
+          },
+          "style": {
+            "background": "rgba(237, 137, 54, 0.1)",
+            "border": "2px solid #ed8936",
+            "border_radius": 8,
+            "padding": 24
+          },
+          "components": {
+            "inputs": [
+              "Syslog/Rsyslog",
+              "Kafka/Kinesis",
+              "HTTP/REST APIs",
+              "File tails",
+              "JDBC/ODBC",
+              "S3/GCS/Azure",
+              "Custom plugins"
+            ],
+            "outputs": [
+              "Snowflake",
+              "Databricks",
+              "Splunk HEC",
+              "Datadog",
+              "S3/GCS",
+              "Kafka/Kinesis",
+              "HTTP webhooks"
+            ]
+          },
+          "layout": {
+            "type": "two_column",
+            "left_label": "Inputs (Sources)",
+            "right_label": "Outputs (Destinations)"
+          }
+        },
+        {
+          "type": "architecture_layer",
+          "id": "deployment_models",
+          "label": "Deployment Models",
+          "position": {
+            "x": 0,
+            "y": 660,
+            "width": 1760,
+            "height": 80
+          },
+          "style": {
+            "background": "rgba(74, 85, 104, 0.3)",
+            "border": "2px solid #4A5568",
+            "border_radius": 8,
+            "padding": 20
+          },
+          "options": [
+            {
+              "name": "Sidecar",
+              "description": "Deploy alongside apps in Kubernetes pods",
+              "icon": "📦"
+            },
+            {
+              "name": "DaemonSet",
+              "description": "One agent per node in K8s cluster",
+              "icon": "🔄"
+            },
+            {
+              "name": "Standalone",
+              "description": "Dedicated VMs/servers for high-throughput",
+              "icon": "🖥️"
+            },
+            {
+              "name": "Edge Gateway",
+              "description": "Single point for all edge devices",
+              "icon": "🌐"
+            }
+          ],
+          "layout": {
+            "type": "horizontal_grid",
+            "columns": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "tech_highlights",
+      "position": {
+        "x": 80,
+        "y": 980,
+        "width": 1760,
+        "height": 80
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.15)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 20
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "highlights_text",
+          "content": "⚡ Key Tech: WebAssembly runtime • <100ms latency • 100K+ events/sec/node • Git-based config • Fail-open design • Multi-cloud native",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 20,
+            "color": "#48BB78",
+            "text_align": "center"
+          }
+        }
+      ]
+    }
+  },
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "control_plane": "rgba(66, 153, 225, 0.1)",
+      "control_plane_border": "#4299e1",
+      "data_plane": "rgba(72, 187, 120, 0.15)",
+      "data_plane_border": "#48BB78",
+      "connectors": "rgba(237, 137, 54, 0.1)",
+      "connectors_border": "#ed8936",
+      "deployment": "rgba(74, 85, 104, 0.3)",
+      "deployment_border": "#4A5568",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0"
+    },
+    "visual_language": {
+      "layered_stack": "Shows architectural separation of concerns",
+      "green_emphasis": "Data plane (core innovation) gets most visual weight",
+      "technical_density": "Dense but organized information for technical audiences"
+    }
+  },
+  "presentation_notes": {
+    "opening": "This is a backup slide for deep technical discussions. Let me show you what's under the hood.",
+    "layer_by_layer": {
+      "control_plane": "[Point to top layer] At the top, we have the control plane. This is where you manage configuration—it's all Git-based, so you get versioning and rollback. We orchestrate agents across your infrastructure. We collect telemetry and observability data. And we compile your declarative policies into executable code—YAML to WebAssembly.",
+      "data_plane": "[Point to green layer] Here's the core innovation: the data plane. This is where the work happens. We use Bacalhau—our distributed compute engine—running at the edge. It's a WebAssembly runtime, so you get near-native performance. Sub-100ms latency for most operations. Handles 100,000+ events per second per node. [Point to components] The stream processing pipeline does real-time transformation. It's stateless for speed, but supports stateful aggregations when needed. Schema-aware transformations. Fail-open design—it never blocks your data. [Point to router] The multi-sink router does intelligent routing to multiple destinations. Route by content, metadata, or time. Support for 20+ destination types. Built-in buffering, retry logic, and dead-letter queues.",
+      "connectors": "[Point to orange layer] Data connectors handle inputs and outputs. On the input side: Syslog, Kafka, Kinesis, HTTP APIs, file tails, JDBC, S3, GCS, Azure, and custom plugins. On the output side: Snowflake, Databricks, Splunk, Datadog, S3, GCS, Kafka, Kinesis, HTTP webhooks. Pretty much anything.",
+      "deployment": "[Point to gray layer] Deployment models are flexible. Sidecar—deploy alongside apps in Kubernetes pods. DaemonSet—one agent per node in your K8s cluster. Standalone—dedicated VMs or servers for high-throughput scenarios. Edge gateway—single point for all edge devices."
+    },
+    "tech_highlights": "[Point to bottom] The key technical highlights: WebAssembly runtime for performance. Sub-100ms latency. 100,000+ events per second per node. Git-based configuration for DevOps workflows. Fail-open design for reliability. And multi-cloud native—runs anywhere.",
+    "qa_handling": "This slide is designed to answer deep technical questions. Don't present it unless asked. Use it as a reference for technical Q&A.",
+    "when_to_use": "Only show when asked about: architecture, technical implementation, deployment models, performance characteristics, or engineering details",
+    "pacing": "Technical audiences can absorb density. Don't rush, but don't over-explain either."
+  },
+  "persona_alignment": {
+    "principal_engineers": {
+      "focus_elements": ["data_plane layer", "Bacalhau engine", "deployment_models"],
+      "talking_points": "WebAssembly performance, distributed compute model, deployment flexibility"
+    },
+    "sre_devops": {
+      "focus_elements": ["control_plane", "observability", "deployment_models"],
+      "talking_points": "GitOps workflow, monitoring integration, operational model"
+    },
+    "architects": {
+      "focus_elements": ["full stack view", "data_connectors", "multi-sink router"],
+      "talking_points": "Integration points, scalability model, failure modes"
+    },
+    "security_engineers": {
+      "focus_elements": ["data_plane processing", "fail-open design", "deployment isolation"],
+      "talking_points": "Where data is processed, security boundaries, isolation models"
+    }
+  },
+  "usage_guidelines": {
+    "when_to_show": [
+      "Technical deep-dive with engineering team",
+      "Architecture review session",
+      "Questions about 'How does this actually work?'",
+      "Performance or scalability concerns",
+      "Deployment planning discussions"
+    ],
+    "when_not_to_show": [
+      "Executive presentations (too technical)",
+      "Initial sales pitch (premature detail)",
+      "Financial/ROI discussions (wrong audience)"
+    ]
+  },
+  "component_detail_notes": {
+    "bacalhau": "Bacalhau is Expanso's open-source distributed compute framework. Think 'Docker for data processing at the edge.' WebAssembly provides sandboxed execution with near-native performance.",
+    "fail_open": "Critical for production safety: If an agent crashes or policy fails, data flows through unchanged. No data loss, no production impact.",
+    "gitops": "All configuration lives in Git. Changes trigger reconciliation loops. Rollback = git revert. Audit trail = git log.",
+    "wasm": "WebAssembly provides: (1) portability across architectures, (2) near-native speed, (3) sandboxed security, (4) tiny binary size"
+  }
+}

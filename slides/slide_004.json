@@ -1,0 +1,449 @@
+{
+  "slide_id": "slide_04_solution_introduction",
+  "frame_name": "Solution Introduction - Upstream Data Control",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "The Solution: Upstream Data Control",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "left"
+      },
+      "position": {
+        "x": 80,
+        "y": 60,
+        "max_width": 1760
+      },
+      "emphasis": {
+        "words": ["Upstream Data Control"],
+        "color": "#48BB78"
+      }
+    },
+    {
+      "type": "group",
+      "id": "architecture_comparison",
+      "position": {
+        "x": 80,
+        "y": 180,
+        "width": 1760,
+        "height": 620
+      },
+      "elements": [
+        {
+          "type": "container",
+          "id": "upstream_zone_with_expanso",
+          "content": {
+            "zone_label": "UPSTREAM",
+            "zone_sublabel": "(At the Source)",
+            "status": "EXPANSO LIVES HERE",
+            "icon": "✓"
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.15)",
+            "border": "3px solid #48BB78",
+            "border_radius": 12
+          },
+          "text_style": {
+            "zone_label": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 24,
+              "color": "#48BB78",
+              "letter_spacing": 2
+            },
+            "zone_sublabel": {
+              "font_family": "Inter",
+              "font_weight": 400,
+              "font_size": 16,
+              "color": "#9ae6b4",
+              "margin_top": 4
+            },
+            "status": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 28,
+              "color": "#48BB78",
+              "margin_top": 24,
+              "margin_bottom": 32
+            },
+            "icon": {
+              "font_size": 64,
+              "color": "#48BB78",
+              "margin_top": 16
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 520,
+            "height": 620
+          },
+          "layout": {
+            "type": "vertical_center",
+            "alignment": "center",
+            "padding": 40
+          },
+          "child_elements": [
+            {
+              "type": "logo",
+              "id": "expanso_logo_main",
+              "file": "expanso_logo_large.svg",
+              "style": {
+                "width": 240,
+                "height": "auto",
+                "filter": "brightness(1.2)"
+              },
+              "position": {
+                "x": "center",
+                "y": 180
+              }
+            },
+            {
+              "type": "text_list",
+              "id": "upstream_capabilities",
+              "items": [
+                "Filter",
+                "Transform", 
+                "Govern",
+                "Route"
+              ],
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 18,
+                "color": "#9ae6b4",
+                "line_height": 1.8,
+                "text_align": "center"
+              },
+              "layout": {
+                "type": "vertical",
+                "spacing": 12,
+                "bullet": "•"
+              },
+              "position": {
+                "x": "center",
+                "y": 340
+              }
+            }
+          ]
+        },
+        {
+          "type": "arrow",
+          "id": "controlled_flow_arrow",
+          "style": {
+            "stroke": "#48BB78",
+            "stroke_width": 6,
+            "arrow_head": "triangle",
+            "arrow_head_size": 24
+          },
+          "position": {
+            "from": {"x": 520, "y": 310},
+            "to": {"x": 620, "y": 310}
+          },
+          "label": {
+            "content": "50-70% LESS DATA\n(Optimized)",
+            "style": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 18,
+              "color": "#48BB78",
+              "background": "#2d3748",
+              "padding": 12,
+              "border_radius": 4,
+              "border": "2px solid #48BB78"
+            },
+            "position": "above"
+          }
+        },
+        {
+          "type": "container",
+          "id": "downstream_zone_optimized",
+          "content": {
+            "zone_label": "DOWNSTREAM",
+            "zone_sublabel": "(Your Existing Platforms)",
+            "status": "WORK WITH LESS DATA"
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.1)",
+            "border": "3px solid #4299e1",
+            "border_radius": 12
+          },
+          "text_style": {
+            "zone_label": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 24,
+              "color": "#4299e1",
+              "letter_spacing": 2
+            },
+            "zone_sublabel": {
+              "font_family": "Inter",
+              "font_weight": 400,
+              "font_size": 16,
+              "color": "#90cdf4",
+              "margin_top": 4
+            },
+            "status": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 24,
+              "color": "#FFFFFF",
+              "margin_top": 24,
+              "margin_bottom": 32
+            }
+          },
+          "position": {
+            "x": 620,
+            "y": 0,
+            "width": 1140,
+            "height": 620
+          },
+          "layout": {
+            "type": "vertical",
+            "padding": 40
+          },
+          "child_elements": [
+            {
+              "type": "logo_grid",
+              "id": "platform_logos_unchanged",
+              "logos": [
+                {"name": "snowflake", "file": "snowflake_logo.svg"},
+                {"name": "databricks", "file": "databricks_logo.svg"},
+                {"name": "splunk", "file": "splunk_logo.svg"},
+                {"name": "datadog", "file": "datadog_logo.svg"}
+              ],
+              "style": {
+                "logo_size": 72,
+                "spacing": 48,
+                "opacity": 1.0
+              },
+              "layout": {
+                "type": "horizontal",
+                "alignment": "center",
+                "gap": 48
+              },
+              "position": {
+                "x": "center",
+                "y": 140
+              }
+            },
+            {
+              "type": "benefit_list",
+              "id": "downstream_benefits",
+              "items": [
+                {
+                  "icon": "💰",
+                  "text": "50-70% lower platform costs",
+                  "emphasis": ["50-70%"]
+                },
+                {
+                  "icon": "⚡",
+                  "text": "Faster queries (less data to scan)",
+                  "emphasis": ["Faster"]
+                },
+                {
+                  "icon": "🔒",
+                  "text": "Better compliance (sensitive data filtered)",
+                  "emphasis": ["Better compliance"]
+                },
+                {
+                  "icon": "🛠️",
+                  "text": "Same tools you already use",
+                  "emphasis": ["Same tools"]
+                }
+              ],
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 500,
+                "font_size": 18,
+                "color": "#FFFFFF",
+                "line_height": 1.8,
+                "icon_size": 24
+              },
+              "emphasis_style": {
+                "color": "#90cdf4",
+                "font_weight": 600
+              },
+              "layout": {
+                "type": "grid",
+                "columns": 2,
+                "row_gap": 20,
+                "column_gap": 40
+              },
+              "position": {
+                "x": 40,
+                "y": 280
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "value_proposition_box",
+      "position": {
+        "x": 80,
+        "y": 840,
+        "width": 1760,
+        "height": 160
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.15)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 32
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "value_prop_headline",
+          "content": "The Result:",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 24,
+            "color": "#9ae6b4",
+            "text_align": "left",
+            "margin_bottom": 16
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "text",
+          "id": "value_prop_text",
+          "content": "You control data where it's generated—before it hits expensive platforms. Filter out noise. Transform at the source. Enforce policies upstream. Your existing tools work exactly the same, but with 50-70% less data to process.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 500,
+            "font_size": 22,
+            "line_height": 1.5,
+            "color": "#FFFFFF",
+            "text_align": "left"
+          },
+          "position": {
+            "x": 0,
+            "y": 48
+          },
+          "emphasis": {
+            "phrases": [
+              "before it hits",
+              "Filter out noise",
+              "Transform at the source",
+              "Enforce policies upstream",
+              "50-70% less data"
+            ],
+            "color": "#9ae6b4",
+            "font_weight": 600
+          }
+        }
+      ]
+    }
+  ],
+  "layout_zones": {
+    "header": {
+      "percentage": 10,
+      "elements": ["slide_title"]
+    },
+    "main_diagram": {
+      "percentage": 65,
+      "elements": ["architecture_comparison"]
+    },
+    "value_proposition": {
+      "percentage": 20,
+      "elements": ["value_proposition_box"]
+    },
+    "footer": {
+      "percentage": 5,
+      "reserved": true
+    }
+  },
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "solution_primary": "#48BB78",
+      "solution_secondary": "#9ae6b4",
+      "solution_bg": "rgba(72, 187, 120, 0.15)",
+      "downstream_bg": "rgba(66, 153, 225, 0.1)",
+      "downstream_border": "#4299e1",
+      "downstream_text": "#90cdf4",
+      "text_primary": "#FFFFFF",
+      "icon_benefits": "#48BB78"
+    },
+    "visual_language": {
+      "green_checkmark": "Solution present, problem solved",
+      "solid_green_border": "Controlled, intentional, positive",
+      "green_arrow": "Optimized flow, reduced volume",
+      "maintained_blue_zone": "Existing platforms unchanged (non-threatening)"
+    }
+  },
+  "cognitive_patterns": {
+    "slide_3_callback": {
+      "upstream_zone": "Previously empty with X, now full with checkmark and Expanso",
+      "arrow": "Previously gray 'ALL DATA', now green '50-70% LESS DATA'",
+      "downstream_zone": "Same platforms, but benefits added below"
+    },
+    "pattern_completion": "Audience sees the 'gap' from Slide 3 now filled, creating satisfaction"
+  },
+  "presentation_notes": {
+    "opening": "So here's the solution: Upstream Data Control. [Pause] We put a control layer at the source—before data hits your expensive platforms.",
+    "diagram_walkthrough": {
+      "upstream": "[Point to left side] Remember this empty zone from the last slide? This is where Expanso lives. Right at the source. Where your data is generated. [Point to capabilities] We filter it. We transform it. We govern it. We route it. All BEFORE it flows downstream.",
+      "arrow": "[Point to arrow] Look at what happens: Instead of ALL your data flowing into the cloud unfiltered, now you're sending 50 to 70 percent LESS data. The arrow literally gets smaller. The volume drops.",
+      "downstream": "[Point to right side] And here's the best part: Your existing platforms—Snowflake, Databricks, Splunk, Datadog—they all stay exactly the same. [Pause] You don't rip and replace anything. You don't retrain your teams. You just work with dramatically less data.",
+      "benefits": "[Point to benefit list] So what does that mean? 50 to 70 percent lower platform costs. Faster queries because there's less data to scan. Better compliance because sensitive data is filtered before it ever leaves your network. And you keep using the same tools you already know."
+    },
+    "value_prop": "[Point to bottom box] The result is simple: You control data where it's generated—before it hits expensive platforms. Filter out noise. Transform at the source. Enforce policies upstream. Your existing tools work exactly the same, but with 50 to 70 percent less data to process.",
+    "transition": "Now, I know what you're thinking: 'This sounds great, but does it actually work?' Let me show you a real example...",
+    "pacing": "Emphasize the visual callback to Slide 3. Make sure audience connects 'empty red zone' → 'filled green zone'"
+  },
+  "assets_required": [
+    {
+      "type": "logo",
+      "files": [
+        "expanso_logo_large.svg",
+        "snowflake_logo.svg",
+        "databricks_logo.svg",
+        "splunk_logo.svg",
+        "datadog_logo.svg"
+      ],
+      "specifications": "Expanso logo: 240px width, high contrast version for dark background. Platform logos: 72x72px minimum."
+    }
+  ],
+  "persona_alignment": {
+    "executives": {
+      "focus_elements": ["50-70% lower costs", "Same tools", "value_proposition_box"],
+      "talking_points": "No rip-and-replace, immediate cost reduction, de-risked implementation"
+    },
+    "architects": {
+      "focus_elements": ["upstream_capabilities", "architecture_comparison"],
+      "talking_points": "Architectural completeness, upstream control layer, non-invasive integration"
+    },
+    "data_engineers": {
+      "focus_elements": ["Filter/Transform/Govern/Route", "Faster queries"],
+      "talking_points": "Operational improvements, same toolchain, better performance"
+    }
+  },
+  "visual_hierarchy": {
+    "primary_focus": "upstream_zone_with_expanso (green zone with Expanso logo)",
+    "secondary_focus": "controlled_flow_arrow (50-70% LESS DATA label)",
+    "tertiary_focus": "benefit_list",
+    "contrast_technique": "Green (new solution) vs Blue (existing tools) creates clear before/after"
+  }
+}

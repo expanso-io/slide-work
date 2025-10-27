@@ -1,0 +1,184 @@
+{
+  "slide_id": "slide_14b_business_faq",
+  "frame_name": "Backup - Business & Commercial FAQ",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Business & Commercial FAQ",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Pricing, Contracts & Business Terms",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "business_faq_list",
+      "position": {
+        "x": 80,
+        "y": 200,
+        "width": 1760,
+        "height": 800
+      },
+      "layout": {
+        "type": "two_column",
+        "gap": 60
+      },
+      "elements": [
+        {
+          "type": "faq_column",
+          "id": "left_column_biz",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 850,
+            "height": 800
+          },
+          "faqs": [
+            {
+              "question": "What's the exact pricing formula?",
+              "answer": "Performance-based: We charge X% of your measured savings. X typically ranges from 15-30% depending on contract value and deployment complexity. Example: Reduce Snowflake spend from $1M → $400K. Gross savings: $600K. Our fee (at 25%): $150K. Your net savings: $450K. Measured quarterly via your platform bills.",
+              "icon": "💰"
+            },
+            {
+              "question": "How do you measure savings?",
+              "answer": "Baseline: Average of last 3 months before Expanso deployment (normalized for growth). Measurement: Platform bills post-deployment, adjusted for organic data growth. Independent audit: You can verify via your own platform dashboards. Quarterly reconciliation: True-up based on actual bills. Disputes: Third-party audit firm (you choose) as tiebreaker.",
+              "icon": "📊"
+            },
+            {
+              "question": "What if my data volume grows 50%?",
+              "answer": "We adjust for organic growth. If your business grows 50%, we expect your data to grow proportionally. Savings measured against 'what you WOULD have paid without Expanso' (baseline × growth factor), not absolute reduction. You're protected from paying us for your business growth.",
+              "icon": "📈"
+            },
+            {
+              "question": "Can I negotiate the percentage?",
+              "answer": "Yes, with constraints: Larger contracts (>$500K annual savings) get better rates. Multi-year commitments get 10-20% discount. Volume discounts for enterprise (>$2M savings). But: We won't go below 10% (not sustainable for us) or above 35% (not fair to you). Typical range: 18-25% for mid-market, 15-20% for enterprise.",
+              "icon": "🤝"
+            },
+            {
+              "question": "What's included in the contract?",
+              "answer": "Unlimited data sources. Unlimited agent deployments. 24/7 support (P0: 15min response). Quarterly business reviews. Platform updates (included). Custom policy development (included). What costs extra: Professional services (custom integrations), dedicated TAM (enterprise tier), private cloud deployment, extended SLAs beyond 99.9%.",
+              "icon": "📄"
+            }
+          ]
+        },
+        {
+          "type": "faq_column",
+          "id": "right_column_biz",
+          "position": {
+            "x": 910,
+            "y": 0,
+            "width": 850,
+            "height": 800
+          },
+          "faqs": [
+            {
+              "question": "How do I get budget for this?",
+              "answer": "Option 1: Reallocate from platform spend (net-zero). Reduce Snowflake budget by $600K, allocate $150K to Expanso, keep $450K savings. Option 2: Use FinOps/optimization budget. Option 3: Fund from Q1 savings (we defer payment until Q2). Most CFOs approve because ROI is immediate and measurable.",
+              "icon": "💵"
+            },
+            {
+              "question": "What's the typical payback period?",
+              "answer": "3-6 months average. Factors: Pilot duration (2-4 weeks typically). Deployment speed (faster = shorter payback). Percentage rate (lower rate = faster payback). Fastest: 6 weeks (fast pilot + low rate). Slowest: 9 months (slow deployment + high rate). Most customers: 4 months.",
+              "icon": "⏱️"
+            },
+            {
+              "question": "Can I cancel mid-contract?",
+              "answer": "For convenience: 90-day notice, continue paying through end of quarter. For cause: Immediate with 30-day cure period (we fix the issue or you exit). No termination fees. You keep all savings achieved to date. Agents can be shut off immediately (data flows unchanged). Data export: Full lineage provided in 7 days.",
+              "icon": "🚪"
+            },
+            {
+              "question": "What's your refund policy?",
+              "answer": "Pilot: Free, no refund needed. Production: If we don't achieve 40% savings in first 90 days, you pay nothing (full refund of any fees paid). After 90 days: Pro-rated refund if terminating for cause. No refund for convenience termination. SLA credits: Automatic fee credits if we miss uptime commitments.",
+              "icon": "↩️"
+            },
+            {
+              "question": "How do I justify this to my CFO?",
+              "answer": "Business case template: (1) Current platform spend: $X/year. (2) Expected 60% reduction = $Y savings. (3) Expanso fee (25%): $Z. (4) Net savings: $Y-Z. (5) ROI: (Y-Z)/Z × 100%. (6) Payback: ~4 months. (7) 3-year NPV: $ABC. We provide Excel model with your actual numbers. CFOs love it because it's measurable and risk-free.",
+              "icon": "📊"
+            }
+          ]
+        }
+      ],
+      "faq_style": {
+        "container": {
+          "margin_bottom": 32,
+          "padding": 24,
+          "background": "rgba(72, 187, 120, 0.08)",
+          "border": "2px solid #4A5568",
+          "border_radius": 8
+        },
+        "icon": {
+          "font_size": 32,
+          "margin_bottom": 12,
+          "display": "inline-block"
+        },
+        "question": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 18,
+          "color": "#48BB78",
+          "line_height": 1.4,
+          "margin_bottom": 12
+        },
+        "answer": {
+          "font_family": "Inter",
+          "font_weight": 400,
+          "font_size": 14,
+          "color": "#FFFFFF",
+          "line_height": 1.7
+        }
+      }
+    }
+  },
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "faq_bg": "rgba(72, 187, 120, 0.08)",
+      "faq_border": "#4A5568",
+      "question_color": "#48BB78",
+      "text_primary": "#FFFFFF"
+    }
+  },
+  "presentation_notes": {
+    "audience": "CFOs, finance teams, procurement, executives",
+    "approach": "Be transparent about pricing and terms. Confidence builds trust.",
+    "emphasis": "Focus on aligned incentives and risk-free model",
+    "when_to_use": "CFO meetings, procurement discussions, contract negotiations"
+  },
+  "use_case": "CFO presentations, procurement, finance teams, contract negotiation"
+}

@@ -1,0 +1,278 @@
+{
+  "slide_id": "slide_11c_contract_terms",
+  "frame_name": "Backup - Contract Terms & SLAs",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Contract Terms & Service Level Agreements",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "group",
+      "id": "contract_terms_section",
+      "position": {
+        "x": 80,
+        "y": 160,
+        "width": 850,
+        "height": 820
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "terms_header",
+          "content": "Standard Contract Terms",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 28,
+            "color": "#4299e1",
+            "margin_bottom": 24
+          }
+        },
+        {
+          "type": "terms_list",
+          "id": "contract_terms_list",
+          "items": [
+            {
+              "category": "Contract Length",
+              "details": [
+                "Standard: 12-month initial term",
+                "Auto-renewal: Additional 12-month periods",
+                "Notice period: 90 days prior to renewal",
+                "Enterprise: Multi-year options available"
+              ]
+            },
+            {
+              "category": "Payment Terms",
+              "details": [
+                "Billing cycle: Quarterly in arrears",
+                "Based on actual savings achieved",
+                "Net 30 payment terms",
+                "Annual prepay discount available"
+              ]
+            },
+            {
+              "category": "Termination",
+              "details": [
+                "For cause: Immediate with 30-day cure period",
+                "For convenience: 90-day notice",
+                "Data export: Full data lineage provided",
+                "No termination fees"
+              ]
+            },
+            {
+              "category": "Liability",
+              "details": [
+                "Cap: 12 months of fees paid",
+                "Exclusions: Standard (IP, confidentiality)",
+                "Insurance: $5M E&O, $2M cyber",
+                "Indemnification: Mutual"
+              ]
+            },
+            {
+              "category": "Data & Privacy",
+              "details": [
+                "Data ownership: Customer retains all rights",
+                "Processing: DPA included as standard",
+                "Subprocessors: Listed and pre-approved",
+                "BAA: Available for HIPAA customers"
+              ]
+            },
+            {
+              "category": "Intellectual Property",
+              "details": [
+                "Customer data: Customer owns",
+                "Platform: Expanso retains ownership",
+                "Custom policies: Customer owns",
+                "Aggregated metrics: Expanso can use"
+              ]
+            }
+          ],
+          "style": {
+            "category": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 18,
+              "color": "#90cdf4",
+              "margin_bottom": 12
+            },
+            "details": {
+              "font_family": "Inter",
+              "font_weight": 400,
+              "font_size": 15,
+              "color": "#FFFFFF",
+              "line_height": 1.8,
+              "bullet": "•",
+              "indent": 16,
+              "spacing": 8
+            },
+            "category_spacing": 28
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "id": "sla_section",
+      "position": {
+        "x": 990,
+        "y": 160,
+        "width": 850,
+        "height": 820
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "sla_header",
+          "content": "Service Level Agreements",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 28,
+            "color": "#48BB78",
+            "margin_bottom": 24
+          }
+        },
+        {
+          "type": "sla_table",
+          "id": "sla_commitments",
+          "sections": [
+            {
+              "title": "Availability SLA",
+              "metrics": [
+                {
+                  "metric": "Agent Uptime",
+                  "commitment": "99.9%",
+                  "measurement": "Monthly",
+                  "credit": "5% fee credit per 0.1% below"
+                },
+                {
+                  "metric": "Control Plane Uptime",
+                  "commitment": "99.95%",
+                  "measurement": "Monthly",
+                  "credit": "10% fee credit per 0.1% below"
+                }
+              ]
+            },
+            {
+              "title": "Performance SLA",
+              "metrics": [
+                {
+                  "metric": "Processing Latency (P99)",
+                  "commitment": "<100ms",
+                  "measurement": "Monthly avg",
+                  "credit": "N/A (monitoring only)"
+                },
+                {
+                  "metric": "Data Loss",
+                  "commitment": "0%",
+                  "measurement": "Zero tolerance",
+                  "credit": "Full month credit"
+                }
+              ]
+            },
+            {
+              "title": "Support SLA",
+              "metrics": [
+                {
+                  "severity": "P0 (Critical)",
+                  "response": "15 minutes",
+                  "resolution": "4 hours",
+                  "availability": "24/7"
+                },
+                {
+                  "severity": "P1 (High)",
+                  "response": "1 hour",
+                  "resolution": "8 hours",
+                  "availability": "24/7"
+                },
+                {
+                  "severity": "P2 (Medium)",
+                  "response": "4 hours",
+                  "resolution": "2 business days",
+                  "availability": "Business hours"
+                },
+                {
+                  "severity": "P3 (Low)",
+                  "response": "1 business day",
+                  "resolution": "5 business days",
+                  "availability": "Business hours"
+                }
+              ]
+            },
+            {
+              "title": "Security & Compliance",
+              "commitments": [
+                "SOC 2 Type II audit: Annual",
+                "Penetration testing: Bi-annual",
+                "Vulnerability scanning: Weekly",
+                "Incident notification: <24 hours",
+                "Security patches: <48 hours for critical"
+              ]
+            }
+          ],
+          "style": {
+            "section_title": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 18,
+              "color": "#9ae6b4",
+              "margin_bottom": 16,
+              "margin_top": 24
+            },
+            "metric_row": {
+              "font_family": "Inter",
+              "font_weight": 400,
+              "font_size": 14,
+              "color": "#FFFFFF",
+              "line_height": 1.8,
+              "padding": "8px 0"
+            },
+            "commitment_value": {
+              "font_weight": 700,
+              "color": "#48BB78"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "terms_primary": "#4299e1",
+      "sla_primary": "#48BB78",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Let me walk you through the standard contract terms and our SLAs. This is important for your legal and procurement teams.",
+    "terms_section": "[Point to left column] Standard contract terms: 12-month initial term with auto-renewal. 90-day notice period before renewal. Enterprise customers can do multi-year. Payment is quarterly in arrears based on actual savings achieved. Net 30 terms. We offer an annual prepay discount if you want to lock that in. [Continue through each category as needed]",
+    "sla_section": "[Point to right column] Service level agreements: Agent uptime is 99.9% monthly. If we fall below that, you get a 5% fee credit per 0.1% we miss. Control plane uptime is 99.95% with a 10% credit per 0.1% miss. [Point to performance] Processing latency commitment is sub-100 milliseconds at P99. Data loss tolerance is zero—if we lose data, you get a full month credit. [Point to support] Support response times: P0 critical issues get 15-minute response, 4-hour resolution, 24/7. P1 high gets 1 hour response, 8 hours resolution, 24/7. And so on. [Point to security] Security and compliance: SOC 2 Type II audit annually. Penetration testing bi-annually. Vulnerability scanning weekly. Incident notification within 24 hours. Security patches for critical vulnerabilities within 48 hours.",
+    "customization": "Enterprise customers can negotiate custom SLAs. If you need tighter commitments—like 99.99% uptime or faster response times—we can accommodate that.",
+    "when_to_use": "Use this slide during contract negotiation, legal review, or when procurement asks about terms and SLAs"
+  },
+  "use_case": "Legal review, procurement discussions, contract negotiation, enterprise sales"
+}

@@ -1,0 +1,353 @@
+{
+  "slide_id": "slide_12a_aggregate_metrics",
+  "frame_name": "Backup - Customer Metrics Dashboard",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Customer Results: By The Numbers",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Aggregate Results Across 50+ Production Customers",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "key_metrics_grid",
+      "position": {
+        "x": 80,
+        "y": 200,
+        "width": 1760,
+        "height": 320
+      },
+      "layout": {
+        "type": "grid",
+        "columns": 4,
+        "rows": 2,
+        "gap": 40
+      },
+      "elements": [
+        {
+          "type": "metric_card",
+          "id": "avg_reduction",
+          "icon": "📉",
+          "metric": "63%",
+          "label": "Average Data Reduction",
+          "context": "Range: 48-78%",
+          "style": "large"
+        },
+        {
+          "type": "metric_card",
+          "id": "avg_savings",
+          "icon": "💰",
+          "metric": "$1.2M",
+          "label": "Average Annual Savings",
+          "context": "Per customer",
+          "style": "large"
+        },
+        {
+          "type": "metric_card",
+          "id": "payback",
+          "icon": "⏱️",
+          "metric": "3.8 mo",
+          "label": "Average Payback Period",
+          "context": "Range: 2-6 months",
+          "style": "large"
+        },
+        {
+          "type": "metric_card",
+          "id": "uptime",
+          "icon": "🛡️",
+          "metric": "99.97%",
+          "label": "Production Uptime",
+          "context": "Last 12 months",
+          "style": "large"
+        },
+        {
+          "type": "metric_card",
+          "id": "deployment_time",
+          "icon": "🚀",
+          "metric": "18 days",
+          "label": "Average Time to Production",
+          "context": "From pilot start",
+          "style": "small"
+        },
+        {
+          "type": "metric_card",
+          "id": "total_saved",
+          "icon": "💵",
+          "metric": "$60M+",
+          "label": "Total Customer Savings",
+          "context": "Cumulative to date",
+          "style": "small"
+        },
+        {
+          "type": "metric_card",
+          "id": "nps",
+          "icon": "⭐",
+          "metric": "72",
+          "label": "Net Promoter Score",
+          "context": "Industry avg: 30",
+          "style": "small"
+        },
+        {
+          "type": "metric_card",
+          "id": "retention",
+          "icon": "🔄",
+          "metric": "98%",
+          "label": "Customer Retention",
+          "context": "Annual renewal rate",
+          "style": "small"
+        }
+      ],
+      "card_style": {
+        "large": {
+          "background": "rgba(72, 187, 120, 0.15)",
+          "border": "3px solid #48BB78",
+          "border_radius": 12,
+          "padding": 32,
+          "icon": {
+            "font_size": 56,
+            "margin_bottom": 16
+          },
+          "metric": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 64,
+            "color": "#48BB78"
+          },
+          "label": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 18,
+            "color": "#FFFFFF",
+            "margin_top": 12
+          },
+          "context": {
+            "font_family": "Inter",
+            "font_weight": 400,
+            "font_size": 14,
+            "color": "#9ae6b4",
+            "margin_top": 8
+          }
+        },
+        "small": {
+          "background": "rgba(66, 153, 225, 0.1)",
+          "border": "2px solid #4299e1",
+          "border_radius": 12,
+          "padding": 24,
+          "icon": {
+            "font_size": 40,
+            "margin_bottom": 12
+          },
+          "metric": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 48,
+            "color": "#4299e1"
+          },
+          "label": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 16,
+            "color": "#FFFFFF",
+            "margin_top": 8
+          },
+          "context": {
+            "font_family": "Inter",
+            "font_weight": 400,
+            "font_size": 13,
+            "color": "#90cdf4",
+            "margin_top": 6
+          }
+        }
+      }
+    },
+    {
+      "type": "group",
+      "id": "breakdown_sections",
+      "position": {
+        "x": 80,
+        "y": 560,
+        "width": 1760,
+        "height": 400
+      },
+      "layout": {
+        "type": "horizontal",
+        "columns": 2,
+        "gap": 60
+      },
+      "elements": [
+        {
+          "type": "breakdown_panel",
+          "id": "by_industry",
+          "title": "Savings by Industry",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 850,
+            "height": 400
+          },
+          "data": [
+            {
+              "industry": "E-Commerce / Retail",
+              "avg_reduction": "65%",
+              "customer_count": "18 customers"
+            },
+            {
+              "industry": "Financial Services",
+              "avg_reduction": "58%",
+              "customer_count": "12 customers"
+            },
+            {
+              "industry": "Healthcare / Biotech",
+              "avg_reduction": "71%",
+              "customer_count": "8 customers"
+            },
+            {
+              "industry": "Technology / SaaS",
+              "avg_reduction": "62%",
+              "customer_count": "15 customers"
+            },
+            {
+              "industry": "Logistics / IoT",
+              "avg_reduction": "69%",
+              "customer_count": "7 customers"
+            }
+          ],
+          "style": {
+            "title": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 24,
+              "color": "#48BB78",
+              "margin_bottom": 24
+            },
+            "row": {
+              "font_family": "Inter",
+              "font_weight": 400,
+              "font_size": 16,
+              "color": "#FFFFFF",
+              "line_height": 2.2
+            },
+            "reduction": {
+              "font_weight": 700,
+              "color": "#48BB78",
+              "font_size": 20
+            }
+          }
+        },
+        {
+          "type": "breakdown_panel",
+          "id": "by_platform",
+          "title": "Savings by Platform",
+          "position": {
+            "x": 910,
+            "y": 0,
+            "width": 850,
+            "height": 400
+          },
+          "data": [
+            {
+              "platform": "Snowflake",
+              "avg_reduction": "64%",
+              "customer_count": "32 customers"
+            },
+            {
+              "platform": "Databricks",
+              "avg_reduction": "61%",
+              "customer_count": "28 customers"
+            },
+            {
+              "platform": "Splunk",
+              "avg_reduction": "68%",
+              "customer_count": "24 customers"
+            },
+            {
+              "platform": "Datadog",
+              "avg_reduction": "66%",
+              "customer_count": "19 customers"
+            },
+            {
+              "platform": "Multi-platform",
+              "avg_reduction": "65%",
+              "customer_count": "41 customers"
+            }
+          ],
+          "style": {
+            "title": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 24,
+              "color": "#4299e1",
+              "margin_bottom": 24
+            },
+            "row": {
+              "font_family": "Inter",
+              "font_weight": 400,
+              "font_size": 16,
+              "color": "#FFFFFF",
+              "line_height": 2.2
+            },
+            "reduction": {
+              "font_weight": 700,
+              "color": "#4299e1",
+              "font_size": 20
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "primary_metric": "#48BB78",
+      "secondary_metric": "#4299e1",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Let me show you the aggregate results across all our customers—this is what the numbers look like at scale.",
+    "top_metrics": "[Point to top row] Average data reduction: 63%—ranging from 48% to 78%. Average annual savings per customer: $1.2M. Average payback period: 3.8 months—ranging from 2 to 6 months. And production uptime: 99.97% over the last 12 months. [Point to bottom row] Average time to production: 18 days from pilot start. Total customer savings to date: over $60M cumulative. Net Promoter Score: 72—compared to industry average of 30. Customer retention: 98% annual renewal rate.",
+    "breakdowns": "[Point to left panel] Savings by industry: E-commerce and retail average 65%. Financial services 58%. Healthcare and biotech 71%. Technology and SaaS 62%. Logistics and IoT 69%. [Point to right panel] Savings by platform: Snowflake customers average 64% reduction. Databricks 61%. Splunk 68%. Datadog 66%. Multi-platform deployments—which is most common—average 65%.",
+    "credibility": "These aren't cherry-picked examples. This is the aggregate across 50+ production customers.",
+    "when_to_use": "Use this slide when prospects want to see aggregate data, industry benchmarks, or proof of scale"
+  },
+  "use_case": "Data-driven buyers, CFOs, analysts, anyone who wants to see aggregate proof points"
+}

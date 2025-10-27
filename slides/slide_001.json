@@ -1,0 +1,255 @@
+{
+  "slide_id": "slide_01_title",
+  "frame_name": "Title Slide - Upstream Data Platform",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "gradient",
+    "gradient": {
+      "type": "linear",
+      "angle": 180,
+      "stops": [
+        {"color": "#1a2332", "position": 0},
+        {"color": "#2d3748", "position": 1}
+      ]
+    },
+    "alternative": {
+      "type": "solid",
+      "color": "#1a2332",
+      "overlay": {
+        "pattern": "data_flow_subtle",
+        "opacity": 0.1
+      }
+    }
+  },
+  "elements": [
+    {
+      "type": "image",
+      "id": "logo",
+      "content": "expanso_logo.svg",
+      "position": {
+        "x": 60,
+        "y": 60,
+        "alignment": "top-left"
+      },
+      "dimensions": {
+        "width": 180,
+        "height": "auto",
+        "maintain_aspect_ratio": true
+      }
+    },
+    {
+      "type": "text",
+      "id": "primary_headline",
+      "content": "The Upstream Data Platform That Cuts\nCloud Data Costs by 50–70%",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 54,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center",
+        "letter_spacing": -0.5
+      },
+      "position": {
+        "x": "center",
+        "y": 280,
+        "max_width": 1400,
+        "alignment": "center"
+      },
+      "emphasis": {
+        "words": ["50–70%"],
+        "color": "#00D9FF"
+      }
+    },
+    {
+      "type": "text",
+      "id": "subheadline",
+      "content": "Filter, transform, and govern data at the source—\nbefore it hits Snowflake, Databricks, Splunk, or Datadog",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 400,
+        "font_size": 28,
+        "line_height": 1.4,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 420,
+        "max_width": 1400,
+        "alignment": "center"
+      },
+      "emphasis": {
+        "words": ["at the source", "before"],
+        "font_weight": 500
+      }
+    },
+    {
+      "type": "diagram",
+      "id": "data_flow_visual",
+      "content": {
+        "nodes": [
+          {
+            "id": "sources",
+            "label": "Data Sources",
+            "icon": "database_stack",
+            "style": "minimal_box"
+          },
+          {
+            "id": "expanso",
+            "label": "EXPANSO",
+            "style": "highlighted_box",
+            "color": "#00D9FF"
+          },
+          {
+            "id": "platforms",
+            "label": "",
+            "icons": ["snowflake", "databricks", "splunk", "datadog"],
+            "style": "logo_row"
+          },
+          {
+            "id": "reduction",
+            "label": "50-70% Less Data",
+            "style": "annotation",
+            "color": "#48BB78"
+          }
+        ],
+        "connections": [
+          {"from": "sources", "to": "expanso", "style": "arrow"},
+          {"from": "expanso", "to": "platforms", "style": "arrow"},
+          {"from": "expanso", "to": "reduction", "style": "annotation_line"}
+        ]
+      },
+      "style": {
+        "line_color": "#4A5568",
+        "line_width": 2,
+        "icon_size": 48,
+        "spacing": 120
+      },
+      "position": {
+        "x": "center",
+        "y": 600,
+        "alignment": "center"
+      },
+      "optional": true,
+      "visibility": "default_visible"
+    },
+    {
+      "type": "text",
+      "id": "contact_info",
+      "content": "David Aronchick, CEO\naronchick@expanso.io",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 400,
+        "font_size": 16,
+        "line_height": 1.5,
+        "color": "#718096",
+        "text_align": "left"
+      },
+      "position": {
+        "x": 60,
+        "y": 980,
+        "alignment": "bottom-left"
+      }
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "content": "Expanso: Upstream Data Control",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 300,
+        "font_size": 14,
+        "color": "#718096",
+        "text_align": "right"
+      },
+      "position": {
+        "x": 1860,
+        "y": 1000,
+        "alignment": "bottom-right"
+      },
+      "optional": true
+    }
+  ],
+  "layout_zones": {
+    "top": {"percentage": 40, "elements": ["logo", "primary_headline", "subheadline"]},
+    "middle": {"percentage": 40, "elements": ["data_flow_visual"]},
+    "bottom": {"percentage": 20, "elements": ["contact_info", "tagline"]}
+  },
+  "design_system": {
+    "colors": {
+      "background_primary": "#1a2332",
+      "background_secondary": "#2d3748",
+      "accent_primary": "#00D9FF",
+      "accent_secondary": "#48BB78",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0",
+      "text_tertiary": "#718096"
+    },
+    "typography": {
+      "font_primary": "Inter",
+      "weights": {
+        "bold": 700,
+        "medium": 500,
+        "regular": 400,
+        "light": 300
+      }
+    }
+  },
+  "variants": [
+    {
+      "name": "technical_audience",
+      "modifications": {
+        "primary_headline": {
+          "content": "The Missing Control Layer in the Modern Data Stack"
+        },
+        "subheadline": {
+          "content": "Process data at the source. Cut volumes 50-70%.\nReduce platform costs. Automate compliance."
+        }
+      },
+      "use_case": "Technical conferences, architect/engineer audiences"
+    }
+  ],
+  "presentation_notes": {
+    "opening_line": "Today I'm going to show you how to cut your cloud data costs by 50 to 70 percent—without losing a single insight. We do this by controlling data upstream, before it hits your expensive platforms like Snowflake, Databricks, Splunk, or Datadog.",
+    "pause_timing": "Let the '50-70%' number land. Don't rush to the next slide.",
+    "transition": "Now, I know what you're thinking: 'That sounds too good to be true.' So let me show you why your cloud bills keep growing—and why traditional approaches can't fix it."
+  }
+}
+```
+
+## How This Maps to Figma API
+
+This JSON structure maps directly to Figma API calls:
+
+```javascript
+// Pseudo-code for Figma API generation
+async function createSlideFromJSON(slideData) {
+  // 1. Create frame
+  const frame = await figma.createFrame({
+    name: slideData.frame_name,
+    width: slideData.dimensions.width,
+    height: slideData.dimensions.height
+  });
+  
+  // 2. Apply background
+  frame.fills = createFillsFromBackground(slideData.background);
+  
+  // 3. Create each element
+  for (const element of slideData.elements) {
+    switch(element.type) {
+      case 'text':
+        createTextNode(frame, element);
+        break;
+      case 'image':
+        createImageNode(frame, element);
+        break;
+      case 'diagram':
+        createDiagramGroup(frame, element);
+        break;
+    }
+  }
+}

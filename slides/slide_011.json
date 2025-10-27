@@ -1,0 +1,565 @@
+{
+  "slide_id": "slide_11_backup_pricing",
+  "frame_name": "Backup - Pricing & Packaging",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Pricing & Packaging",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Performance-Based Model: We Only Win When You Win",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 600,
+        "font_size": 28,
+        "color": "#48BB78",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "pricing_tiers",
+      "position": {
+        "x": 160,
+        "y": 220,
+        "width": 1600,
+        "height": 520
+      },
+      "layout": {
+        "type": "horizontal",
+        "columns": 3,
+        "gap": 60
+      },
+      "elements": [
+        {
+          "type": "pricing_tier_card",
+          "id": "pilot_tier",
+          "tier_name": "Pilot",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 493,
+            "height": 520
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.1)",
+            "border": "2px solid #4299e1",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "pilot_label",
+              "content": "Pilot",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 32,
+                "color": "#4299e1",
+                "text_align": "center",
+                "margin_bottom": 16
+              }
+            },
+            {
+              "type": "text",
+              "id": "pilot_duration",
+              "content": "2-4 Weeks",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 500,
+                "font_size": 18,
+                "color": "#90cdf4",
+                "text_align": "center",
+                "margin_bottom": 32
+              }
+            },
+            {
+              "type": "pricing_display",
+              "id": "pilot_price",
+              "amount": "$0",
+              "period": "Completely Free",
+              "style": {
+                "amount": {
+                  "font_family": "Inter",
+                  "font_weight": 700,
+                  "font_size": 56,
+                  "color": "#FFFFFF",
+                  "text_align": "center"
+                },
+                "period": {
+                  "font_family": "Inter",
+                  "font_weight": 500,
+                  "font_size": 20,
+                  "color": "#90cdf4",
+                  "text_align": "center",
+                  "margin_top": 8
+                }
+              }
+            },
+            {
+              "type": "divider",
+              "style": {
+                "border_top": "1px solid #4299e1",
+                "margin": "32px 0",
+                "opacity": 0.3
+              }
+            },
+            {
+              "type": "feature_list",
+              "id": "pilot_features",
+              "items": [
+                "1-2 data sources",
+                "Shadow mode validation",
+                "Savings analysis report",
+                "Architecture review",
+                "No commitment required"
+              ],
+              "style": {
+                "bullet": "✓",
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "color": "#FFFFFF",
+                "line_height": 2,
+                "bullet_color": "#4299e1"
+              }
+            },
+            {
+              "type": "callout_box",
+              "id": "pilot_cta",
+              "content": "Prove value before paying",
+              "style": {
+                "background": "rgba(66, 153, 225, 0.2)",
+                "border": "2px solid #4299e1",
+                "border_radius": 6,
+                "padding": 16,
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 16,
+                "color": "#4299e1",
+                "text_align": "center",
+                "margin_top": 32
+              }
+            }
+          ]
+        },
+        {
+          "type": "pricing_tier_card",
+          "id": "production_tier",
+          "tier_name": "Production",
+          "position": {
+            "x": 553,
+            "y": 0,
+            "width": 493,
+            "height": 520
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.15)",
+            "border": "3px solid #48BB78",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "badge": {
+            "text": "MOST COMMON",
+            "style": {
+              "background": "#48BB78",
+              "color": "#FFFFFF",
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 14,
+              "padding": "8px 16px",
+              "border_radius": 20,
+              "position": "top_center"
+            }
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "production_label",
+              "content": "Production",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 32,
+                "color": "#48BB78",
+                "text_align": "center",
+                "margin_bottom": 16,
+                "margin_top": 32
+              }
+            },
+            {
+              "type": "text",
+              "id": "production_duration",
+              "content": "Annual Contract",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 500,
+                "font_size": 18,
+                "color": "#9ae6b4",
+                "text_align": "center",
+                "margin_bottom": 32
+              }
+            },
+            {
+              "type": "pricing_display",
+              "id": "production_price",
+              "formula": "X% of Savings",
+              "description": "Only pay if you save",
+              "style": {
+                "formula": {
+                  "font_family": "Inter",
+                  "font_weight": 700,
+                  "font_size": 48,
+                  "color": "#FFFFFF",
+                  "text_align": "center"
+                },
+                "description": {
+                  "font_family": "Inter",
+                  "font_weight": 500,
+                  "font_size": 20,
+                  "color": "#9ae6b4",
+                  "text_align": "center",
+                  "margin_top": 8
+                }
+              }
+            },
+            {
+              "type": "divider",
+              "style": {
+                "border_top": "1px solid #48BB78",
+                "margin": "32px 0",
+                "opacity": 0.3
+              }
+            },
+            {
+              "type": "feature_list",
+              "id": "production_features",
+              "items": [
+                "Unlimited data sources",
+                "24/7 support & monitoring",
+                "Quarterly business reviews",
+                "Custom policy development",
+                "Success guarantee"
+              ],
+              "style": {
+                "bullet": "✓",
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "color": "#FFFFFF",
+                "line_height": 2,
+                "bullet_color": "#48BB78"
+              }
+            },
+            {
+              "type": "callout_box",
+              "id": "production_cta",
+              "content": "Risk-free aligned incentives",
+              "style": {
+                "background": "rgba(72, 187, 120, 0.2)",
+                "border": "2px solid #48BB78",
+                "border_radius": 6,
+                "padding": 16,
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 16,
+                "color": "#48BB78",
+                "text_align": "center",
+                "margin_top": 32
+              }
+            }
+          ]
+        },
+        {
+          "type": "pricing_tier_card",
+          "id": "enterprise_tier",
+          "tier_name": "Enterprise",
+          "position": {
+            "x": 1107,
+            "y": 0,
+            "width": 493,
+            "height": 520
+          },
+          "style": {
+            "background": "rgba(237, 137, 54, 0.1)",
+            "border": "2px solid #ed8936",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "enterprise_label",
+              "content": "Enterprise",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 32,
+                "color": "#ed8936",
+                "text_align": "center",
+                "margin_bottom": 16
+              }
+            },
+            {
+              "type": "text",
+              "id": "enterprise_duration",
+              "content": "Multi-Year",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 500,
+                "font_size": 18,
+                "color": "#fbd38d",
+                "text_align": "center",
+                "margin_bottom": 32
+              }
+            },
+            {
+              "type": "pricing_display",
+              "id": "enterprise_price",
+              "formula": "Custom",
+              "description": "Volume discounts available",
+              "style": {
+                "formula": {
+                  "font_family": "Inter",
+                  "font_weight": 700,
+                  "font_size": 48,
+                  "color": "#FFFFFF",
+                  "text_align": "center"
+                },
+                "description": {
+                  "font_family": "Inter",
+                  "font_weight": 500,
+                  "font_size": 20,
+                  "color": "#fbd38d",
+                  "text_align": "center",
+                  "margin_top": 8
+                }
+              }
+            },
+            {
+              "type": "divider",
+              "style": {
+                "border_top": "1px solid #ed8936",
+                "margin": "32px 0",
+                "opacity": 0.3
+              }
+            },
+            {
+              "type": "feature_list",
+              "id": "enterprise_features",
+              "items": [
+                "Everything in Production",
+                "Dedicated CSM & TAM",
+                "Custom SLAs & BAA",
+                "Private deployment options",
+                "Executive sponsorship"
+              ],
+              "style": {
+                "bullet": "✓",
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "color": "#FFFFFF",
+                "line_height": 2,
+                "bullet_color": "#ed8936"
+              }
+            },
+            {
+              "type": "callout_box",
+              "id": "enterprise_cta",
+              "content": "White-glove service",
+              "style": {
+                "background": "rgba(237, 137, 54, 0.2)",
+                "border": "2px solid #ed8936",
+                "border_radius": 6,
+                "padding": 16,
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 16,
+                "color": "#ed8936",
+                "text_align": "center",
+                "margin_top": 32
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "pricing_principles",
+      "position": {
+        "x": 160,
+        "y": 780,
+        "width": 1600,
+        "height": 220
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.15)",
+        "border": "3px solid #48BB78",
+        "border_radius": 12,
+        "padding": 40
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "principles_header",
+          "content": "Our Pricing Philosophy",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 28,
+            "color": "#48BB78",
+            "text_align": "center",
+            "margin_bottom": 24
+          }
+        },
+        {
+          "type": "principle_grid",
+          "id": "principles_list",
+          "layout": {
+            "type": "horizontal",
+            "columns": 3,
+            "gap": 60
+          },
+          "principles": [
+            {
+              "icon": "🤝",
+              "title": "Aligned Incentives",
+              "description": "We make money when you save money. If you save $2M, we take a percentage. If you save $0, you pay $0."
+            },
+            {
+              "icon": "📊",
+              "title": "Transparent & Predictable",
+              "description": "You see exactly what you're saving in real-time dashboards. No surprise bills. No hidden fees."
+            },
+            {
+              "icon": "⏱️",
+              "title": "Fast ROI",
+              "description": "Typical payback: 3-6 months. Most customers see positive ROI within the first year."
+            }
+          ],
+          "style": {
+            "icon": {
+              "font_size": 40,
+              "margin_bottom": 12
+            },
+            "title": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 18,
+              "color": "#FFFFFF",
+              "text_align": "center",
+              "margin_bottom": 8
+            },
+            "description": {
+              "font_family": "Inter",
+              "font_weight": 400,
+              "font_size": 15,
+              "color": "#FFFFFF",
+              "line_height": 1.6,
+              "text_align": "center"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "pilot_primary": "#4299e1",
+      "pilot_bg": "rgba(66, 153, 225, 0.1)",
+      "production_primary": "#48BB78",
+      "production_bg": "rgba(72, 187, 120, 0.15)",
+      "enterprise_primary": "#ed8936",
+      "enterprise_bg": "rgba(237, 137, 54, 0.1)",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0"
+    },
+    "visual_language": {
+      "three_tiers": "Clear progression from free pilot to enterprise",
+      "middle_emphasis": "Production tier highlighted as most common",
+      "performance_based": "X% formula reinforces aligned incentives"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Let me walk you through our pricing model. It's designed to be completely risk-free for you.",
+    "tier_by_tier": {
+      "pilot": "[Point to left card] First, the pilot: 2 to 4 weeks, completely free. We'll work with 1 to 2 of your data sources, run in shadow mode for validation, give you a savings analysis report, do an architecture review. No commitment required. The idea is: prove value before paying.",
+      "production": "[Point to middle card] Most customers move to production after the pilot. This is an annual contract with performance-based pricing. We charge X percent of your savings. [Pause] That's critical: We ONLY make money if you save money. If you save $2 million, we take a percentage. If you save zero, you pay zero. [Point to features] You get unlimited data sources, 24/7 support and monitoring, quarterly business reviews, custom policy development, and a success guarantee.",
+      "enterprise": "[Point to right card] For enterprises—typically Fortune 500s or those processing 200+ terabytes per month—we offer custom pricing with volume discounts. Multi-year contracts. Everything in production, plus: dedicated customer success manager and technical account manager, custom SLAs and BAA, private deployment options, executive sponsorship. White-glove service."
+    },
+    "principles": "[Point to bottom section] Our pricing philosophy has three core principles. [Point to each] Aligned incentives: We make money when you save money. Transparent and predictable: You see exactly what you're saving in real-time dashboards. No surprise bills. No hidden fees. And fast ROI: Typical payback is 3 to 6 months. Most customers see positive ROI within the first year.",
+    "objection_handling": {
+      "specific_percentage": "If asked for the specific percentage: 'It depends on your total contract value and deployment complexity. Typically ranges from 15-30% of savings. We can model this exactly for your scenario.'",
+      "comparison_to_per_gb": "If compared to per-GB pricing: 'The difference is: per-GB pricing punishes you for success. If you reduce 70% of your data, you pay us for 30%. We charge based on the SAVINGS, not the remaining volume. Our incentives are aligned.'",
+      "what_if_no_savings": "If asked 'What if we don't hit 40% savings?': 'Then you don't pay. That's our guarantee. We've never had a customer not hit at least 40% reduction, but if it happened, you'd owe us nothing.'"
+    },
+    "transition": "Does this pricing model make sense? Do you have any questions about how it would work for your specific situation?",
+    "when_to_use": "Show this slide only when pricing is explicitly asked about. Never lead with pricing.",
+    "pacing": "Spend most time on the 'aligned incentives' concept. That's the unique selling point."
+  },
+  "persona_alignment": {
+    "cfo_finance": {
+      "focus_elements": ["performance_based_pricing", "principles (aligned incentives)", "fast_roi"],
+      "talking_points": "Risk-free model, predictable costs, fast payback, no upfront investment"
+    },
+    "procurement": {
+      "focus_elements": ["pilot (free)", "production_features", "contract_terms"],
+      "talking_points": "Try before you buy, annual contracts available, volume discounts for enterprise"
+    },
+    "technical_teams": {
+      "focus_elements": ["pilot_features (shadow mode)", "production_features (support)"],
+      "talking_points": "Thorough validation period, 24/7 support, custom policy development"
+    }
+  },
+  "usage_guidelines": {
+    "when_to_show": [
+      "Prospect explicitly asks 'What does this cost?'",
+      "CFO or procurement is in the room",
+      "After value has been established (never lead with price)",
+      "During contract negotiation discussions"
+    ],
+    "when_not_to_show": [
+      "First meeting (too early)",
+      "Technical deep-dives (wrong focus)",
+      "Before establishing value and pain"
+    ],
+    "red_flags": [
+      "Never apologize for pricing",
+      "Never discount without reciprocity",
+      "Never give exact percentages in large group settings (save for 1:1 with procurement)"
+    ]
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "slide_id": "slide_09c_integration_architecture",
+  "frame_name": "Backup - How Expanso Integrates",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "How Expanso Fits Into Your Stack",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "architecture_diagram",
+      "id": "integration_layers",
+      "position": {
+        "x": 80,
+        "y": 160,
+        "width": 1760,
+        "height": 800
+      },
+      "layers": [
+        {
+          "id": "data_sources",
+          "label": "YOUR DATA SOURCES",
+          "position": {"y": 0, "height": 140},
+          "style": {
+            "background": "rgba(74, 85, 104, 0.3)",
+            "border": "2px solid #4A5568",
+            "border_radius": 8
+          },
+          "components": [
+            {"icon": "🖥️", "label": "Applications"},
+            {"icon": "📊", "label": "Databases"},
+            {"icon": "📡", "label": "IoT Devices"},
+            {"icon": "☁️", "label": "Cloud VMs"},
+            {"icon": "📱", "label": "Mobile Apps"}
+          ]
+        },
+        {
+          "id": "expanso_layer",
+          "label": "EXPANSO CONTROL PLANE",
+          "position": {"y": 180, "height": 240},
+          "style": {
+            "background": "rgba(72, 187, 120, 0.15)",
+            "border": "4px solid #48BB78",
+            "border_radius": 12
+          },
+          "callout": "← You are here\n(New layer we add)",
+          "components": [
+            {
+              "name": "Filter",
+              "description": "Drop 50-70% of data",
+              "integration": "Taps existing log streams, database change feeds, event buses"
+            },
+            {
+              "name": "Transform",
+              "description": "Mask PII, enrich, aggregate",
+              "integration": "Works with any data format (JSON, Parquet, CSV, logs)"
+            },
+            {
+              "name": "Route",
+              "description": "Multi-destination logic",
+              "integration": "Sends to existing connectors/APIs"
+            }
+          ]
+        },
+        {
+          "id": "existing_tools",
+          "label": "YOUR EXISTING TOOLS (Unchanged)",
+          "position": {"y": 460, "height": 140},
+          "style": {
+            "background": "rgba(66, 153, 225, 0.1)",
+            "border": "2px solid #4299e1",
+            "border_radius": 8
+          },
+          "components": [
+            {"logo": "fivetran_logo.svg", "label": "Fivetran"},
+            {"logo": "airbyte_logo.svg", "label": "Airbyte"},
+            {"logo": "dbt_logo.svg", "label": "dbt"},
+            {"logo": "airflow_logo.svg", "label": "Airflow"},
+            {"label": "Your ETL/ELT"}
+          ]
+        },
+        {
+          "id": "data_platforms",
+          "label": "YOUR DATA PLATFORMS (Cheaper)",
+          "position": {"y": 640, "height": 140},
+          "style": {
+            "background": "rgba(66, 153, 225, 0.1)",
+            "border": "2px solid #4299e1",
+            "border_radius": 8
+          },
+          "components": [
+            {"logo": "snowflake_logo.svg", "label": "Snowflake"},
+            {"logo": "databricks_logo.svg", "label": "Databricks"},
+            {"logo": "splunk_logo.svg", "label": "Splunk"},
+            {"logo": "datadog_logo.svg", "label": "Datadog"}
+          ],
+          "annotation": "50-70% less data ingested →\n50-70% lower bills"
+        }
+      ],
+      "flow_indicators": [
+        {
+          "from": "data_sources",
+          "to": "expanso_layer",
+          "label": "100% of data",
+          "style": {"stroke": "#718096", "width": 8}
+        },
+        {
+          "from": "expanso_layer",
+          "to": "existing_tools",
+          "label": "30-50% of data\n(filtered & optimized)",
+          "style": {"stroke": "#48BB78", "width": 4}
+        },
+        {
+          "from": "existing_tools",
+          "to": "data_platforms",
+          "label": "Clean, governed data",
+          "style": {"stroke": "#4299e1", "width": 4}
+        }
+      ]
+    }
+  },
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "expanso_layer": "rgba(72, 187, 120, 0.15)",
+      "expanso_border": "#48BB78",
+      "existing_tools": "rgba(66, 153, 225, 0.1)",
+      "existing_border": "#4299e1",
+      "sources_bg": "rgba(74, 85, 104, 0.3)",
+      "text_primary": "#FFFFFF"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Let me show you exactly how Expanso fits into your existing stack.",
+    "layer_by_layer": {
+      "sources": "[Point to top] At the top, you have your data sources—applications, databases, IoT devices, cloud VMs, mobile apps. Nothing changes here.",
+      "expanso": "[Point to green layer] Here's where Expanso sits—between your sources and your existing tools. We're a new layer you add. We tap existing log streams, database change feeds, event buses. We filter, transform, and route. This is where the 50 to 70% data reduction happens.",
+      "existing_tools": "[Point to middle blue layer] Below that, your existing tools—Fivetran, Airbyte, dbt, Airflow—they all stay exactly as they are. They just process 50 to 70% less data. No changes required.",
+      "platforms": "[Point to bottom layer] And at the bottom, your data platforms—Snowflake, Databricks, Splunk, Datadog. They also stay exactly as they are. Same queries. Same dashboards. Same APIs. Just 50 to 70% lower bills."
+    },
+    "integration_emphasis": "The key point: We don't replace anything. We insert a new layer upstream that makes everything downstream cheaper.",
+    "closing": "Any questions about how this integrates with your specific architecture?",
+    "when_to_use": "When architects want to understand integration points or during technical deep-dives"
+  },
+  "use_case": "Technical audiences, architecture reviews, integration planning discussions"
+}

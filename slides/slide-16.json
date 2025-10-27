@@ -1,0 +1,395 @@
+{
+  "slide_id": "slide_16_backup_competitive_analysis",
+  "frame_name": "Backup - Competitive Landscape",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Competitive Landscape",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "How Expanso Compares to Alternatives",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "competitive_comparison_matrix",
+      "id": "comparison_table",
+      "position": {
+        "x": 80,
+        "y": 200,
+        "width": 1760,
+        "height": 800
+      },
+      "structure": {
+        "columns": [
+          {
+            "id": "capability",
+            "header": "Capability",
+            "width": 360,
+            "align": "left"
+          },
+          {
+            "id": "expanso",
+            "header": "Expanso",
+            "width": 280,
+            "align": "center",
+            "highlight": true
+          },
+          {
+            "id": "platform_native",
+            "header": "Platform-Native Tools\n(Snowflake, Databricks)",
+            "width": 280,
+            "align": "center"
+          },
+          {
+            "id": "etl_tools",
+            "header": "ETL/ELT Tools\n(Fivetran, dbt)",
+            "width": 280,
+            "align": "center"
+          },
+          {
+            "id": "observability",
+            "header": "Observability Tools\n(Datadog, Cribl)",
+            "width": 280,
+            "align": "center"
+          },
+          {
+            "id": "diy",
+            "header": "DIY / Build\nIn-House",
+            "width": 280,
+            "align": "center"
+          }
+        ],
+        "rows": [
+          {
+            "section": "Core Value Proposition"
+          },
+          {
+            "capability": "Reduces data BEFORE platform ingestion",
+            "expanso": "✓ Core value",
+            "platform_native": "✗ After ingestion",
+            "etl_tools": "△ Limited",
+            "observability": "△ Limited scope",
+            "diy": "⚠ Possible but complex",
+            "weight": "critical"
+          },
+          {
+            "capability": "Works across ALL platforms simultaneously",
+            "expanso": "✓ Multi-platform",
+            "platform_native": "✗ Single platform",
+            "etl_tools": "△ Per-connector",
+            "observability": "△ Logs/metrics only",
+            "diy": "✗ High complexity",
+            "weight": "critical"
+          },
+          {
+            "capability": "Performance-based pricing (pay for savings)",
+            "expanso": "✓ Aligned incentives",
+            "platform_native": "✗ Per-GB",
+            "etl_tools": "✗ Per-connector",
+            "observability": "✗ Per-GB",
+            "diy": "✗ High capex",
+            "weight": "critical"
+          },
+          {
+            "section": "Technical Capabilities"
+          },
+          {
+            "capability": "Real-time filtering & transformation",
+            "expanso": "✓ <100ms latency",
+            "platform_native": "△ Batch only",
+            "etl_tools": "△ Batch focused",
+            "observability": "✓ Real-time",
+            "diy": "⚠ Depends on impl"
+          },
+          {
+            "capability": "Stateful aggregations & windows",
+            "expanso": "✓ Built-in",
+            "platform_native": "✓ Post-ingestion",
+            "etl_tools": "△ Limited",
+            "observability": "△ Basic",
+            "diy": "⚠ Complex to build"
+          },
+          {
+            "capability": "PII masking at source",
+            "expanso": "✓ Before cloud",
+            "platform_native": "△ After ingestion",
+            "etl_tools": "△ Per-tool",
+            "observability": "△ Basic",
+            "diy": "⚠ Must build"
+          },
+          {
+            "capability": "Multi-cloud & edge deployment",
+            "expanso": "✓ AWS/Azure/GCP/Edge",
+            "platform_native": "✗ Cloud only",
+            "etl_tools": "✗ Cloud only",
+            "observability": "△ Limited edge",
+            "diy": "⚠ Must build"
+          },
+          {
+            "section": "Operational Characteristics"
+          },
+          {
+            "capability": "Time to first savings",
+            "expanso": "2-4 weeks",
+            "platform_native": "N/A (no savings)",
+            "etl_tools": "N/A (adds cost)",
+            "observability": "8-12 weeks",
+            "diy": "6-12 months"
+          },
+          {
+            "capability": "Fail-open safety (no data loss)",
+            "expanso": "✓ Guaranteed",
+            "platform_native": "N/A",
+            "etl_tools": "△ Varies",
+            "observability": "✓ Some tools",
+            "diy": "⚠ Must build"
+          },
+          {
+            "capability": "Maintenance burden",
+            "expanso": "Low (managed)",
+            "platform_native": "Medium",
+            "etl_tools": "Medium",
+            "observability": "Medium",
+            "diy": "Very High"
+          },
+          {
+            "capability": "Vendor lock-in risk",
+            "expanso": "Low (upstream)",
+            "platform_native": "High",
+            "etl_tools": "Medium",
+            "observability": "Medium",
+            "diy": "None"
+          },
+          {
+            "section": "Economics"
+          },
+          {
+            "capability": "Typical ROI (3-year)",
+            "expanso": "300-500%",
+            "platform_native": "N/A",
+            "etl_tools": "Negative",
+            "observability": "100-200%",
+            "diy": "50-150%"
+          },
+          {
+            "capability": "Upfront investment required",
+            "expanso": "$0 (free pilot)",
+            "platform_native": "High",
+            "etl_tools": "Medium",
+            "observability": "Medium",
+            "diy": "Very High"
+          },
+          {
+            "capability": "Risk if doesn't work",
+            "expanso": "Zero",
+            "platform_native": "Sunk cost",
+            "etl_tools": "Sunk cost",
+            "observability": "Sunk cost",
+            "diy": "Very High"
+          }
+        ]
+      },
+      "style": {
+        "section_header": {
+          "background": "rgba(72, 187, 120, 0.2)",
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 16,
+          "color": "#48BB78",
+          "padding": 12,
+          "text_transform": "uppercase",
+          "letter_spacing": 1
+        },
+        "header_row": {
+          "background": "#2d3748",
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 14,
+          "color": "#FFFFFF",
+          "padding": 16,
+          "border_bottom": "2px solid #4A5568",
+          "line_height": 1.4
+        },
+        "header_highlight": {
+          "background": "rgba(72, 187, 120, 0.2)",
+          "border": "2px solid #48BB78",
+          "color": "#48BB78"
+        },
+        "capability_cell": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 15,
+          "color": "#FFFFFF",
+          "padding": 14,
+          "text_align": "left",
+          "critical_weight": {
+            "background": "rgba(72, 187, 120, 0.05)"
+          }
+        },
+        "value_cell": {
+          "font_family": "Inter",
+          "font_weight": 500,
+          "font_size": 14,
+          "color": "#FFFFFF",
+          "padding": 14,
+          "text_align": "center",
+          "line_height": 1.6
+        },
+        "expanso_cell": {
+          "background": "rgba(72, 187, 120, 0.08)",
+          "font_weight": 600
+        },
+        "symbols": {
+          "checkmark": {
+            "symbol": "✓",
+            "color": "#48BB78",
+            "font_size": 20
+          },
+          "x_mark": {
+            "symbol": "✗",
+            "color": "#fc8181",
+            "font_size": 20
+          },
+          "partial": {
+            "symbol": "△",
+            "color": "#fbd38d",
+            "font_size": 20
+          },
+          "warning": {
+            "symbol": "⚠",
+            "color": "#ed8936",
+            "font_size": 20
+          }
+        }
+      }
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "section_header": "rgba(72, 187, 120, 0.2)",
+      "expanso_highlight": "rgba(72, 187, 120, 0.08)",
+      "expanso_border": "#48BB78",
+      "positive": "#48BB78",
+      "negative": "#fc8181",
+      "partial": "#fbd38d",
+      "warning": "#ed8936",
+      "text_primary": "#FFFFFF"
+    },
+    "visual_language": {
+      "matrix_format": "Easy comparison across alternatives",
+      "expanso_column_emphasis": "Highlighted to draw attention",
+      "symbol_system": "Quick visual scanning"
+    }
+  },
+  "presentation_notes": {
+    "opening": "You're probably evaluating several approaches. Let me show you how Expanso compares to the alternatives.",
+    "walkthrough_strategy": "Don't read every cell. Hit the critical differentiators in the first section, then selectively highlight other key differences.",
+    "key_points": {
+      "core_value": "[Point to first 3 rows] The core value proposition: We reduce data BEFORE platform ingestion—they optimize AFTER. We work across ALL platforms simultaneously—they're single-platform or per-connector. We charge for savings—they charge for volume. That's fundamentally different.",
+      "technical": "[Point to technical section] Technically: We do real-time filtering with sub-100ms latency. We mask PII at the source—before it reaches the cloud. We deploy anywhere—multi-cloud and edge. Most alternatives are cloud-only or batch-focused.",
+      "operational": "[Point to operational section] Operationally: Time to first savings is 2 to 4 weeks for us versus 6 to 12 months for DIY. We have fail-open safety—guaranteed no data loss. Low maintenance burden—we manage it. Low vendor lock-in risk—we sit upstream, not in the critical path.",
+      "economics": "[Point to economics section] Economics: 300 to 500% ROI over 3 years. Zero upfront investment—free pilot. Zero risk if it doesn't work. Compare that to DIY: very high upfront investment, very high risk."
+    },
+    "objection_handling": {
+      "why_not_platform_native": "Platform-native optimization happens AFTER ingestion. You've already paid to ingest 100%. Even with perfect downstream optimization, you're still paying for that baseline. We reduce the baseline by 50-70%.",
+      "why_not_diy": "DIY seems appealing—no vendor lock-in. But reality: 6-12 months to build, very high capex, ongoing maintenance burden. Our customers tried DIY first. They came to us because building this is harder than it looks.",
+      "why_not_observability": "Observability tools like Cribl are great for logs and metrics. But they're single-domain. We work across logs, metrics, analytics, ML training data—everything. Multi-platform, not single-domain."
+    },
+    "when_to_use": "Use this slide when prospects say: 'We're evaluating other options' or 'Can't we just use [alternative]?' or 'We're considering building this ourselves.'"
+  },
+  "persona_alignment": {
+    "executives": {
+      "focus_rows": ["pricing_model", "roi", "risk", "time_to_savings"],
+      "talking_points": "Performance-based pricing, fast ROI, zero risk"
+    },
+    "architects": {
+      "focus_rows": ["multi_platform", "real_time", "pii_masking", "fail_open"],
+      "talking_points": "Technical superiority, multi-cloud, safety guarantees"
+    },
+    "finance": {
+      "focus_rows": ["pricing_model", "roi", "upfront_investment", "risk"],
+      "talking_points": "Aligned incentives, fast payback, no upfront cost"
+    },
+    "operations": {
+      "focus_rows": ["time_to_savings", "maintenance", "fail_open"],
+      "talking_points": "Quick deployment, low maintenance, operational safety"
+    }
+  },
+  "usage_guidelines": {
+    "when_to_show": [
+      "Prospect mentions evaluating alternatives",
+      "Competitive situation (RFP, bake-off)",
+      "Prospect asks 'Why not just use X?'",
+      "Building business case and need differentiation"
+    ],
+    "when_not_to_show": [
+      "First meeting (too defensive)",
+      "Before establishing value (premature)",
+      "Single-vendor evaluation (unnecessary)"
+    ],
+    "presentation_tips": [
+      "Lead with value, not competition",
+      "Be respectful of alternatives (don't trash talk)",
+      "Focus on differentiation, not superiority",
+      "Acknowledge when competitors have strengths"
+    ]
+  },
+  "competitive_intelligence_notes": {
+    "platform_native": {
+      "snowflake": "Great for optimization AFTER ingestion. Clustering, materialized views, result caching. But you've already paid to ingest 100%.",
+      "databricks": "Delta optimization, auto-loader efficiency. Same issue: optimization post-ingestion.",
+      "key_weakness": "All optimization happens downstream. Baseline data volume never reduced."
+    },
+    "etl_tools": {
+      "fivetran": "Reliable data replication. But adds connectors—increases data movement, doesn't reduce it.",
+      "dbt": "Transformations in the warehouse. Excellent tool. But operates post-ingestion.",
+      "key_weakness": "These tools INCREASE data movement and processing. Wrong direction for cost optimization."
+    },
+    "observability": {
+      "cribl": "Log optimization and routing. Good for logs. But single-domain (doesn't cover analytics, ML).",
+      "datadog": "Observability platform with some filtering. But designed for observability data only.",
+      "key_weakness": "Single-domain solutions. Don't address full data pipeline."
+    },
+    "diy": {
+      "appeal": "No vendor lock-in, full control, custom to your needs.",
+      "reality": "6-12 months to build, high capex (engineers, infrastructure), ongoing maintenance, scaling challenges.",
+      "key_weakness": "Underestimate complexity. Most customers who tried DIY came to us after failing."
+    }
+  }
+}

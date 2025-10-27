@@ -1,0 +1,184 @@
+{
+  "slide_id": "slide_14a_technical_faq",
+  "frame_name": "Backup - Technical FAQ",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Technical FAQ",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Engineering & Architecture Questions",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "technical_faq_list",
+      "position": {
+        "x": 80,
+        "y": 200,
+        "width": 1760,
+        "height": 800
+      },
+      "layout": {
+        "type": "two_column",
+        "gap": 60
+      },
+      "elements": [
+        {
+          "type": "faq_column",
+          "id": "left_column_tech",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 850,
+            "height": 800
+          },
+          "faqs": [
+            {
+              "question": "What's the performance overhead?",
+              "answer": "Sub-100ms latency at P99 for stateless filters. Stateful aggregations: 200-500ms. CPU: 0.3-0.7 vCPU per agent. Memory: ~200MB baseline. Throughput: 100K+ events/sec per node. Scales linearly—add more nodes for more throughput. WebAssembly runtime provides near-native performance.",
+              "icon": "⚡"
+            },
+            {
+              "question": "How does it handle backpressure?",
+              "answer": "Built-in buffering (configurable size). When buffer fills: (1) Apply backpressure to upstream sources, (2) Persist to local disk, (3) Fail-open if buffer + disk exhausted (data flows through unchanged). Monitoring alerts before buffers fill. Never block production data flow.",
+              "icon": "🌊"
+            },
+            {
+              "question": "What programming model for policies?",
+              "answer": "Declarative YAML policies compiled to WebAssembly. Similar to Envoy filters or eBPF programs. Write filters in high-level language (supports JavaScript, Python, Rust), compile to Wasm. Built-in functions for common patterns (regex, JSON parsing, time windows). Custom functions supported via Wasm modules.",
+              "icon": "📝"
+            },
+            {
+              "question": "How do you handle schema evolution?",
+              "answer": "Schema-aware transformations with automatic adaptation. When schema changes: (1) Detect via schema registry integration, (2) Backward-compatible transforms continue working, (3) Alert on breaking changes, (4) Provide schema diff for policy updates. Supports Avro, Protobuf, JSON Schema.",
+              "icon": "🔄"
+            },
+            {
+              "question": "What's the network architecture?",
+              "answer": "Agents → Control Plane: mTLS, pull-based config updates. Data Plane: Agents process locally, never send data to control plane. Multi-region: Deploy control plane per region. Hybrid: Agents work offline (cache policies locally), sync when online. No hairpinning—data never leaves source region.",
+              "icon": "🌐"
+            }
+          ]
+        },
+        {
+          "type": "faq_column",
+          "id": "right_column_tech",
+          "position": {
+            "x": 910,
+            "y": 0,
+            "width": 850,
+            "height": 800
+          },
+          "faqs": [
+            {
+              "question": "How do I debug production issues?",
+              "answer": "Structured logs to your aggregator. Distributed tracing with OpenTelemetry (trace IDs propagate end-to-end). Metrics via Prometheus. Built-in diagnostics endpoints (/health, /metrics, /debug/pprof). Shadow replay: Re-test policies with historical data. Policy dry-run mode: Test without applying.",
+              "icon": "🔍"
+            },
+            {
+              "question": "What's the upgrade process?",
+              "answer": "Rolling updates with zero downtime. Blue-green deployment: New version deployed alongside old, traffic gradually shifted. Automatic rollback on failure. Agents are stateless—no state migration. Control plane: Database migrations run automatically. Emergency patches: Hot-reload policies without restart.",
+              "icon": "⬆️"
+            },
+            {
+              "question": "How does multi-tenancy work?",
+              "answer": "Namespace isolation in K8s. RBAC for policy management (which teams can deploy to which namespaces). Resource quotas per tenant. Separate agent pools for isolation-sensitive workloads. Private control plane available for enterprise. Full tenant data isolation—no data sharing between tenants.",
+              "icon": "🏢"
+            },
+            {
+              "question": "What's the disaster recovery story?",
+              "answer": "Control plane: Multi-AZ, automatic failover, RPO=0, RTO<5min. Policies: Stored in Git (your source of truth). Agents: Stateless, can be recreated instantly. Metrics/logs: Stored in your systems. If control plane fails: Agents continue with cached policies. Recovery: Redeploy agents from IaC, control plane auto-recovers.",
+              "icon": "🔥"
+            },
+            {
+              "question": "Can I run this air-gapped?",
+              "answer": "Yes. Agents and control plane can run fully air-gapped. Deploy via: (1) Container images pushed to your registry, (2) Helm charts in your repo, (3) GitOps with your Git server. No outbound internet required. Updates: Manual push of new images. Licensing: License file instead of phone-home.",
+              "icon": "🔒"
+            }
+          ]
+        }
+      ],
+      "faq_style": {
+        "container": {
+          "margin_bottom": 32,
+          "padding": 24,
+          "background": "rgba(66, 153, 225, 0.08)",
+          "border": "2px solid #4A5568",
+          "border_radius": 8
+        },
+        "icon": {
+          "font_size": 32,
+          "margin_bottom": 12,
+          "display": "inline-block"
+        },
+        "question": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 18,
+          "color": "#4299e1",
+          "line_height": 1.4,
+          "margin_bottom": 12
+        },
+        "answer": {
+          "font_family": "Inter",
+          "font_weight": 400,
+          "font_size": 14,
+          "color": "#FFFFFF",
+          "line_height": 1.7
+        }
+      }
+    }
+  },
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "faq_bg": "rgba(66, 153, 225, 0.08)",
+      "faq_border": "#4A5568",
+      "question_color": "#4299e1",
+      "text_primary": "#FFFFFF"
+    }
+  },
+  "presentation_notes": {
+    "audience": "Principal engineers, architects, SRE leads, DevOps managers",
+    "depth": "These are detailed technical answers. Don't simplify—this audience wants specifics.",
+    "follow_up": "After answering, ask: 'Does that answer your question, or should I go deeper on any aspect?'",
+    "when_to_use": "Technical deep-dives, architecture reviews, engineering evaluations"
+  },
+  "use_case": "Technical audiences, architecture reviews, engineering due diligence"
+}

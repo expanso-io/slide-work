@@ -1,0 +1,421 @@
+{
+  "slide_id": "slide_11b_roi_calculator_detailed",
+  "frame_name": "Backup - Detailed ROI Model",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Your ROI Model",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Conservative 3-Year Financial Model",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "assumptions_section",
+      "position": {
+        "x": 80,
+        "y": 200,
+        "width": 850,
+        "height": 280
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "assumptions_header",
+          "content": "Assumptions (Your Numbers)",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 24,
+            "color": "#4299e1",
+            "margin_bottom": 20
+          }
+        },
+        {
+          "type": "assumption_table",
+          "id": "input_assumptions",
+          "rows": [
+            {
+              "label": "Current Monthly Data Volume",
+              "value": "100 TB",
+              "editable": true
+            },
+            {
+              "label": "Average Cost per TB",
+              "value": "$50",
+              "editable": true
+            },
+            {
+              "label": "Current Annual Platform Spend",
+              "value": "$600,000",
+              "calculated": "volume × cost × 12"
+            },
+            {
+              "label": "Expected Data Reduction",
+              "value": "60%",
+              "note": "(Conservative estimate)"
+            },
+            {
+              "label": "Expanso Fee (% of Savings)",
+              "value": "25%",
+              "note": "(Example rate)"
+            }
+          ],
+          "style": {
+            "row_height": 44,
+            "label": {
+              "font_family": "Inter",
+              "font_weight": 600,
+              "font_size": 16,
+              "color": "#FFFFFF"
+            },
+            "value": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 18,
+              "color": "#4299e1"
+            },
+            "note": {
+              "font_family": "Inter",
+              "font_weight": 400,
+              "font_size": 13,
+              "color": "#90cdf4",
+              "font_style": "italic"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "id": "annual_breakdown",
+      "position": {
+        "x": 990,
+        "y": 200,
+        "width": 850,
+        "height": 280
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "breakdown_header",
+          "content": "Annual Financial Impact",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 24,
+            "color": "#48BB78",
+            "margin_bottom": 20
+          }
+        },
+        {
+          "type": "financial_breakdown_table",
+          "id": "annual_financials",
+          "rows": [
+            {
+              "label": "Current Annual Spend",
+              "value": "$600,000",
+              "type": "baseline"
+            },
+            {
+              "label": "Data Reduction (60%)",
+              "value": "60 TB → 40 TB",
+              "type": "metric"
+            },
+            {
+              "label": "New Annual Platform Spend",
+              "value": "$240,000",
+              "type": "reduced"
+            },
+            {
+              "label": "Total Annual Savings",
+              "value": "$360,000",
+              "type": "savings",
+              "emphasis": true
+            },
+            {
+              "label": "Expanso Fee (25% of savings)",
+              "value": "$90,000",
+              "type": "cost"
+            },
+            {
+              "label": "Your Net Annual Savings",
+              "value": "$270,000",
+              "type": "net_savings",
+              "emphasis": true,
+              "highlight": true
+            }
+          ],
+          "style": {
+            "row_height": 44,
+            "label": {
+              "font_family": "Inter",
+              "font_weight": 600,
+              "font_size": 16,
+              "color": "#FFFFFF"
+            },
+            "value": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 18,
+              "color": "#FFFFFF"
+            },
+            "savings": {
+              "color": "#48BB78"
+            },
+            "highlight": {
+              "background": "rgba(72, 187, 120, 0.2)",
+              "border": "2px solid #48BB78",
+              "border_radius": 4,
+              "padding": "8px 12px"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "id": "three_year_projection",
+      "position": {
+        "x": 80,
+        "y": 520,
+        "width": 1760,
+        "height": 320
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "projection_header",
+          "content": "3-Year Cumulative Impact",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 28,
+            "color": "#48BB78",
+            "text_align": "center",
+            "margin_bottom": 32
+          }
+        },
+        {
+          "type": "year_comparison_table",
+          "id": "three_year_table",
+          "columns": [
+            {"header": "Metric", "width": 440},
+            {"header": "Year 1", "width": 440},
+            {"header": "Year 2", "width": 440},
+            {"header": "Year 3", "width": 440}
+          ],
+          "rows": [
+            {
+              "metric": "Platform Spend WITHOUT Expanso",
+              "year_1": "$600,000",
+              "year_2": "$660,000",
+              "year_3": "$726,000",
+              "note": "(+10% YoY growth)"
+            },
+            {
+              "metric": "Platform Spend WITH Expanso",
+              "year_1": "$240,000",
+              "year_2": "$264,000",
+              "year_3": "$290,400",
+              "note": "(40% of baseline)"
+            },
+            {
+              "metric": "Gross Savings",
+              "year_1": "$360,000",
+              "year_2": "$396,000",
+              "year_3": "$435,600",
+              "style": "savings"
+            },
+            {
+              "metric": "Expanso Fees",
+              "year_1": "$90,000",
+              "year_2": "$99,000",
+              "year_3": "$108,900",
+              "style": "cost"
+            },
+            {
+              "metric": "Net Savings",
+              "year_1": "$270,000",
+              "year_2": "$297,000",
+              "year_3": "$326,700",
+              "style": "net_savings",
+              "emphasis": true
+            },
+            {
+              "metric": "Cumulative Net Savings",
+              "year_1": "$270,000",
+              "year_2": "$567,000",
+              "year_3": "$893,700",
+              "style": "cumulative",
+              "emphasis": true,
+              "highlight": true
+            }
+          ],
+          "style": {
+            "header": {
+              "background": "#2d3748",
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 18,
+              "color": "#FFFFFF",
+              "padding": 16,
+              "text_align": "center"
+            },
+            "cell": {
+              "font_family": "Inter",
+              "font_weight": 500,
+              "font_size": 16,
+              "color": "#FFFFFF",
+              "padding": 16,
+              "text_align": "center"
+            },
+            "savings": {
+              "color": "#48BB78"
+            },
+            "cost": {
+              "color": "#fbd38d"
+            },
+            "net_savings": {
+              "color": "#48BB78",
+              "font_weight": 700
+            },
+            "highlight": {
+              "background": "rgba(72, 187, 120, 0.2)",
+              "border": "2px solid #48BB78",
+              "font_size": 20,
+              "font_weight": 700
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "roi_summary",
+      "position": {
+        "x": 80,
+        "y": 880,
+        "width": 1760,
+        "height": 140
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.2)",
+        "border": "3px solid #48BB78",
+        "border_radius": 12,
+        "padding": 32
+      },
+      "elements": [
+        {
+          "type": "roi_metrics_row",
+          "id": "summary_metrics",
+          "layout": {
+            "type": "horizontal",
+            "columns": 4,
+            "gap": 60
+          },
+          "metrics": [
+            {
+              "label": "3-Year Net Savings",
+              "value": "$893,700",
+              "icon": "💰"
+            },
+            {
+              "label": "ROI",
+              "value": "333%",
+              "icon": "📈"
+            },
+            {
+              "label": "Payback Period",
+              "value": "4 Months",
+              "icon": "⏱️"
+            },
+            {
+              "label": "Monthly Savings",
+              "value": "$22,500",
+              "icon": "💵"
+            }
+          ],
+          "style": {
+            "icon": {
+              "font_size": 32,
+              "margin_bottom": 8
+            },
+            "label": {
+              "font_family": "Inter",
+              "font_weight": 600,
+              "font_size": 16,
+              "color": "#9ae6b4",
+              "text_align": "center",
+              "margin_bottom": 8
+            },
+            "value": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 32,
+              "color": "#FFFFFF",
+              "text_align": "center"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "assumptions_primary": "#4299e1",
+      "impact_primary": "#48BB78",
+      "cost_color": "#fbd38d",
+      "savings_color": "#48BB78",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Let me show you exactly what the financial model looks like with your numbers.",
+    "assumptions": "[Point to left] Here are the assumptions—and these are YOUR numbers, not ours. Current monthly data volume: 100 terabytes. Average cost per terabyte: $50. That's $600,000 in annual platform spend. We're using a conservative 60% data reduction estimate. And let's say our fee is 25% of savings—that's an example rate we can adjust.",
+    "annual_impact": "[Point to right] Annual financial impact: Current spend is $600,000. With 60% reduction, you go from 100 terabytes to 40 terabytes. New annual platform spend: $240,000. Total annual savings: $360,000. Our fee—25% of that—is $90,000. Your net annual savings: $270,000.",
+    "three_year": "[Point to table] Now let's project this over 3 years, assuming your data volume grows 10% year-over-year—which is typical. [Walk through table rows] Year one net savings: $270,000. Year two: $297,000. Year three: $326,700. Cumulative net savings over 3 years: $893,700.",
+    "summary": "[Point to bottom] That gives you a 333% ROI, a 4-month payback period, and $22,500 in monthly savings.",
+    "customization": "This model is fully customizable. We can plug in your exact numbers—your actual data volume, your actual cost per terabyte, your actual platform mix. Would you like me to build this out with your specific numbers?",
+    "when_to_use": "Use this slide in CFO meetings, business case development, or when prospect wants detailed financial modeling"
+  },
+  "use_case": "CFO presentations, business case development, financial planning discussions"
+}

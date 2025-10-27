@@ -1,0 +1,321 @@
+{
+  "slide_id": "slide_16b_build_vs_buy",
+  "frame_name": "Backup - Build vs Buy Analysis",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Build vs Buy: The Real Cost of DIY",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Total Cost of Ownership: 3-Year Analysis",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "tco_comparison",
+      "position": {
+        "x": 80,
+        "y": 200,
+        "width": 1760,
+        "height": 380
+      },
+      "elements": [
+        {
+          "type": "tco_table",
+          "id": "cost_breakdown",
+          "columns": [
+            {"header": "Cost Category", "width": 440},
+            {"header": "DIY (Build In-House)", "width": 440},
+            {"header": "Buy (Expanso)", "width": 440},
+            {"header": "Difference", "width": 440}
+          ],
+          "rows": [
+            {
+              "category": "Initial Development",
+              "diy": "$300K - $500K",
+              "buy": "$0 (free pilot)",
+              "difference": "+$300K - $500K",
+              "detail_diy": "4-6 engineers × 3-6 months"
+            },
+            {
+              "category": "Infrastructure & Hosting",
+              "diy": "$50K - $100K/year",
+              "buy": "Included in fee",
+              "difference": "+$150K - $300K (3yr)",
+              "detail_diy": "Compute, storage, networking"
+            },
+            {
+              "category": "Ongoing Maintenance",
+              "diy": "$200K - $400K/year",
+              "buy": "Included in fee",
+              "difference": "+$600K - $1.2M (3yr)",
+              "detail_diy": "2-4 engineers full-time"
+            },
+            {
+              "category": "Feature Development",
+              "diy": "$100K - $200K/year",
+              "buy": "Automatic updates",
+              "difference": "+$300K - $600K (3yr)",
+              "detail_diy": "New connectors, features"
+            },
+            {
+              "category": "Monitoring & Operations",
+              "diy": "$50K - $100K/year",
+              "buy": "Included in fee",
+              "difference": "+$150K - $300K (3yr)",
+              "detail_diy": "On-call, incident response"
+            },
+            {
+              "category": "Total 3-Year TCO",
+              "diy": "$1.5M - $3.3M",
+              "buy": "$360K - $900K",
+              "difference": "+$1.1M - $2.4M",
+              "style": "total_row",
+              "detail_buy": "25% of $1.2M-$3.6M savings"
+            }
+          ],
+          "style": {
+            "header": {
+              "background": "#2d3748",
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 16,
+              "color": "#FFFFFF",
+              "padding": 16,
+              "text_align": "center"
+            },
+            "cell": {
+              "font_family": "Inter",
+              "font_weight": 500,
+              "font_size": 15,
+              "color": "#FFFFFF",
+              "padding": 16,
+              "text_align": "center"
+            },
+            "category_cell": {
+              "text_align": "left",
+              "font_weight": 600
+            },
+            "difference_cell": {
+              "color": "#fc8181",
+              "font_weight": 700
+            },
+            "total_row": {
+              "background": "rgba(72, 187, 120, 0.15)",
+              "font_weight": 700,
+              "font_size": 18
+            },
+            "detail": {
+              "font_size": 13,
+              "color": "#CBD5E0",
+              "font_style": "italic",
+              "display": "block",
+              "margin_top": 4
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "id": "qualitative_factors",
+      "position": {
+        "x": 80,
+        "y": 620,
+        "width": 1760,
+        "height": 360
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "factors_header",
+          "content": "Non-Financial Factors",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 28,
+            "color": "#48BB78",
+            "margin_bottom": 24
+          }
+        },
+        {
+          "type": "factors_comparison",
+          "id": "qualitative_comparison",
+          "layout": "two_column",
+          "columns": [
+            {
+              "header": "Build (DIY)",
+              "factors": [
+                {
+                  "factor": "Time to Value",
+                  "assessment": "6-12 months to first savings",
+                  "icon": "⏱️",
+                  "sentiment": "negative"
+                },
+                {
+                  "factor": "Risk",
+                  "assessment": "High: Project may fail, over budget, delayed",
+                  "icon": "⚠️",
+                  "sentiment": "negative"
+                },
+                {
+                  "factor": "Opportunity Cost",
+                  "assessment": "Engineers unavailable for product work",
+                  "icon": "💼",
+                  "sentiment": "negative"
+                },
+                {
+                  "factor": "Scalability",
+                  "assessment": "Must build for future scale up-front",
+                  "icon": "📈",
+                  "sentiment": "negative"
+                },
+                {
+                  "factor": "Innovation",
+                  "assessment": "Must build every new feature yourself",
+                  "icon": "💡",
+                  "sentiment": "negative"
+                },
+                {
+                  "factor": "Control",
+                  "assessment": "Full control, no vendor dependency",
+                  "icon": "🎛️",
+                  "sentiment": "positive"
+                }
+              ]
+            },
+            {
+              "header": "Buy (Expanso)",
+              "factors": [
+                {
+                  "factor": "Time to Value",
+                  "assessment": "2-4 weeks to first savings",
+                  "icon": "⚡",
+                  "sentiment": "positive"
+                },
+                {
+                  "factor": "Risk",
+                  "assessment": "Zero: Free pilot, pay only if it works",
+                  "icon": "🛡️",
+                  "sentiment": "positive"
+                },
+                {
+                  "factor": "Opportunity Cost",
+                  "assessment": "Engineers stay focused on core product",
+                  "icon": "🎯",
+                  "sentiment": "positive"
+                },
+                {
+                  "factor": "Scalability",
+                  "assessment": "Proven at scale (50+ customers)",
+                  "icon": "🚀",
+                  "sentiment": "positive"
+                },
+                {
+                  "factor": "Innovation",
+                  "assessment": "Automatic updates, new features included",
+                  "icon": "✨",
+                  "sentiment": "positive"
+                },
+                {
+                  "factor": "Control",
+                  "assessment": "Vendor dependency, less customization",
+                  "icon": "🔗",
+                  "sentiment": "negative"
+                }
+              ]
+            }
+          ],
+          "style": {
+            "header": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 22,
+              "color": "#48BB78",
+              "margin_bottom": 20
+            },
+            "factor_item": {
+              "margin_bottom": 16,
+              "layout": "horizontal"
+            },
+            "icon": {
+              "font_size": 24,
+              "margin_right": 12
+            },
+            "factor_name": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 16,
+              "color": "#FFFFFF",
+              "margin_bottom": 4
+            },
+            "assessment": {
+              "font_family": "Inter",
+              "font_weight": 400,
+              "font_size": 14,
+              "line_height": 1.6
+            },
+            "positive_sentiment": {
+              "color": "#9ae6b4"
+            },
+            "negative_sentiment": {
+              "color": "#fbb6b6"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "positive": "#48BB78",
+      "negative": "#fc8181",
+      "neutral": "#CBD5E0",
+      "text_primary": "#FFFFFF"
+    }
+  },
+  "presentation_notes": {
+    "opening": "I respect the instinct to build. You get full control, no vendor dependency. But let's look at the real numbers.",
+    "tco_walkthrough": "[Point to table] Initial development: $300K to $500K—4 to 6 engineers for 3 to 6 months. Infrastructure: $50K to $100K per year. Ongoing maintenance: $200K to $400K per year—2 to 4 engineers full-time. Feature development: $100K to $200K per year for new connectors and features. Monitoring and operations: $50K to $100K per year for on-call and incident response. [Point to total] Total 3-year TCO for DIY: $1.5M to $3.3M. With Expanso: $360K to $900K—that's 25% of the savings we deliver. Difference: You save an additional $1.1M to $2.4M by buying versus building.",
+    "qualitative": "[Point to bottom section] Beyond the money: Time to value—6 to 12 months for DIY versus 2 to 4 weeks for us. Risk—high for DIY, zero for us because of the free pilot. Opportunity cost—your engineers stay focused on product, not infrastructure. Scalability—we're proven at scale with 50+ customers. Innovation—automatic updates versus having to build every feature yourself. [Acknowledge] The one advantage of DIY: Full control, no vendor dependency. That's real. You have to decide if that's worth $1M+ more.",
+    "common_objection": "If they say 'But we have cheap engineering resources offshore': That's a tempting calculation. But: (1) Hidden costs—coordination, quality, rework. (2) Opportunity cost—those engineers could build revenue-generating features. (3) Risk—projects often take 2-3x longer than estimated. (4) Ongoing burden—this isn't build once, it's continuous investment.",
+    "when_to_use": "Use this slide when prospect says 'We're considering building this ourselves' or 'We have engineering capacity'"
+  },
+  "use_case": "Build vs buy discussions, engineering-led organizations, cost-conscious buyers"
+}

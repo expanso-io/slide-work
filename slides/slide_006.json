@@ -1,0 +1,421 @@
+{
+  "slide_id": "slide_06_customer_example",
+  "frame_name": "Customer Example - Real Results",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Real Customer Example: $2.1M Saved Annually",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "left"
+      },
+      "position": {
+        "x": 80,
+        "y": 60,
+        "max_width": 1760
+      },
+      "emphasis": {
+        "words": ["$2.1M"],
+        "color": "#48BB78"
+      }
+    },
+    {
+      "type": "container",
+      "id": "company_profile",
+      "position": {
+        "x": 80,
+        "y": 160,
+        "width": 1760,
+        "height": 120
+      },
+      "style": {
+        "background": "rgba(74, 85, 104, 0.3)",
+        "border": "2px solid #4A5568",
+        "border_radius": 8,
+        "padding": 32
+      },
+      "layout": {
+        "type": "horizontal",
+        "gap": 80
+      },
+      "elements": [
+        {
+          "type": "stat_item",
+          "label": "Company",
+          "value": "Global logistics company",
+          "icon": "🏢"
+        },
+        {
+          "type": "stat_item",
+          "label": "Industry",
+          "value": "Supply chain & IoT",
+          "icon": "📦"
+        },
+        {
+          "type": "stat_item",
+          "label": "Data Volume",
+          "value": "200+ TB/month",
+          "icon": "💾"
+        },
+        {
+          "type": "stat_item",
+          "label": "Platforms",
+          "value": "Snowflake, Splunk, Datadog",
+          "icon": "☁️"
+        }
+      ],
+      "stat_style": {
+        "label": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 14,
+          "color": "#A0AEC0",
+          "text_transform": "uppercase",
+          "letter_spacing": 1
+        },
+        "value": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 20,
+          "color": "#FFFFFF",
+          "margin_top": 8
+        },
+        "icon": {
+          "font_size": 32,
+          "margin_bottom": 12
+        }
+      }
+    },
+    {
+      "type": "group",
+      "id": "problem_solution_comparison",
+      "position": {
+        "x": 80,
+        "y": 320,
+        "width": 1760,
+        "height": 480
+      },
+      "layout": {
+        "type": "two_column",
+        "gap": 60
+      },
+      "elements": [
+        {
+          "type": "container",
+          "id": "before_state",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 850,
+            "height": 480
+          },
+          "style": {
+            "background": "rgba(197, 48, 48, 0.1)",
+            "border": "3px solid #fc8181",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "before_label",
+              "content": "❌ BEFORE EXPANSO",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 28,
+                "color": "#fc8181",
+                "text_align": "center",
+                "margin_bottom": 32
+              }
+            },
+            {
+              "type": "problem_list",
+              "id": "before_problems",
+              "items": [
+                {
+                  "icon": "💸",
+                  "title": "Annual Cloud Data Costs",
+                  "value": "$3.2M/year",
+                  "detail": "Growing 40% YoY"
+                },
+                {
+                  "icon": "📊",
+                  "title": "Data Volume",
+                  "value": "200 TB/month",
+                  "detail": "100% of generated data ingested"
+                },
+                {
+                  "icon": "🐌",
+                  "title": "Query Performance",
+                  "value": "Slow & getting worse",
+                  "detail": "Snowflake scans taking 10+ minutes"
+                },
+                {
+                  "icon": "🔓",
+                  "title": "Compliance Issues",
+                  "value": "3 audit findings",
+                  "detail": "PII in analytics environments"
+                },
+                {
+                  "icon": "⏱️",
+                  "title": "Engineering Time",
+                  "value": "60% on firefighting",
+                  "detail": "Pipeline breaks, data quality issues"
+                }
+              ],
+              "style": {
+                "item_spacing": 24,
+                "icon_size": 28,
+                "title": {
+                  "font_family": "Inter",
+                  "font_weight": 600,
+                  "font_size": 16,
+                  "color": "#feb2b2"
+                },
+                "value": {
+                  "font_family": "Inter",
+                  "font_weight": 700,
+                  "font_size": 20,
+                  "color": "#FFFFFF"
+                },
+                "detail": {
+                  "font_family": "Inter",
+                  "font_weight": 400,
+                  "font_size": 14,
+                  "color": "#cbd5e0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "id": "after_state",
+          "position": {
+            "x": 910,
+            "y": 0,
+            "width": 850,
+            "height": 480
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.1)",
+            "border": "3px solid #48BB78",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "after_label",
+              "content": "✓ AFTER EXPANSO",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 28,
+                "color": "#48BB78",
+                "text_align": "center",
+                "margin_bottom": 32
+              }
+            },
+            {
+              "type": "solution_list",
+              "id": "after_results",
+              "items": [
+                {
+                  "icon": "💰",
+                  "title": "Annual Cloud Data Costs",
+                  "value": "$1.1M/year",
+                  "detail": "$2.1M saved (65% reduction)",
+                  "highlight": true
+                },
+                {
+                  "icon": "📉",
+                  "title": "Data Volume",
+                  "value": "70 TB/month",
+                  "detail": "65% reduction at source"
+                },
+                {
+                  "icon": "⚡",
+                  "title": "Query Performance",
+                  "value": "3-5x faster",
+                  "detail": "Snowflake scans under 2 minutes"
+                },
+                {
+                  "icon": "🔒",
+                  "title": "Compliance",
+                  "value": "100% compliant",
+                  "detail": "PII filtered before cloud ingestion"
+                },
+                {
+                  "icon": "🚀",
+                  "title": "Engineering Time",
+                  "value": "80% on innovation",
+                  "detail": "Pipelines stable, quality issues eliminated"
+                }
+              ],
+              "style": {
+                "item_spacing": 24,
+                "icon_size": 28,
+                "title": {
+                  "font_family": "Inter",
+                  "font_weight": 600,
+                  "font_size": 16,
+                  "color": "#9ae6b4"
+                },
+                "value": {
+                  "font_family": "Inter",
+                  "font_weight": 700,
+                  "font_size": 20,
+                  "color": "#FFFFFF"
+                },
+                "detail": {
+                  "font_family": "Inter",
+                  "font_weight": 400,
+                  "font_size": 14,
+                  "color": "#cbd5e0"
+                },
+                "highlight": {
+                  "background": "rgba(72, 187, 120, 0.2)",
+                  "border": "2px solid #48BB78",
+                  "border_radius": 6,
+                  "padding": 8
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "implementation_timeline",
+      "position": {
+        "x": 80,
+        "y": 840,
+        "width": 1760,
+        "height": 160
+      },
+      "style": {
+        "background": "rgba(66, 153, 225, 0.1)",
+        "border": "2px solid #4299e1",
+        "border_radius": 8,
+        "padding": 32
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "timeline_headline",
+          "content": "Implementation Timeline:",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 22,
+            "color": "#90cdf4",
+            "margin_bottom": 16
+          }
+        },
+        {
+          "type": "timeline",
+          "id": "deployment_timeline",
+          "milestones": [
+            {"week": "Week 1", "event": "Pilot deployment on 3 edge nodes", "icon": "🚀"},
+            {"week": "Week 2", "event": "Validated 68% data reduction", "icon": "📊"},
+            {"week": "Week 3", "event": "Rolled out to 50% of infrastructure", "icon": "📈"},
+            {"week": "Week 4", "event": "Full production deployment", "icon": "✅"},
+            {"week": "Week 8", "event": "First month savings: $175K", "icon": "💰"}
+          ],
+          "style": {
+            "layout": "horizontal",
+            "connector_color": "#4299e1",
+            "milestone": {
+              "font_family": "Inter",
+              "font_weight": 600,
+              "font_size": 14,
+              "color": "#90cdf4"
+            },
+            "event": {
+              "font_family": "Inter",
+              "font_weight": 400,
+              "font_size": 16,
+              "color": "#FFFFFF"
+            },
+            "icon_size": 24
+          }
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "before_state": {
+        "bg": "rgba(197, 48, 48, 0.1)",
+        "border": "#fc8181",
+        "text": "#feb2b2"
+      },
+      "after_state": {
+        "bg": "rgba(72, 187, 120, 0.1)",
+        "border": "#48BB78",
+        "text": "#9ae6b4"
+      },
+      "timeline": {
+        "bg": "rgba(66, 153, 225, 0.1)",
+        "border": "#4299e1",
+        "text": "#90cdf4"
+      }
+    },
+    "visual_language": {
+      "before_after": "Side-by-side comparison with color coding (red vs green)",
+      "metrics_driven": "Every claim backed by specific numbers",
+      "timeline_proof": "Shows implementation feasibility"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Let me show you what this looks like in practice. Here's a real customer—a global logistics company.",
+    "profile": "[Point to profile bar] They operate in supply chain and IoT. They were generating over 200 terabytes of data per month, flowing into Snowflake, Splunk, and Datadog.",
+    "before_state": "[Point to left side] Before Expanso, they were spending $3.2 million a year on cloud data costs, growing 40% year-over-year. They were ingesting 100% of their generated data—200 terabytes a month. Their Snowflake queries were taking 10-plus minutes. They had three compliance audit findings because PII was leaking into analytics environments. And their data engineers were spending 60% of their time firefighting pipeline breaks and data quality issues.",
+    "after_state": "[Point to right side] After Expanso, their annual costs dropped to $1.1 million. That's $2.1 million saved—a 65% reduction. They're now ingesting only 70 terabytes per month because we filter 65% at the source. Their queries are 3 to 5 times faster—under 2 minutes. They're 100% compliant because PII is filtered before it ever reaches the cloud. And their engineers are spending 80% of their time on innovation instead of firefighting.",
+    "timeline": "[Point to timeline] And here's the implementation timeline: Week one, pilot deployment. Week two, validated 68% data reduction. Week three, rolled out to half their infrastructure. Week four, full production. By week eight, they saw their first month's savings: $175,000.",
+    "transition": "Now, I know you're thinking: 'This sounds great, but will it work for us?' Let me address that...",
+    "pacing": "Spend time on the before/after contrast. Let the numbers sink in. Pause after '$2.1M saved.'"
+  },
+  "assets_required": [
+    {
+      "type": "icon",
+      "files": ["company_icon.svg", "industry_icon.svg", "data_icon.svg", "cloud_icon.svg"],
+      "specifications": "Emoji-style or simple line icons, 32px"
+    }
+  ],
+  "persona_alignment": {
+    "cfo": {
+      "focus_elements": ["$2.1M saved", "65% cost reduction", "$175K first month"],
+      "talking_points": "Immediate, measurable ROI, fast payback period"
+    },
+    "data_engineers": {
+      "focus_elements": ["80% on innovation", "3-5x faster queries", "pipelines stable"],
+      "talking_points": "Operational relief, performance improvement, career development time"
+    },
+    "compliance_officers": {
+      "focus_elements": ["100% compliant", "PII filtered before cloud"],
+      "talking_points": "Risk reduction, audit readiness, automated governance"
+    },
+    "executives": {
+      "focus_elements": ["4-week deployment", "$2.1M annual savings", "3 audit findings → 0"],
+      "talking_points": "Fast implementation, business impact, risk mitigation"
+    }
+  }
+}

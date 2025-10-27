@@ -1,0 +1,433 @@
+{
+  "slide_id": "slide_06_customer_example",
+  "frame_name": "Customer Example - Fortune 500 Retailer",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Real Customer Example: $1.77M Saved Annually",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "left"
+      },
+      "position": {
+        "x": 80,
+        "y": 60,
+        "max_width": 1760
+      },
+      "emphasis": {
+        "words": ["$1.77M"],
+        "color": "#48BB78"
+      }
+    },
+    {
+      "type": "container",
+      "id": "company_profile",
+      "position": {
+        "x": 80,
+        "y": 160,
+        "width": 1760,
+        "height": 120
+      },
+      "style": {
+        "background": "rgba(74, 85, 104, 0.3)",
+        "border": "2px solid #4A5568",
+        "border_radius": 8,
+        "padding": 32
+      },
+      "layout": {
+        "type": "horizontal",
+        "gap": 80
+      },
+      "elements": [
+        {
+          "type": "stat_item",
+          "label": "Company",
+          "value": "Fortune 500 Retailer (1,300 stores)",
+          "icon": "🏬"
+        },
+        {
+          "type": "stat_item",
+          "label": "Industry",
+          "value": "Omnichannel Retail & Supply Chain",
+          "icon": "🛒"
+        },
+        {
+          "type": "stat_item",
+          "label": "Data Volume",
+          "value": "5 TB/day → 600 GB/day",
+          "icon": "💾"
+        },
+        {
+          "type": "stat_item",
+          "label": "Platforms",
+          "value": "Snowflake, BigQuery, Datadog",
+          "icon": "☁️"
+        }
+      ],
+      "stat_style": {
+        "label": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 14,
+          "color": "#A0AEC0",
+          "text_transform": "uppercase",
+          "letter_spacing": 1
+        },
+        "value": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 20,
+          "color": "#FFFFFF",
+          "margin_top": 8
+        },
+        "icon": {
+          "font_size": 32,
+          "margin_bottom": 12
+        }
+      }
+    },
+    {
+      "type": "group",
+      "id": "problem_solution_comparison",
+      "position": {
+        "x": 80,
+        "y": 320,
+        "width": 1760,
+        "height": 480
+      },
+      "layout": {
+        "type": "two_column",
+        "gap": 60
+      },
+      "elements": [
+        {
+          "type": "container",
+          "id": "before_state",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 850,
+            "height": 480
+          },
+          "style": {
+            "background": "rgba(197, 48, 48, 0.1)",
+            "border": "3px solid #fc8181",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "before_label",
+              "content": "❌ BEFORE EXPANSO",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 28,
+                "color": "#fc8181",
+                "text_align": "center",
+                "margin_bottom": 32
+              }
+            },
+            {
+              "type": "problem_list",
+              "id": "before_problems",
+              "items": [
+                {
+                  "icon": "💸",
+                  "title": "Annual Cloud Data Costs",
+                  "value": "$4.30 M/year",
+                  "detail": "Centralized warehouse (Snowflake)"
+                },
+                {
+                  "icon": "📊",
+                  "title": "Data Transfer",
+                  "value": "5 TB/day",
+                  "detail": "Full raw ingestion from 1,300 stores"
+                },
+                {
+                  "icon": "🐌",
+                  "title": "Query Latency",
+                  "value": "3.5 seconds",
+                  "detail": "Network and warehouse bottlenecks"
+                },
+                {
+                  "icon": "⏱️",
+                  "title": "Data Ops Overhead",
+                  "value": "High",
+                  "detail": "Constant pipeline and sync issues"
+                },
+                {
+                  "icon": "🔐",
+                  "title": "Compliance Risk",
+                  "value": "Moderate",
+                  "detail": "PII replicated across multiple regions"
+                }
+              ],
+              "style": {
+                "item_spacing": 24,
+                "icon_size": 28,
+                "title": {
+                  "font_family": "Inter",
+                  "font_weight": 600,
+                  "font_size": 16,
+                  "color": "#feb2b2"
+                },
+                "value": {
+                  "font_family": "Inter",
+                  "font_weight": 700,
+                  "font_size": 20,
+                  "color": "#FFFFFF"
+                },
+                "detail": {
+                  "font_family": "Inter",
+                  "font_weight": 400,
+                  "font_size": 14,
+                  "color": "#cbd5e0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "id": "after_state",
+          "position": {
+            "x": 910,
+            "y": 0,
+            "width": 850,
+            "height": 480
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.1)",
+            "border": "3px solid #48BB78",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "after_label",
+              "content": "✓ AFTER EXPANSO",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 28,
+                "color": "#48BB78",
+                "text_align": "center",
+                "margin_bottom": 32
+              }
+            },
+            {
+              "type": "solution_list",
+              "id": "after_results",
+              "items": [
+                {
+                  "icon": "💰",
+                  "title": "Annual Cloud Data Costs",
+                  "value": "$2.53 M/year",
+                  "detail": "$1.77 M saved (58% reduction)",
+                  "highlight": true
+                },
+                {
+                  "icon": "📉",
+                  "title": "Data Transfer",
+                  "value": "0.6 TB/day",
+                  "detail": "88% less data moved centrally"
+                },
+                {
+                  "icon": "⚡",
+                  "title": "Query Latency",
+                  "value": "220 ms average",
+                  "detail": "~16× faster responses"
+                },
+                {
+                  "icon": "🔒",
+                  "title": "Compliance",
+                  "value": "Fully Compliant",
+                  "detail": "PII filtered at edge"
+                },
+                {
+                  "icon": "🚀",
+                  "title": "Data Ops Efficiency",
+                  "value": "80% less manual work",
+                  "detail": "Self-healing pipelines, automated syncs"
+                }
+              ],
+              "style": {
+                "item_spacing": 24,
+                "icon_size": 28,
+                "title": {
+                  "font_family": "Inter",
+                  "font_weight": 600,
+                  "font_size": 16,
+                  "color": "#9ae6b4"
+                },
+                "value": {
+                  "font_family": "Inter",
+                  "font_weight": 700,
+                  "font_size": 20,
+                  "color": "#FFFFFF"
+                },
+                "detail": {
+                  "font_family": "Inter",
+                  "font_weight": 400,
+                  "font_size": 14,
+                  "color": "#cbd5e0"
+                },
+                "highlight": {
+                  "background": "rgba(72, 187, 120, 0.2)",
+                  "border": "2px solid #48BB78",
+                  "border_radius": 6,
+                  "padding": 8
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "implementation_timeline",
+      "position": {
+        "x": 80,
+        "y": 840,
+        "width": 1760,
+        "height": 160
+      },
+      "style": {
+        "background": "rgba(66, 153, 225, 0.1)",
+        "border": "2px solid #4299e1",
+        "border_radius": 8,
+        "padding": 32
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "timeline_headline",
+          "content": "Implementation Timeline:",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 22,
+            "color": "#90cdf4",
+            "margin_bottom": 16
+          }
+        },
+        {
+          "type": "timeline",
+          "id": "deployment_timeline",
+          "milestones": [
+            {
+              "week": "Week 1",
+              "event": "Pilot on 5 stores (10 edge nodes)",
+              "icon": "🚀"
+            },
+            {
+              "week": "Week 2",
+              "event": "Validated 58% cost projection",
+              "icon": "📊"
+            },
+            {
+              "week": "Week 3",
+              "event": "Deployed to half of regions",
+              "icon": "📈"
+            },
+            {
+              "week": "Week 4",
+              "event": "Full rollout to 1,300 stores",
+              "icon": "✅"
+            },
+            {
+              "week": "Week 8",
+              "event": "First month savings: $145K",
+              "icon": "💰"
+            }
+          ],
+          "style": {
+            "layout": "horizontal",
+            "connector_color": "#4299e1",
+            "milestone": {
+              "font_family": "Inter",
+              "font_weight": 600,
+              "font_size": 14,
+              "color": "#90cdf4"
+            },
+            "event": {
+              "font_family": "Inter",
+              "font_weight": 400,
+              "font_size": 16,
+              "color": "#FFFFFF"
+            },
+            "icon_size": 24
+          }
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "before_state": {
+        "bg": "rgba(197, 48, 48, 0.1)",
+        "border": "#fc8181",
+        "text": "#feb2b2"
+      },
+      "after_state": {
+        "bg": "rgba(72, 187, 120, 0.1)",
+        "border": "#48BB78",
+        "text": "#9ae6b4"
+      },
+      "timeline": {
+        "bg": "rgba(66, 153, 225, 0.1)",
+        "border": "#4299e1",
+        "text": "#90cdf4"
+      }
+    },
+    "visual_language": {
+      "before_after": "Side-by-side comparison with red vs green",
+      "metrics_driven": "Every claim quantified with real numbers",
+      "timeline_proof": "Execution and impact timeline for credibility"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Let’s look at a realistic Fortune 500 retail example.",
+    "profile": "They run 1,300 stores nationwide and an online channel. They were pushing 5 terabytes of raw data to Snowflake every day.",
+    "before_state": "Before Expanso, their annual cloud data costs were $4.3 million. Each store sent raw data directly to the cloud — network and query latency averaged 3.5 seconds. Their teams were overwhelmed by sync issues and compliance risk.",
+    "after_state": "After Expanso, we distributed compute to the edge. Data transfer dropped to 600 GB/day — a 58% cost reduction ($1.77 million saved annually). Queries now run in under 250 milliseconds. Data Ops workload plummeted 80%, and they’re fully PII compliant.",
+    "timeline": "Pilot in week 1, validated results by week 2, full rollout by week 4, and $145,000 savings in the first month.",
+    "transition": "This model is repeatable for any retailer with distributed operations — fast ROI, provable savings, no centralized bottlenecks."
+  },
+  "persona_alignment": {
+    "cfo": {
+      "focus_elements": ["$1.77M saved", "58% reduction", "$145K first month"],
+      "talking_points": "Clear ROI with payback under 3 months."
+    },
+    "data_engineers": {
+      "focus_elements": ["220 ms latency", "80% less manual ops"],
+      "talking_points": "Better performance, fewer fires, more innovation time."
+    },
+    "compliance_officers": {
+      "focus_elements": ["PII filtered at edge", "Fully Compliant"],
+      "talking_points": "Audit readiness and data sovereignty guaranteed."
+    },
+    "executives": {
+      "focus_elements": ["4-week deployment", "Nationwide scalability"],
+      "talking_points": "Enterprise-scale impact with measurable business results."
+    }
+  }
+}

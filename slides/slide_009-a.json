@@ -1,0 +1,326 @@
+{
+  "slide_id": "slide_09a_versus_cribl",
+  "frame_name": "Backup - Expanso vs Cribl",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Expanso vs Cribl",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Similar Philosophy, Different Execution",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "comparison_columns",
+      "position": {
+        "x": 160,
+        "y": 220,
+        "width": 1600,
+        "height": 680
+      },
+      "layout": {
+        "type": "two_column",
+        "gap": 80
+      },
+      "elements": [
+        {
+          "type": "competitor_card",
+          "id": "cribl_side",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 760,
+            "height": 680
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.1)",
+            "border": "2px solid #4299e1",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "cribl_header",
+              "content": "Cribl",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 32,
+                "color": "#4299e1",
+                "text_align": "center",
+                "margin_bottom": 32
+              }
+            },
+            {
+              "type": "comparison_list",
+              "id": "cribl_attributes",
+              "items": [
+                {
+                  "label": "Focus",
+                  "value": "Log data & observability pipelines",
+                  "icon": "📊"
+                },
+                {
+                  "label": "Deployment",
+                  "value": "Cloud-centric (Edge available but less mature)",
+                  "icon": "☁️"
+                },
+                {
+                  "label": "Target Users",
+                  "value": "Security & observability teams",
+                  "icon": "🔍"
+                },
+                {
+                  "label": "Primary Use Case",
+                  "value": "Reduce Splunk costs specifically",
+                  "icon": "🎯"
+                },
+                {
+                  "label": "Configuration",
+                  "value": "UI-driven config (easier for beginners)",
+                  "icon": "🖱️"
+                },
+                {
+                  "label": "Data Types",
+                  "value": "Logs, metrics, events (observability focus)",
+                  "icon": "📝"
+                },
+                {
+                  "label": "Compute Model",
+                  "value": "Centralized stream processing",
+                  "icon": "🏢"
+                },
+                {
+                  "label": "Pricing",
+                  "value": "Per-GB processed + infrastructure costs",
+                  "icon": "💵"
+                },
+                {
+                  "label": "Best For",
+                  "value": "Security teams with Splunk pain",
+                  "icon": "✓"
+                }
+              ],
+              "style": {
+                "item_spacing": 20,
+                "label": {
+                  "font_family": "Inter",
+                  "font_weight": 700,
+                  "font_size": 16,
+                  "color": "#90cdf4"
+                },
+                "value": {
+                  "font_family": "Inter",
+                  "font_weight": 400,
+                  "font_size": 15,
+                  "color": "#FFFFFF",
+                  "line_height": 1.5,
+                  "margin_top": 6
+                },
+                "icon": {
+                  "font_size": 20,
+                  "margin_right": 12
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "competitor_card",
+          "id": "expanso_side",
+          "position": {
+            "x": 840,
+            "y": 0,
+            "width": 760,
+            "height": 680
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.15)",
+            "border": "3px solid #48BB78",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "expanso_header",
+              "content": "Expanso",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 32,
+                "color": "#48BB78",
+                "text_align": "center",
+                "margin_bottom": 32
+              }
+            },
+            {
+              "type": "comparison_list",
+              "id": "expanso_attributes",
+              "items": [
+                {
+                  "label": "Focus",
+                  "value": "ALL data types (logs, analytics, IoT, ML)",
+                  "icon": "🌐"
+                },
+                {
+                  "label": "Deployment",
+                  "value": "Edge-first (true distributed compute)",
+                  "icon": "📡"
+                },
+                {
+                  "label": "Target Users",
+                  "value": "Data engineering & platform teams",
+                  "icon": "👨‍💻"
+                },
+                {
+                  "label": "Primary Use Case",
+                  "value": "Reduce ALL platform costs (Snowflake, Databricks, Splunk)",
+                  "icon": "💰"
+                },
+                {
+                  "label": "Configuration",
+                  "value": "Git-based IaC (advanced control)",
+                  "icon": "⚙️"
+                },
+                {
+                  "label": "Data Types",
+                  "value": "Any data (analytics, logs, IoT, ML training)",
+                  "icon": "📦"
+                },
+                {
+                  "label": "Compute Model",
+                  "value": "Distributed edge compute (Bacalhau)",
+                  "icon": "🌍"
+                },
+                {
+                  "label": "Pricing",
+                  "value": "% of savings (risk-free, aligned incentives)",
+                  "icon": "🤝"
+                },
+                {
+                  "label": "Best For",
+                  "value": "Data teams with multi-platform costs",
+                  "icon": "✓"
+                }
+              ],
+              "style": {
+                "item_spacing": 20,
+                "label": {
+                  "font_family": "Inter",
+                  "font_weight": 700,
+                  "font_size": 16,
+                  "color": "#9ae6b4"
+                },
+                "value": {
+                  "font_family": "Inter",
+                  "font_weight": 400,
+                  "font_size": 15,
+                  "color": "#FFFFFF",
+                  "line_height": 1.5,
+                  "margin_top": 6
+                },
+                "icon": {
+                  "font_size": 20,
+                  "margin_right": 12
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "bottom_line",
+      "position": {
+        "x": 160,
+        "y": 940,
+        "width": 1600,
+        "height": 100
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.15)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 28
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "bottom_line_text",
+          "content": "Bottom Line: Cribl is excellent for Splunk-specific cost reduction. Expanso tackles the entire data estate—Snowflake, Databricks, Splunk, Datadog, and beyond. If your pain is broader than just logs, we're the better fit.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 20,
+            "color": "#FFFFFF",
+            "text_align": "center",
+            "line_height": 1.6
+          },
+          "emphasis": {
+            "phrases": ["entire data estate", "pain is broader than just logs"],
+            "color": "#48BB78",
+            "font_weight": 700
+          }
+        }
+      ]
+    }
+  },
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "cribl_primary": "#4299e1",
+      "cribl_bg": "rgba(66, 153, 225, 0.1)",
+      "expanso_primary": "#48BB78",
+      "expanso_bg": "rgba(72, 187, 120, 0.15)",
+      "text_primary": "#FFFFFF"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Great question. Cribl is a good company solving a similar problem. Let me show you the key differences.",
+    "comparison_approach": "Acknowledge Cribl's strengths first, then differentiate. Never disparage competitors.",
+    "cribl_strengths": "Cribl is excellent for log data and observability pipelines. They've built a really nice UI-driven config system that's easy for security teams to use. If your primary pain is Splunk costs, they're a strong option.",
+    "expanso_differentiation": "Where Expanso differs: We tackle ALL data types—logs, analytics data, IoT streams, ML training data. We're edge-first from day one with true distributed compute. We target the entire data estate—not just Splunk, but also Snowflake, Databricks, Datadog. And our pricing model is risk-free—percentage of savings, not per-GB processed.",
+    "when_to_use": "Only show this if prospect specifically mentions Cribl or if you know they're evaluating both",
+    "closing": "The question is: Is your pain limited to Splunk logs, or is it broader across your entire data infrastructure? If it's broader, Expanso is the better fit."
+  },
+  "use_case": "When prospect is evaluating Cribl or mentions them explicitly"
+}

@@ -1,0 +1,201 @@
+{
+  "slide_id": "slide_04a_metaphor",
+  "frame_name": "Solution Introduction - Water Filter Metaphor",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Think of It Like a Water Filter",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "group",
+      "id": "metaphor_comparison",
+      "position": {
+        "x": 160,
+        "y": 200,
+        "width": 1600,
+        "height": 560
+      },
+      "layout": {
+        "type": "two_column",
+        "gap": 80
+      },
+      "elements": [
+        {
+          "type": "container",
+          "id": "without_filter",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 760,
+            "height": 560
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "without_title",
+              "content": "❌ WITHOUT A FILTER",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 24,
+                "color": "#fc8181",
+                "text_align": "center",
+                "margin_bottom": 32
+              }
+            },
+            {
+              "type": "diagram",
+              "id": "unfiltered_flow",
+              "content": {
+                "nodes": [
+                  {"type": "icon", "name": "water_source", "label": "Water Source", "size": 80},
+                  {"type": "pipe", "width": "thick", "color": "#718096", "length": 120},
+                  {"type": "icon", "name": "water_glass", "label": "Your Glass", "size": 80}
+                ],
+                "annotation": "You drink everything:\n• Dirt\n• Chemicals\n• Debris\n• Good water",
+                "style": "vertical_flow"
+              },
+              "position": {"y": 80}
+            },
+            {
+              "type": "text",
+              "id": "without_cost",
+              "content": "You pay to drink\n100% of what flows",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 20,
+                "color": "#fc8181",
+                "text_align": "center",
+                "margin_top": 40
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "id": "with_filter",
+          "position": {
+            "x": 840,
+            "y": 0,
+            "width": 760,
+            "height": 560
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "with_title",
+              "content": "✓ WITH A FILTER",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 24,
+                "color": "#48BB78",
+                "text_align": "center",
+                "margin_bottom": 32
+              }
+            },
+            {
+              "type": "diagram",
+              "id": "filtered_flow",
+              "content": {
+                "nodes": [
+                  {"type": "icon", "name": "water_source", "label": "Water Source", "size": 80},
+                  {"type": "pipe", "width": "thick", "color": "#718096", "length": 40},
+                  {"type": "filter_box", "label": "FILTER", "color": "#48BB78", "size": 100},
+                  {"type": "pipe", "width": "thin", "color": "#48BB78", "length": 40},
+                  {"type": "icon", "name": "water_glass", "label": "Your Glass", "size": 80}
+                ],
+                "annotation": "Filter removes:\n• Dirt ❌\n• Chemicals ❌\n• Debris ❌\n• Good water ✓",
+                "style": "vertical_flow"
+              },
+              "position": {"y": 80}
+            },
+            {
+              "type": "text",
+              "id": "with_benefit",
+              "content": "You drink (and pay for)\nonly 30-40% of what flows",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 20,
+                "color": "#48BB78",
+                "text_align": "center",
+                "margin_top": 40
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "metaphor_translation",
+      "position": {
+        "x": 160,
+        "y": 820,
+        "width": 1600,
+        "height": 180
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.1)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 32
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "translation_text",
+          "content": "That's exactly what Expanso does for your data: We filter out the dirt, debris, and noise at the source—before it flows into Snowflake, Databricks, Splunk, or Datadog. You only pay for the clean, useful data you actually need.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 500,
+            "font_size": 24,
+            "line_height": 1.5,
+            "color": "#FFFFFF",
+            "text_align": "center"
+          },
+          "emphasis": {
+            "phrases": ["at the source", "before it flows", "only pay for"],
+            "color": "#9ae6b4",
+            "font_weight": 600
+          }
+        }
+      ]
+    }
+  ],
+  "design_notes": {
+    "use_case": "Non-technical executives, board presentations, sales kickoff",
+    "advantage": "Universal metaphor, no technical knowledge required",
+    "risk": "May feel too simplistic for technical audiences"
+  },
+  "presentation_notes": {
+    "opening": "Let me explain this with a simple metaphor: Think of it like a water filter.",
+    "walkthrough": "[Point to left] Without a filter, you drink everything that comes through the pipe. Dirt. Chemicals. Debris. Good water. You pay to process all of it. [Point to right] With a filter, the dirt and debris get caught BEFORE they reach your glass. You only drink—and pay for—the clean water you actually want.",
+    "translation": "[Point to bottom] That's exactly what Expanso does for your data. We filter out the dirt, debris, and noise at the source—before it flows into your expensive platforms. You only pay for the clean, useful data you actually need.",
+    "transition": "Now let me show you what this looks like in a real architecture..."
+  }
+}

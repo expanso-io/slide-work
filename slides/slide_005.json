@@ -1,0 +1,530 @@
+{
+  "slide_id": "slide_05_how_it_works",
+  "frame_name": "How It Works - Three-Step Process",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "How It Works: Three Steps to Upstream Control",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "left"
+      },
+      "position": {
+        "x": 80,
+        "y": 60,
+        "max_width": 1760
+      },
+      "emphasis": {
+        "words": ["Three Steps"],
+        "color": "#48BB78"
+      }
+    },
+    {
+      "type": "group",
+      "id": "three_step_process",
+      "position": {
+        "x": 80,
+        "y": 180,
+        "width": 1760,
+        "height": 720
+      },
+      "layout": {
+        "type": "horizontal",
+        "columns": 3,
+        "gap": 60
+      },
+      "elements": [
+        {
+          "type": "step_card",
+          "id": "step_1",
+          "step_number": "1",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 547,
+            "height": 720
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.1)",
+            "border": "3px solid #48BB78",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "step_number_badge",
+              "content": "1",
+              "style": {
+                "background": "#48BB78",
+                "color": "#FFFFFF",
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 48,
+                "width": 80,
+                "height": 80,
+                "border_radius": "50%",
+                "text_align": "center"
+              },
+              "position": {
+                "x": "center",
+                "y": 0
+              }
+            },
+            {
+              "type": "text",
+              "id": "step_1_title",
+              "content": "Deploy at the Source",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 28,
+                "color": "#48BB78",
+                "text_align": "center",
+                "margin_top": 24
+              },
+              "position": {
+                "x": "center",
+                "y": 104
+              }
+            },
+            {
+              "type": "icon",
+              "id": "step_1_icon",
+              "file": "deploy_icon.svg",
+              "style": {
+                "width": 120,
+                "height": 120,
+                "color": "#48BB78"
+              },
+              "position": {
+                "x": "center",
+                "y": 180
+              }
+            },
+            {
+              "type": "text",
+              "id": "step_1_description",
+              "content": "Install Expanso agents where your data lives:",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 500,
+                "font_size": 18,
+                "line_height": 1.6,
+                "color": "#FFFFFF",
+                "text_align": "left",
+                "margin_top": 32
+              },
+              "position": {
+                "x": 0,
+                "y": 340
+              }
+            },
+            {
+              "type": "list",
+              "id": "step_1_list",
+              "items": [
+                "Edge devices & servers",
+                "Kubernetes clusters",
+                "Cloud VPCs",
+                "On-premises data centers"
+              ],
+              "style": {
+                "bullet": "•",
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "line_height": 1.8,
+                "color": "#9ae6b4",
+                "spacing": 12,
+                "indent": 20
+              },
+              "position": {
+                "x": 0,
+                "y": 420
+              }
+            },
+            {
+              "type": "callout_box",
+              "id": "step_1_callout",
+              "content": "No application changes required",
+              "style": {
+                "background": "rgba(72, 187, 120, 0.2)",
+                "border": "2px solid #48BB78",
+                "border_radius": 6,
+                "padding": 16,
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 16,
+                "color": "#48BB78",
+                "text_align": "center"
+              },
+              "position": {
+                "x": "center",
+                "y": 600
+              }
+            }
+          ]
+        },
+        {
+          "type": "step_card",
+          "id": "step_2",
+          "step_number": "2",
+          "position": {
+            "x": 607,
+            "y": 0,
+            "width": 547,
+            "height": 720
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.1)",
+            "border": "3px solid #4299e1",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "step_number_badge",
+              "content": "2",
+              "style": {
+                "background": "#4299e1",
+                "color": "#FFFFFF",
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 48,
+                "width": 80,
+                "height": 80,
+                "border_radius": "50%",
+                "text_align": "center"
+              },
+              "position": {
+                "x": "center",
+                "y": 0
+              }
+            },
+            {
+              "type": "text",
+              "id": "step_2_title",
+              "content": "Define Your Rules",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 28,
+                "color": "#4299e1",
+                "text_align": "center",
+                "margin_top": 24
+              },
+              "position": {
+                "x": "center",
+                "y": 104
+              }
+            },
+            {
+              "type": "icon",
+              "id": "step_2_icon",
+              "file": "rules_icon.svg",
+              "style": {
+                "width": 120,
+                "height": 120,
+                "color": "#4299e1"
+              },
+              "position": {
+                "x": "center",
+                "y": 180
+              }
+            },
+            {
+              "type": "text",
+              "id": "step_2_description",
+              "content": "Set policies using simple, declarative rules:",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 500,
+                "font_size": 18,
+                "line_height": 1.6,
+                "color": "#FFFFFF",
+                "text_align": "left",
+                "margin_top": 32
+              },
+              "position": {
+                "x": 0,
+                "y": 340
+              }
+            },
+            {
+              "type": "list",
+              "id": "step_2_list",
+              "items": [
+                "Filter: \"Drop debug logs\"",
+                "Transform: \"Mask PII fields\"",
+                "Route: \"Send errors to Splunk\"",
+                "Sample: \"Keep 10% of metrics\""
+              ],
+              "style": {
+                "bullet": "•",
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "line_height": 1.8,
+                "color": "#90cdf4",
+                "spacing": 12,
+                "indent": 20
+              },
+              "position": {
+                "x": 0,
+                "y": 420
+              }
+            },
+            {
+              "type": "callout_box",
+              "id": "step_2_callout",
+              "content": "Git-based configuration (Infrastructure as Code)",
+              "style": {
+                "background": "rgba(66, 153, 225, 0.2)",
+                "border": "2px solid #4299e1",
+                "border_radius": 6,
+                "padding": 16,
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 16,
+                "color": "#4299e1",
+                "text_align": "center"
+              },
+              "position": {
+                "x": "center",
+                "y": 600
+              }
+            }
+          ]
+        },
+        {
+          "type": "step_card",
+          "id": "step_3",
+          "step_number": "3",
+          "position": {
+            "x": 1214,
+            "y": 0,
+            "width": 547,
+            "height": 720
+          },
+          "style": {
+            "background": "rgba(237, 137, 54, 0.1)",
+            "border": "3px solid #ed8936",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "step_number_badge",
+              "content": "3",
+              "style": {
+                "background": "#ed8936",
+                "color": "#FFFFFF",
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 48,
+                "width": 80,
+                "height": 80,
+                "border_radius": "50%",
+                "text_align": "center"
+              },
+              "position": {
+                "x": "center",
+                "y": 0
+              }
+            },
+            {
+              "type": "text",
+              "id": "step_3_title",
+              "content": "Watch Costs Drop",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 28,
+                "color": "#ed8936",
+                "text_align": "center",
+                "margin_top": 24
+              },
+              "position": {
+                "x": "center",
+                "y": 104
+              }
+            },
+            {
+              "type": "icon",
+              "id": "step_3_icon",
+              "file": "savings_icon.svg",
+              "style": {
+                "width": 120,
+                "height": 120,
+                "color": "#ed8936"
+              },
+              "position": {
+                "x": "center",
+                "y": 180
+              }
+            },
+            {
+              "type": "text",
+              "id": "step_3_description",
+              "content": "Data flows optimized to your platforms:",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 500,
+                "font_size": 18,
+                "line_height": 1.6,
+                "color": "#FFFFFF",
+                "text_align": "left",
+                "margin_top": 32
+              },
+              "position": {
+                "x": 0,
+                "y": 340
+              }
+            },
+            {
+              "type": "list",
+              "id": "step_3_list",
+              "items": [
+                "50-70% less data ingested",
+                "Immediate cost reduction",
+                "Faster query performance",
+                "Better compliance posture"
+              ],
+              "style": {
+                "bullet": "✓",
+                "font_family": "Inter",
+                "font_weight": 400,
+                "font_size": 16,
+                "line_height": 1.8,
+                "color": "#fbd38d",
+                "spacing": 12,
+                "indent": 20
+              },
+              "position": {
+                "x": 0,
+                "y": 420
+              }
+            },
+            {
+              "type": "callout_box",
+              "id": "step_3_callout",
+              "content": "Results visible within 24 hours",
+              "style": {
+                "background": "rgba(237, 137, 54, 0.2)",
+                "border": "2px solid #ed8936",
+                "border_radius": 6,
+                "padding": 16,
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 16,
+                "color": "#ed8936",
+                "text_align": "center"
+              },
+              "position": {
+                "x": "center",
+                "y": 600
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "timeline_indicator",
+      "position": {
+        "x": 80,
+        "y": 940,
+        "width": 1760,
+        "height": 80
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "timeline_text",
+          "content": "⏱️ Total Time to Value: 2-4 Weeks from Contract to Production",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 24,
+            "color": "#48BB78",
+            "text_align": "center"
+          },
+          "position": {
+            "x": "center",
+            "y": "center"
+          }
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "step_1_primary": "#48BB78",
+      "step_1_secondary": "#9ae6b4",
+      "step_1_bg": "rgba(72, 187, 120, 0.1)",
+      "step_2_primary": "#4299e1",
+      "step_2_secondary": "#90cdf4",
+      "step_2_bg": "rgba(66, 153, 225, 0.1)",
+      "step_3_primary": "#ed8936",
+      "step_3_secondary": "#fbd38d",
+      "step_3_bg": "rgba(237, 137, 54, 0.1)",
+      "text_primary": "#FFFFFF"
+    },
+    "visual_language": {
+      "color_coding": "Green (deploy) → Blue (configure) → Orange (results)",
+      "progression": "Sequential left-to-right reading pattern",
+      "equal_weight": "Equal-sized cards show equal importance of each step"
+    }
+  },
+  "presentation_notes": {
+    "opening": "So how does this actually work? It's three simple steps.",
+    "step_by_step": {
+      "step_1": "[Point to left card] Step one: Deploy at the source. You install Expanso agents where your data lives—edge devices, Kubernetes clusters, cloud VPCs, on-prem data centers. [Pause] And here's the key: No application changes required. Your apps keep working exactly as they do today.",
+      "step_2": "[Point to middle card] Step two: Define your rules. You set policies using simple, declarative rules. 'Drop debug logs.' 'Mask PII fields.' 'Send errors to Splunk.' 'Keep 10% of metrics.' It's all git-based configuration—Infrastructure as Code. Your data team already knows how to do this.",
+      "step_3": "[Point to right card] Step three: Watch costs drop. Data flows optimized to your platforms. 50 to 70 percent less data ingested. Immediate cost reduction. Faster queries. Better compliance. [Pause] And you see results within 24 hours of deployment."
+    },
+    "timeline": "[Point to bottom] Total time to value? Two to four weeks from contract to production. Not months. Not quarters. Weeks.",
+    "transition": "Now let me show you what this looks like in a real customer example...",
+    "pacing": "Move deliberately through each step. Don't rush. Each card deserves attention."
+  },
+  "assets_required": [
+    {
+      "type": "icon",
+      "files": [
+        "deploy_icon.svg",
+        "rules_icon.svg",
+        "savings_icon.svg"
+      ],
+      "specifications": "Line icons, 120x120px, single color, consistent stroke weight"
+    }
+  ],
+  "persona_alignment": {
+    "executives": {
+      "focus_elements": ["timeline_indicator", "step_3 (costs drop)"],
+      "talking_points": "Fast time to value, immediate ROI, low risk"
+    },
+    "data_engineers": {
+      "focus_elements": ["step_2 (rules)", "git-based config"],
+      "talking_points": "Familiar tooling, declarative config, no app changes"
+    },
+    "operations": {
+      "focus_elements": ["step_1 (deployment locations)", "24 hours to results"],
+      "talking_points": "Flexible deployment, quick validation, low operational overhead"
+    }
+  }
+}
