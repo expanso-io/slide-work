@@ -1,0 +1,159 @@
+{
+  "slide_id": "slide_14c_objection_handling",
+  "frame_name": "Backup - Common Objections & Responses",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Common Objections & How We Address Them",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "group",
+      "id": "objection_list",
+      "position": {
+        "x": 80,
+        "y": 160,
+        "width": 1760,
+        "height": 860
+      },
+      "layout": {
+        "type": "vertical_stack",
+        "gap": 28
+      },
+      "elements": [
+        {
+          "type": "objection_card",
+          "id": "obj_1",
+          "objection": "\"We don't have budget for another tool.\"",
+          "response": "This isn't 'another tool'—it's a cost reallocation. Reduce your Snowflake spend by $600K, pay us $150K, keep $450K. Net impact to budget: -$450K (you save money). Most CFOs fund this from platform budget reduction, not new budget.",
+          "supporting_point": "Alternative: We can defer payment until Q2, funded by Q1 savings. Zero upfront investment.",
+          "icon": "💰",
+          "height": 160
+        },
+        {
+          "type": "objection_card",
+          "id": "obj_2",
+          "objection": "\"We're already optimizing our data pipelines.\"",
+          "response": "Great—that makes Expanso even more valuable. Platform optimization happens AFTER ingestion. You've already paid to ingest 100%. Even with perfect downstream optimization, you're still paying for that initial ingestion. We reduce the baseline by 50-70% BEFORE you pay anything.",
+          "supporting_point": "Think of it as: Your optimization = making efficient use of data. Our optimization = reducing how much data you need.",
+          "icon": "🔧",
+          "height": 160
+        },
+        {
+          "type": "objection_card",
+          "id": "obj_3",
+          "objection": "\"This seems too good to be true.\"",
+          "response": "Healthy skepticism is fair. That's why we offer a free pilot. Shadow mode for 1-2 weeks—we prove the 50-70% reduction before you pay anything. Then you decide. We have 98% customer retention because the savings are real and measurable. We can provide references in your industry.",
+          "supporting_point": "Our business model depends on delivering results. If we don't save you money, we don't get paid.",
+          "icon": "🤔",
+          "height": 160
+        },
+        {
+          "type": "objection_card",
+          "id": "obj_4",
+          "objection": "\"We don't want to risk breaking production.\"",
+          "response": "Neither do we. That's why we have fail-open design—if an agent fails, data flows through unchanged. We start in shadow mode (zero production impact). Deployment is gradual (canary rollout). And we have 99.9% uptime SLA. In 50+ production customers, we've never caused a production incident.",
+          "supporting_point": "Risk comparison: Continuing to pay 3x more = guaranteed loss. Trying Expanso = potential 50-70% savings, zero downtime risk.",
+          "icon": "⚠️",
+          "height": 160
+        },
+        {
+          "type": "objection_card",
+          "id": "obj_5",
+          "objection": "\"We need to evaluate other vendors.\"",
+          "response": "Absolutely—do your diligence. Here's what makes us different: (1) We're the only vendor with performance-based pricing (pay for results, not volume). (2) We work upstream—before platforms, not instead of them. (3) We reduce ALL platforms simultaneously, not just one. When you evaluate alternatives, compare our ROI model to their per-GB pricing.",
+          "supporting_point": "While you evaluate: Let's run a free pilot in parallel. You'll have hard data to compare against other proposals.",
+          "icon": "🔍",
+          "height": 160
+        }
+      ],
+      "card_style": {
+        "background": "rgba(72, 187, 120, 0.08)",
+        "border_left": "6px solid #48BB78",
+        "border_radius": 8,
+        "padding": 28,
+        "layout": "vertical",
+        "icon": {
+          "font_size": 40,
+          "margin_bottom": 16,
+          "color": "#48BB78"
+        },
+        "objection": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 20,
+          "color": "#fc8181",
+          "line_height": 1.4,
+          "margin_bottom": 16
+        },
+        "response": {
+          "font_family": "Inter",
+          "font_weight": 500,
+          "font_size": 16,
+          "color": "#FFFFFF",
+          "line_height": 1.7,
+          "margin_bottom": 12
+        },
+        "supporting_point": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 15,
+          "color": "#48BB78",
+          "line_height": 1.6,
+          "font_style": "italic"
+        }
+      }
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "card_bg": "rgba(72, 187, 120, 0.08)",
+      "card_border": "#48BB78",
+      "objection_color": "#fc8181",
+      "response_color": "#FFFFFF",
+      "supporting_color": "#48BB78"
+    },
+    "visual_language": {
+      "objection_in_red": "Makes objection clearly visible",
+      "response_emphasis": "Direct, confident response",
+      "supporting_point": "Additional ammunition in green"
+    }
+  },
+  "presentation_notes": {
+    "usage": "Internal reference—don't present this slide directly to prospects unless they explicitly want to see 'common pushback'",
+    "delivery": "When you hear an objection, acknowledge it first: 'That's a fair concern. Here's how we address that...'",
+    "tone": "Confident but not defensive. These are common, reasonable objections.",
+    "practice": "Role-play these objections with team. Have responses ready without needing to read from slide.",
+    "expansion": "For each objection, have 2-3 follow-up points ready in case prospect pushes back on initial response"
+  },
+  "objection_framework": {
+    "listen": "Let them finish. Don't interrupt. Show you understand their concern.",
+    "validate": "Acknowledge the objection is reasonable: 'That's a fair question' or 'I understand that concern'",
+    "respond": "Give direct, confident answer. Use examples when possible.",
+    "confirm": "Check if you've addressed it: 'Does that answer your concern?'",
+    "document": "Note objections for follow-up materials"
+  },
+  "use_case": "Internal sales training, objection handling workshops, sales playbook reference"
+}

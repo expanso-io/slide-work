@@ -26,22 +26,20 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: sli-dev/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: |
-          cd sli-dev
-          npm ci
+        run: npm ci
 
-      - name: Build slides
-        run: |
-          cd sli-dev
-          npm run build:gh
+      - name: Build all slides
+        run: npm run build:gh
+        env:
+          GITHUB_ACTIONS: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: sli-dev/dist
+          path: dist
 
   deploy:
     environment:

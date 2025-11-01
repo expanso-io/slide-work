@@ -1,0 +1,65 @@
+/**
+ * Expanso Design System - Color Palette
+ * Master Presentation System v1.0
+ */
+
+:root {
+  /* ===== Background Colors ===== */
+  --expanso-bg-primary: #101921;     /* Expanso Navy */
+  --expanso-bg-secondary: #1D2D39;   /* Expanso Slate */
+  --expanso-bg-gradient: linear-gradient(180deg, #101921 0%, #1D2D39 100%);
+
+  /* ===== Text Colors ===== */
+  --expanso-text-primary: #FFFFFF;       /* White - headlines, body */
+  --expanso-text-off-white: #F0F4F8;     /* Off-white - softer text */
+  --expanso-text-secondary: #CBD5E0;     /* Light gray - secondary */
+  --expanso-text-tertiary: #CBD5E0;      /* Metadata, footnotes */
+  --expanso-text-muted: #A0AEC0;         /* Disabled, placeholder */
+
+  /* ===== Accent Colors (Strategic Use) ===== */
+  --expanso-accent-blue: #00A9E0;        /* Primary accent - links, CTAs */
+  --expanso-accent-green: #63F5B4;       /* Secondary - success, positive */
+  --expanso-accent-green-alt: #48BB78;   /* Alternative green */
+  /* ===== Semantic Colors ===== */
+  --expanso-success: #48BB78;            /* Success, achievements */
+  --expanso-warning: #F59E0B;            /* Warnings, caution */
+  --expanso-error: #EF4444;              /* Errors, critical */
+  --expanso-info: #00A9E0;               /* Info, tips */
+
+  /* ===== Legacy/Compatibility (for existing slides) ===== */
+  --expanso-accent-cyan: var(--expanso-accent-blue);
+  --expanso-accent-red: var(--expanso-error);
+  --expanso-accent-orange: var(--expanso-warning);
+  --expanso-problem-color: var(--expanso-error);
+  --expanso-solution-color: var(--expanso-success);
+  --expanso-platform-color: var(--expanso-accent-blue);
+  --expanso-metric-color: var(--expanso-warning);
+  --expanso-highlight-color: var(--expanso-accent-blue);
+
+  /* ===== Slidev Override Colors ===== */
+  --slidev-theme-primary: var(--expanso-accent-blue);
+  --slidev-theme-accents-blue: var(--expanso-info);
+  --slidev-theme-accents-green: var(--expanso-success);
+  --slidev-theme-accents-red: var(--expanso-error);
+  --slidev-theme-accents-orange: var(--expanso-warning);
+}
+
+/* ===== Chart/Data Viz Colors ===== */
+:root {
+  --chart-series-1: #00A9E0;   /* Expanso Blue */
+  --chart-series-2: #63F5B4;   /* Expanso Green */
+  --chart-series-3: #F59E0B;   /* Amber */
+  --chart-series-4: #8B5CF6;   /* Purple */
+  --chart-series-5: #EC4899;   /* Pink */
+  --chart-neutral: rgba(255, 255, 255, 0.3);
+}
+
+/* Apply dark theme by default */
+html {
+  background-color: var(--expanso-bg-primary);
+  color: var(--expanso-text-primary);
+}
+
+html.dark {
+  --slidev-code-background: var(--expanso-bg-secondary);
+}

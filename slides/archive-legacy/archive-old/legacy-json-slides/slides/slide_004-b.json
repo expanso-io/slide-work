@@ -1,0 +1,185 @@
+{
+  "slide_id": "slide_04b_technical",
+  "frame_name": "Solution Architecture - Technical Detail",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Expanso Architecture: Distributed Data Processing at the Edge",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 38,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "left"
+      },
+      "position": {
+        "x": 80,
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "group",
+      "id": "technical_architecture",
+      "position": {
+        "x": 80,
+        "y": 160,
+        "width": 1760,
+        "height": 700
+      },
+      "elements": [
+        {
+          "type": "architecture_layer",
+          "id": "data_sources_layer",
+          "content": {
+            "label": "DATA SOURCES",
+            "components": [
+              {"name": "Edge Devices", "icon": "edge_device"},
+              {"name": "IoT Sensors", "icon": "iot"},
+              {"name": "Application Logs", "icon": "logs"},
+              {"name": "Databases", "icon": "database"},
+              {"name": "Event Streams", "icon": "stream"}
+            ]
+          },
+          "position": {"y": 0},
+          "height": 120
+        },
+        {
+          "type": "architecture_layer",
+          "id": "expanso_layer",
+          "content": {
+            "label": "EXPANSO CONTROL PLANE",
+            "components": [
+              {
+                "name": "Stream Processing",
+                "description": "Real-time filtering & transformation",
+                "tech": "Bacalhau compute nodes"
+              },
+              {
+                "name": "Policy Engine",
+                "description": "Data governance & compliance rules",
+                "tech": "Declarative policy framework"
+              },
+              {
+                "name": "Routing Logic",
+                "description": "Intelligent data destination routing",
+                "tech": "Multi-sink orchestration"
+              },
+              {
+                "name": "Observability",
+                "description": "Pipeline health & metrics",
+                "tech": "Built-in monitoring"
+              }
+            ]
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.15)",
+            "border": "3px solid #48BB78",
+            "border_radius": 8
+          },
+          "position": {"y": 160},
+          "height": 280
+        },
+        {
+          "type": "architecture_layer",
+          "id": "destinations_layer",
+          "content": {
+            "label": "CLOUD DESTINATIONS",
+            "components": [
+              {"name": "Snowflake", "logo": "snowflake_logo.svg", "data_reduction": "60-70%"},
+              {"name": "Databricks", "logo": "databricks_logo.svg", "data_reduction": "50-65%"},
+              {"name": "Splunk", "logo": "splunk_logo.svg", "data_reduction": "65-75%"},
+              {"name": "Datadog", "logo": "datadog_logo.svg", "data_reduction": "55-70%"}
+            ]
+          },
+          "position": {"y": 480},
+          "height": 180
+        },
+        {
+          "type": "data_flow_indicators",
+          "id": "flow_arrows",
+          "flows": [
+            {
+              "from": "data_sources_layer",
+              "to": "expanso_layer",
+              "label": "100% Volume\n(Raw Events)",
+              "style": {"stroke": "#718096", "width": 8}
+            },
+            {
+              "from": "expanso_layer",
+              "to": "destinations_layer",
+              "label": "30-50% Volume\n(Filtered & Optimized)",
+              "style": {"stroke": "#48BB78", "width": 4}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "technical_benefits",
+      "position": {
+        "x": 80,
+        "y": 900,
+        "width": 1760,
+        "height": 120
+      },
+      "layout": {
+        "type": "horizontal_grid",
+        "columns": 4,
+        "gap": 40
+      },
+      "elements": [
+        {
+          "type": "metric_card",
+          "icon": "🎯",
+          "metric": "50-70%",
+          "label": "Data Reduction",
+          "style": "compact"
+        },
+        {
+          "type": "metric_card",
+          "icon": "⚡",
+          "metric": "<100ms",
+          "label": "Processing Latency",
+          "style": "compact"
+        },
+        {
+          "type": "metric_card",
+          "icon": "🔧",
+          "metric": "Zero",
+          "label": "App Changes Required",
+          "style": "compact"
+        },
+        {
+          "type": "metric_card",
+          "icon": "🌐",
+          "metric": "Multi-Cloud",
+          "label": "Works Anywhere",
+          "style": "compact"
+        }
+      ]
+    }
+  ],
+  "design_notes": {
+    "use_case": "Technical audiences, architecture reviews, engineering presentations",
+    "advantage": "Shows actual technical implementation, builds credibility with engineers",
+    "risk": "Too detailed for executive audiences"
+  },
+  "presentation_notes": {
+    "opening": "Let me show you how this works architecturally.",
+    "walkthrough": "[Point to layers] At the top, you have your data sources—edge devices, IoT sensors, application logs, databases, event streams. [Point to Expanso layer] Expanso sits right here in the middle—at the source, before data flows to the cloud. We run distributed compute nodes using our Bacalhau engine. We filter and transform in real-time. We enforce policies. We route intelligently. [Point to destinations] Then the optimized data—now 50 to 70 percent smaller—flows to your existing platforms.",
+    "technical_emphasis": "This is true edge computing. We bring compute to the data, not data to compute. Sub-100ms latency. No application changes. Works across any cloud.",
+    "transition": "Now let me show you what kind of results this produces in production..."
+  }
+}

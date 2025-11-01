@@ -1,0 +1,218 @@
+{
+  "slide_id": "slide_05a_data_flow",
+  "frame_name": "How It Works - Live Data Flow",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "How It Works: Watch Data Flow Through Expanso",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "group",
+      "id": "animated_flow_diagram",
+      "position": {
+        "x": 200,
+        "y": 180,
+        "width": 1520,
+        "height": 720
+      },
+      "animation_note": "This slide works best with live presentation animation",
+      "elements": [
+        {
+          "type": "data_source_cluster",
+          "id": "sources",
+          "content": {
+            "label": "DATA SOURCES",
+            "icons": ["server", "iot", "mobile", "database"],
+            "data_packets": {
+              "count": 100,
+              "representation": "small_dots",
+              "color": "#718096"
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 280,
+            "width": 300,
+            "height": 160
+          }
+        },
+        {
+          "type": "processing_node",
+          "id": "expanso_node",
+          "content": {
+            "logo": "expanso_logo.svg",
+            "label": "EXPANSO",
+            "processors": [
+              {
+                "name": "FILTER",
+                "action": "drops_70_percent",
+                "color": "#fc8181"
+              },
+              {
+                "name": "TRANSFORM",
+                "action": "modifies_data",
+                "color": "#4299e1"
+              },
+              { "name": "ROUTE", "action": "directs_flow", "color": "#ed8936" }
+            ]
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.2)",
+            "border": "4px solid #48BB78",
+            "border_radius": 12
+          },
+          "position": {
+            "x": 460,
+            "y": 140,
+            "width": 600,
+            "height": 440
+          }
+        },
+        {
+          "type": "destination_cluster",
+          "id": "destinations",
+          "content": {
+            "label": "CLOUD PLATFORMS",
+            "logos": ["snowflake", "databricks", "splunk", "datadog"],
+            "data_packets": {
+              "count": 30,
+              "representation": "small_dots",
+              "color": "#48BB78"
+            }
+          },
+          "position": {
+            "x": 1220,
+            "y": 280,
+            "width": 300,
+            "height": 160
+          }
+        },
+        {
+          "type": "flow_animation",
+          "id": "data_particles",
+          "flows": [
+            {
+              "from": "sources",
+              "to": "expanso_node",
+              "particle_count": 100,
+              "particle_size": 4,
+              "color": "#718096",
+              "speed": "medium",
+              "label": "100 Events/sec"
+            },
+            {
+              "from": "expanso_node",
+              "to": "destinations",
+              "particle_count": 30,
+              "particle_size": 4,
+              "color": "#48BB78",
+              "speed": "medium",
+              "label": "30 Events/sec"
+            }
+          ],
+          "animation_style": "continuous_flow"
+        },
+        {
+          "type": "counter_overlay",
+          "id": "live_counters",
+          "counters": [
+            {
+              "label": "Events Received",
+              "value": "100/sec",
+              "position": { "x": 300, "y": 120 },
+              "color": "#718096"
+            },
+            {
+              "label": "Events Filtered",
+              "value": "70/sec",
+              "position": { "x": 660, "y": 40 },
+              "color": "#fc8181"
+            },
+            {
+              "label": "Events Sent",
+              "value": "30/sec",
+              "position": { "x": 1060, "y": 120 },
+              "color": "#48BB78"
+            },
+            {
+              "label": "Data Reduction",
+              "value": "70%",
+              "position": { "x": 660, "y": 620 },
+              "color": "#48BB78",
+              "style": "large_emphasis"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "savings_calculation",
+      "position": {
+        "x": 200,
+        "y": 940,
+        "width": 1520,
+        "height": 100
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.15)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 24
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "savings_math",
+          "content": "100 TB/month ingested → Filter 70% → 30 TB ingested = $420K saved annually at $0.50/GB",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 24,
+            "color": "#FFFFFF",
+            "text_align": "center"
+          },
+          "emphasis": {
+            "phrases": ["$420K saved"],
+            "color": "#48BB78",
+            "font_weight": 700
+          }
+        }
+      ]
+    }
+  ],
+  "design_notes": {
+    "use_case": "Live presentations, demos, webinars where animation is possible",
+    "advantage": "Visceral visualization of data reduction in real-time",
+    "implementation": "Requires animation framework (After Effects, Figma prototype, or web-based)",
+    "fallback": "Static version shows before/after particle counts"
+  },
+  "presentation_notes": {
+    "opening": "Let me show you what this looks like in real-time. Watch the data flow.",
+    "narration": "[As animation plays] On the left, data is generated at your sources—100 events per second. It flows into Expanso. [Pause] Watch what happens: Expanso filters 70 events per second—that's the noise, the debug logs, the duplicate data you don't need. It transforms the remaining data—masking PII, enriching fields. It routes intelligently to the right destinations. [Pause] On the right, only 30 events per second reach your platforms. Same insights. 70% less cost.",
+    "math_moment": "[Point to bottom] Here's the math: If you're ingesting 100 terabytes a month, we filter 70%, so you're down to 30 terabytes. At 50 cents per gigabyte, that's $420,000 saved annually. Just from data reduction alone.",
+    "transition": "Now let me show you a real customer who did exactly this..."
+  }
+}

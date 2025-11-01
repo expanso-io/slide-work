@@ -1,0 +1,283 @@
+{
+  "slide_id": "slide_16c_positioning_map",
+  "frame_name": "Backup - Market Positioning Map",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Market Positioning",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Scope vs Point of Optimization",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "positioning_quadrant",
+      "id": "positioning_chart",
+      "position": {
+        "x": 160,
+        "y": 220,
+        "width": 1600,
+        "height": 780
+      },
+      "axes": {
+        "x": {
+          "label": "Point of Optimization →",
+          "left_label": "Downstream\n(After Ingestion)",
+          "right_label": "Upstream\n(Before Ingestion)",
+          "position": "bottom"
+        },
+        "y": {
+          "label": "Scope of Coverage →",
+          "bottom_label": "Single Domain\n(Logs OR Analytics)",
+          "top_label": "Multi-Platform\n(All Data Types)",
+          "position": "left"
+        }
+      },
+      "quadrants": [
+        {
+          "id": "lower_left",
+          "label": "Limited Impact",
+          "description": "Single-domain, post-ingestion",
+          "style": {
+            "background": "rgba(74, 85, 104, 0.2)",
+            "border": "1px solid #4A5568"
+          }
+        },
+        {
+          "id": "upper_left",
+          "label": "Platform-Native Tools",
+          "description": "Multi-domain but post-ingestion",
+          "style": {
+            "background": "rgba(66, 153, 225, 0.1)",
+            "border": "1px solid #4299e1"
+          }
+        },
+        {
+          "id": "lower_right",
+          "label": "Observability Pipelines",
+          "description": "Upstream but single-domain",
+          "style": {
+            "background": "rgba(237, 137, 54, 0.1)",
+            "border": "1px solid #ed8936"
+          }
+        },
+        {
+          "id": "upper_right",
+          "label": "Maximum Value Zone",
+          "description": "Multi-platform + upstream",
+          "style": {
+            "background": "rgba(72, 187, 120, 0.2)",
+            "border": "2px solid #48BB78"
+          }
+        }
+      ],
+      "plotted_solutions": [
+        {
+          "name": "Snowflake Clustering",
+          "position": {"x": 15, "y": 70},
+          "category": "platform_native",
+          "size": "large",
+          "color": "#4299e1"
+        },
+        {
+          "name": "Databricks Delta\nOptimization",
+          "position": {"x": 20, "y": 75},
+          "category": "platform_native",
+          "size": "large",
+          "color": "#4299e1"
+        },
+        {
+          "name": "dbt",
+          "position": {"x": 25, "y": 60},
+          "category": "etl",
+          "size": "medium",
+          "color": "#9f7aea"
+        },
+        {
+          "name": "Fivetran",
+          "position": {"x": 30, "y": 50},
+          "category": "etl",
+          "size": "medium",
+          "color": "#9f7aea"
+        },
+        {
+          "name": "Cribl",
+          "position": {"x": 75, "y": 30},
+          "category": "observability",
+          "size": "large",
+          "color": "#ed8936"
+        },
+        {
+          "name": "Datadog Pipelines",
+          "position": {"x": 70, "y": 25},
+          "category": "observability",
+          "size": "medium",
+          "color": "#ed8936"
+        },
+        {
+          "name": "Splunk DSP",
+          "position": {"x": 35, "y": 35},
+          "category": "observability",
+          "size": "medium",
+          "color": "#4299e1"
+        },
+        {
+          "name": "EXPANSO",
+          "position": {"x": 85, "y": 85},
+          "category": "expanso",
+          "size": "xlarge",
+          "color": "#48BB78",
+          "emphasis": true,
+          "annotation": "Multi-platform\nUpstream optimization"
+        },
+        {
+          "name": "DIY / Build",
+          "position": {"x": 80, "y": 70},
+          "category": "diy",
+          "size": "medium",
+          "color": "#fbd38d",
+          "annotation": "High effort"
+        }
+      ],
+      "legend": [
+        {
+          "category": "Platform-Native Tools",
+          "color": "#4299e1",
+          "examples": "Snowflake, Databricks"
+        },
+        {
+          "category": "ETL/ELT Tools",
+          "color": "#9f7aea",
+          "examples": "Fivetran, dbt"
+        },
+        {
+          "category": "Observability Pipelines",
+          "color": "#ed8936",
+          "examples": "Cribl, Datadog"
+        },
+        {
+          "category": "Expanso",
+          "color": "#48BB78",
+          "examples": "Multi-platform upstream"
+        },
+        {
+          "category": "DIY / Build",
+          "color": "#fbd38d",
+          "examples": "Custom build"
+        }
+      ],
+      "style": {
+        "axis_line": {
+          "stroke": "#4A5568",
+          "stroke_width": 2
+        },
+        "axis_label": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 18,
+          "color": "#CBD5E0"
+        },
+        "solution_bubble": {
+          "xlarge": {
+            "width": 160,
+            "height": 160,
+            "border_width": 4
+          },
+          "large": {
+            "width": 120,
+            "height": 120,
+            "border_width": 3
+          },
+          "medium": {
+            "width": 100,
+            "height": 100,
+            "border_width": 2
+          },
+          "border_radius": "50%",
+          "opacity": 0.9
+        },
+        "solution_label": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 14,
+          "color": "#FFFFFF",
+          "text_align": "center",
+          "line_height": 1.3
+        },
+        "emphasis_bubble": {
+          "border_width": 5,
+          "opacity": 1,
+          "animation": "pulse"
+        },
+        "annotation": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 12,
+          "color": "#48BB78",
+          "background": "rgba(26, 35, 50, 0.9)",
+          "padding": 8,
+          "border_radius": 4
+        }
+      }
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "expanso": "#48BB78",
+      "platform_native": "#4299e1",
+      "observability": "#ed8936",
+      "etl": "#9f7aea",
+      "diy": "#fbd38d",
+      "text_primary": "#FFFFFF"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Let me show you where different solutions sit in the market. This helps clarify when to use what.",
+    "axes_explanation": "X-axis: Point of optimization. Left side is downstream—after ingestion. Right side is upstream—before ingestion. Y-axis: Scope of coverage. Bottom is single-domain—logs OR analytics. Top is multi-platform—all data types.",
+    "quadrant_walkthrough": {
+      "lower_left": "[Point to lower left] Limited impact zone. Single-domain, post-ingestion. Least cost savings potential.",
+      "upper_left": "[Point to upper left] Platform-native tools like Snowflake clustering and Databricks Delta optimization. Multi-domain but still post-ingestion. You've already paid to ingest 100%.",
+      "lower_right": "[Point to lower right] Observability pipelines like Cribl and Datadog. Upstream—before ingestion—which is great. But single-domain. Only optimizes logs and metrics, not analytics or ML data.",
+      "upper_right": "[Point to upper right] Maximum value zone. Multi-platform AND upstream. This is where Expanso sits. We optimize ALL data types BEFORE ingestion across ALL platforms."
+    },
+    "positioning_message": "The closer you are to the upper right, the more cost savings you achieve. Expanso is purpose-built for that zone.",
+    "when_to_use": "Use this slide when explaining market positioning, differentiating from multiple competitors, or visualizing strategic positioning"
+  },
+  "use_case": "Strategic discussions, market education, competitive differentiation, analyst briefings"
+}

@@ -1,0 +1,258 @@
+{
+  "slide_id": "slide_10c_deployment_operations",
+  "frame_name": "Backup - Deployment & Day 2 Operations",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Deployment & Day 2 Operations",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "How Teams Actually Manage Expanso in Production",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "deployment_workflow",
+      "position": {
+        "x": 80,
+        "y": 200,
+        "width": 850,
+        "height": 780
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "deployment_header",
+          "content": "Initial Deployment (Week 1-2)",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 28,
+            "color": "#48BB78",
+            "margin_bottom": 24
+          }
+        },
+        {
+          "type": "deployment_step",
+          "id": "step_1",
+          "step_number": "1",
+          "title": "Agent Installation",
+          "methods": [
+            {
+              "name": "Kubernetes",
+              "command": "helm install expanso expanso/agent",
+              "notes": "DaemonSet or Sidecar"
+            },
+            {
+              "name": "Docker",
+              "command": "docker run -d expanso/agent",
+              "notes": "Standalone mode"
+            },
+            {
+              "name": "Systemd",
+              "command": "systemctl start expanso-agent",
+              "notes": "Bare metal/VMs"
+            }
+          ],
+          "position": {"y": 60, "height": 160}
+        },
+        {
+          "type": "deployment_step",
+          "id": "step_2",
+          "step_number": "2",
+          "title": "Policy Configuration",
+          "details": [
+            "Create Git repo for policies (expanso-config/)",
+            "Write YAML policies (filter, transform, route)",
+            "Test in staging environment",
+            "Deploy via GitOps (ArgoCD, Flux)"
+          ],
+          "position": {"y": 240, "height": 140}
+        },
+        {
+          "type": "deployment_step",
+          "id": "step_3",
+          "step_number": "3",
+          "title": "Shadow Mode Validation",
+          "details": [
+            "Agents observe but don't modify data",
+            "Collect metrics on what WOULD be filtered",
+            "Compare against query patterns",
+            "Validate reduction estimates (1-2 weeks)"
+          ],
+          "position": {"y": 400, "height": 140}
+        },
+        {
+          "type": "deployment_step",
+          "id": "step_4",
+          "step_number": "4",
+          "title": "Go Live",
+          "details": [
+            "Flip from shadow → active mode",
+            "Start with non-critical data sources",
+            "Gradual rollout (canary deployment)",
+            "Monitor for 72 hours before full rollout"
+          ],
+          "position": {"y": 560, "height": 140}
+        }
+      ],
+      "step_style": {
+        "background": "rgba(72, 187, 120, 0.1)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 24,
+        "margin_bottom": 20
+      }
+    },
+    {
+      "type": "group",
+      "id": "day2_operations",
+      "position": {
+        "x": 990,
+        "y": 200,
+        "width": 850,
+        "height": 780
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "day2_header",
+          "content": "Day 2 Operations",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 28,
+            "color": "#4299e1",
+            "margin_bottom": 24
+          }
+        },
+        {
+          "type": "operations_card",
+          "id": "monitoring",
+          "icon": "📊",
+          "title": "Monitoring & Alerting",
+          "tasks": [
+            "Pre-built Grafana dashboards (throughput, latency, drop rates)",
+            "Prometheus metrics exported automatically",
+            "Alert on: agent down, high latency, buffer full",
+            "Integration with PagerDuty, Slack, Opsgenie"
+          ],
+          "position": {"y": 60, "height": 140}
+        },
+        {
+          "type": "operations_card",
+          "id": "policy_updates",
+          "icon": "🔄",
+          "title": "Policy Updates",
+          "tasks": [
+            "Edit YAML in Git → automatic deployment",
+            "A/B testing: route 10% to new policy, 90% to old",
+            "Rollback in seconds (git revert)",
+            "Policy version history for audit"
+          ],
+          "position": {"y": 220, "height": 140}
+        },
+        {
+          "type": "operations_card",
+          "id": "troubleshooting",
+          "icon": "🔍",
+          "title": "Troubleshooting",
+          "tasks": [
+            "Structured logs to your log aggregator",
+            "Trace IDs for end-to-end debugging",
+            "Shadow replay: re-test policies with historical data",
+            "Built-in diagnostics endpoint (/health, /metrics)"
+          ],
+          "position": {"y": 380, "height": 140}
+        },
+        {
+          "type": "operations_card",
+          "id": "capacity_planning",
+          "icon": "📈",
+          "title": "Capacity Planning",
+          "tasks": [
+            "Monitor CPU/memory per agent",
+            "Scale horizontally (add more agents)",
+            "Auto-scaling in K8s (HPA based on throughput)",
+            "No vertical scaling needed (agents are stateless)"
+          ],
+          "position": {"y": 540, "height": 140}
+        },
+        {
+          "type": "operations_card",
+          "id": "upgrades",
+          "icon": "⬆️",
+          "title": "Upgrades & Maintenance",
+          "tasks": [
+            "Rolling updates (zero-downtime)",
+            "Quarterly releases (backward compatible)",
+            "Emergency patches within 24 hours",
+            "Maintenance window: none required"
+          ],
+          "position": {"y": 700, "height": 140}
+        }
+      ],
+      "card_style": {
+        "background": "rgba(66, 153, 225, 0.1)",
+        "border": "2px solid #4299e1",
+        "border_radius": 8,
+        "padding": 24,
+        "margin_bottom": 20
+      }
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "deployment_primary": "#48BB78",
+      "deployment_bg": "rgba(72, 187, 120, 0.1)",
+      "operations_primary": "#4299e1",
+      "operations_bg": "rgba(66, 153, 225, 0.1)",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Let me show you what deployment and day-to-day operations actually look like.",
+    "deployment_section": "[Point to left column] Initial deployment takes 1 to 2 weeks. Step one: Install agents via Helm for Kubernetes, Docker for standalone, or systemd for bare metal. Step two: Configure policies in Git—YAML files for filter, transform, route logic. Test in staging, then deploy via GitOps with ArgoCD or Flux. Step three: Run in shadow mode for validation. Agents observe but don't modify data. You collect metrics on what WOULD be filtered, compare against query patterns, validate reduction estimates. This takes 1 to 2 weeks. Step four: Go live. Flip from shadow to active mode. Start with non-critical data sources. Do a gradual rollout—canary deployment. Monitor for 72 hours before full rollout.",
+    "day2_section": "[Point to right column] Day 2 operations—what teams actually do in production. Monitoring and alerting: Pre-built Grafana dashboards show throughput, latency, drop rates. Prometheus metrics exported automatically. Alerts for agent down, high latency, buffer full. Integration with PagerDuty, Slack, Opsgenie. Policy updates: Edit YAML in Git, automatic deployment. A/B testing: route 10% to new policy, 90% to old. Rollback in seconds with git revert. Policy version history for audit. Troubleshooting: Structured logs to your log aggregator. Trace IDs for end-to-end debugging. Shadow replay lets you re-test policies with historical data. Built-in diagnostics endpoints. Capacity planning: Monitor CPU and memory per agent. Scale horizontally by adding more agents. Auto-scaling in Kubernetes based on throughput. No vertical scaling needed—agents are stateless. Upgrades and maintenance: Rolling updates with zero downtime. Quarterly releases that are backward compatible. Emergency patches within 24 hours. No maintenance window required.",
+    "operational_emphasis": "The key point: This is designed to fit into DevOps and SRE workflows teams already know. GitOps, Prometheus, Grafana, PagerDuty. No new tooling required.",
+    "when_to_use": "Use this slide when DevOps, SRE, or platform engineering teams ask about operational model"
+  },
+  "use_case": "DevOps/SRE audiences, operational readiness reviews, implementation planning"
+}

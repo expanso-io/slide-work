@@ -1,0 +1,171 @@
+/**
+ * Expanso Design System - Layout & Spacing
+ * Consistent spacing, padding, and layout utilities
+ */
+
+:root {
+  /* ===== Spacing System ===== */
+  --expanso-margin-slide: 80px;       /* Slide margins */
+  --expanso-gap-xlarge: 80px;
+  --expanso-gap-large: 60px;
+  --expanso-gap-medium: 48px;
+  --expanso-gap-small: 32px;
+  --expanso-gap-tiny: 24px;
+  --expanso-gap-xs: 16px;
+
+  /* ===== Container Padding ===== */
+  --expanso-padding-large: 40px;
+  --expanso-padding-medium: 32px;
+  --expanso-padding-small: 24px;
+  --expanso-padding-tiny: 16px;
+
+  /* ===== Border Radius ===== */
+  --expanso-radius-large: 12px;
+  --expanso-radius-medium: 8px;
+  --expanso-radius-small: 6px;
+  --expanso-radius-tiny: 4px;
+
+  /* ===== Border Widths ===== */
+  --expanso-border-thin: 1px;
+  --expanso-border-medium: 2px;
+  --expanso-border-thick: 3px;
+
+  /* ===== Shadows ===== */
+  --expanso-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --expanso-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --expanso-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+
+  /* ===== Slide Dimensions ===== */
+  --slide-width: 1920px;
+  --slide-height: 1080px;
+}
+
+/* ===== Slide Layout ===== */
+.slidev-layout {
+  padding: var(--expanso-margin-slide);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Centered content */
+.slidev-layout.center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ===== Grid Utilities ===== */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--expanso-gap-medium);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--expanso-gap-medium);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--expanso-gap-small);
+}
+
+/* ===== Flex Utilities ===== */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--expanso-gap-small);
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--expanso-gap-small);
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+/* ===== Container Styles ===== */
+.expanso-container {
+  background: var(--expanso-bg-secondary);
+  padding: var(--expanso-padding-medium);
+  border-radius: var(--expanso-radius-large);
+  box-shadow: var(--expanso-shadow-sm);
+}
+
+.expanso-container-bordered {
+  border: var(--expanso-border-medium) solid var(--expanso-accent-cyan);
+  padding: var(--expanso-padding-medium);
+  border-radius: var(--expanso-radius-large);
+  background: rgba(0, 217, 255, 0.05);
+}
+
+/* ===== Spacing Utilities ===== */
+.mt-xs { margin-top: var(--expanso-gap-xs); }
+.mt-sm { margin-top: var(--expanso-gap-tiny); }
+.mt-md { margin-top: var(--expanso-gap-small); }
+.mt-lg { margin-top: var(--expanso-gap-medium); }
+.mt-xl { margin-top: var(--expanso-gap-large); }
+
+.mb-xs { margin-bottom: var(--expanso-gap-xs); }
+.mb-sm { margin-bottom: var(--expanso-gap-tiny); }
+.mb-md { margin-bottom: var(--expanso-gap-small); }
+.mb-lg { margin-bottom: var(--expanso-gap-medium); }
+.mb-xl { margin-bottom: var(--expanso-gap-large); }
+
+.gap-sm { gap: var(--expanso-gap-tiny); }
+.gap-md { gap: var(--expanso-gap-small); }
+.gap-lg { gap: var(--expanso-gap-medium); }
+.gap-xl { gap: var(--expanso-gap-large); }
+
+/* ===== Two-Column Layout ===== */
+.two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--expanso-gap-large);
+  height: 100%;
+}
+
+.two-cols.uneven {
+  grid-template-columns: 40% 60%;
+}
+
+.two-cols.reverse {
+  grid-template-columns: 60% 40%;
+}
+
+/* ===== Three-Zone Layout (Header/Content/Footer) ===== */
+.slide-zones {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.zone-top {
+  flex: 0 0 auto;
+  margin-bottom: var(--expanso-gap-medium);
+}
+
+.zone-middle {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.zone-bottom {
+  flex: 0 0 auto;
+  margin-top: var(--expanso-gap-medium);
+}

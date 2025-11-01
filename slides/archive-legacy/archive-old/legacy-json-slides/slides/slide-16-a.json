@@ -1,0 +1,256 @@
+{
+  "slide_id": "slide_16a_vs_cribl",
+  "frame_name": "Backup - Expanso vs Cribl",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Expanso vs Cribl",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "When to Use Each Solution",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "comparison_content",
+      "position": {
+        "x": 80,
+        "y": 200,
+        "width": 1760,
+        "height": 800
+      },
+      "layout": {
+        "type": "two_column",
+        "gap": 60
+      },
+      "elements": [
+        {
+          "type": "solution_profile",
+          "id": "expanso_profile",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 850,
+            "height": 800
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.15)",
+            "border": "3px solid #48BB78",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "content": {
+            "logo_text": "Expanso",
+            "tagline": "Multi-Platform Data Pipeline Optimization",
+            "positioning": "Upstream data control across ALL platforms and data types",
+            "ideal_for": [
+              "Multi-platform environments (Snowflake + Databricks + Splunk + etc)",
+              "Diverse data types (logs, metrics, analytics, ML training data)",
+              "Organizations spending >$500K/year on multiple data platforms",
+              "Need to reduce BOTH observability AND analytics costs"
+            ],
+            "key_differentiators": [
+              {
+                "point": "Multi-Platform Coverage",
+                "detail": "Reduces costs across Snowflake, Databricks, Splunk, Datadog, etc. simultaneously"
+              },
+              {
+                "point": "All Data Types",
+                "detail": "Works with logs, metrics, traces, analytics data, ML training data, event streams"
+              },
+              {
+                "point": "Performance-Based Pricing",
+                "detail": "Pay percentage of savings, not per-GB. Aligned incentives."
+              },
+              {
+                "point": "Compute-Over-Data",
+                "detail": "Distributed compute framework (Bacalhau) for complex transformations at scale"
+              }
+            ],
+            "technical_strengths": [
+              "WebAssembly runtime for near-native performance",
+              "Stateful aggregations and windowing",
+              "Multi-cloud and edge deployment",
+              "GitOps-based policy management"
+            ],
+            "typical_savings": "$500K - $2M+ annually",
+            "sweet_spot": "Enterprises with complex, multi-platform data architectures"
+          }
+        },
+        {
+          "type": "solution_profile",
+          "id": "cribl_profile",
+          "position": {
+            "x": 910,
+            "y": 0,
+            "width": 850,
+            "height": 800
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.1)",
+            "border": "3px solid #4299e1",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "content": {
+            "logo_text": "Cribl",
+            "tagline": "Observability Pipeline",
+            "positioning": "Purpose-built for log and observability data routing",
+            "ideal_for": [
+              "Observability-focused use cases (logs, metrics, traces only)",
+              "Organizations heavily invested in Splunk",
+              "Need sophisticated log parsing and routing",
+              "Single-domain optimization (observability)"
+            ],
+            "key_differentiators": [
+              {
+                "point": "Observability Specialization",
+                "detail": "Deep expertise in log formats, parsing, and observability data"
+              },
+              {
+                "point": "Splunk Optimization",
+                "detail": "Originally built to reduce Splunk costs—still core strength"
+              },
+              {
+                "point": "Rich Parsing Library",
+                "detail": "Extensive built-in parsers for common log formats"
+              },
+              {
+                "point": "Mature Ecosystem",
+                "detail": "Established vendor with large customer base"
+              }
+            ],
+            "technical_strengths": [
+              "Strong log parsing capabilities",
+              "Observability data routing",
+              "Good Splunk integration",
+              "Active community"
+            ],
+            "typical_savings": "$200K - $800K annually (observability only)",
+            "sweet_spot": "Observability-heavy organizations, especially Splunk customers"
+          }
+        }
+      ],
+      "section_style": {
+        "header": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 28,
+          "margin_bottom": 16
+        },
+        "tagline": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 18,
+          "margin_bottom": 24,
+          "font_style": "italic"
+        },
+        "positioning": {
+          "font_family": "Inter",
+          "font_weight": 500,
+          "font_size": 16,
+          "margin_bottom": 28,
+          "line_height": 1.6
+        },
+        "section_label": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 16,
+          "text_transform": "uppercase",
+          "letter_spacing": 1,
+          "margin_top": 24,
+          "margin_bottom": 12
+        },
+        "list_item": {
+          "font_family": "Inter",
+          "font_weight": 400,
+          "font_size": 14,
+          "line_height": 1.8,
+          "bullet": "•",
+          "margin_bottom": 8
+        },
+        "differentiator": {
+          "point": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 15,
+            "margin_bottom": 4
+          },
+          "detail": {
+            "font_family": "Inter",
+            "font_weight": 400,
+            "font_size": 14,
+            "line_height": 1.6,
+            "margin_bottom": 16
+          }
+        },
+        "savings": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 20,
+          "margin_top": 24
+        },
+        "sweet_spot": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 15,
+          "font_style": "italic",
+          "margin_top": 16
+        }
+      }
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "expanso_primary": "#48BB78",
+      "expanso_bg": "rgba(72, 187, 120, 0.15)",
+      "cribl_primary": "#4299e1",
+      "cribl_bg": "rgba(66, 153, 225, 0.1)",
+      "text_primary": "#FFFFFF"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Cribl is a great product—we respect them. But we solve different problems. Let me show you when to use each.",
+    "positioning": "Position as complementary, not competitive: 'If you're ONLY optimizing observability, Cribl is excellent. If you're optimizing your ENTIRE data pipeline across multiple platforms, that's where we shine.'",
+    "key_message": "Cribl = Observability specialist. Expanso = Multi-platform generalist. Different sweet spots.",
+    "use_both": "In fact, some customers use BOTH: Cribl for observability pipeline, Expanso for analytics and ML data pipelines. They're not mutually exclusive.",
+    "when_to_use": "Use this slide when prospect mentions Cribl or when you're in a competitive situation with them"
+  },
+  "use_case": "Competitive situations with Cribl, head-to-head comparisons, deal defense"
+}

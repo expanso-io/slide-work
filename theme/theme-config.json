@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "name": "Expanso Dark Deck",
+    "version": "1.0.0",
+    "description": "Projection-first, modern dark theme for talks, sales and demos.",
+    "license": "CC-BY-4.0"
+  },
+  "colors": {
+    "background": "#000000",
+    "backgroundAlt": "#0A0A0A",
+    "textPrimary": "#FCFCFC",
+    "textSecondary": "#B0B0B0",
+    "textDisabled": "#8A8A8A",
+    "accent": "#9A6BFF",
+    "semantic": {
+      "success": "#4ADE80",
+      "warning": "#FBBF24",
+      "error": "#F87171",
+      "info": "#38BDF8"
+    }
+  },
+  "typography": {
+    "fontFamilySans": ["Inter", "SF Pro", "system-ui", "Arial", "sans-serif"],
+    "fontFamilyMono": ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+    "sizesPx": {
+      "titleMax": 90,
+      "title": 72,
+      "subtitleMax": 48,
+      "subtitle": 36,
+      "sectionHeader": 48,
+      "bodyMax": 34,
+      "body": 30,
+      "code": 30,
+      "caption": 26,
+      "minProjection": 28
+    },
+    "lineHeightMultiplier": 1.12,
+    "letterSpacing": {
+      "iconLabels": 0.15
+    }
+  },
+  "layout": {
+    "gridColumns": 12,
+    "baselinePx": 8,
+    "gutterPx": 56,
+    "pageMarginsPx": { "top": 100, "right": 96, "bottom": 100, "left": 96 },
+    "sectionSpacingPx": 90,
+    "card": {
+      "radiusPx": 14,
+      "borderPx": 2,
+      "borderOpacity": 0.35,
+      "glass": { "enabled": true, "blurPx": 10, "glowOpacity": 0.2 }
+    },
+    "icon": {
+      "minPx": 64,
+      "maxPx": 96,
+      "barPaddingV": 52,
+      "barPaddingH": 96,
+      "betweenPx": 110,
+      "glowOpacity": 0.2
+    }
+  },
+  "motion": {
+    "defaultMs": 500,
+    "easing": "ease-in-out",
+    "staggerMs": 120,
+    "transitions": ["fade", "slide", "scale", "blur"],
+    "discipline": "one-axis-per-animation"
+  },
+  "accessibility": {
+    "wcagAA": true,
+    "enforceMinFontPx": 28,
+    "projectionDistanceMeters": [3, 4],
+    "targets": ["1080p", "4k"]
+  },
+  "export": {
+    "pdfDPI": 300,
+    "pngDPI": 300,
+    "distDir": "dist",
+    "exportsDir": "exports"
+  },
+  "interactions": {
+    "contextMenu": [
+      "Preview Animation",
+      "Toggle Light/Dark",
+      "Export to PDF",
+      "Export to PNG",
+      "View Deployment Workflow"
+    ]
+  },
+  "layouts": {
+    "titleOnly": { "type": "center", "titleSizePx": 90 },
+    "titleBullets": { "leftColumns": 8, "rightColumns": 4 },
+    "titleBulletsImage": { "textColumns": 7, "imageColumns": 5, "imageAspect": "16:9" },
+    "twoColumn": { "leftColumns": 7, "rightColumns": 5 },
+    "sectionDivider": { "centered": true, "subtitle": true },
+    "code": { "monoSizePx": 30, "paddingPx": 32 },
+    "colorRef": { "rows": 4 },
+    "typographyRef": { "panels": 3 },
+    "iconGrid": { "columns": 6, "minIconPx": 64 }
+  },
+  "rules": {
+    "tenTwentyThirty": true,
+    "oneFocalPoint": true,
+    "noGradientsExceptGlows": true
+  }
+}
+

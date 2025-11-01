@@ -1,0 +1,643 @@
+{
+  "slide_id": "slide_08_next_steps",
+  "frame_name": "Next Steps - Get Started",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Next Steps: Let's Prove This Together",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      },
+      "emphasis": {
+        "words": ["Together"],
+        "color": "#48BB78"
+      }
+    },
+    {
+      "type": "group",
+      "id": "engagement_paths",
+      "position": {
+        "x": 80,
+        "y": 180,
+        "width": 1760,
+        "height": 580
+      },
+      "layout": {
+        "type": "horizontal",
+        "columns": 3,
+        "gap": 60
+      },
+      "elements": [
+        {
+          "type": "engagement_card",
+          "id": "path_1_pilot",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 547,
+            "height": 580
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.15)",
+            "border": "3px solid #48BB78",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "badge",
+              "id": "recommended_badge",
+              "content": "RECOMMENDED",
+              "style": {
+                "background": "#48BB78",
+                "color": "#FFFFFF",
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 14,
+                "padding": "8px 16px",
+                "border_radius": 20,
+                "letter_spacing": 1,
+                "text_align": "center"
+              },
+              "position": {
+                "x": "center",
+                "y": 0
+              }
+            },
+            {
+              "type": "text",
+              "id": "path_1_title",
+              "content": "Path 1: Pilot Program",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 28,
+                "color": "#48BB78",
+                "text_align": "center",
+                "margin_top": 48
+              },
+              "position": {
+                "x": "center",
+                "y": 56
+              }
+            },
+            {
+              "type": "text",
+              "id": "path_1_timeline",
+              "content": "⏱️ 2-4 Weeks",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 18,
+                "color": "#9ae6b4",
+                "text_align": "center",
+                "margin_top": 12
+              },
+              "position": {
+                "x": "center",
+                "y": 112
+              }
+            },
+            {
+              "type": "divider",
+              "id": "divider_1",
+              "style": {
+                "border_top": "1px solid #48BB78",
+                "margin": "24px 0",
+                "opacity": 0.3
+              },
+              "position": {
+                "x": 0,
+                "y": 160,
+                "width": "100%"
+              }
+            },
+            {
+              "type": "checklist",
+              "id": "path_1_steps",
+              "items": [
+                {
+                  "icon": "1️⃣",
+                  "title": "Week 1: Discovery",
+                  "description": "We analyze 1-2 data sources. Identify quick wins."
+                },
+                {
+                  "icon": "2️⃣",
+                  "title": "Week 2: Deploy",
+                  "description": "Install agents in shadow mode. Zero production impact."
+                },
+                {
+                  "icon": "3️⃣",
+                  "title": "Week 3: Validate",
+                  "description": "Review metrics. Confirm 50-70% reduction potential."
+                },
+                {
+                  "icon": "4️⃣",
+                  "title": "Week 4: Activate",
+                  "description": "Go live. Watch costs drop in real-time."
+                }
+              ],
+              "style": {
+                "item_spacing": 24,
+                "icon_size": 24,
+                "title": {
+                  "font_family": "Inter",
+                  "font_weight": 600,
+                  "font_size": 16,
+                  "color": "#FFFFFF"
+                },
+                "description": {
+                  "font_family": "Inter",
+                  "font_weight": 400,
+                  "font_size": 14,
+                  "color": "#CBD5E0",
+                  "line_height": 1.5
+                }
+              },
+              "position": {
+                "x": 0,
+                "y": 200
+              }
+            },
+            {
+              "type": "callout_box",
+              "id": "path_1_outcome",
+              "content": "Outcome: Hard data on savings before full commitment",
+              "style": {
+                "background": "rgba(72, 187, 120, 0.2)",
+                "border": "2px solid #48BB78",
+                "border_radius": 6,
+                "padding": 16,
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 15,
+                "color": "#48BB78",
+                "text_align": "center",
+                "margin_top": 32
+              },
+              "position": {
+                "x": "center",
+                "y": 500
+              }
+            }
+          ]
+        },
+        {
+          "type": "engagement_card",
+          "id": "path_2_assessment",
+          "position": {
+            "x": 607,
+            "y": 0,
+            "width": 547,
+            "height": 580
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.1)",
+            "border": "3px solid #4299e1",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "path_2_title",
+              "content": "Path 2: Data Assessment",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 28,
+                "color": "#4299e1",
+                "text_align": "center",
+                "margin_top": 8
+              },
+              "position": {
+                "x": "center",
+                "y": 8
+              }
+            },
+            {
+              "type": "text",
+              "id": "path_2_timeline",
+              "content": "⏱️ 1-2 Weeks",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 18,
+                "color": "#90cdf4",
+                "text_align": "center",
+                "margin_top": 12
+              },
+              "position": {
+                "x": "center",
+                "y": 64
+              }
+            },
+            {
+              "type": "divider",
+              "id": "divider_2",
+              "style": {
+                "border_top": "1px solid #4299e1",
+                "margin": "24px 0",
+                "opacity": 0.3
+              },
+              "position": {
+                "x": 0,
+                "y": 112,
+                "width": "100%"
+              }
+            },
+            {
+              "type": "text",
+              "id": "path_2_description",
+              "content": "Not ready to deploy? Start with analysis:",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 16,
+                "color": "#90cdf4",
+                "text_align": "left",
+                "margin_bottom": 24
+              },
+              "position": {
+                "x": 0,
+                "y": 152
+              }
+            },
+            {
+              "type": "checklist",
+              "id": "path_2_steps",
+              "items": [
+                {
+                  "icon": "📊",
+                  "title": "Data Volume Analysis",
+                  "description": "Review your platform bills. Map data sources."
+                },
+                {
+                  "icon": "🔍",
+                  "title": "Query Pattern Analysis",
+                  "description": "Identify unused data. Find filtering opportunities."
+                },
+                {
+                  "icon": "💰",
+                  "title": "Savings Projection",
+                  "description": "Conservative estimate of potential savings."
+                },
+                {
+                  "icon": "🗺️",
+                  "title": "Implementation Roadmap",
+                  "description": "Phased rollout plan tailored to your environment."
+                }
+              ],
+              "style": {
+                "item_spacing": 28,
+                "icon_size": 24,
+                "title": {
+                  "font_family": "Inter",
+                  "font_weight": 600,
+                  "font_size": 16,
+                  "color": "#FFFFFF"
+                },
+                "description": {
+                  "font_family": "Inter",
+                  "font_weight": 400,
+                  "font_size": 14,
+                  "color": "#CBD5E0",
+                  "line_height": 1.5
+                }
+              },
+              "position": {
+                "x": 0,
+                "y": 200
+              }
+            },
+            {
+              "type": "callout_box",
+              "id": "path_2_outcome",
+              "content": "Outcome: Custom business case for internal approval",
+              "style": {
+                "background": "rgba(66, 153, 225, 0.2)",
+                "border": "2px solid #4299e1",
+                "border_radius": 6,
+                "padding": 16,
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 15,
+                "color": "#4299e1",
+                "text_align": "center",
+                "margin_top": 32
+              },
+              "position": {
+                "x": "center",
+                "y": 500
+              }
+            }
+          ]
+        },
+        {
+          "type": "engagement_card",
+          "id": "path_3_workshop",
+          "position": {
+            "x": 1214,
+            "y": 0,
+            "width": 547,
+            "height": 580
+          },
+          "style": {
+            "background": "rgba(237, 137, 54, 0.1)",
+            "border": "3px solid #ed8936",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "path_3_title",
+              "content": "Path 3: Technical Workshop",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 28,
+                "color": "#ed8936",
+                "text_align": "center",
+                "margin_top": 8
+              },
+              "position": {
+                "x": "center",
+                "y": 8
+              }
+            },
+            {
+              "type": "text",
+              "id": "path_3_timeline",
+              "content": "⏱️ 2-4 Hours",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 18,
+                "color": "#fbd38d",
+                "text_align": "center",
+                "margin_top": 12
+              },
+              "position": {
+                "x": "center",
+                "y": 64
+              }
+            },
+            {
+              "type": "divider",
+              "id": "divider_3",
+              "style": {
+                "border_top": "1px solid #ed8936",
+                "margin": "24px 0",
+                "opacity": 0.3
+              },
+              "position": {
+                "x": 0,
+                "y": 112,
+                "width": "100%"
+              }
+            },
+            {
+              "type": "text",
+              "id": "path_3_description",
+              "content": "For engineering teams that want hands-on validation:",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 16,
+                "color": "#fbd38d",
+                "text_align": "left",
+                "margin_bottom": 24
+              },
+              "position": {
+                "x": 0,
+                "y": 152
+              }
+            },
+            {
+              "type": "checklist",
+              "id": "path_3_steps",
+              "items": [
+                {
+                  "icon": "🛠️",
+                  "title": "Live Demo",
+                  "description": "See Expanso process YOUR actual data (sanitized sample)."
+                },
+                {
+                  "icon": "📝",
+                  "title": "Policy Workshop",
+                  "description": "Write filtering rules together. Test scenarios."
+                },
+                {
+                  "icon": "🏗️",
+                  "title": "Architecture Review",
+                  "description": "Map Expanso into your existing infrastructure."
+                },
+                {
+                  "icon": "❓",
+                  "title": "Technical Q&A",
+                  "description": "Deep dive with our principal engineers."
+                }
+              ],
+              "style": {
+                "item_spacing": 28,
+                "icon_size": 24,
+                "title": {
+                  "font_family": "Inter",
+                  "font_weight": 600,
+                  "font_size": 16,
+                  "color": "#FFFFFF"
+                },
+                "description": {
+                  "font_family": "Inter",
+                  "font_weight": 400,
+                  "font_size": 14,
+                  "color": "#CBD5E0",
+                  "line_height": 1.5
+                }
+              },
+              "position": {
+                "x": 0,
+                "y": 200
+              }
+            },
+            {
+              "type": "callout_box",
+              "id": "path_3_outcome",
+              "content": "Outcome: Engineering team buy-in & confidence",
+              "style": {
+                "background": "rgba(237, 137, 54, 0.2)",
+                "border": "2px solid #ed8936",
+                "border_radius": 6,
+                "padding": 16,
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 15,
+                "color": "#ed8936",
+                "text_align": "center",
+                "margin_top": 32
+              },
+              "position": {
+                "x": "center",
+                "y": 500
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "cta_section",
+      "position": {
+        "x": 80,
+        "y": 820,
+        "width": 1760,
+        "height": 180
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.15)",
+        "border": "3px solid #48BB78",
+        "border_radius": 12,
+        "padding": 40
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "cta_headline",
+          "content": "Ready to Get Started?",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 32,
+            "color": "#48BB78",
+            "text_align": "center",
+            "margin_bottom": 16
+          },
+          "position": {
+            "x": "center",
+            "y": 0
+          }
+        },
+        {
+          "type": "text",
+          "id": "cta_body",
+          "content": "Let's schedule a 30-minute call to determine which path makes sense for your organization.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 500,
+            "font_size": 22,
+            "color": "#FFFFFF",
+            "text_align": "center",
+            "line_height": 1.5,
+            "margin_bottom": 20
+          },
+          "position": {
+            "x": "center",
+            "y": 56
+          }
+        },
+        {
+          "type": "text",
+          "id": "contact_info",
+          "content": "📧 David Aronchick, CEO  |  aronchick@expanso.io  |  📅 calendly.com/expanso",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 20,
+            "color": "#9ae6b4",
+            "text_align": "center"
+          },
+          "position": {
+            "x": "center",
+            "y": 116
+          }
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "path_1_primary": "#48BB78",
+      "path_1_bg": "rgba(72, 187, 120, 0.15)",
+      "path_2_primary": "#4299e1",
+      "path_2_bg": "rgba(66, 153, 225, 0.1)",
+      "path_3_primary": "#ed8936",
+      "path_3_bg": "rgba(237, 137, 54, 0.1)",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0",
+      "cta_bg": "rgba(72, 187, 120, 0.15)",
+      "cta_border": "#48BB78"
+    },
+    "visual_language": {
+      "three_paths": "Multiple entry points reduce friction",
+      "recommended_badge": "Guides decision-making without forcing",
+      "equal_weight": "All cards same size = all paths valid",
+      "color_coding": "Green (pilot) = action, Blue (assessment) = analysis, Orange (workshop) = learning"
+    }
+  },
+  "presentation_notes": {
+    "opening": "So here's what I recommend: Let's prove this together. You have three paths to choose from.",
+    "path_by_path": {
+      "pilot": "[Point to left card] Path one—and this is what I recommend—is a pilot program. 2 to 4 weeks. Week one, we analyze 1 to 2 of your data sources and identify quick wins. Week two, we install agents in shadow mode—zero production impact. Week three, we review metrics and confirm that 50 to 70 percent reduction potential. Week four, we go live and you watch costs drop in real-time. [Pause] Outcome: You get hard data on savings before making any full commitment.",
+      "assessment": "[Point to middle card] Path two: If you're not ready to deploy yet, we can start with a data assessment. 1 to 2 weeks. We review your platform bills, map your data sources, analyze your query patterns, identify unused data, and give you a conservative savings projection plus a phased implementation roadmap. [Pause] Outcome: You get a custom business case for internal approval.",
+      "workshop": "[Point to right card] Path three: For engineering teams that want hands-on validation, we can run a technical workshop. 2 to 4 hours. Live demo with YOUR actual data—sanitized samples, of course. We write filtering rules together. We map Expanso into your existing infrastructure. We do a deep Q&A with our principal engineers. [Pause] Outcome: Your engineering team gets buy-in and confidence."
+    },
+    "cta": "[Point to bottom section] Here's what I'd like to do: Let's schedule a 30-minute call to determine which path makes sense for your organization. [Pause, show contact info] You can email me directly—David Aronchick, aronchick@expanso.io—or grab time on my calendar at calendly.com/expanso.",
+    "closing": "What questions do you have?",
+    "alternative_close": "Which path sounds most appropriate for where you are today?",
+    "pacing": "Don't rush the CTA. Give them time to absorb the options. Pause after presenting all three paths."
+  },
+  "persona_alignment": {
+    "executives": {
+      "recommended_path": "Path 2 (Assessment) → provides business case",
+      "focus_elements": ["timeline badges", "outcome callouts"],
+      "talking_points": "Low-risk entry points, clear outcomes, fast timeline"
+    },
+    "data_engineers": {
+      "recommended_path": "Path 3 (Workshop) → builds technical confidence",
+      "focus_elements": ["technical steps", "hands-on validation"],
+      "talking_points": "Hands-on validation, architecture integration, peer engineering discussion"
+    },
+    "data_architects": {
+      "recommended_path": "Path 1 (Pilot) → proves concept with real data",
+      "focus_elements": ["shadow mode", "validate metrics", "hard data"],
+      "talking_points": "Non-invasive testing, data-driven validation, production-ready proof"
+    },
+    "mixed_audience": {
+      "recommended_path": "Path 1 (Pilot) → satisfies both business and technical",
+      "approach": "Present all three, recommend pilot, let them choose"
+    }
+  },
+  "assets_required": [
+    {
+      "type": "none",
+      "note": "This slide uses emoji icons only, no external assets required"
+    }
+  ],
+  "interactive_notes": {
+    "live_presentation": "After showing all three paths, ask: 'Which of these resonates with where you are today?' This surfaces their actual buying stage.",
+    "follow_up": "If they choose a path, immediately pull up calendar and schedule. Strike while iron is hot.",
+    "objection_handling": "If they say 'We need to think about it,' ask: 'What would you need to see or know to move forward with Path 2 (the assessment)?' Lowest commitment option removes excuse."
+  }
+}

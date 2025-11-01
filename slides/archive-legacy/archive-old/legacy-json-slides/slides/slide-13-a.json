@@ -1,0 +1,237 @@
+{
+  "slide_id": "slide_13a_thank_you_qr",
+  "frame_name": "Thank You with QR Code",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "content": "Let's Start Saving You Money",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 64,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 160,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "content": "Schedule Your Free Pilot",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 600,
+        "font_size": 32,
+        "color": "#48BB78",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 280,
+        "max_width": 1600
+      }
+    },
+    {
+      "type": "group",
+      "id": "contact_section",
+      "position": {
+        "x": 240,
+        "y": 380,
+        "width": 1440,
+        "height": 580
+      },
+      "layout": {
+        "type": "horizontal",
+        "columns": 2,
+        "gap": 120
+      },
+      "elements": [
+        {
+          "type": "qr_code_panel",
+          "id": "qr_code_section",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 660,
+            "height": 580
+          },
+          "elements": [
+            {
+              "type": "qr_code",
+              "id": "calendar_qr",
+              "url": "https://calendly.com/expanso",
+              "size": 400,
+              "style": {
+                "border": "8px solid #48BB78",
+                "border_radius": 16,
+                "background": "#FFFFFF",
+                "padding": 20
+              },
+              "position": {
+                "x": "center",
+                "y": 0
+              }
+            },
+            {
+              "type": "text",
+              "id": "qr_instruction",
+              "content": "📱 Scan to Schedule",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 28,
+                "color": "#48BB78",
+                "text_align": "center",
+                "margin_top": 32
+              },
+              "position": {
+                "x": "center",
+                "y": 460
+              }
+            },
+            {
+              "type": "text",
+              "id": "qr_detail",
+              "content": "Direct link to calendar",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 500,
+                "font_size": 18,
+                "color": "#9ae6b4",
+                "text_align": "center",
+                "margin_top": 8
+              },
+              "position": {
+                "x": "center",
+                "y": 508
+              }
+            }
+          ]
+        },
+        {
+          "type": "contact_details_panel",
+          "id": "contact_info",
+          "position": {
+            "x": 780,
+            "y": 0,
+            "width": 660,
+            "height": 580
+          },
+          "elements": [
+            {
+              "type": "contact_person",
+              "id": "person_info",
+              "name": "David Aronchick",
+              "title": "CEO & Co-Founder",
+              "style": {
+                "name": {
+                  "font_family": "Inter",
+                  "font_weight": 700,
+                  "font_size": 36,
+                  "color": "#FFFFFF",
+                  "margin_bottom": 8
+                },
+                "title": {
+                  "font_family": "Inter",
+                  "font_weight": 500,
+                  "font_size": 22,
+                  "color": "#9ae6b4",
+                  "margin_bottom": 48
+                }
+              }
+            },
+            {
+              "type": "contact_methods_stack",
+              "id": "contact_stack",
+              "items": [
+                {
+                  "icon": "📧",
+                  "label": "aronchick@expanso.io",
+                  "link": "mailto:aronchick@expanso.io"
+                },
+                {
+                  "icon": "📅",
+                  "label": "calendly.com/expanso",
+                  "link": "https://calendly.com/expanso"
+                },
+                {
+                  "icon": "💬",
+                  "label": "linkedin.com/in/daronchick",
+                  "link": "https://linkedin.com/in/daronchick"
+                },
+                {
+                  "icon": "🌐",
+                  "label": "expanso.io",
+                  "link": "https://expanso.io"
+                }
+              ],
+              "style": {
+                "item_spacing": 32,
+                "icon": {
+                  "font_size": 32,
+                  "margin_right": 20
+                },
+                "label": {
+                  "font_family": "Inter",
+                  "font_weight": 600,
+                  "font_size": 22,
+                  "color": "#FFFFFF"
+                }
+              }
+            },
+            {
+              "type": "divider",
+              "style": {
+                "border_top": "2px solid #48BB78",
+                "margin": "48px 0",
+                "opacity": 0.3
+              }
+            },
+            {
+              "type": "text",
+              "id": "value_prop_reminder",
+              "content": "2-4 Week Free Pilot\n50-70% Cost Reduction\nZero Risk Guarantee",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 20,
+                "color": "#48BB78",
+                "line_height": 1.8,
+                "text_align": "left"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "primary": "#48BB78",
+      "secondary": "#9ae6b4",
+      "qr_border": "#48BB78",
+      "text_primary": "#FFFFFF"
+    }
+  },
+  "presentation_notes": {
+    "use_case": "Large audience presentations (conferences, webinars, trade shows) where attendees need to quickly capture contact info",
+    "qr_generation": "Generate QR code pointing to: https://calendly.com/expanso with UTM parameters for tracking source",
+    "mobile_friendly": "QR code makes it easy for audience to immediately book a meeting from their phones"
+  },
+  "use_case": "Conference presentations, webinars, large group demos, trade show booths"
+}

@@ -1,0 +1,162 @@
+{
+  "slide_id": "slide_09b_platform_features",
+  "frame_name": "Backup - Why Not Platform-Native Features?",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": ""Can't We Just Use Snowflake/Databricks Features?"",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1600
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Why Platform-Native Optimization Doesn't Work",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "platform_limitations",
+      "position": {
+        "x": 160,
+        "y": 220,
+        "width": 1600,
+        "height": 720
+      },
+      "layout": {
+        "type": "vertical_stack",
+        "gap": 36
+      },
+      "elements": [
+        {
+          "type": "limitation_card",
+          "id": "limitation_1",
+          "icon": "💸",
+          "title": "They Already Charged You for Ingestion",
+          "problem": "By the time Snowflake or Databricks filters your data, you've ALREADY PAID for ingestion. The damage is done. It's like a restaurant charging you for food, then offering to throw half away after you pay.",
+          "expanso_solution": "We filter BEFORE ingestion. You never pay for data you don't need.",
+          "position": {"y": 0, "height": 160}
+        },
+        {
+          "type": "limitation_card",
+          "id": "limitation_2",
+          "icon": "🏦",
+          "title": "Misaligned Incentives",
+          "problem": "Platform vendors make MORE money when you store MORE data. Their business model depends on volume growth. Asking them to reduce your data is like asking a restaurant to recommend you order less food.",
+          "expanso_solution": "We make money when you SAVE money. Our incentives are aligned with yours.",
+          "position": {"y": 196, "height": 160}
+        },
+        {
+          "type": "limitation_card",
+          "id": "limitation_3",
+          "icon": "🌐",
+          "title": "Cloud-Only = Too Late",
+          "problem": "Platform features only work AFTER data reaches the cloud. Your network bandwidth is already consumed. Your egress fees are already paid. Your compliance risk is already incurred (PII crossed the network boundary).",
+          "expanso_solution": "We work at the SOURCE—before network transfer, before egress fees, before PII leaves your environment.",
+          "position": {"y": 392, "height": 160}
+        },
+        {
+          "type": "limitation_card",
+          "id": "limitation_4",
+          "icon": "🔗",
+          "title": "Single-Platform Lock-In",
+          "problem": "Snowflake features only help with Snowflake. Databricks features only help with Databricks. You need separate solutions for Splunk, Datadog, etc. More tools = more complexity = more cost.",
+          "expanso_solution": "Single solution reduces ALL platforms simultaneously. One deployment, universal savings.",
+          "position": {"y": 588, "height": 160}
+        }
+      ],
+      "card_style": {
+        "background": "rgba(66, 153, 225, 0.08)",
+        "border": "2px solid #4A5568",
+        "border_radius": 8,
+        "padding": 32,
+        "layout": "horizontal",
+        "icon_position": "left",
+        "icon_size": 48,
+        "title": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 20,
+          "color": "#4299e1",
+          "margin_bottom": 12
+        },
+        "problem": {
+          "font_family": "Inter",
+          "font_weight": 400,
+          "font_size": 16,
+          "color": "#FFFFFF",
+          "line_height": 1.6,
+          "margin_bottom": 12
+        },
+        "expanso_solution": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 16,
+          "color": "#48BB78",
+          "line_height": 1.6,
+          "prefix": "→ Expanso: "
+        }
+      }
+    },
+    {
+      "type": "container",
+      "id": "analogy_box",
+      "position": {
+        "x": 360,
+        "y": 980,
+        "width": 1200,
+        "height": 80
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.15)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 20
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "analogy_text",
+          "content": "💡 Analogy: You don't use the garbage disposal to reduce grocery bills—you buy less at the store.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 22,
+            "color": "#48BB78",
+            "text_align": "center"
+          }
+        }
+      ]
+    }
+  }

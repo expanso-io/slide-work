@@ -1,0 +1,240 @@
+{
+  "slide_id": "slide_15c_success_criteria",
+  "frame_name": "Backup - Success Criteria & Exit Criteria",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Success Criteria & Milestones",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "How We Measure Success at Each Phase",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "success_criteria_list",
+      "position": {
+        "x": 80,
+        "y": 200,
+        "width": 1760,
+        "height": 820
+      },
+      "layout": {
+        "type": "vertical_stack",
+        "gap": 36
+      },
+      "elements": [
+        {
+          "type": "success_criteria_card",
+          "id": "criteria_1_pilot",
+          "phase": "Pilot Completion",
+          "timeframe": "End of Week 3",
+          "position": {
+            "y": 0,
+            "height": 160
+          },
+          "criteria": {
+            "must_have": [
+              "≥50% data reduction validated in shadow mode",
+              "Zero data loss confirmed via query validation",
+              "Agent stability: 99%+ uptime during pilot",
+              "Baseline metrics documented"
+            ],
+            "should_have": [
+              "Sample policies developed for 80% of use cases",
+              "Performance impact <5% on source systems"
+            ],
+            "exit_condition": "If <40% reduction OR data loss detected → Investigate root cause, extend pilot 1 week, or terminate pilot"
+          },
+          "decision": "Proceed to Business Case or Terminate"
+        },
+        {
+          "type": "success_criteria_card",
+          "id": "criteria_2_business_case",
+          "phase": "Business Case Approval",
+          "timeframe": "End of Week 4",
+          "position": {
+            "y": 196,
+            "height": 160
+          },
+          "criteria": {
+            "must_have": [
+              "ROI ≥300% over 3 years",
+              "Payback period ≤6 months",
+              "Executive sponsor sign-off",
+              "Budget approved or reallocated"
+            ],
+            "should_have": [
+              "Finance team aligned on measurement methodology",
+              "Legal/procurement review started"
+            ],
+            "exit_condition": "If ROI <200% OR payback >12 months → Renegotiate terms or terminate"
+          },
+          "decision": "Proceed to Production or Renegotiate"
+        },
+        {
+          "type": "success_criteria_card",
+          "id": "criteria_3_initial_production",
+          "phase": "Initial Production Deploy",
+          "timeframe": "End of Week 6",
+          "position": {
+            "y": 392,
+            "height": 160
+          },
+          "criteria": {
+            "must_have": [
+              "Canary rollout: 10% → 50% → 100% completed",
+              "Agent uptime: ≥99.5% in production",
+              "Monitoring & alerting operational",
+              "No production incidents caused by Expanso"
+            ],
+            "should_have": [
+              "Operations team trained on basic troubleshooting",
+              "Runbooks documented",
+              "3-5 data sources in production"
+            ],
+            "exit_condition": "If production incident OR uptime <95% → Rollback to shadow mode, investigate, fix, retry"
+          },
+          "decision": "Expand to More Sources or Pause"
+        },
+        {
+          "type": "success_criteria_card",
+          "id": "criteria_4_full_production",
+          "phase": "Full Production Deployment",
+          "timeframe": "End of Week 8",
+          "position": {
+            "y": 588,
+            "height": 160
+          },
+          "criteria": {
+            "must_have": [
+              "Target savings achieved (50-70% reduction)",
+              "All agreed data sources in production",
+              "Agent fleet: 99.9%+ uptime",
+              "Operations team self-sufficient for day-2 tasks"
+            ],
+            "should_have": [
+              "Quarterly Business Review completed",
+              "Optimization roadmap defined",
+              "Customer Success handoff complete"
+            ],
+            "exit_condition": "If target savings not achieved → Policy tuning sprint (2 weeks), then reassess"
+          },
+          "decision": "Move to BAU or Optimization Sprint"
+        }
+      ],
+      "card_style": {
+        "background": "rgba(72, 187, 120, 0.08)",
+        "border_left": "6px solid #48BB78",
+        "border_radius": 8,
+        "padding": 28,
+        "phase": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 24,
+          "color": "#48BB78",
+          "margin_bottom": 8
+        },
+        "timeframe": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 16,
+          "color": "#9ae6b4",
+          "margin_bottom": 20
+        },
+        "section_label": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 14,
+          "color": "#CBD5E0",
+          "text_transform": "uppercase",
+          "letter_spacing": 1,
+          "margin_bottom": 8
+        },
+        "criteria_list": {
+          "font_family": "Inter",
+          "font_weight": 400,
+          "font_size": 14,
+          "color": "#FFFFFF",
+          "line_height": 1.8,
+          "bullet": "✓",
+          "bullet_color": "#48BB78"
+        },
+        "exit_condition": {
+          "background": "rgba(252, 129, 129, 0.15)",
+          "border": "2px solid #fc8181",
+          "border_radius": 6,
+          "padding": 12,
+          "font_family": "Inter",
+          "font_weight": 500,
+          "font_size": 13,
+          "color": "#fc8181",
+          "margin_top": 12
+        },
+        "decision_badge": {
+          "background": "#48BB78",
+          "color": "#FFFFFF",
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 13,
+          "padding": "6px 16px",
+          "border_radius": 16,
+          "margin_top": 12,
+          "display": "inline-block"
+        }
+      }
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "card_bg": "rgba(72, 187, 120, 0.08)",
+      "card_border": "#48BB78",
+      "success_color": "#48BB78",
+      "warning_color": "#fc8181",
+      "text_primary": "#FFFFFF"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Let me show you exactly how we measure success at each phase—and what happens if we don't hit these criteria.",
+    "emphasis": "This is important: We're committing to specific, measurable outcomes. If we don't hit them, we have clear exit conditions.",
+    "transparency": "Most vendors don't show you exit conditions. We do because we're confident in our results.",
+    "when_to_use": "Use with risk-averse customers, enterprises with strict governance, or anyone who asks 'What if this doesn't work?'"
+  },
+  "use_case": "Risk-averse customers, enterprise governance, pilot planning, SOW development"
+}

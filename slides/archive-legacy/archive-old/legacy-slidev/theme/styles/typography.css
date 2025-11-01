@@ -1,0 +1,131 @@
+/**
+ * Expanso Design System - Typography
+ * Font: Inter (weights 300-700)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ===== Font Families ===== */
+  --slidev-font-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --slidev-font-mono: 'Fira Code', 'Monaco', 'Consolas', monospace;
+
+  /* ===== Font Sizes (pt converted to px, ~1.33x scaling) ===== */
+  --expanso-font-title: 54px;       /* Slide titles: 38-54pt */
+  --expanso-font-headline: 42px;    /* Section headers: 24-42pt */
+  --expanso-font-subhead: 28px;     /* Subheadings: 24-32pt */
+  --expanso-font-body: 20px;        /* Body text: 18-24pt */
+  --expanso-font-small: 16px;       /* Captions: 14-16pt */
+  --expanso-font-tiny: 14px;        /* Fine print */
+
+  /* ===== Line Heights ===== */
+  --expanso-line-tight: 1.2;
+  --expanso-line-normal: 1.5;
+  --expanso-line-relaxed: 1.6;
+
+  /* ===== Font Weights ===== */
+  --expanso-weight-light: 300;
+  --expanso-weight-regular: 400;
+  --expanso-weight-medium: 500;
+  --expanso-weight-semibold: 600;
+  --expanso-weight-bold: 700;
+
+  /* ===== Letter Spacing ===== */
+  --expanso-tracking-tight: -0.5px;
+  --expanso-tracking-normal: 0px;
+  --expanso-tracking-wide: 0.5px;
+}
+
+/* ===== Global Typography Styles ===== */
+.slidev-layout {
+  font-family: var(--slidev-font-base);
+  font-size: var(--expanso-font-body);
+  line-height: var(--expanso-line-normal);
+  color: var(--expanso-text-primary);
+}
+
+/* Headings */
+h1 {
+  font-size: var(--expanso-font-title);
+  font-weight: var(--expanso-weight-bold);
+  line-height: var(--expanso-line-tight);
+  letter-spacing: var(--expanso-tracking-tight);
+  color: var(--expanso-text-primary);
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: var(--expanso-font-headline);
+  font-weight: var(--expanso-weight-bold);
+  line-height: var(--expanso-line-tight);
+  color: var(--expanso-text-primary);
+  margin-bottom: 0.4em;
+}
+
+h3 {
+  font-size: var(--expanso-font-subhead);
+  font-weight: var(--expanso-weight-medium);
+  line-height: var(--expanso-line-normal);
+  color: var(--expanso-text-secondary);
+  margin-bottom: 0.3em;
+}
+
+h4 {
+  font-size: var(--expanso-font-body);
+  font-weight: var(--expanso-weight-semibold);
+  color: var(--expanso-text-secondary);
+}
+
+/* Body text */
+p {
+  font-size: var(--expanso-font-body);
+  line-height: var(--expanso-line-normal);
+  color: var(--expanso-text-primary);
+  margin-bottom: 1em;
+}
+
+/* Lists */
+ul, ol {
+  font-size: var(--expanso-font-body);
+  line-height: var(--expanso-line-relaxed);
+  color: var(--expanso-text-primary);
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* Small text */
+small, .text-small {
+  font-size: var(--expanso-font-small);
+  color: var(--expanso-text-secondary);
+}
+
+/* Emphasis utilities */
+.text-highlight {
+  color: var(--expanso-accent-cyan);
+  font-weight: var(--expanso-weight-semibold);
+}
+
+.text-muted {
+  color: var(--expanso-text-muted);
+}
+
+.text-secondary {
+  color: var(--expanso-text-secondary);
+}
+
+/* Code blocks */
+code {
+  font-family: var(--slidev-font-mono);
+  font-size: 0.9em;
+  background: var(--expanso-bg-secondary);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+pre code {
+  padding: 0;
+  background: transparent;
+}

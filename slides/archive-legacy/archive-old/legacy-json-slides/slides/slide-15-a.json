@@ -1,0 +1,394 @@
+{
+  "slide_id": "slide_15a_detailed_project_plan",
+  "frame_name": "Backup - Detailed Project Plan",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Detailed Implementation Plan",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Week-by-Week Breakdown with Responsibilities",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "gantt_chart",
+      "id": "project_gantt",
+      "position": {
+        "x": 80,
+        "y": 200,
+        "width": 1760,
+        "height": 800
+      },
+      "structure": {
+        "columns": [
+          {
+            "id": "task",
+            "header": "Task / Deliverable",
+            "width": 500
+          },
+          {
+            "id": "owner",
+            "header": "Owner",
+            "width": 200
+          },
+          {
+            "id": "week_1",
+            "header": "W1",
+            "width": 100
+          },
+          {
+            "id": "week_2",
+            "header": "W2",
+            "width": 100
+          },
+          {
+            "id": "week_3",
+            "header": "W3",
+            "width": 100
+          },
+          {
+            "id": "week_4",
+            "header": "W4",
+            "width": 100
+          },
+          {
+            "id": "week_5",
+            "header": "W5",
+            "width": 100
+          },
+          {
+            "id": "week_6",
+            "header": "W6",
+            "width": 100
+          },
+          {
+            "id": "week_7",
+            "header": "W7",
+            "width": 100
+          },
+          {
+            "id": "week_8",
+            "header": "W8",
+            "width": 100
+          },
+          {
+            "id": "status",
+            "header": "Status",
+            "width": 160
+          }
+        ],
+        "rows": [
+          {
+            "section": "Discovery & Planning",
+            "style": "section_header"
+          },
+          {
+            "task": "Kickoff meeting & discovery call",
+            "owner": "Expanso SE",
+            "timeline": {
+              "week_1": "active"
+            },
+            "status": "📅 Scheduled"
+          },
+          {
+            "task": "Architecture review & agent placement",
+            "owner": "Joint",
+            "timeline": {
+              "week_1": "active"
+            },
+            "status": "📋 Planning"
+          },
+          {
+            "task": "Data source identification & prioritization",
+            "owner": "Customer",
+            "timeline": {
+              "week_1": "active"
+            },
+            "status": "📋 Planning"
+          },
+          {
+            "task": "Security review & compliance check",
+            "owner": "Customer",
+            "timeline": {
+              "week_1": "active",
+              "week_2": "active"
+            },
+            "status": "🔐 In Review"
+          },
+          {
+            "section": "Pilot Deployment",
+            "style": "section_header"
+          },
+          {
+            "task": "Agent installation (1-2 sources)",
+            "owner": "Expanso SE",
+            "timeline": {
+              "week_2": "active"
+            },
+            "status": "🚀 Deploy"
+          },
+          {
+            "task": "Shadow mode enablement",
+            "owner": "Expanso SE",
+            "timeline": {
+              "week_2": "active"
+            },
+            "status": "👁️ Monitor"
+          },
+          {
+            "task": "Baseline metrics collection",
+            "owner": "Expanso SE",
+            "timeline": {
+              "week_2": "active",
+              "week_3": "active"
+            },
+            "status": "📊 Collecting"
+          },
+          {
+            "task": "Policy development & testing",
+            "owner": "Expanso SE",
+            "timeline": {
+              "week_3": "active"
+            },
+            "status": "⚙️ Config"
+          },
+          {
+            "task": "Query validation (no data loss)",
+            "owner": "Customer",
+            "timeline": {
+              "week_3": "active",
+              "week_4": "active"
+            },
+            "status": "✅ Validate"
+          },
+          {
+            "section": "Validation & Approval",
+            "style": "section_header"
+          },
+          {
+            "task": "Savings analysis report",
+            "owner": "Expanso SE",
+            "timeline": {
+              "week_4": "active"
+            },
+            "status": "📈 Analysis"
+          },
+          {
+            "task": "ROI calculation & business case",
+            "owner": "Expanso Sales",
+            "timeline": {
+              "week_4": "active"
+            },
+            "status": "💰 Finance"
+          },
+          {
+            "task": "Go/No-Go decision meeting",
+            "owner": "Joint",
+            "timeline": {
+              "week_4": "milestone"
+            },
+            "status": "🎯 Decision"
+          },
+          {
+            "section": "Production Rollout",
+            "style": "section_header"
+          },
+          {
+            "task": "Contract signing & onboarding",
+            "owner": "Customer",
+            "timeline": {
+              "week_4": "active",
+              "week_5": "active"
+            },
+            "status": "📝 Legal"
+          },
+          {
+            "task": "Production deployment (canary 10%)",
+            "owner": "Expanso SE",
+            "timeline": {
+              "week_5": "active"
+            },
+            "status": "🚀 Deploy"
+          },
+          {
+            "task": "Monitoring & dashboard setup",
+            "owner": "Joint",
+            "timeline": {
+              "week_5": "active"
+            },
+            "status": "📊 Monitor"
+          },
+          {
+            "task": "Scale canary: 50% → 100%",
+            "owner": "Expanso SE",
+            "timeline": {
+              "week_5": "active",
+              "week_6": "active"
+            },
+            "status": "📈 Scaling"
+          },
+          {
+            "task": "Add 3-5 more data sources",
+            "owner": "Joint",
+            "timeline": {
+              "week_6": "active"
+            },
+            "status": "🔗 Expand"
+          },
+          {
+            "section": "Optimization & Handoff",
+            "style": "section_header"
+          },
+          {
+            "task": "Policy tuning based on prod data",
+            "owner": "Expanso SE",
+            "timeline": {
+              "week_7": "active"
+            },
+            "status": "⚙️ Optimize"
+          },
+          {
+            "task": "Remaining data sources (scale to all)",
+            "owner": "Joint",
+            "timeline": {
+              "week_7": "active",
+              "week_8": "active"
+            },
+            "status": "🌐 Full Scale"
+          },
+          {
+            "task": "Operations team training",
+            "owner": "Expanso CSM",
+            "timeline": {
+              "week_7": "active"
+            },
+            "status": "📚 Training"
+          },
+          {
+            "task": "First Quarterly Business Review",
+            "owner": "Joint",
+            "timeline": {
+              "week_8": "milestone"
+            },
+            "status": "🎉 Complete"
+          },
+          {
+            "task": "Handoff to Customer Success",
+            "owner": "Expanso CSM",
+            "timeline": {
+              "week_8": "active"
+            },
+            "status": "🤝 Transition"
+          }
+        ]
+      },
+      "style": {
+        "section_header": {
+          "background": "rgba(72, 187, 120, 0.2)",
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 16,
+          "color": "#48BB78",
+          "padding": 12,
+          "text_transform": "uppercase",
+          "letter_spacing": 1
+        },
+        "header_row": {
+          "background": "#2d3748",
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 14,
+          "color": "#FFFFFF",
+          "padding": 12,
+          "border_bottom": "2px solid #48BB78"
+        },
+        "task_cell": {
+          "font_family": "Inter",
+          "font_weight": 400,
+          "font_size": 14,
+          "color": "#FFFFFF",
+          "padding": 12
+        },
+        "owner_cell": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 13,
+          "color": "#9ae6b4",
+          "padding": 12
+        },
+        "timeline_cell": {
+          "active": {
+            "background": "#48BB78",
+            "border_radius": 4
+          },
+          "milestone": {
+            "background": "#ed8936",
+            "border_radius": 4,
+            "icon": "⭐"
+          },
+          "empty": {
+            "background": "rgba(74, 85, 104, 0.2)"
+          }
+        },
+        "status_cell": {
+          "font_family": "Inter",
+          "font_weight": 600,
+          "font_size": 13,
+          "color": "#FFFFFF",
+          "padding": 12
+        }
+      }
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "section_header": "rgba(72, 187, 120, 0.2)",
+      "active_timeline": "#48BB78",
+      "milestone": "#ed8936",
+      "text_primary": "#FFFFFF"
+    }
+  },
+  "presentation_notes": {
+    "opening": "This is a detailed week-by-week breakdown showing exactly who does what and when.",
+    "walkthrough": "You don't need to read every line—just highlight key milestones and dependencies.",
+    "ownership_emphasis": "Point out the 'Owner' column—make clear what we do vs what customer needs to provide.",
+    "when_to_use": "Use with project managers, operations teams, or anyone planning resources and timeline"
+  },
+  "use_case": "Project planning, resource allocation, SOW development, operational readiness"
+}

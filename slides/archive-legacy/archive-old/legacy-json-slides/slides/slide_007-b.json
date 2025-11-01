@@ -1,0 +1,252 @@
+{
+  "slide_id": "slide_07b_executive_objections",
+  "frame_name": "Executive Objections - Business Risk Concerns",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Addressing Business & Risk Concerns",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "group",
+      "id": "executive_objections",
+      "position": {
+        "x": 160,
+        "y": 180,
+        "width": 1600,
+        "height": 820
+      },
+      "layout": {
+        "type": "vertical_stack",
+        "gap": 40
+      },
+      "elements": [
+        {
+          "type": "executive_concern_card",
+          "id": "exec_obj_1",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 1600,
+            "height": 190
+          },
+          "style": {
+            "background": "rgba(237, 137, 54, 0.1)",
+            "border": "3px solid #ed8936",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "exec_concern_1",
+              "content": "⚠️ \"This creates vendor lock-in\"",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 24,
+                "color": "#fbd38d",
+                "margin_bottom": 16
+              }
+            },
+            {
+              "type": "text",
+              "id": "exec_response_1",
+              "content": "✓ Expanso is upstream and optional. If you stop using us tomorrow, data flows directly to your platforms unchanged. No migration. No data loss. No downtime. Compare this to Snowflake or Databricks—those ARE lock-in. We're the opposite: you keep full control.",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 500,
+                "font_size": 20,
+                "line_height": 1.5,
+                "color": "#FFFFFF"
+              },
+              "emphasis": {
+                "phrases": [
+                  "upstream and optional",
+                  "No migration. No data loss. No downtime",
+                  "you keep full control"
+                ],
+                "color": "#48BB78",
+                "font_weight": 700
+              }
+            }
+          ]
+        },
+        {
+          "type": "executive_concern_card",
+          "id": "exec_obj_2",
+          "position": {
+            "x": 0,
+            "y": 230,
+            "width": 1600,
+            "height": 190
+          },
+          "style": {
+            "background": "rgba(237, 137, 54, 0.1)",
+            "border": "3px solid #ed8936",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "exec_concern_2",
+              "content": "⚠️ 'What's the ROI if we're only saving 30%, not 70%?",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 24,
+                "color": "#fbd38d",
+                "margin_bottom": 16
+              }
+            },
+            {
+              "type": "text",
+              "id": "exec_response_2",
+              "content": "✓ Even at 30% reduction, most customers see 3-6 month payback. Our pricing is performance-based—we take a percentage of savings. If you're only saving 30%, our fee is proportionally smaller. But realistically? Every customer we've worked with hits 50%+ reduction within 90 days.",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 500,
+                "font_size": 20,
+                "line_height": 1.5,
+                "color": "#FFFFFF"
+              },
+              "emphasis": {
+                "phrases": [
+                  "3-6 month payback",
+                  "performance-based",
+                  "50%+ reduction within 90 days"
+                ],
+                "color": "#48BB78",
+                "font_weight": 700
+              }
+            }
+          ]
+        },
+        {
+          "type": "executive_concern_card",
+          "id": "exec_obj_3",
+          "position": {
+            "x": 0,
+            "y": 460,
+            "width": 1600,
+            "height": 190
+          },
+          "style": {
+            "background": "rgba(237, 137, 54, 0.1)",
+            "border": "3px solid #ed8936",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "exec_concern_3",
+              "content": "⚠️ 'We don't have budget for another vendor this year'",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 24,
+                "color": "#fbd38d",
+                "margin_bottom": 16
+              }
+            },
+            {
+              "type": "text",
+              "id": "exec_response_3",
+              "content": "✓ Expanso pays for itself from Snowflake/Databricks/Splunk/Datadog savings. CFOs often move budget FROM those platforms TO us—net-zero impact. Some customers even get budget approval by showing our pilot results: '$280K saved in month one.' That's pretty compelling.",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 500,
+                "font_size": 20,
+                "line_height": 1.5,
+                "color": "#FFFFFF"
+              },
+              "emphasis": {
+                "phrases": [
+                  "pays for itself",
+                  "net-zero impact",
+                  "$280K saved in month one"
+                ],
+                "color": "#48BB78",
+                "font_weight": 700
+              }
+            }
+          ]
+        },
+        {
+          "type": "executive_concern_card",
+          "id": "exec_obj_4",
+          "position": {
+            "x": 0,
+            "y": 690,
+            "width": 1600,
+            "height": 190
+          },
+          "style": {
+            "background": "rgba(237, 137, 54, 0.1)",
+            "border": "3px solid #ed8936",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "elements": [
+            {
+              "type": "text",
+              "id": "exec_concern_4",
+              "content": "⚠️ 'What if Snowflake/Databricks builds this feature?'",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 24,
+                "color": "#fbd38d",
+                "margin_bottom": 16
+              }
+            },
+            {
+              "type": "text",
+              "id": "exec_response_4",
+              "content": "✓ They won't. Their business model is 'more data = more revenue.' Building upstream filtering would cannibalize their own income. Even if they tried, they can't control data at YOUR edge—only at their cloud ingestion points. That's too late. We win on physics and incentives.",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 500,
+                "font_size": 20,
+                "line_height": 1.5,
+                "color": "#FFFFFF"
+              },
+              "emphasis": {
+                "phrases": [
+                  "cannibalize their own income",
+                  "can't control data at YOUR edge",
+                  "We win on physics and incentives"
+                ],
+                "color": "#48BB78",
+                "font_weight": 700
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

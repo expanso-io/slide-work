@@ -1,0 +1,220 @@
+{
+  "slide_id": "slide_11a_pricing_comparison",
+  "frame_name": "Backup - Pricing vs Alternatives",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Pricing Model Comparison",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "How Different Vendors Charge for Data Management",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "comparison_table",
+      "id": "pricing_comparison_matrix",
+      "position": {
+        "x": 80,
+        "y": 220,
+        "width": 1760,
+        "height": 680
+      },
+      "structure": {
+        "columns": [
+          {
+            "id": "attribute",
+            "header": "Attribute",
+            "width": 300,
+            "align": "left"
+          },
+          {
+            "id": "expanso",
+            "header": "Expanso",
+            "width": 365,
+            "align": "center",
+            "highlight": true
+          },
+          {
+            "id": "cloud_platforms",
+            "header": "Cloud Platforms\n(Snowflake, Databricks)",
+            "width": 365,
+            "align": "center"
+          },
+          {
+            "id": "etl_tools",
+            "header": "ETL Tools\n(Fivetran, Airbyte)",
+            "width": 365,
+            "align": "center"
+          },
+          {
+            "id": "observability",
+            "header": "Observability\n(Datadog, Splunk)",
+            "width": 365,
+            "align": "center"
+          }
+        ],
+        "rows": [
+          {
+            "attribute": "Pricing Model",
+            "expanso": "% of savings\n(performance-based)",
+            "cloud_platforms": "Per-GB ingested\n+ compute/storage",
+            "etl_tools": "Per-connector\n+ per-GB processed",
+            "observability": "Per-GB ingested\n+ retention",
+            "row_height": 100
+          },
+          {
+            "attribute": "Incentive Alignment",
+            "expanso": "Make $ when you save $\n✓ Aligned",
+            "cloud_platforms": "Make $ when you use more\n❌ Misaligned",
+            "etl_tools": "Make $ when you add connectors\n❌ Misaligned",
+            "observability": "Make $ when you log more\n❌ Misaligned",
+            "row_height": 100
+          },
+          {
+            "attribute": "Cost If No Value",
+            "expanso": "$0\n(risk-free)",
+            "cloud_platforms": "Full bill\n(risk on you)",
+            "etl_tools": "Full bill\n(risk on you)",
+            "observability": "Full bill\n(risk on you)",
+            "row_height": 90
+          },
+          {
+            "attribute": "Surprise Bills",
+            "expanso": "None\n(predictable from savings)",
+            "cloud_platforms": "Common\n(usage spikes)",
+            "etl_tools": "Common\n(new connectors)",
+            "observability": "Very common\n(log explosions)",
+            "row_height": 90
+          },
+          {
+            "attribute": "Contract Flexibility",
+            "expanso": "Annual standard\nPilot always free",
+            "cloud_platforms": "Consumption-based\n(ongoing risk)",
+            "etl_tools": "Annual or monthly\nPer-connector",
+            "observability": "Consumption-based\n(ongoing risk)",
+            "row_height": 90
+          },
+          {
+            "attribute": "Typical Annual Cost\n(100 TB/month baseline)",
+            "expanso": "$120K-$240K\n(% of $600K-$1.2M saved)",
+            "cloud_platforms": "$600K-$1.2M\n(platform spend)",
+            "etl_tools": "$50K-$150K\n(connector fees)",
+            "observability": "$600K-$1M\n(log storage)",
+            "row_height": 110
+          }
+        ]
+      },
+      "style": {
+        "header": {
+          "background": "#2d3748",
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 16,
+          "color": "#FFFFFF",
+          "padding": 20,
+          "border_bottom": "2px solid #4A5568"
+        },
+        "header_highlight": {
+          "background": "rgba(72, 187, 120, 0.2)",
+          "border": "2px solid #48BB78",
+          "color": "#48BB78"
+        },
+        "cell": {
+          "font_family": "Inter",
+          "font_weight": 400,
+          "font_size": 14,
+          "color": "#FFFFFF",
+          "line_height": 1.5,
+          "padding": 16,
+          "border_bottom": "1px solid #4A5568"
+        },
+        "attribute_cell": {
+          "font_weight": 600,
+          "color": "#CBD5E0",
+          "background": "rgba(45, 55, 72, 0.5)"
+        },
+        "expanso_cell": {
+          "background": "rgba(72, 187, 120, 0.08)",
+          "font_weight": 500
+        },
+        "checkmark": {
+          "color": "#48BB78",
+          "font_size": 18
+        },
+        "x_mark": {
+          "color": "#fc8181",
+          "font_size": 18
+        }
+      }
+    },
+    {
+      "type": "container",
+      "id": "bottom_line",
+      "position": {
+        "x": 80,
+        "y": 940,
+        "width": 1760,
+        "height": 100
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.15)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 28
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "bottom_line_text",
+          "content": "💡 Bottom Line: Other vendors charge for volume. We charge for value. If you don't save money, you don't pay us. That's why we're the only vendor whose incentives are truly aligned with yours.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 20,
+            "color": "#FFFFFF",
+            "text_align": "center",
+            "line_height": 1.6
+          },
+          "emphasis": {
+            "phrases": ["charge for value", "don't save money, you don't pay us", "truly aligned"],
+            "color": "#48BB78",
+            "font_weight": 700
+          }
+        }
+      }
+    }

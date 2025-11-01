@@ -1,0 +1,230 @@
+{
+  "slide_id": "slide_14_backup_faq",
+  "frame_name": "Backup - Frequently Asked Questions",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Frequently Asked Questions",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Common Questions & Answers",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "faq_list",
+      "position": {
+        "x": 80,
+        "y": 200,
+        "width": 1760,
+        "height": 800
+      },
+      "layout": {
+        "type": "two_column",
+        "gap": 60
+      },
+      "elements": [
+        {
+          "type": "faq_column",
+          "id": "left_column",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 850,
+            "height": 800
+          },
+          "faqs": [
+            {
+              "question": "Does this work with my existing tools?",
+              "answer": "Yes. Expanso sits upstream of your existing ETL/ELT tools (Fivetran, Airbyte, dbt) and cloud platforms (Snowflake, Databricks, Splunk, Datadog). Nothing changes downstream—same queries, same dashboards, same APIs. We just reduce the volume of data reaching them.",
+              "icon": "🔗"
+            },
+            {
+              "question": "What if I filter out data I need later?",
+              "answer": "We run in shadow mode first (1-2 weeks) to validate what would be filtered. You approve every filtering rule. Plus, filtered data can be archived to S3 at $0.02/GB for retrieval if ever needed. We use conservative filters by default—better to keep 10% too much than filter 1% too much.",
+              "icon": "🛡️"
+            },
+            {
+              "question": "How long does deployment take?",
+              "answer": "Pilot: 2-4 weeks (shadow mode → validation → go live). Production: 4-6 weeks for full rollout across all data sources. Most customers see first savings within 72 hours of going live.",
+              "icon": "⏱️"
+            },
+            {
+              "question": "Do I need to change my application code?",
+              "answer": "No. Expanso taps existing data streams (log collectors, database change feeds, event buses). Your applications continue working exactly as they do today. Developers see no changes. Zero code modifications required.",
+              "icon": "💻"
+            },
+            {
+              "question": "What happens if Expanso goes down?",
+              "answer": "Fail-open design: If an agent crashes or policy fails, data flows through unchanged. No data loss. No production impact. Your platforms continue receiving data as if Expanso wasn't there. We have 99.9% uptime SLA, but even in the 0.1%, your operations are unaffected.",
+              "icon": "🔄"
+            }
+          ]
+        },
+        {
+          "type": "faq_column",
+          "id": "right_column",
+          "position": {
+            "x": 910,
+            "y": 0,
+            "width": 850,
+            "height": 800
+          },
+          "faqs": [
+            {
+              "question": "Is my data secure?",
+              "answer": "Yes. Data is processed at the source—never leaves your environment until YOU decide. PII is filtered BEFORE crossing network boundaries. No data is transmitted to Expanso SaaS. Agents run entirely in your infrastructure. SOC 2 Type II certified. GDPR compliant. HIPAA-ready with BAA available.",
+              "icon": "🔐"
+            },
+            {
+              "question": "How much does this cost?",
+              "answer": "Pilot: Free (2-4 weeks). Production: Performance-based pricing—we charge a percentage of your savings. If you save $0, you pay $0. Typical range: 15-30% of savings depending on contract size. Example: Save $1M → pay $200-300K → net savings $700-800K.",
+              "icon": "💰"
+            },
+            {
+              "question": "Can I cancel anytime?",
+              "answer": "Standard contract: 12-month term with 90-day notice for cancellation. No termination fees. You can turn off agents immediately—data flows unchanged. We provide full data lineage export. Most customers renew (98% retention rate) because the savings are real.",
+              "icon": "🚪"
+            },
+            {
+              "question": "What if I'm already optimizing my data?",
+              "answer": "Platform-native optimization happens AFTER ingestion—you've already paid. We filter BEFORE ingestion. Even if you're using Snowflake's clustering or Databricks' Delta optimization, you're still paying to ingest 100% of your data first. We reduce that baseline by 50-70%.",
+              "icon": "📊"
+            },
+            {
+              "question": "Do you support my cloud provider?",
+              "answer": "Yes. We support AWS, Azure, GCP, and hybrid/multi-cloud. We deploy as containers (Docker, Kubernetes), VMs, or bare metal. Edge, on-prem, VPC, or cloud—wherever your data originates. Multi-cloud deployments are common.",
+              "icon": "☁️"
+            }
+          ]
+        }
+      ],
+      "faq_style": {
+        "container": {
+          "margin_bottom": 32,
+          "padding": 24,
+          "background": "rgba(72, 187, 120, 0.08)",
+          "border": "2px solid #4A5568",
+          "border_radius": 8
+        },
+        "icon": {
+          "font_size": 32,
+          "margin_bottom": 12,
+          "display": "inline-block"
+        },
+        "question": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 18,
+          "color": "#48BB78",
+          "line_height": 1.4,
+          "margin_bottom": 12
+        },
+        "answer": {
+          "font_family": "Inter",
+          "font_weight": 400,
+          "font_size": 15,
+          "color": "#FFFFFF",
+          "line_height": 1.7
+        }
+      }
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "faq_bg": "rgba(72, 187, 120, 0.08)",
+      "faq_border": "#4A5568",
+      "question_color": "#48BB78",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0"
+    },
+    "visual_language": {
+      "two_column": "Easy scanning, comprehensive coverage",
+      "icon_system": "Visual anchors for quick scanning",
+      "compact_density": "Maximum info in minimal space"
+    }
+  },
+  "presentation_notes": {
+    "opening": "This is a backup slide with answers to the most common questions we get. Let me walk through a few that might be relevant.",
+    "selective_usage": "Don't read through all 10. Pick 2-3 most relevant to this prospect's concerns and address those.",
+    "qa_reference": "Keep this slide handy during Q&A as a reference. If a question comes up, you can quickly navigate here.",
+    "common_patterns": {
+      "technical_buyers": "Focus on: integration, deployment time, fail-open, security",
+      "business_buyers": "Focus on: cost, ROI, cancellation terms, existing optimization",
+      "security_teams": "Focus on: security, PII handling, compliance, fail-open"
+    },
+    "when_to_use": "Use proactively if you sense hesitation or objections. Use reactively during Q&A when specific questions arise."
+  },
+  "persona_alignment": {
+    "executives": {
+      "focus_faqs": ["cost", "cancellation", "deployment_time"],
+      "skip_faqs": ["technical_details", "cloud_provider"]
+    },
+    "architects": {
+      "focus_faqs": ["integration", "fail_open", "cloud_provider", "code_changes"],
+      "skip_faqs": ["cost", "cancellation"]
+    },
+    "security": {
+      "focus_faqs": ["security", "data_filtering", "compliance"],
+      "skip_faqs": ["cost", "deployment_time"]
+    },
+    "finance": {
+      "focus_faqs": ["cost", "existing_optimization", "cancellation"],
+      "skip_faqs": ["technical_details", "code_changes"]
+    }
+  },
+  "usage_guidelines": {
+    "when_to_show": [
+      "During Q&A session",
+      "When prospect raises specific objections",
+      "At end of presentation as 'any other questions?' reference",
+      "In leave-behind materials"
+    ],
+    "when_not_to_show": [
+      "During main presentation flow (breaks momentum)",
+      "Before establishing value (creates unnecessary concerns)",
+      "With audiences that haven't asked questions yet"
+    ]
+  },
+  "customization_notes": {
+    "add_industry_specific": "For healthcare: Add HIPAA/PHI question. For finance: Add PCI-DSS question. For retail: Add seasonal scaling question.",
+    "add_platform_specific": "If prospect uses specific platform, add question about that platform's native features vs Expanso",
+    "prioritize_by_persona": "Reorder FAQs based on who's in the room—put most relevant questions first"
+  }
+}

@@ -1,0 +1,460 @@
+{
+  "slide_id": "slide_03_root_cause",
+  "frame_name": "Root Cause - The Downstream-Only Architecture",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "The Root Cause: Your Data Stack Only Works Downstream",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "left"
+      },
+      "position": {
+        "x": 80,
+        "y": 60,
+        "max_width": 1760
+      },
+      "emphasis": {
+        "words": ["Downstream"],
+        "color": "#c53030"
+      }
+    },
+    {
+      "type": "group",
+      "id": "architecture_diagram",
+      "position": {
+        "x": 80,
+        "y": 180,
+        "width": 1760,
+        "height": 600
+      },
+      "elements": [
+        {
+          "type": "container",
+          "id": "upstream_zone",
+          "content": {
+            "zone_label": "UPSTREAM",
+            "zone_sublabel": "(At the Source)",
+            "status": "NO TOOLS HERE",
+            "icon": "❌"
+          },
+          "style": {
+            "background": "rgba(197, 48, 48, 0.15)",
+            "border": "3px dashed #fc8181",
+            "border_radius": 12
+          },
+          "text_style": {
+            "zone_label": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 24,
+              "color": "#fc8181",
+              "letter_spacing": 2
+            },
+            "zone_sublabel": {
+              "font_family": "Inter",
+              "font_weight": 400,
+              "font_size": 16,
+              "color": "#feb2b2",
+              "margin_top": 4
+            },
+            "status": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 32,
+              "color": "#fc8181",
+              "margin_top": 24
+            },
+            "icon": {
+              "font_size": 48,
+              "margin_top": 16
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 520,
+            "height": 600
+          },
+          "layout": {
+            "type": "vertical_center",
+            "alignment": "center",
+            "padding": 40
+          },
+          "annotations": [
+            {
+              "type": "callout",
+              "content": "Data sources\ngenerate 100%\nof volume here",
+              "style": {
+                "font_family": "Inter",
+                "font_weight": 500,
+                "font_size": 14,
+                "color": "#feb2b2",
+                "text_align": "center",
+                "background": "rgba(197, 48, 48, 0.2)",
+                "padding": 12,
+                "border_radius": 6
+              },
+              "position": {
+                "x": 160,
+                "y": 480
+              }
+            }
+          ]
+        },
+        {
+          "type": "arrow",
+          "id": "data_flow_arrow",
+          "style": {
+            "stroke": "#718096",
+            "stroke_width": 6,
+            "arrow_head": "triangle",
+            "arrow_head_size": 24
+          },
+          "position": {
+            "from": { "x": 520, "y": 300 },
+            "to": { "x": 620, "y": 300 }
+          },
+          "label": {
+            "content": "ALL DATA\n(Unfiltered)",
+            "style": {
+              "font_family": "Inter",
+              "font_weight": 600,
+              "font_size": 16,
+              "color": "#ECC94B",
+              "background": "#2d3748",
+              "padding": 8,
+              "border_radius": 4
+            },
+            "position": "above"
+          }
+        },
+        {
+          "type": "container",
+          "id": "downstream_zone",
+          "content": {
+            "zone_label": "DOWNSTREAM",
+            "zone_sublabel": "(In the Cloud)",
+            "status": "ALL TOOLS HERE"
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.1)",
+            "border": "3px solid #4299e1",
+            "border_radius": 12
+          },
+          "text_style": {
+            "zone_label": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 24,
+              "color": "#4299e1",
+              "letter_spacing": 2
+            },
+            "zone_sublabel": {
+              "font_family": "Inter",
+              "font_weight": 400,
+              "font_size": 16,
+              "color": "#90cdf4",
+              "margin_top": 4
+            },
+            "status": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 28,
+              "color": "#FFFFFF",
+              "margin_top": 24,
+              "margin_bottom": 32
+            }
+          },
+          "position": {
+            "x": 620,
+            "y": 0,
+            "width": 1140,
+            "height": 600
+          },
+          "layout": {
+            "type": "vertical",
+            "padding": 40
+          },
+          "child_elements": [
+            {
+              "type": "logo_grid",
+              "id": "tool_categories",
+              "categories": [
+                {
+                  "name": "Storage & Warehousing",
+                  "logos": [
+                    { "name": "snowflake", "file": "snowflake_logo.svg" },
+                    { "name": "databricks", "file": "databricks_logo.svg" },
+                    { "name": "bigquery", "file": "bigquery_logo.svg" }
+                  ]
+                },
+                {
+                  "name": "Observability & Monitoring",
+                  "logos": [
+                    { "name": "datadog", "file": "datadog_logo.svg" },
+                    { "name": "splunk", "file": "splunk_logo.svg" },
+                    { "name": "newrelic", "file": "newrelic_logo.svg" }
+                  ]
+                },
+                {
+                  "name": "Data Integration",
+                  "logos": [
+                    { "name": "fivetran", "file": "fivetran_logo.svg" },
+                    { "name": "airbyte", "file": "airbyte_logo.svg" },
+                    { "name": "meltano", "file": "meltano_logo.svg" }
+                  ]
+                },
+                {
+                  "name": "Transformation",
+                  "logos": [{ "name": "dbt", "file": "dbt_logo.svg" }]
+                }
+              ],
+              "style": {
+                "logo_size": 56,
+                "category_spacing": 32,
+                "logo_spacing": 24,
+                "category_label": {
+                  "font_family": "Inter",
+                  "font_weight": 600,
+                  "font_size": 14,
+                  "color": "#90cdf4",
+                  "margin_bottom": 12
+                }
+              },
+              "layout": {
+                "type": "grid",
+                "columns": 2,
+                "row_gap": 40,
+                "column_gap": 60
+              },
+              "position": {
+                "x": 40,
+                "y": 120
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "consequence_box",
+      "position": {
+        "x": 80,
+        "y": 820,
+        "width": 1760,
+        "height": 180
+      },
+      "style": {
+        "background": "rgba(237, 137, 54, 0.15)",
+        "border": "2px solid #ed8936",
+        "border_radius": 8,
+        "padding": 32
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "consequence_headline",
+          "content": "The Consequence:",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 24,
+            "color": "#fbd38d",
+            "text_align": "left",
+            "margin_bottom": 16
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "text",
+          "id": "consequence_text",
+          "content": "By the time data reaches your tools, it's already too late. You've already paid to move it. You've already paid to store it. You're locked into processing costs you can't avoid. Every optimization happens after the damage is done.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 500,
+            "font_size": 22,
+            "line_height": 1.5,
+            "color": "#FFFFFF",
+            "text_align": "left"
+          },
+          "position": {
+            "x": 0,
+            "y": 48
+          },
+          "emphasis": {
+            "phrases": [
+              "already too late",
+              "already paid",
+              "locked into",
+              "after the damage is done"
+            ],
+            "color": "#fbd38d",
+            "font_weight": 600
+          }
+        }
+      ]
+    }
+  ],
+  "layout_zones": {
+    "header": {
+      "percentage": 10,
+      "elements": ["slide_title"]
+    },
+    "main_diagram": {
+      "percentage": 60,
+      "elements": ["architecture_diagram"]
+    },
+    "consequence": {
+      "percentage": 20,
+      "elements": ["consequence_box"]
+    },
+    "footer": {
+      "percentage": 10,
+      "reserved": true
+    }
+  },
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "zone_upstream_bg": "rgba(197, 48, 48, 0.15)",
+      "zone_upstream_border": "#fc8181",
+      "zone_upstream_text": "#fc8181",
+      "zone_downstream_bg": "rgba(66, 153, 225, 0.1)",
+      "zone_downstream_border": "#4299e1",
+      "zone_downstream_text": "#4299e1",
+      "consequence_bg": "rgba(237, 137, 54, 0.15)",
+      "consequence_border": "#ed8936",
+      "consequence_accent": "#fbd38d",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#90cdf4",
+      "arrow_default": "#718096",
+      "label_warning": "#ECC94B"
+    },
+    "visual_language": {
+      "upstream_empty": "Dashed border, X icon, empty space conveys 'gap'",
+      "downstream_crowded": "Solid border, many logos, conveys 'all tools here'",
+      "spatial_contrast": "Left (empty/problem) vs Right (full/reactive)"
+    }
+  },
+  "variants": [
+    {
+      "name": "technical_audience",
+      "description": "More detailed tool categories",
+      "modifications": {
+        "tool_categories": {
+          "add_categories": [
+            {
+              "name": "Data Quality",
+              "logos": ["montecarlo", "great_expectations", "soda"]
+            },
+            {
+              "name": "Orchestration",
+              "logos": ["airflow", "dagster", "prefect"]
+            }
+          ]
+        }
+      },
+      "use_case": "When presenting to data engineers or architects"
+    },
+    {
+      "name": "simplified_executive",
+      "description": "Fewer logos, clearer categories",
+      "modifications": {
+        "tool_categories": {
+          "limit_per_category": 2,
+          "show_only": ["Storage & Warehousing", "Observability & Monitoring"]
+        }
+      },
+      "use_case": "Executive presentations where tool recognition matters more than completeness"
+    }
+  ],
+  "visual_hierarchy": {
+    "primary_focus": "upstream_zone (empty red zone)",
+    "secondary_focus": "downstream_zone (crowded blue zone)",
+    "tertiary_focus": "consequence_box",
+    "flow_direction": "left_to_right"
+  },
+  "presentation_notes": {
+    "opening": "So what's the root cause? It's simple: Your entire data stack only works downstream.",
+    "diagram_walkthrough": {
+      "upstream": "[Point to left side] Look at the upstream zone—where your data is actually generated. At the edge. In your applications. In your databases. [Pause] There are no tools here. Zero control. Zero visibility. Zero optimization.",
+      "arrow": "[Point to arrow] So ALL your data—100% of it, unfiltered—flows into the cloud.",
+      "downstream": "[Point to right side] And now look at the downstream zone. THIS is where all your tools live. Snowflake. Databricks. Splunk. Datadog. Fivetran. dbt. [Pause] These are incredible platforms. But they all share one fatal limitation: They only see data AFTER it's already in the cloud.",
+      "consequence": "[Point to consequence box] Here's the problem: By the time data reaches your tools, it's already too late. You've already paid to move it. You've already paid to store it. You're locked into processing costs you can't avoid. Every optimization you do—compression, deduplication, sampling—happens AFTER the damage is done."
+    },
+    "transition": "So the question becomes: What if we could control data BEFORE it reaches these expensive platforms? What if we could filter, transform, and govern it at the source? [Pause] That's what we call 'Upstream Data Control.' Let me show you what that looks like...",
+    "pacing": "Spend time on the visual contrast. Let audience absorb the empty left vs. crowded right."
+  },
+  "accessibility": {
+    "color_blindness_safe": true,
+    "note": "Red (upstream) and blue (downstream) are distinguishable even in grayscale via border styles (dashed vs solid)",
+    "alt_text": {
+      "upstream_zone": "Empty red dashed zone labeled 'UPSTREAM (At the Source) - NO TOOLS HERE' with X icon",
+      "downstream_zone": "Blue solid zone labeled 'DOWNSTREAM (In the Cloud) - ALL TOOLS HERE' containing multiple data platform logos organized by category",
+      "arrow": "Thick arrow flowing from upstream to downstream labeled 'ALL DATA (Unfiltered)'"
+    }
+  },
+  "assets_required": [
+    {
+      "type": "logo",
+      "files": [
+        "snowflake_logo.svg",
+        "databricks_logo.svg",
+        "bigquery_logo.svg",
+        "datadog_logo.svg",
+        "splunk_logo.svg",
+        "newrelic_logo.svg",
+        "fivetran_logo.svg",
+        "airbyte_logo.svg",
+        "meltano_logo.svg",
+        "dbt_logo.svg"
+      ],
+      "specifications": "Full color, transparent background, 56x56px minimum",
+      "optional_additional": [
+        "montecarlo_logo.svg",
+        "great_expectations_logo.svg",
+        "soda_logo.svg",
+        "airflow_logo.svg",
+        "dagster_logo.svg",
+        "prefect_logo.svg"
+      ]
+    }
+  ],
+  "persona_alignment": {
+    "architects": {
+      "focus_elements": ["architecture_diagram", "tool_categories"],
+      "talking_points": "Architectural gap in the stack, reactive vs proactive design"
+    },
+    "executives": {
+      "focus_elements": ["consequence_box", "already paid", "locked into"],
+      "talking_points": "Economic lock-in, cost control happens too late"
+    },
+    "data_engineers": {
+      "focus_elements": ["tool_categories", "no upstream tools"],
+      "talking_points": "Tool gap, reactive troubleshooting vs proactive prevention"
+    }
+  },
+  "cognitive_load_analysis": {
+    "key_insight": "Visual spatial metaphor (left=upstream, right=downstream) makes concept immediately graspable",
+    "memory_anchor": "Empty red zone vs crowded blue zone",
+    "estimated_comprehension_time": "15-20 seconds for full diagram understanding"
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "slide_id": "slide_08c_risk_mitigation",
+  "frame_name": "Next Steps - Zero Risk Pilot",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Start With Zero Risk",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 48,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1600
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Our Pilot Program Eliminates Every Concern",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 28,
+        "color": "#48BB78",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 140,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "risk_elimination_grid",
+      "position": {
+        "x": 160,
+        "y": 240,
+        "width": 1600,
+        "height": 540
+      },
+      "layout": {
+        "type": "grid",
+        "columns": 2,
+        "rows": 3,
+        "gap_horizontal": 60,
+        "gap_vertical": 32
+      },
+      "elements": [
+        {
+          "type": "risk_card",
+          "concern": "❌ \"What if it breaks production?\"",
+          "mitigation": "✓ Shadow mode first. We observe without touching. Zero production impact.",
+          "position": {"row": 0, "col": 0}
+        },
+        {
+          "type": "risk_card",
+          "concern": "❌ \"What if we filter critical data?\"",
+          "mitigation": "✓ Conservative filters only. You approve every rule. Plus S3 backup at $0.02/GB.",
+          "position": {"row": 0, "col": 1}
+        },
+        {
+          "type": "risk_card",
+          "concern": "❌ \"What if it doesn't save enough?\"",
+          "mitigation": "✓ Performance-based pricing. If we save $0, you pay $0. Our incentives = your incentives.",
+          "position": {"row": 1, "col": 0}
+        },
+        {
+          "type": "risk_card",
+          "concern": "❌ \"What if our team doesn't adopt it?\"",
+          "mitigation": "✓ No app changes required. Developers see nothing. Ops teams love less firefighting.",
+          "position": {"row": 1, "col": 1}
+        },
+        {
+          "type": "risk_card",
+          "concern": "❌ \"What if we get locked in?\"",
+          "mitigation": "✓ Turn us off tomorrow—data flows unchanged. No migration, no downtime, no lock-in.",
+          "position": {"row": 2, "col": 0}
+        },
+        {
+          "type": "risk_card",
+          "concern": "❌ \"What if it takes too long?\"",
+          "mitigation": "✓ 2-4 weeks to production. First savings visible in 72 hours of going live.",
+          "position": {"row": 2, "col": 1}
+        }
+      ],
+      "card_style": {
+        "background": "rgba(66, 153, 225, 0.08)",
+        "border": "2px solid #4A5568",
+        "border_radius": 8,
+        "padding": 28,
+        "height": 160,
+        "concern": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 18,
+          "color": "#fc8181",
+          "margin_bottom": 12
+        },
+        "mitigation": {
+          "font_family": "Inter",
+          "font_weight": 500,
+          "font_size": 16,
+          "line_height": 1.6,
+          "color": "#FFFFFF"
+        },
+        "emphasis": {
+          "color": "#48BB78",
+          "font_weight": 600
+        }
+      }
+    },
+    {
+      "type": "container",
+      "id": "guarantee_box",
+      "position": {
+        "x": 360,
+        "y": 840,
+        "width": 1200,
+        "height": 180
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.2)",
+        "border": "4px solid #48BB78",
+        "border_radius": 12,
+        "padding": 40
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "guarantee_headline",
+          "content": "🛡️ Our Guarantee",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 32,
+            "color": "#48BB78",
+            "text_align": "center",
+            "margin_bottom": 16
+          }
+        },
+        {
+          "type": "text",
+          "id": "guarantee_text",
+          "content": "If we don't save you at least 40% on cloud data costs within 90 days, you owe us nothing.\nWe put our money where our mouth is.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 22,
+            "color": "#FFFFFF",
+            "text_align": "center",
+            "line_height": 1.6
+          },
+          "emphasis": {
+            "phrases": ["you owe us nothing", "We put our money where our mouth is"],
+            "color": "#48BB78",
+            "font_weight": 700
+          }
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "card_bg": "rgba(66, 153, 225, 0.08)",
+      "card_border": "#4A5568",
+      "concern_color": "#fc8181",
+      "mitigation_color": "#48BB78",
+      "guarantee_bg": "rgba(72, 187, 120, 0.2)",
+      "guarantee_border": "#48BB78",
+      "text_primary": "#FFFFFF"
+    },
+    "visual_language": {
+      "concern_mitigation_pairs": "Every fear has a specific answer",
+      "grid_layout": "Easy scanning, comprehensive coverage",
+      "guarantee_emphasis": "Trust-building through financial commitment"
+    }
+  },
+  "presentation_notes": {
+    "opening": "I want to address something important: risk. Let me show you how our pilot program eliminates every concern.",
+    "grid_walkthrough": "[Point to each card and read both concern and mitigation] 'What if it breaks production?' Shadow mode first. We observe without touching. Zero production impact. [Continue through all six cards methodically]",
+    "guarantee": "[Point to guarantee box] And here's our guarantee: If we don't save you at least 40% on cloud data costs within 90 days, you owe us nothing. We put our money where our mouth is.",
+    "closing": "So there's literally no downside. The only risk is NOT trying this and continuing to pay full price. What do you say—shall we get started?",
+    "silence_technique": "After the guarantee, pause. Let it sink in. Wait for them to speak first.",
+    "pacing": "Slow and deliberate. Each risk mitigation deserves its moment."
+  },
+  "use_case": "Risk-averse prospects, committees, enterprises with complex approval processes",
+  "advantage": "Systematically removes objections, builds trust through guarantees"
+}

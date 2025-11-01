@@ -1,0 +1,202 @@
+{
+  "slide_id": "slide_13_thank_you_contact",
+  "frame_name": "Thank You / Next Steps",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "content": "Let's Start Saving You Money",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 64,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 200,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "content": "2-4 Week Free Pilot • 50-70% Cost Reduction • Zero Risk",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 600,
+        "font_size": 32,
+        "color": "#48BB78",
+        "text_align": "center",
+        "letter_spacing": 1
+      },
+      "position": {
+        "x": "center",
+        "y": 320,
+        "max_width": 1600
+      }
+    },
+    {
+      "type": "container",
+      "id": "contact_section",
+      "position": {
+        "x": 360,
+        "y": 440,
+        "width": 1200,
+        "height": 420
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.15)",
+        "border": "4px solid #48BB78",
+        "border_radius": 16,
+        "padding": 60
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "contact_header",
+          "content": "Schedule Your Discovery Call",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 40,
+            "color": "#FFFFFF",
+            "text_align": "center",
+            "margin_bottom": 48
+          }
+        },
+        {
+          "type": "contact_grid",
+          "id": "contact_methods",
+          "layout": {
+            "type": "vertical_stack",
+            "gap": 32
+          },
+          "items": [
+            {
+              "icon": "👤",
+              "label": "David Aronchick",
+              "detail": "CEO & Co-Founder",
+              "style": "header"
+            },
+            {
+              "icon": "📧",
+              "label": "Email",
+              "detail": "aronchick@expanso.io",
+              "link": "mailto:aronchick@expanso.io",
+              "style": "contact"
+            },
+            {
+              "icon": "📅",
+              "label": "Calendar",
+              "detail": "calendly.com/expanso",
+              "link": "https://calendly.com/expanso",
+              "style": "contact"
+            },
+            {
+              "icon": "💬",
+              "label": "LinkedIn",
+              "detail": "linkedin.com/in/daronchick",
+              "link": "https://linkedin.com/in/daronchick",
+              "style": "contact"
+            },
+            {
+              "icon": "🌐",
+              "label": "Website",
+              "detail": "expanso.io",
+              "link": "https://expanso.io",
+              "style": "contact"
+            }
+          ],
+          "item_style": {
+            "header": {
+              "icon": {
+                "font_size": 48,
+                "margin_right": 20
+              },
+              "label": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 32,
+                "color": "#48BB78"
+              },
+              "detail": {
+                "font_family": "Inter",
+                "font_weight": 500,
+                "font_size": 20,
+                "color": "#9ae6b4",
+                "margin_left": 68
+              }
+            },
+            "contact": {
+              "layout": "horizontal",
+              "alignment": "center",
+              "icon": {
+                "font_size": 32,
+                "margin_right": 20,
+                "width": 48,
+                "text_align": "center"
+              },
+              "label": {
+                "font_family": "Inter",
+                "font_weight": 600,
+                "font_size": 18,
+                "color": "#9ae6b4",
+                "width": 120,
+                "text_align": "right",
+                "margin_right": 20
+              },
+              "detail": {
+                "font_family": "Inter",
+                "font_weight": 700,
+                "font_size": 24,
+                "color": "#FFFFFF",
+                "text_decoration": "none"
+              },
+              "hover": {
+                "detail_color": "#48BB78",
+                "cursor": "pointer"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "primary": "#48BB78",
+      "secondary": "#9ae6b4",
+      "text_primary": "#FFFFFF",
+      "contact_bg": "rgba(72, 187, 120, 0.15)",
+      "contact_border": "#48BB78"
+    },
+    "visual_language": {
+      "minimalist": "Clean, uncluttered final slide",
+      "action_focused": "Clear CTA with multiple contact methods",
+      "professional": "Matches brand throughout deck"
+    }
+  },
+  "presentation_notes": {
+    "delivery": "This is your closing slide. Keep it visible while you wrap up the conversation.",
+    "script": "So, that's Expanso. We filter 50 to 70% of your data before it reaches expensive cloud platforms. You save $500K to $2M+ annually. We offer a free 2 to 4 week pilot to prove it. And we only get paid if you save money. [Pause] Let's schedule a 30-minute discovery call to see if this makes sense for your environment. [Point to contact info] You can reach me at aronchick@expanso.io, grab time on my calendar at calendly.com/expanso, or connect on LinkedIn. [Pause] What questions do you have?",
+    "leave_it_up": "Leave this slide up during Q&A and while scheduling the next meeting. Don't advance to a black screen.",
+    "follow_up": "After the meeting, send a follow-up email with: (1) This slide as a PDF attachment, (2) Calendar link, (3) One-sentence summary of next steps"
+  },
+  "usage_guidelines": {
+    "always_end_here": "This should be the last slide in every presentation",
+    "visible_during_qa": "Keep this slide up during Q&A so contact info is visible",
+    "screenshot_friendly": "Designed to be easily photographed by attendees"
+  }
+}

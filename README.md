@@ -1,6 +1,6 @@
-# Expanso Presentation Deck
+# Expanso Presentation Decks
 
-Professional presentation system for Expanso's "Upstream Data Control" platform, built with reveal.js and optimized for LLM-based slide generation.
+Multi-deck presentation system for Expanso, built with Slidev and optimized for LLM-based slide generation.
 
 ## 🚀 Quick Start
 
@@ -8,8 +8,17 @@ Professional presentation system for Expanso's "Upstream Data Control" platform,
 # Install dependencies
 npm install
 
-# Start development server
+# Start development server (current deck)
 npm run dev
+
+# Or open a specific deck
+npm run dev:deck --deck=2025-11-01-sales-demo
+
+# Build all decks for production
+npm run build:all
+
+# Build a specific deck
+npm run build:deck --deck=2025-11-01-sales-demo
 ```
 
 Visit http://localhost:3030 to view the presentation.
@@ -18,153 +27,260 @@ Visit http://localhost:3030 to view the presentation.
 
 ```
 /
-├── README.md                      # You are here
-├── LLM_EVERGREEN_PROMPT.md        # Brand guidelines & design rules (READ THIS FIRST)
-├── SLIDE_GENERATION_GUIDE.md      # How to generate slides via LLM
-├── SLIDE_CHECKLIST.md             # Systematic slide rework checklist
-├── index.html                     # Main presentation file
-├── package.json                   # Dependencies
-├── css/theme/expanso.css          # Custom Expanso theme
-├── js/reveal-init.js              # Reveal.js configuration
-├── public/                        # Assets (logos, icons)
-├── archive/                       # Legacy files (see archive/README.md)
-└── .claude/CLAUDE.md              # Claude Code project configuration
+├── README.md                          # You are here
+├── index.html                         # Deck directory page (lists all decks)
+├── package.json                       # Build configuration
+├── slides/
+│   ├── 2025-11-01-sales-demo.md      # Active sales demo deck
+│   ├── archive-ascii/                 # Preserved ASCII slides
+│   └── archive-legacy/                # Old deck structures
+├── theme/
+│   ├── theme-and-context.md          # Expanso theme configuration
+│   ├── theme-config.json             # Theme settings
+│   ├── components/                    # Vue components (GlowBackground, etc.)
+│   ├── layouts/                       # Slide layouts (cover, center, two-cols, etc.)
+│   └── styles/                        # Theme CSS
+├── prompts/
+│   ├── LLM_EVERGREEN_PROMPT.md       # Brand guidelines & viewport rules
+│   └── VIEWPORT_CALCULATOR.md        # Pre-build size verification
+├── docs/archive/                      # Documentation archive
+├── scripts/
+│   └── build-all-decks.js            # Multi-deck build script
+├── .github/workflows/
+│   └── deploy.yml                     # GitHub Pages deployment
+└── dist/                              # Build output (gitignored)
+    ├── index.html                     # Deck directory
+    ├── 2025-11-01-sales-demo/         # Built deck 1
+    └── [future-deck-slug]/            # Built deck 2, 3, etc.
 ```
 
 ## 📋 Key Documents
 
-### 1. **LLM_EVERGREEN_PROMPT.md** (MUST READ)
+### 1. **prompts/LLM_EVERGREEN_PROMPT.md** (MUST READ)
 Permanent brand guidelines and design rules including:
-- 10/20/30 presentation rule (10 slides max, 20 min delivery, 30pt+ fonts)
-- Expanso brand voice & messaging ("at the source", not "upstream")
-- Visual design system (colors, typography, layout)
+- **Viewport enforcement**: 850px hard limit, calculate BEFORE building
+- Expanso brand voice & messaging (technical clarity without jargon)
+- Visual design system (dark theme with purple accents)
 - Target audience pain points
 - Key metrics library (50-70% reduction, $1.77M savings, etc.)
 
-### 2. **SLIDE_GENERATION_GUIDE.md**
-Step-by-step guide for generating slides with LLMs:
-- How to prompt Claude/GPT for new slides
-- Reveal.js HTML structure reference
-- CSS class reference
-- Common slide patterns
-- Quality checklist
+### 2. **prompts/VIEWPORT_CALCULATOR.md**
+Pre-build viewport verification system:
+- Step-by-step height calculation checklist
+- Formula for size reduction: `[(Total - 750) / Total × 100]%`
+- Examples and common pitfalls
+- **CRITICAL**: Always run before building
 
-### 3. **SLIDE_CHECKLIST.md**
-Systematic checklist for reworking existing slides:
-- Content audit (messaging, metrics, voice)
-- Design audit (fonts, whitespace, hierarchy)
-- Brand compliance check
-- Accessibility verification
+### 3. **theme/theme-and-context.md**
+Theme configuration and component library:
+- Available layouts (cover, center, two-cols, default)
+- Custom components (GlowBackground)
+- Typography scale and color system
+- Layout best practices
 
 ## 🎨 Design System
 
 ### Colors
 - **Primary**: Navy Blue (#0A1628) → Charcoal (#1A2332)
-- **Accent**: Electric Cyan (#00D9FF)
-- **Text**: White (#FFFFFF), Light Gray (#D4D9E0), Medium Gray (#B8BFC7)
+- **Accent**: Purple (#9A6BFF) with glow effects
+- **Success**: Green (#4ADE80)
+- **Text**: White (#FCFCFC), Light Gray (#D4D9E0), Medium Gray (#8A95A3)
 
 ### Typography
-- **Font**: Inter (modern sans-serif)
-- **Headlines**: 72-96pt, Semi-bold (600)
-- **Subheadlines**: 42-60pt, Medium (500)
-- **Body**: 30-36pt minimum, Regular (400)
-- **RULE**: No text under 30pt (10/20/30 rule)
+- **Font**: Inter (modern sans-serif, system fallbacks)
+- **Headlines**: 3-4rem (48-64px), Semi-bold (600)
+- **Subheadlines**: 1.5-2rem (24-32px), Medium (500)
+- **Body**: 1-1.25rem (16-20px), Regular (400)
+- **Code**: JetBrains Mono (monospace)
 
 ### Layout
-- **Format**: 16:9 (1920px × 1080px)
-- **Margins**: 80px from all edges
-- **Whitespace**: Minimum 60% per slide
-- **Focal Points**: One clear focal point per slide
+- **Format**: 16:9 (960px × 720px Slidev viewport)
+- **CRITICAL**: 850px max content height, 750-800px recommended
+- **Viewport rule**: Calculate BEFORE building (see VIEWPORT_CALCULATOR.md)
+- **Whitespace**: Generous padding, no cramming
+- **Focal Points**: One clear message per slide
 
-## 🎯 Current Presentation Structure
+## 🎯 Current Decks
 
-The main deck (`index.html`) currently contains:
+### 2025-11-01 Sales Demo
+**File**: `slides/2025-11-01-sales-demo.md`  
+**Status**: Active  
+**Slides**: 22  
 
-### Main Deck (5 slides)
-1. **Title Slide**: "Upstream Data Control" with value pillars
-2. **Problem Slide**: "$10M Data Tax" - why cloud bills keep growing
-3. **How It Works**: 3-step process
-4. **Customer Results**: 68% cost reduction case study
-5. **Contact/CTA**: Schedule cost assessment
-
-### Appendix (3 variations)
-- **Slide 2a**: Empathy-driven problem statement
-- **Slide 1a**: Bold claim variation (typography-driven)
-- **Slide 1b**: Visual metaphor variation (graphic-rich)
+Comprehensive sales demonstration deck showcasing Expanso's data control platform with customer proof points, industry breadth, and technical architecture.
 
 ## 🛠️ Workflow
 
-### Adding a New Slide
+### Adding a New Deck
 
-1. **Review brand guidelines**: Read `LLM_EVERGREEN_PROMPT.md`
-2. **Use LLM to generate**: Follow `SLIDE_GENERATION_GUIDE.md`
-3. **Paste HTML into `index.html`**: Add new `<section>` element
-4. **Test locally**: `npm run dev` and verify
-5. **Check against checklist**: Use `SLIDE_CHECKLIST.md`
+1. **Create markdown file** in `slides/` with naming pattern:
+   ```
+   slides/YYYY-MM-DD-deck-name.md
+   ```
+
+2. **Add frontmatter** at the top:
+   ```yaml
+   ---
+   theme: ../theme
+   class: text-center
+   highlighter: shiki
+   lineNumbers: false
+   drawings:
+     persist: false
+   ---
+   ```
+
+3. **Write slides** using markdown + Slidev syntax:
+   ```markdown
+   # Slide Title
+   
+   Content here
+   
+   ---
+   layout: two-cols
+   ---
+   
+   # Two Column Slide
+   
+   ::left::
+   Left content
+   
+   ::right::
+   Right content
+   ```
+
+4. **Test locally**:
+   ```bash
+   npm run dev:deck --deck=YYYY-MM-DD-deck-name
+   ```
+
+5. **Update index.html** registry (lines 175-185):
+   ```javascript
+   const decks = [
+       {
+           date: 'YYYY-MM-DD',
+           title: 'Deck Name',
+           slug: 'YYYY-MM-DD-deck-name',
+           description: 'Brief description',
+           slides: 22,
+           active: true
+       }
+   ];
+   ```
+
+6. **Build and verify**:
+   ```bash
+   npm run build:all
+   ```
 
 ### Editing Existing Slides
 
-1. **Edit `index.html`**: Modify the `<section>` for your slide
-2. **Edit `css/theme/expanso.css`**: Modify styling if needed
-3. **Live reload**: Changes appear instantly via live-server
-4. **Verify compliance**: Check fonts, whitespace, messaging
+1. **Edit markdown file** in `slides/`
+2. **Calculate viewport** (CRITICAL):
+   - Follow `prompts/VIEWPORT_CALCULATOR.md`
+   - Ensure max 850px total height
+   - Reduce elements if needed
+3. **Test locally**: `npm run dev`
+4. **Build**: `npm run build:all`
 
 ## 📦 Dependencies
 
-- **reveal.js** v5.2.1 - HTML presentation framework
-- **live-server** v1.2.2 - Development server with hot reload
-- **Inter font** - Loaded via Google Fonts
+- **@slidev/cli** ^0.49.0 - Presentation framework
+- **@slidev/theme-default** ^0.25.0 - Base theme (customized)
+- **Node.js** 20+ - Runtime environment
 
-## 🎤 Keyboard Shortcuts
+## 🎤 Keyboard Shortcuts (Slidev)
 
 - `→` / `Space` - Next slide
 - `←` - Previous slide
 - `F` - Fullscreen
-- `S` - Speaker notes
-- `ESC` - Slide overview
+- `O` - Slide overview
+- `D` - Dark mode toggle
+- `C` - Camera (record presentation)
+- `G` - Go to slide (type number)
 - `?` - Show help
+
+## 🚀 Deployment
+
+### GitHub Pages (Automatic)
+
+1. **Enable GitHub Pages** in repository settings:
+   - Go to Settings → Pages
+   - Source: "GitHub Actions"
+
+2. **Push to main branch**:
+   ```bash
+   git add .
+   git commit -m "Update presentation"
+   git push origin main
+   ```
+
+3. **GitHub Actions will**:
+   - Build all decks in `slides/*.md`
+   - Generate deck directory page
+   - Deploy to GitHub Pages
+   - URL: `https://expanso-io.github.io/slide-code/`
+
+### Local Build
+
+```bash
+# Build all decks
+npm run build:all
+
+# Output structure:
+# dist/
+#   ├── index.html (deck directory)
+#   ├── 2025-11-01-sales-demo/ (deck 1)
+#   └── [other-deck-slug]/ (deck 2, etc.)
+
+# Serve locally to test
+npx serve dist
+```
 
 ## 📝 Brand Messaging Rules
 
 ### ✅ DO:
 - Lead with measurable outcomes: "50-70% reduction", "$1.77M savings"
 - Use active verbs: "Cut", "Filter", "Deploy", "Control"
-- Say "at the source" or "where data lives"
 - Name specific platforms: "Snowflake", "Databricks", "Splunk", "Datadog"
-- Show before/after contrast
+- Show before/after contrast with clear metrics
+- Use technical clarity (no buzzwords)
 
 ### ❌ DON'T:
-- Use "upstream" (too technical, requires explanation)
-- Say vague things like "significant savings" or "best-in-class"
+- Use marketing jargon or vague claims
+- Say "significant savings" without numbers
 - Use passive voice for key benefits
 - Create villain narratives about competitors
-- Promise perfection
+- Promise perfection or 100% solutions
 
 ## 🔍 Quality Standards
 
 Every slide must:
-- [ ] Adhere to 10/20/30 rule (10 slides max, 20 min, 30pt+ fonts)
+- [ ] **VIEWPORT CHECK**: Max 850px height (use VIEWPORT_CALCULATOR.md)
 - [ ] Have one clear concept/message
-- [ ] Use approved spatial language ("at the source")
-- [ ] Include specific metrics (50-70%, $1.77M, etc.)
-- [ ] Maintain 60%+ whitespace
-- [ ] Meet WCAG AAA contrast standards (7:1 minimum)
-- [ ] Be readable from 20+ feet away
+- [ ] Include specific metrics when relevant
+- [ ] Maintain generous whitespace (no cramming)
+- [ ] Use consistent typography scale
+- [ ] Meet WCAG AA contrast standards (4.5:1 minimum)
+- [ ] Be readable in presenter view
 
 ## 📚 Additional Resources
 
-- **Original Content**: See `archive/original-content/` for raw slide specifications
-- **Legacy Files**: See `archive/` for historical project files
-- **Reveal.js Docs**: https://revealjs.com/
-- **10/20/30 Rule**: Guy Kawasaki's presentation principle
+- **Slidev Documentation**: https://sli.dev/
+- **Theme Components**: See `theme/components/` for Vue components
+- **Layout Reference**: See `theme/layouts/` for available layouts
+- **Archived Decks**: See `slides/archive-legacy/` for historical files
+- **ASCII Slides**: See `slides/archive-ascii/` for text-only versions
 
 ## 🤝 Contributing
 
-When adding new slides or content:
-1. Always check `LLM_EVERGREEN_PROMPT.md` first
-2. Follow the established HTML/CSS patterns in `index.html`
-3. Test on localhost before committing
-4. Verify against `SLIDE_CHECKLIST.md`
+When adding new decks or content:
+1. Always check `prompts/LLM_EVERGREEN_PROMPT.md` first
+2. **CRITICAL**: Run viewport calculation before building
+3. Follow naming convention: `YYYY-MM-DD-deck-name.md`
+4. Test locally with `npm run dev:deck`
+5. Update `index.html` deck registry
+6. Build and verify with `npm run build:all`
 
 ## 📧 Contact
 
@@ -174,6 +290,7 @@ www.expanso.io
 
 ---
 
-**Last Updated**: October 28, 2024
-**Framework**: reveal.js v5.2.1
-**Design System**: Expanso Brand Guidelines v1.0
+**Last Updated**: November 1, 2025  
+**Framework**: Slidev v0.49.29  
+**Theme**: Expanso Custom Theme v1.0  
+**Structure**: Multi-deck with automated builds

@@ -1,0 +1,232 @@
+{
+  "slide_id": "slide_13b_team_contacts",
+  "frame_name": "Thank You - Team Contacts",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "content": "Let's Continue the Conversation",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 56,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 80,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "content": "Your Expanso Team",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 600,
+        "font_size": 28,
+        "color": "#48BB78",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 180,
+        "max_width": 1600
+      }
+    },
+    {
+      "type": "group",
+      "id": "team_grid",
+      "position": {
+        "x": 160,
+        "y": 260,
+        "width": 1600,
+        "height": 720
+      },
+      "layout": {
+        "type": "grid",
+        "columns": 3,
+        "rows": 2,
+        "gap_horizontal": 60,
+        "gap_vertical": 40
+      },
+      "elements": [
+        {
+          "type": "team_member_card",
+          "id": "member_1_sales",
+          "role": "Sales",
+          "name": "David Aronchick",
+          "title": "CEO & Co-Founder",
+          "focus": "Business Strategy",
+          "contacts": {
+            "email": "aronchick@expanso.io",
+            "calendar": "calendly.com/expanso",
+            "linkedin": "linkedin.com/in/daronchick"
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.15)",
+            "border": "3px solid #48BB78"
+          }
+        },
+        {
+          "type": "team_member_card",
+          "id": "member_2_solutions",
+          "role": "Solutions Engineering",
+          "name": "[Solutions Engineer Name]",
+          "title": "Principal Solutions Engineer",
+          "focus": "Technical Architecture",
+          "contacts": {
+            "email": "solutions@expanso.io",
+            "calendar": "calendly.com/expanso-se"
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.1)",
+            "border": "2px solid #4299e1"
+          }
+        },
+        {
+          "type": "team_member_card",
+          "id": "member_3_customer_success",
+          "role": "Customer Success",
+          "name": "[CSM Name]",
+          "title": "Customer Success Manager",
+          "focus": "Onboarding & Support",
+          "contacts": {
+            "email": "success@expanso.io",
+            "calendar": "calendly.com/expanso-csm"
+          },
+          "style": {
+            "background": "rgba(237, 137, 54, 0.1)",
+            "border": "2px solid #ed8936"
+          }
+        },
+        {
+          "type": "general_contact_card",
+          "id": "general_sales",
+          "label": "General Sales",
+          "contact": "sales@expanso.io",
+          "icon": "📧",
+          "style": {
+            "background": "rgba(74, 85, 104, 0.3)",
+            "border": "2px solid #4A5568"
+          }
+        },
+        {
+          "type": "general_contact_card",
+          "id": "general_support",
+          "label": "Technical Support",
+          "contact": "support@expanso.io",
+          "icon": "🛠️",
+          "style": {
+            "background": "rgba(74, 85, 104, 0.3)",
+            "border": "2px solid #4A5568"
+          }
+        },
+        {
+          "type": "general_contact_card",
+          "id": "website",
+          "label": "Website",
+          "contact": "expanso.io",
+          "icon": "🌐",
+          "style": {
+            "background": "rgba(74, 85, 104, 0.3)",
+            "border": "2px solid #4A5568"
+          }
+        }
+      ],
+      "card_style": {
+        "team_member": {
+          "border_radius": 12,
+          "padding": 32,
+          "text_align": "center",
+          "role": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 14,
+            "text_transform": "uppercase",
+            "letter_spacing": 1,
+            "margin_bottom": 16
+          },
+          "name": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 22,
+            "color": "#FFFFFF",
+            "margin_bottom": 8
+          },
+          "title": {
+            "font_family": "Inter",
+            "font_weight": 500,
+            "font_size": 16,
+            "color": "#CBD5E0",
+            "margin_bottom": 12
+          },
+          "focus": {
+            "font_family": "Inter",
+            "font_weight": 400,
+            "font_size": 14,
+            "color": "#A0AEC0",
+            "font_style": "italic",
+            "margin_bottom": 24
+          },
+          "contacts": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 14,
+            "color": "#FFFFFF",
+            "line_height": 2
+          }
+        },
+        "general": {
+          "border_radius": 12,
+          "padding": 32,
+          "text_align": "center",
+          "icon": {
+            "font_size": 48,
+            "margin_bottom": 16
+          },
+          "label": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 20,
+            "color": "#FFFFFF",
+            "margin_bottom": 12
+          },
+          "contact": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 18,
+            "color": "#CBD5E0"
+          }
+        }
+      }
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "sales_primary": "#48BB78",
+      "solutions_primary": "#4299e1",
+      "success_primary": "#ed8936",
+      "general_bg": "rgba(74, 85, 104, 0.3)",
+      "text_primary": "#FFFFFF"
+    }
+  },
+  "presentation_notes": {
+    "use_case": "Enterprise deals with multiple stakeholders where different roles need different contacts",
+    "customization": "Update names, titles, and contact info before each presentation",
+    "role_mapping": "Sales for execs/procurement, Solutions Engineering for architects/engineers, Customer Success for operations"
+  },
+  "use_case": "Enterprise sales, complex deals, multi-stakeholder presentations"
+}

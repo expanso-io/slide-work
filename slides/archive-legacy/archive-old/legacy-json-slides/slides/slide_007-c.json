@@ -1,0 +1,165 @@
+{
+  "slide_id": "slide_07c_single_concern_deepdive",
+  "frame_name": "Deep Dive - Data Loss Risk",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": ""What If We Filter Out Data We Need Later?"",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 48,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 80,
+        "max_width": 1600
+      }
+    },
+    {
+      "type": "text",
+      "id": "intro_text",
+      "content": "This is the #1 concern we hear. Let me show you our four-layer safety system:",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 180,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "safety_layers",
+      "position": {
+        "x": 240,
+        "y": 280,
+        "width": 1440,
+        "height": 680
+      },
+      "layout": {
+        "type": "vertical_stack",
+        "gap": 40
+      },
+      "elements": [
+        {
+          "type": "safety_layer_card",
+          "layer_number": "1",
+          "title": "Conservative Start",
+          "description": "We begin with universally safe filters: debug logs, duplicate events, bot traffic, test data. These account for 40-60% of volume but are never queried. Zero business risk.",
+          "icon": "🛡️",
+          "position": {"y": 0, "height": 140}
+        },
+        {
+          "type": "safety_layer_card",
+          "layer_number": "2",
+          "title": "Shadow Mode Testing",
+          "description": "Before dropping ANY data, we run in shadow mode for 1-4 weeks. You see what WOULD be filtered, but nothing actually changes. Compare shadow metrics against actual query patterns. Validate assumptions before going live.",
+          "icon": "👁️",
+          "position": {"y": 180, "height": 140}
+        },
+        {
+          "type": "safety_layer_card",
+          "layer_number": "3",
+          "title": "Usage Analytics",
+          "description": "We track what's filtered vs. what's queried. After 30 days, you get a report: 'You filtered 10TB of logs. 0.02% were later queried.' This data-driven approach removes guesswork and proves safety.",
+          "icon": "📊",
+          "position": {"y": 360, "height": 140}
+        },
+        {
+          "type": "safety_layer_card",
+          "layer_number": "4",
+          "title": "Tiered Storage Fallback",
+          "description": "For paranoid-but-practical scenarios: Route filtered data to S3/GCS at $0.02/GB (instead of Snowflake at $0.50/GB). You get 25x cost reduction plus an archive. If you need it later, it's there. Most customers never touch it.",
+          "icon": "💾",
+          "position": {"y": 540, "height": 140}
+        }
+      ],
+      "card_style": {
+        "background": "rgba(72, 187, 120, 0.1)",
+        "border": "3px solid #48BB78",
+        "border_radius": 12,
+        "padding": 32,
+        "layout": "horizontal",
+        "icon_position": "left",
+        "icon_size": 64
+      }
+    },
+    {
+      "type": "container",
+      "id": "bottom_stat",
+      "position": {
+        "x": 240,
+        "y": 1000,
+        "width": 1440,
+        "height": 80
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.2)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 20
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "safety_stat",
+          "content": "💡 In 3 years and 50+ customers, we've had zero data loss incidents. Zero.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 24,
+            "color": "#48BB78",
+            "text_align": "center"
+          }
+        }
+      ]
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "card_bg": "rgba(72, 187, 120, 0.1)",
+      "card_border": "#48BB78",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0",
+      "emphasis": "#48BB78"
+    },
+    "visual_language": {
+      "numbered_layers": "Shows systematic approach, not ad-hoc solution",
+      "vertical_progression": "Layers build on each other sequentially",
+      "green_safety": "Positive color reinforces safety message"
+    }
+  },
+  "presentation_notes": {
+    "opening": "This is the number one concern we hear, so let me spend a minute on it. 'What if we filter out data we need later?' Here's our four-layer safety system.",
+    "layer_by_layer": {
+      "layer_1": "[Point to card 1] Layer one: We start conservatively. Debug logs, duplicate events, bot traffic, test data. These account for 40 to 60% of your volume but are never queried. Zero business risk.",
+      "layer_2": "[Point to card 2] Layer two: Shadow mode. Before dropping ANY data, we run in shadow mode for 1 to 4 weeks. You see what WOULD be filtered, but nothing actually changes. You compare shadow metrics against actual query patterns. Validate assumptions before going live.",
+      "layer_3": "[Point to card 3] Layer three: Usage analytics. We track what's filtered versus what's queried. After 30 days, you get a report: 'You filtered 10 terabytes of logs. 0.02% were later queried.' This data-driven approach removes guesswork.",
+      "layer_4": "[Point to card 4] Layer four: Tiered storage fallback. For the truly paranoid—and I mean that affectionately—route filtered data to S3 at 2 cents per gigabyte instead of Snowflake at 50 cents per gigabyte. You get 25x cost reduction plus an archive. If you need it later, it's there. Most customers never touch it."
+    },
+    "closer": "[Point to bottom stat] Here's the result: In 3 years and 50+ customers, we've had zero data loss incidents. Zero.",
+    "transition": "Does that address the concern? [Pause for response] Great. Let's talk about next steps.",
+    "pacing": "This is a trust-building slide. Take your time. Let each layer sink in."
+  },
+  "use_case": "When data loss risk is the primary objection blocking the deal",
+  "note": "Use this slide when a single objection dominates the conversation and needs deep treatment"
+}

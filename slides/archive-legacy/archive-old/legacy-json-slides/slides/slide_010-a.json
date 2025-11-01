@@ -1,0 +1,265 @@
+{
+  "slide_id": "slide_10a_performance_scalability",
+  "frame_name": "Backup - Performance & Scale Characteristics",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Performance & Scale",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Real-World Performance Characteristics",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "performance_metrics",
+      "position": {
+        "x": 80,
+        "y": 200,
+        "width": 1760,
+        "height": 360
+      },
+      "layout": {
+        "type": "grid",
+        "columns": 3,
+        "rows": 2,
+        "gap": 40
+      },
+      "elements": [
+        {
+          "type": "metric_card",
+          "id": "latency",
+          "icon": "⚡",
+          "metric": "<100ms",
+          "label": "Processing Latency",
+          "description": "P99 for stateless filters\nStateful aggregations: 200-500ms",
+          "benchmark": "Tested at 100K events/sec"
+        },
+        {
+          "type": "metric_card",
+          "id": "throughput",
+          "icon": "🚀",
+          "metric": "100K+",
+          "label": "Events/Sec/Node",
+          "description": "Single agent throughput\nLinear scaling with nodes",
+          "benchmark": "JSON logs, 1KB avg size"
+        },
+        {
+          "type": "metric_card",
+          "id": "resource_usage",
+          "icon": "💾",
+          "metric": "~200MB",
+          "label": "Memory Footprint",
+          "description": "Per agent baseline\nScales with buffer config",
+          "benchmark": "0.5-1 vCPU typical usage"
+        },
+        {
+          "type": "metric_card",
+          "id": "reliability",
+          "icon": "🛡️",
+          "metric": "99.99%",
+          "label": "Uptime SLA",
+          "description": "Agent availability\nFail-open on failure",
+          "benchmark": "Production customer average"
+        },
+        {
+          "type": "metric_card",
+          "id": "scalability",
+          "icon": "📈",
+          "metric": "10M+",
+          "label": "Events/Sec/Cluster",
+          "description": "Tested cluster scale\nHorizontally scalable",
+          "benchmark": "100-node deployment"
+        },
+        {
+          "type": "metric_card",
+          "id": "data_reduction",
+          "icon": "📉",
+          "metric": "50-70%",
+          "label": "Typical Reduction",
+          "description": "Validated across 50+ customers\nRange: 40-80%",
+          "benchmark": "Conservative estimate"
+        }
+      ],
+      "card_style": {
+        "background": "rgba(72, 187, 120, 0.1)",
+        "border": "2px solid #48BB78",
+        "border_radius": 12,
+        "padding": 32,
+        "text_align": "center",
+        "icon": {
+          "font_size": 48,
+          "margin_bottom": 16
+        },
+        "metric": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 48,
+          "color": "#48BB78",
+          "margin_bottom": 8
+        },
+        "label": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 18,
+          "color": "#FFFFFF",
+          "margin_bottom": 12
+        },
+        "description": {
+          "font_family": "Inter",
+          "font_weight": 400,
+          "font_size": 14,
+          "color": "#CBD5E0",
+          "line_height": 1.6,
+          "margin_bottom": 12
+        },
+        "benchmark": {
+          "font_family": "Inter",
+          "font_weight": 500,
+          "font_size": 12,
+          "color": "#9ae6b4",
+          "font_style": "italic"
+        }
+      }
+    },
+    {
+      "type": "group",
+      "id": "scale_scenarios",
+      "position": {
+        "x": 80,
+        "y": 600,
+        "width": 1760,
+        "height": 320
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "scenarios_header",
+          "content": "Real-World Scale Examples",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 28,
+            "color": "#48BB78",
+            "text_align": "center",
+            "margin_bottom": 32
+          }
+        },
+        {
+          "type": "scenario_table",
+          "id": "scale_table",
+          "columns": [
+            {"header": "Scenario", "width": 400},
+            {"header": "Data Volume", "width": 300},
+            {"header": "Deployment", "width": 300},
+            {"header": "Performance", "width": 460}
+          ],
+          "rows": [
+            {
+              "scenario": "Small SaaS Company\n(~100 services)",
+              "volume": "5 TB/month\n~2K events/sec",
+              "deployment": "10 agents\n(K8s DaemonSet)",
+              "performance": "Avg latency: 45ms\nCPU: 0.3 vCPU/agent\n99.98% uptime"
+            },
+            {
+              "scenario": "Mid-Market E-commerce\n(~500 services)",
+              "volume": "50 TB/month\n~20K events/sec",
+              "deployment": "50 agents\n(K8s + edge gateways)",
+              "performance": "Avg latency: 65ms\nCPU: 0.5 vCPU/agent\n99.99% uptime"
+            },
+            {
+              "scenario": "Enterprise Logistics\n(~5K edge devices)",
+              "volume": "200 TB/month\n~80K events/sec",
+              "deployment": "200 agents\n(distributed edge)",
+              "performance": "Avg latency: 85ms\nCPU: 0.7 vCPU/agent\n99.99% uptime"
+            }
+          ],
+          "style": {
+            "header": {
+              "background": "#2d3748",
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 16,
+              "color": "#FFFFFF",
+              "padding": 16,
+              "border_bottom": "2px solid #48BB78"
+            },
+            "cell": {
+              "font_family": "Inter",
+              "font_weight": 400,
+              "font_size": 14,
+              "color": "#FFFFFF",
+              "line_height": 1.6,
+              "padding": 20,
+              "border_bottom": "1px solid #4A5568"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "performance_note",
+      "position": {
+        "x": 360,
+        "y": 960,
+        "width": 1200,
+        "height": 80
+      },
+      "style": {
+        "background": "rgba(72, 187, 120, 0.15)",
+        "border": "2px solid #48BB78",
+        "border_radius": 8,
+        "padding": 20
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "note_text",
+          "content": "💡 Performance scales linearly with nodes. Add more agents = handle more data. No single point of failure.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 20,
+            "color": "#48BB78",
+            "text_align": "center"
+          }
+        }
+      ]
+    }
+  }

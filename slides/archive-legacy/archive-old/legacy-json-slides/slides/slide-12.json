@@ -1,0 +1,348 @@
+{
+  "slide_id": "slide_12_backup_customer_stories",
+  "frame_name": "Backup - Customer Success Stories",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "Customer Success Stories",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 60,
+        "max_width": 1760
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "Real Results from Real Customers",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 500,
+        "font_size": 24,
+        "color": "#CBD5E0",
+        "text_align": "center"
+      },
+      "position": {
+        "x": "center",
+        "y": 130,
+        "max_width": 1400
+      }
+    },
+    {
+      "type": "group",
+      "id": "customer_case_studies",
+      "position": {
+        "x": 80,
+        "y": 200,
+        "width": 1760,
+        "height": 780
+      },
+      "layout": {
+        "type": "vertical_stack",
+        "gap": 32
+      },
+      "elements": [
+        {
+          "type": "case_study_card",
+          "id": "case_1_ecommerce",
+          "position": {
+            "y": 0,
+            "height": 240
+          },
+          "style": {
+            "background": "rgba(72, 187, 120, 0.1)",
+            "border": "2px solid #48BB78",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "content": {
+            "company_type": "Mid-Market E-Commerce Company",
+            "industry": "Retail",
+            "size": "~500 microservices",
+            "challenge": "Spending $1.2M annually on Snowflake for analytics data. 70% of ingested data was never queried. Exploratory datasets polluting production tables.",
+            "solution": "Deployed Expanso agents at API gateway and database change streams. Filtered exploratory data to S3 cold storage ($0.02/GB). Routed only production-critical data to Snowflake.",
+            "results": [
+              {
+                "metric": "Cost Reduction",
+                "value": "68%",
+                "detail": "$816K annual savings"
+              },
+              {
+                "metric": "Time to Deploy",
+                "value": "3 weeks",
+                "detail": "Shadow mode → production"
+              },
+              {
+                "metric": "Payback Period",
+                "value": "2.5 months",
+                "detail": "Full ROI achieved"
+              },
+              {
+                "metric": "Data Quality",
+                "value": "Improved",
+                "detail": "Cleaner production tables"
+              }
+            ],
+            "quote": {
+              "text": "Expanso paid for itself in 10 weeks. We're now using those savings to fund our ML initiatives.",
+              "attribution": "VP of Data Engineering"
+            }
+          }
+        },
+        {
+          "type": "case_study_card",
+          "id": "case_2_logistics",
+          "position": {
+            "y": 272,
+            "height": 240
+          },
+          "style": {
+            "background": "rgba(66, 153, 225, 0.1)",
+            "border": "2px solid #4299e1",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "content": {
+            "company_type": "Enterprise Logistics Provider",
+            "industry": "Transportation & Logistics",
+            "size": "5,000+ IoT devices, 200 TB/month",
+            "challenge": "Spending $2.8M annually on Splunk and Datadog for IoT telemetry. Most data was diagnostic noise only needed for debugging. Compliance required 7-day retention but only 1% was ever accessed.",
+            "solution": "Deployed Expanso at edge gateways. Filtered diagnostic logs in real-time. Routed only anomalies and errors to Splunk/Datadog. Archived full logs to S3 for compliance.",
+            "results": [
+              {
+                "metric": "Cost Reduction",
+                "value": "72%",
+                "detail": "$2.02M annual savings"
+              },
+              {
+                "metric": "Network Bandwidth",
+                "value": "↓65%",
+                "detail": "Reduced egress costs"
+              },
+              {
+                "metric": "MTTR",
+                "value": "↓40%",
+                "detail": "Less noise = faster debugging"
+              },
+              {
+                "metric": "Compliance",
+                "value": "Maintained",
+                "detail": "Full 7-day archive in S3"
+              }
+            ],
+            "quote": {
+              "text": "We saved $2M and our SREs are happier because they're not drowning in logs anymore.",
+              "attribution": "Director of Infrastructure"
+            }
+          }
+        },
+        {
+          "type": "case_study_card",
+          "id": "case_3_fintech",
+          "position": {
+            "y": 544,
+            "height": 240
+          },
+          "style": {
+            "background": "rgba(237, 137, 54, 0.1)",
+            "border": "2px solid #ed8936",
+            "border_radius": 12,
+            "padding": 40
+          },
+          "content": {
+            "company_type": "FinTech Startup",
+            "industry": "Financial Services",
+            "size": "50 TB/month, rapid growth",
+            "challenge": "Databricks costs doubling every 6 months as customer base grew. ML training data included full transaction histories but only recent patterns were relevant. PII concerns in development environments.",
+            "solution": "Deployed Expanso at data ingestion layer. Time-windowed filtering (last 90 days for ML). Masked PII before Databricks ingestion. Routed full transaction history to S3 for compliance.",
+            "results": [
+              {
+                "metric": "Cost Reduction",
+                "value": "58%",
+                "detail": "$480K annual savings"
+              },
+              {
+                "metric": "Model Training Time",
+                "value": "↓35%",
+                "detail": "Smaller, cleaner datasets"
+              },
+              {
+                "metric": "PII Compliance",
+                "value": "Improved",
+                "detail": "Masked before cloud"
+              },
+              {
+                "metric": "Scalability",
+                "value": "Future-proof",
+                "detail": "Costs now predictable"
+              }
+            ],
+            "quote": {
+              "text": "Expanso let us scale our ML platform without the infrastructure costs eating our runway.",
+              "attribution": "CTO & Co-Founder"
+            }
+          }
+        }
+      ],
+      "card_layout": {
+        "left_section": {
+          "width": "35%",
+          "elements": ["company_type", "industry", "size", "challenge"]
+        },
+        "middle_section": {
+          "width": "30%",
+          "elements": ["solution", "results_grid"]
+        },
+        "right_section": {
+          "width": "35%",
+          "elements": ["results_metrics", "quote"]
+        }
+      },
+      "style": {
+        "company_type": {
+          "font_family": "Inter",
+          "font_weight": 700,
+          "font_size": 20,
+          "color": "#FFFFFF",
+          "margin_bottom": 8
+        },
+        "industry": {
+          "font_family": "Inter",
+          "font_weight": 500,
+          "font_size": 14,
+          "color": "#CBD5E0",
+          "margin_bottom": 16
+        },
+        "challenge": {
+          "font_family": "Inter",
+          "font_weight": 400,
+          "font_size": 14,
+          "color": "#FFFFFF",
+          "line_height": 1.6
+        },
+        "solution": {
+          "font_family": "Inter",
+          "font_weight": 400,
+          "font_size": 14,
+          "color": "#FFFFFF",
+          "line_height": 1.6
+        },
+        "results_metric": {
+          "label": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 12,
+            "color": "#CBD5E0"
+          },
+          "value": {
+            "font_family": "Inter",
+            "font_weight": 700,
+            "font_size": 24,
+            "color": "#48BB78"
+          },
+          "detail": {
+            "font_family": "Inter",
+            "font_weight": 400,
+            "font_size": 12,
+            "color": "#FFFFFF"
+          }
+        },
+        "quote": {
+          "text": {
+            "font_family": "Inter",
+            "font_weight": 500,
+            "font_size": 16,
+            "color": "#FFFFFF",
+            "font_style": "italic",
+            "line_height": 1.6
+          },
+          "attribution": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 13,
+            "color": "#CBD5E0"
+          }
+        }
+      }
+    }
+  ],
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "case_1_border": "#48BB78",
+      "case_1_bg": "rgba(72, 187, 120, 0.1)",
+      "case_2_border": "#4299e1",
+      "case_2_bg": "rgba(66, 153, 225, 0.1)",
+      "case_3_border": "#ed8936",
+      "case_3_bg": "rgba(237, 137, 54, 0.1)",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0",
+      "metric_value": "#48BB78"
+    },
+    "visual_language": {
+      "three_diverse_cases": "Different industries, sizes, use cases",
+      "horizontal_layout": "Challenge → Solution → Results flow",
+      "quote_humanization": "Real voices, real results"
+    }
+  },
+  "presentation_notes": {
+    "opening": "Let me show you some real customer examples—what they were facing, how we solved it, and the results they got.",
+    "case_by_case": {
+      "case_1": "[Point to top card] Mid-market e-commerce company. 500 microservices. They were spending $1.2M annually on Snowflake. 70% of their ingested data was never queried—just exploratory datasets polluting production tables. [Point to solution] We deployed Expanso agents at their API gateway and database change streams. Filtered exploratory data to S3 cold storage at $0.02 per gigabyte. Routed only production-critical data to Snowflake. [Point to results] 68% cost reduction—$816K in annual savings. Took 3 weeks from shadow mode to production. Payback in 2.5 months. Plus their data quality improved—cleaner production tables. [Point to quote] Their VP of Data Engineering said: 'Expanso paid for itself in 10 weeks. We're now using those savings to fund our ML initiatives.'",
+      "case_2": "[Point to middle card] Enterprise logistics provider. 5,000+ IoT devices generating 200 terabytes per month. Spending $2.8M annually on Splunk and Datadog for IoT telemetry. Most of it was diagnostic noise only needed for debugging. Compliance required 7-day retention but only 1% was ever accessed. [Point to solution] We deployed Expanso at their edge gateways. Filtered diagnostic logs in real-time. Routed only anomalies and errors to Splunk and Datadog. Archived full logs to S3 for compliance. [Point to results] 72% cost reduction—$2.02M in annual savings. 65% reduction in network bandwidth and egress costs. 40% reduction in mean time to recovery because less noise means faster debugging. And compliance was maintained with full 7-day archive in S3. [Point to quote] Their Director of Infrastructure said: 'We saved $2M and our SREs are happier because they're not drowning in logs anymore.'",
+      "case_3": "[Point to bottom card] FinTech startup. 50 terabytes per month with rapid growth. Databricks costs were doubling every 6 months. ML training data included full transaction histories but only recent patterns were relevant. Plus PII concerns in development environments. [Point to solution] We deployed Expanso at the data ingestion layer. Time-windowed filtering—last 90 days for ML. Masked PII before Databricks ingestion. Routed full transaction history to S3 for compliance. [Point to results] 58% cost reduction—$480K in annual savings. 35% reduction in model training time because of smaller, cleaner datasets. Improved PII compliance by masking before the cloud. And now their costs are predictable—future-proof scaling. [Point to quote] Their CTO and co-founder said: 'Expanso let us scale our ML platform without the infrastructure costs eating our runway.'"
+    },
+    "pattern_recognition": "Notice the pattern: Different industries, different platforms, different data types. But the same 50-70% reduction. That's what upstream data control delivers.",
+    "transition": "These are just three examples. We have 50+ customers with similar stories. Would you like references in your specific industry or use case?",
+    "when_to_use": "Use this slide when prospects ask for proof points, case studies, or customer references"
+  },
+  "persona_alignment": {
+    "executives": {
+      "focus_elements": ["cost_reduction", "payback_period", "quotes"],
+      "talking_points": "Fast ROI, proven savings, executive validation"
+    },
+    "technical_teams": {
+      "focus_elements": ["solution", "deployment_time", "technical_results"],
+      "talking_points": "Implementation approach, technical results like MTTR improvement"
+    },
+    "finance": {
+      "focus_elements": ["dollar_savings", "payback_period", "predictability"],
+      "talking_points": "Concrete savings numbers, fast payback, cost predictability"
+    }
+  },
+  "usage_guidelines": {
+    "when_to_show": [
+      "Prospect asks 'Who else is using this?'",
+      "Need social proof or validation",
+      "Building business case for internal approval",
+      "Late-stage evaluation with multiple stakeholders"
+    ],
+    "when_not_to_show": [
+      "First meeting (too much detail too soon)",
+      "Before establishing pain and value",
+      "Technical deep-dives (focus on architecture instead)"
+    ]
+  },
+  "customization_notes": {
+    "industry_matching": "Have 2-3 case studies per vertical ready to swap in based on prospect's industry",
+    "size_matching": "Match customer size to prospect (startup vs mid-market vs enterprise)",
+    "platform_matching": "Emphasize case studies using same platforms as prospect (Snowflake, Databricks, Splunk, etc.)"
+  }
+}

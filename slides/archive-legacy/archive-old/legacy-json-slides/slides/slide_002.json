@@ -1,0 +1,473 @@
+{
+  "slide_id": "slide_02_problem",
+  "frame_name": "Problem Statement - The $10M Data Tax",
+  "dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "type": "solid",
+    "color": "#1a2332"
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "slide_title",
+      "content": "The $10M Data Tax: Why Your Cloud Bills Keep Growing",
+      "style": {
+        "font_family": "Inter",
+        "font_weight": 700,
+        "font_size": 42,
+        "line_height": 1.2,
+        "color": "#FFFFFF",
+        "text_align": "left"
+      },
+      "position": {
+        "x": 80,
+        "y": 60,
+        "max_width": 1760
+      },
+      "emphasis": {
+        "words": ["$10M Data Tax"],
+        "color": "#00D9FF"
+      }
+    },
+    {
+      "type": "group",
+      "id": "data_flow_diagram",
+      "position": {
+        "x": 80,
+        "y": 180,
+        "width": 900,
+        "height": 700
+      },
+      "elements": [
+        {
+          "type": "container",
+          "id": "data_sources_box",
+          "content": {
+            "label": "DATA SOURCES",
+            "label_style": {
+              "font_family": "Inter",
+              "font_weight": 600,
+              "font_size": 16,
+              "color": "#CBD5E0",
+              "letter_spacing": 1.5
+            },
+            "icons": [
+              { "name": "edge_devices", "label": "Edge Devices" },
+              { "name": "servers", "label": "Servers" },
+              { "name": "applications", "label": "Applications" },
+              { "name": "iot_sensors", "label": "IoT Sensors" }
+            ]
+          },
+          "style": {
+            "border": "2px solid #4A5568",
+            "border_radius": 8,
+            "padding": 24,
+            "background": "transparent"
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 900,
+            "height": 120
+          },
+          "layout": {
+            "type": "horizontal",
+            "icon_size": 48,
+            "spacing": 40,
+            "alignment": "center"
+          }
+        },
+        {
+          "type": "arrow",
+          "id": "flow_arrow_1",
+          "style": {
+            "stroke": "#00D9FF",
+            "stroke_width": 4,
+            "arrow_head": "triangle"
+          },
+          "position": {
+            "from": { "x": 450, "y": 120 },
+            "to": { "x": 450, "y": 200 }
+          }
+        },
+        {
+          "type": "container",
+          "id": "unfiltered_data_box",
+          "content": {
+            "title": "UNFILTERED DATA",
+            "subtitle": "(100% Volume)",
+            "visual_indicator": "💰 💰 💰 💰 💰"
+          },
+          "style": {
+            "background": "linear-gradient(135deg, #742a2a 0%, #c53030 100%)",
+            "border": "2px solid #fc8181",
+            "border_radius": 8,
+            "padding": 32,
+            "text_align": "center"
+          },
+          "text_style": {
+            "title": {
+              "font_family": "Inter",
+              "font_weight": 700,
+              "font_size": 20,
+              "color": "#FFFFFF",
+              "letter_spacing": 1
+            },
+            "subtitle": {
+              "font_family": "Inter",
+              "font_weight": 500,
+              "font_size": 18,
+              "color": "#FED7D7"
+            },
+            "indicator": {
+              "font_size": 32,
+              "margin_top": 16
+            }
+          },
+          "position": {
+            "x": 250,
+            "y": 200,
+            "width": 400,
+            "height": 180
+          }
+        },
+        {
+          "type": "arrow",
+          "id": "flow_arrow_2",
+          "style": {
+            "stroke": "#00D9FF",
+            "stroke_width": 4,
+            "arrow_head": "triangle"
+          },
+          "position": {
+            "from": { "x": 450, "y": 380 },
+            "to": { "x": 450, "y": 460 }
+          }
+        },
+        {
+          "type": "container",
+          "id": "platforms_box",
+          "content": {
+            "label": "YOUR CLOUD PLATFORMS",
+            "label_style": {
+              "font_family": "Inter",
+              "font_weight": 600,
+              "font_size": 16,
+              "color": "#CBD5E0",
+              "letter_spacing": 1.5
+            },
+            "logos": [
+              { "name": "snowflake", "file": "snowflake_logo.svg" },
+              { "name": "databricks", "file": "databricks_logo.svg" },
+              { "name": "splunk", "file": "splunk_logo.svg" },
+              { "name": "datadog", "file": "datadog_logo.svg" }
+            ],
+            "cost_items": [
+              { "icon": "💰", "label": "Ingestion Costs" },
+              { "icon": "💰", "label": "Storage Costs" },
+              { "icon": "💰", "label": "Compute Costs" },
+              { "icon": "💰", "label": "Egress Costs" }
+            ]
+          },
+          "style": {
+            "border": "2px solid #4A5568",
+            "border_radius": 8,
+            "padding": 24,
+            "background": "transparent"
+          },
+          "text_style": {
+            "cost_items": {
+              "font_family": "Inter",
+              "font_weight": 400,
+              "font_size": 14,
+              "color": "#ECC94B"
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 460,
+            "width": 900,
+            "height": 240
+          },
+          "layout": {
+            "logos": {
+              "type": "horizontal",
+              "size": 64,
+              "spacing": 40,
+              "margin_bottom": 24
+            },
+            "costs": {
+              "type": "grid",
+              "columns": 2,
+              "spacing": 16
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "key_messages_box",
+      "position": {
+        "x": 1040,
+        "y": 180,
+        "width": 800,
+        "height": 700
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "headline_message",
+          "content": "You're paying to move, store, and process\nterabytes of data you don't need.",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 600,
+            "font_size": 28,
+            "line_height": 1.4,
+            "color": "#FFFFFF",
+            "text_align": "left"
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "max_width": 800
+          }
+        },
+        {
+          "type": "list",
+          "id": "problem_bullets",
+          "items": [
+            {
+              "content": "60–70% of data in Snowflake is never queried",
+              "emphasis": ["60–70%"]
+            },
+            {
+              "content": "Your Snowflake bill grows 40% YoY—but insights don't",
+              "emphasis": ["40% YoY"]
+            },
+            {
+              "content": "Data teams spend 40% of time firefighting pipelines",
+              "emphasis": ["40%"]
+            }
+          ],
+          "style": {
+            "bullet": "•",
+            "font_family": "Inter",
+            "font_weight": 400,
+            "font_size": 24,
+            "line_height": 1.6,
+            "color": "#FFFFFF",
+            "spacing": 32,
+            "margin_top": 48
+          },
+          "emphasis_style": {
+            "color": "#00D9FF",
+            "font_weight": 600
+          },
+          "position": {
+            "x": 0,
+            "y": 140
+          }
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "id": "stats_bar",
+      "position": {
+        "x": 80,
+        "y": 980,
+        "width": 1760,
+        "height": 60
+      },
+      "style": {
+        "background": "rgba(74, 85, 104, 0.2)",
+        "border_radius": 6,
+        "padding": "16px 24px"
+      },
+      "elements": [
+        {
+          "type": "text",
+          "id": "industry_stats",
+          "content": "📊 62% of enterprises report storage cost overruns (CIO Dive, 2024)  •  📊 Data teams spend 40% of time troubleshooting pipelines (Gartner, 2024)  •  📊 Average data quality issues cost $13M annually (Gartner, 2024)",
+          "style": {
+            "font_family": "Inter",
+            "font_weight": 400,
+            "font_size": 15,
+            "line_height": 1.5,
+            "color": "#A0AEC0",
+            "text_align": "center"
+          },
+          "position": {
+            "x": "center",
+            "y": "center"
+          }
+        }
+      ]
+    }
+  ],
+  "layout_zones": {
+    "header": {
+      "percentage": 10,
+      "elements": ["slide_title"]
+    },
+    "main_content": {
+      "percentage": 75,
+      "layout": "two_column",
+      "left": {
+        "width_percentage": 50,
+        "elements": ["data_flow_diagram"]
+      },
+      "right": {
+        "width_percentage": 50,
+        "elements": ["key_messages_box"]
+      }
+    },
+    "footer": {
+      "percentage": 15,
+      "elements": ["stats_bar"]
+    }
+  },
+  "design_system": {
+    "colors": {
+      "background": "#1a2332",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#CBD5E0",
+      "text_muted": "#A0AEC0",
+      "accent_primary": "#00D9FF",
+      "accent_warning": "#c53030",
+      "accent_cost": "#ECC94B",
+      "border_default": "#4A5568"
+    },
+    "spacing": {
+      "container_padding": 24,
+      "element_gap": 32,
+      "section_gap": 48
+    }
+  },
+  "variants": [
+    {
+      "name": "full_width_diagram",
+      "description": "Diagram spans full width with messages below",
+      "modifications": {
+        "data_flow_diagram": {
+          "position": { "x": 300, "y": 180, "width": 1320 },
+          "layout": "vertical_centered"
+        },
+        "key_messages_box": {
+          "position": { "x": 300, "y": 680, "width": 1320 },
+          "elements": {
+            "headline_message": {
+              "style": { "text_align": "center" }
+            },
+            "problem_bullets": {
+              "layout": "horizontal_grid",
+              "columns": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "empathy_driven",
+      "description": "Alternative version validating past decisions",
+      "modifications": {
+        "slide_title": {
+          "content": "You've Done Everything Right—And Your Bills Still Doubled"
+        },
+        "replace_main_content": {
+          "type": "checklist_with_logos",
+          "positive_items": [
+            "You invested in best-in-class platforms",
+            "You hired talented data teams",
+            "You centralized data for a 'single source of truth'"
+          ],
+          "negative_items": [
+            "But your cloud data bills grew 40% YoY",
+            "Your pipelines are brittle and break constantly",
+            "Your best engineers spend 60% of time firefighting"
+          ],
+          "conclusion": {
+            "text": "The problem isn't your tools. It's your architecture.",
+            "style": "bold_large"
+          }
+        }
+      },
+      "use_case": "Defensive audiences, teams heavily invested in current stack"
+    }
+  ],
+  "animation_sequence": {
+    "enabled": false,
+    "note": "Only for live presentations, not PDF",
+    "steps": [
+      { "element": "data_sources_box", "action": "fade_in", "duration": 0.5 },
+      { "element": "flow_arrow_1", "action": "draw", "duration": 0.5 },
+      {
+        "element": "unfiltered_data_box",
+        "action": "fade_in_scale",
+        "duration": 0.5
+      },
+      { "element": "flow_arrow_2", "action": "draw", "duration": 0.5 },
+      { "element": "platforms_box", "action": "fade_in", "duration": 0.5 },
+      { "element": "key_messages_box", "action": "fade_in", "duration": 0.8 },
+      { "element": "stats_bar", "action": "slide_up", "duration": 0.5 }
+    ]
+  },
+  "presentation_notes": {
+    "opening": "Let me show you why your cloud bills keep growing—and why you can't fix it with your current architecture.",
+    "diagram_narration": {
+      "sources": "Here's what's happening: All your data—from edge devices, servers, applications, IoT sensors—flows directly into your cloud platforms. [Pause] No filtering. No optimization. No control.",
+      "costs": "And you pay at every stage: Ingestion costs. Storage costs. Compute costs. Egress costs. It's what we call the '$10M Data Tax.'",
+      "key_stats": "Here's the kicker: 60 to 70 percent of the data sitting in Snowflake is never queried. You're paying to store and process data you'll never use. [Pause] Your Snowflake bill grows 40% year-over-year, but your insights don't. And your data teams? They spend 40% of their time firefighting broken pipelines instead of building new capabilities.",
+      "validation": "And this isn't just anecdotal. Gartner reports that data quality issues cost the average enterprise $13 million annually. CIO Dive found that 62% of enterprises report storage cost overruns. This is an industry-wide crisis."
+    },
+    "transition": "So why does this happen? Because the modern data stack is missing a critical layer. Let me show you...",
+    "pacing": "Use pauses after dollar signs appear and after '60-70%' stat for impact"
+  },
+  "assets_required": [
+    {
+      "type": "logo",
+      "files": [
+        "snowflake_logo.svg",
+        "databricks_logo.svg",
+        "splunk_logo.svg",
+        "datadog_logo.svg"
+      ],
+      "specifications": "Full color, transparent background, 64x64px minimum"
+    },
+    {
+      "type": "icon",
+      "files": [
+        "edge_devices_icon.svg",
+        "servers_icon.svg",
+        "applications_icon.svg",
+        "iot_sensors_icon.svg"
+      ],
+      "specifications": "Monochrome light gray, 48x48px, consistent style"
+    }
+  ],
+  "persona_alignment": {
+    "cfo_finops": {
+      "focus_elements": [
+        "$10M Data Tax",
+        "40% YoY growth",
+        "$13M quality costs"
+      ],
+      "talking_points": "Cost accumulation at every stage, no ROI on 60-70% of data"
+    },
+    "data_engineers": {
+      "focus_elements": ["40% firefighting", "pipeline brittleness"],
+      "talking_points": "Operational pain, time waste on maintenance vs innovation"
+    },
+    "cdo": {
+      "focus_elements": [
+        "Unused data",
+        "No insights growth despite cost growth"
+      ],
+      "talking_points": "Strategic risk, data value not realized, architecture problem"
+    }
+  }
+}
