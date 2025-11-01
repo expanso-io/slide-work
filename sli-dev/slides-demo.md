@@ -201,8 +201,6 @@ layout: default
 glow: full
 glowOpacity: 0.2
 ---
-layout: default
----
 
 <div>
 
@@ -270,12 +268,6 @@ layout: default
 <!-- DevIcon -->
 <div class="i-devicon-typescript" />
 ```
-
-</div>
-
-</div>
-
-</div>
 
 <div style="padding: 1.5rem 3rem; background: rgba(154, 107, 255, 0.05); border: 2px solid rgba(154, 107, 255, 0.2); border-radius: 12px;">
 
@@ -617,7 +609,7 @@ glow: full
 glowOpacity: 0.2
 ---
 
-<!-- 
+<!--
 VIEWPORT CALCULATION:
 - Padding: 60px (30 + 30)
 - Title: 80px (52 + 28 margin)
@@ -773,7 +765,7 @@ glow: center
 glowOpacity: 0.3
 ---
 
-<!-- 
+<!--
 VIEWPORT CALCULATION (CORRECTED):
 - Padding: 50px (25 + 25)
 - Title: 70px (46 + 24 margin)
