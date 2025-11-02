@@ -2,8 +2,10 @@
   "name": "expanso-slidev-theme",
   "version": "1.0.0",
   "scripts": {
-    "dev": "slidev slides/2025-11-01-sales-demo.md --open",
+    "dev": "node scripts/dev-help.js",
     "dev:deck": "slidev slides/$npm_config_deck.md --open",
+    "dev:index": "npx serve dist --listen 3030",
+    "dev:list": "node scripts/dev-help.js",
     "build": "slidev build slides/2025-11-01-sales-demo.md --out dist/2025-11-01-sales-demo",
     "build:deck": "slidev build slides/$npm_config_deck.md --out dist/$npm_config_deck",
     "build:gh": "node scripts/build-all-decks.js",

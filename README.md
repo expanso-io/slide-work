@@ -8,10 +8,15 @@ Multi-deck presentation system for Expanso, built with Slidev and optimized for 
 # Install dependencies
 npm install
 
-# Start development server (current deck)
-npm run dev
+# Show help and list all available decks
+npm run dev              # Shows error + help + deck list
+npm run dev:list         # Same as above
 
-# Or open a specific deck
+# Build and preview the deck directory (IMPORTANT: Build first!)
+npm run build:all        # Build all decks
+npm run dev:index        # Preview built decks at http://localhost:3030
+
+# Open a specific deck in dev mode
 npm run dev:deck --deck=2025-11-01-sales-demo
 
 # Build all decks for production
@@ -20,8 +25,6 @@ npm run build:all
 # Build a specific deck
 npm run build:deck --deck=2025-11-01-sales-demo
 ```
-
-Visit http://localhost:3030 to view the presentation.
 
 ## 📁 Project Structure
 
@@ -113,12 +116,17 @@ Comprehensive sales demonstration deck showcasing Expanso's data control platfor
 
 ### Adding a New Deck
 
-1. **Create markdown file** in `slides/` with naming pattern:
+1. **List existing decks** to see examples:
+   ```bash
+   npm run dev:list
+   ```
+
+2. **Create markdown file** in `slides/` with naming pattern:
    ```
    slides/YYYY-MM-DD-deck-name.md
    ```
 
-2. **Add frontmatter** at the top:
+3. **Add frontmatter** at the top:
    ```yaml
    ---
    theme: ../theme
@@ -130,7 +138,7 @@ Comprehensive sales demonstration deck showcasing Expanso's data control platfor
    ---
    ```
 
-3. **Write slides** using markdown + Slidev syntax:
+4. **Write slides** using markdown + Slidev syntax:
    ```markdown
    # Slide Title
    
@@ -149,12 +157,12 @@ Comprehensive sales demonstration deck showcasing Expanso's data control platfor
    Right content
    ```
 
-4. **Test locally**:
+5. **Test locally**:
    ```bash
    npm run dev:deck --deck=YYYY-MM-DD-deck-name
    ```
 
-5. **Update index.html** registry (lines 175-185):
+6. **Update index.html** registry (lines 175-185):
    ```javascript
    const decks = [
        {
@@ -168,9 +176,10 @@ Comprehensive sales demonstration deck showcasing Expanso's data control platfor
    ];
    ```
 
-6. **Build and verify**:
+7. **Build and verify**:
    ```bash
    npm run build:all
+   npm run dev:index   # Preview the index page
    ```
 
 ### Editing Existing Slides
@@ -180,8 +189,17 @@ Comprehensive sales demonstration deck showcasing Expanso's data control platfor
    - Follow `prompts/VIEWPORT_CALCULATOR.md`
    - Ensure max 850px total height
    - Reduce elements if needed
-3. **Test locally**: `npm run dev`
-4. **Build**: `npm run build:all`
+3. **Test locally with live reload**:
+   ```bash
+   npm run dev:deck --deck=2025-11-01-sales-demo
+   ```
+   This opens the deck in dev mode with hot reload (no build needed)
+
+4. **Build and preview final result**:
+   ```bash
+   npm run build:all      # Build all decks
+   npm run dev:index      # Preview deck directory
+   ```
 
 ## 📦 Dependencies
 

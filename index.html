@@ -171,6 +171,11 @@
     </div>
 
     <script>
+        // Detect base path for GitHub Pages vs local dev
+        const basePath = window.location.pathname.includes('/slide-code/')
+            ? '/slide-code'
+            : '';
+
         // Deck registry - Update this array when adding new decks
         const decks = [
             {
@@ -199,7 +204,7 @@
             sortedDecks.forEach(deck => {
                 const card = document.createElement('a');
                 card.className = 'deck-card';
-                card.href = `./${deck.slug}/`;
+                card.href = `${basePath}/${deck.slug}/`;
                 
                 card.innerHTML = `
                     <div class="deck-date">${formatDate(deck.date)}</div>
