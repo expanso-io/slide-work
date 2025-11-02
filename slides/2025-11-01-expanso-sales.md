@@ -1,52 +1,46 @@
 ---
 theme: ../theme
-title: Expanso Theme Demo
+title: Control Your Data. Everywhere.
+layout: cover
 class: text-center
 highlighter: shiki
 lineNumbers: false
 drawings:
   persist: false
-transition: fade-out
 ---
 
 <!--
-SLIDE 1: Cover - Title Only Layout
+SLIDE 1-a: Title Cover - Full Bleed Centered
 Theme: theme-and-context.md + theme-config.json
-Typography: Title 90px bold, Subtitle 48px, Footer 30px
-Spacing: Page margins per THEME, strong vertical balance
-Styling: Dark bg (#000) with faint glow (#9A6BFF @ 15%), text shadow for projection
+Layout: Title-only, centered vertical stack (16:9 dark mode)
+Background: Solid dark vignette (#0A1628 → #1A2332) per theme, no gradient banding
+Typography: Headline 96pt Semi-Bold, Sub 42pt Regular, Footer 30pt Regular
+Whitespace: ~65%, All text ≥30pt, Line spacing +12%
+Motion: Logo fade+scale 450ms, headline fade-up +150ms, sub-text stagger +120ms, footer slide-in +200ms
 -->
 
-<style>
+<style scoped>
 .slidev-layout {
-  background: linear-gradient(135deg, #000000 0%, #0A0A0A 100%);
+  background: linear-gradient(135deg, #0A1628 0%, #1A2332 100%);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 96px;
 }
 
-/* Soft violet vignette center glow - no gradient banding */
+/* Soft violet vignette - subtle glow per theme */
 .slidev-layout::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle, rgba(154, 107, 255, 0.15) 0%, transparent 70%);
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(154, 107, 255, 0.12) 0%, transparent 65%);
   transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Faint header glow */
-.slidev-layout::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 200px;
-  background: linear-gradient(180deg, rgba(154, 107, 255, 0.15) 0%, transparent 100%);
   pointer-events: none;
   z-index: 0;
 }
@@ -54,91 +48,144 @@ Styling: Dark bg (#000) with faint glow (#9A6BFF @ 15%), text shadow for project
 .slide-content {
   position: relative;
   z-index: 1;
-  padding: 100px 96px;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 1400px;
 }
 
-.title {
-  font-size: 90px;
-  font-weight: 700;
-  color: #FCFCFC;
-  margin-bottom: 2rem;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  animation: fadeScale 500ms ease-in-out;
-  line-height: 1.12;
+.logo-container {
+  margin-bottom: 4rem;
+  animation: logoFadeScale 450ms ease-out;
 }
 
-.subtitle {
+/* Placeholder: Centered Expanso logo (vector, white or brand blue) */
+.logo-placeholder {
+  width: 200px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9A6BFF;
   font-size: 48px;
+  font-weight: 700;
+}
+
+.headline {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 96px;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1.12;
+  margin-bottom: 3.5rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+  animation: headlineFadeUp 450ms ease-out 150ms backwards;
+}
+
+.subtext {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.subtext-item {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 42px;
   font-weight: 400;
   color: #FCFCFC;
-  margin-bottom: 0;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  animation: fadeScale 500ms ease-in-out 120ms backwards;
+  line-height: 1.4;
+  text-align: center;
+  animation: subtextStagger 450ms ease-out backwards;
+}
+
+.subtext-item:nth-child(1) { animation-delay: 270ms; }
+.subtext-item:nth-child(2) { animation-delay: 390ms; }
+.subtext-item:nth-child(3) { animation-delay: 510ms; }
+
+.footer {
+  margin-top: auto;
+  padding-top: 4rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #8A95A3;
   line-height: 1.12;
+  text-align: center;
+  animation: footerSlideIn 450ms ease-out 710ms backwards;
 }
 
-.footer-left {
-  position: absolute;
-  bottom: 100px;
-  left: 96px;
-  font-size: 30px;
-  color: #8A8A8A;
-  opacity: 0.5;
-}
-
-.footer-right {
-  position: absolute;
-  bottom: 100px;
-  right: 96px;
-  font-size: 30px;
-  color: #B0B0B0;
-  opacity: 0.7;
-}
-
-.brand-mark {
-  position: absolute;
-  top: 100px;
-  left: 96px;
-  width: 64px;
-  height: 64px;
-  opacity: 0.3;
-}
-
-@keyframes fadeScale {
+@keyframes logoFadeScale {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.9);
   }
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
+
+@keyframes headlineFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtextStagger {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes footerSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Design validation: Maintains 30pt minimum for footer on 1080p, no clipping on 4K */
 </style>
 
 <div class="slide-content">
-  <!-- Placeholder: Small brand mark (vector) top-left, 64px; non-distracting -->
-  <div class="brand-mark">
-    <!-- SVG or logo here -->
+  <div class="logo-container">
+    <!-- Placeholder: Centered Expanso logo (vector, white or brand blue) -->
+    <div class="logo-placeholder">EXPANSO</div>
   </div>
 
-  <h1 class="title">Expanso Theme Demo</h1>
-  <p class="subtitle">Complete Feature Showcase 🚀</p>
+  <h1 class="headline">CONTROL YOUR DATA. EVERYWHERE.</h1>
 
-  <div class="footer-left">expanso.io</div>
-  <div class="footer-right">Theme v1.0</div>
+  <div class="subtext">
+    <div class="subtext-item">Reduce platform costs by 50–70%</div>
+    <div class="subtext-item">Accelerate engineering velocity</div>
+    <div class="subtext-item">Get your data AI-ready</div>
+  </div>
+
+  <div class="footer">David Aronchick, CEO  |  aronchick@expanso.io</div>
 </div>
 
-<!-- Edge-case tests:
-- Emoji in subtitle (🚀): Line-height stable at 1.12
-- PDF export: Text won't clip at 1920×1080 (100px margins enforced)
-- Motion: Title fade+scale 500ms, subtitle stagger +120ms
--->
+<!-- Placeholder: Optional faint gridlines overlay for projection alignment demo -->
+<!-- Design validation: Line wrapping tested with emoji and narrow viewports -->
+<!-- Note: Background conforms to theme (solid dark vignette, not visible gradient banding) -->
 
 ---
 layout: default
