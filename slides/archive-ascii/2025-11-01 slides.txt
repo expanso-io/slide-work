@@ -133,7 +133,7 @@
 └───────────────────────────────────────────────────────────────────────────────────┘
 
 
-# Slide 2-b:
+# Slide 3-c:
 ┌───────────────────────────────────────────────────────────────────────────────────┐
 │                                                                                   │
 │                         The Centralization Bottleneck                             │
@@ -486,7 +486,7 @@ Expanso Logo Slide
 │                                   16x                                             │
 │                     (Font: Inter Bold, 144pt, #00D9FF)                            │
 │                                                                                   │
-│                                  Faster query performance                         │
+│                                  Faster performance                         │
 │                             for ML model training.                                │
 │                     (Font: Inter Medium, 42pt, #D4D9E0)                           │
 │                                                                                   │
@@ -611,7 +611,7 @@ Expanso Logo Slide
 └───────────────────────────────────────────────────────────────────────────────────┘
 // Design Annotation: Minimalist social proof. Grayscale logos for brand consistency. // High whitespace (~70%) signals confidence. Simple supporting text.
 
-# Slide 12-b:
+# Slide 13-a:
 ┌───────────────────────────────────────────────────────────────────────────────────┐
 │                                                                                   │
 │                                                                                   │
@@ -638,32 +638,6 @@ Expanso Logo Slide
 └───────────────────────────────────────────────────────────────────────────────────┘
 // Design Annotation: Metrics-focused social proof. Three sections with specific numbers. // Customer quote adds credibility. Industries listed for relatability.
 
-# Slide 13-a:
-┌───────────────────────────────────────────────────────────────────────────────────┐
-│                                                                                   │
-│                                                                                   │
-│                                                                                   │
-│                          Let's Quantify Your Savings                              │
-│                       (Font: Inter Semi-Bold, 72pt, #FFFFFF)                      │
-│                                                                                   │
-│                                                                                   │
-│                                                                                   │
-│            Schedule your complimentary Data Value Assessment.                     │
-│                   (Font: Inter Regular, 42pt, #D4D9E0)                            │
-│                                                                                   │
-│                                                                                   │
-│                                expanso.io/assessment                              │
-│                       (Font: Inter Bold, 42pt, #00D9FF)                           │
-│                                                                                   │
-│                                                                                   │
-│                                                                                   │
-│                                                                                   │
-│                                                                                   │
-│                       David Aronchick | aronchick@expanso.io                      │
-│                           (Font: Inter Regular, 30pt, #8A95A3)                    │
-│                                                                                   │
-└───────────────────────────────────────────────────────────────────────────────────┘
-// Design Annotation: One focal point, one clear action. ~70% whitespace. // URL is highlighted in brand blue. Contact info at bottom. Simple and confident.
 
 # Slide 13-b:
 ┌───────────────────────────────────────────────────────────────────────────────────┐

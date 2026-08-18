@@ -181,18 +181,11 @@
             {
                 date: '2025-11-01',
                 title: 'Expanso Sales Demo',
-                slug: '2025-11-01-expanso-sales',
+                slug: '2025-11-01-sales-demo',
                 description: 'Cut cloud costs 50-70% with data control at the source',
                 slides: 10,
-                active: true
-            },
-            {
-                date: '2025-11-01',
-                title: 'Theme Showcase',
-                slug: '2025-11-01-sales-demo',
-                description: 'Complete feature showcase of the Expanso Slidev theme',
-                slides: 22,
-                active: false
+                active: true,
+                devPort: 3031  // Slidev dev server port (run: npm run dev:deck --deck=2025-11-01-sales-demo -- --port 3031)
             }
             // Add more decks here following the same format
         ];
@@ -212,7 +205,12 @@
             sortedDecks.forEach(deck => {
                 const card = document.createElement('a');
                 card.className = 'deck-card';
-                card.href = `${basePath}/${deck.slug}/`;
+
+                // In dev mode, link to Slidev dev server, otherwise use built path
+                const isDev = window.location.hostname === 'localhost';
+                card.href = isDev && deck.devPort
+                    ? `http://localhost:${deck.devPort}`
+                    : `${basePath}/${deck.slug}/`;
                 
                 card.innerHTML = `
                     <div class="deck-date">${formatDate(deck.date)}</div>
